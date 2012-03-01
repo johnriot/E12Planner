@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, Euro2012PlannerActivity!</string>
     <string name="app_name">Euro2012Planner</string>
 
+    <string name="menuGames">Games</string>
+    <string name="menuVenues">Venues</string>
+    <string name="menuTeams">Teams</string>
+    <string name="menuFacts">Facts</string>
+        
 </resources>

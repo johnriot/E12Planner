@@ -16,29 +16,33 @@
         android:background="@drawable/euro2012"
         android:padding="0dip"
         android:gravity="center_vertical|center_horizontal"
+        android:baselineAligned="false"
         >
 
         <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:gravity="center_vertical|center_horizontal"
-            android:stretchColumns="1">
+            android:background="#AAFF0000"
+            android:layout_width="280dp"
+            android:layout_height="350dp"
+            android:stretchColumns="field">
+            
             <TableRow
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView android:text="Ere e is"/>
-                <TextView android:text="Ere e is"/>
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#FF00FF00">
+                
+                    <include layout="@layout/games_menu_item"/>
+                    <include layout="@layout/venues_menu_item"/>
             </TableRow>
-        
+            
             <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <include
-                    layout="@layout/menuitem"/>
-                <include
-                    layout="@layout/menuitem"/>
-            </TableRow>
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#FF00FF00">
+                
+                    <include layout="@layout/teams_menu_item"/>
+                    <include layout="@layout/factfile_menu_item"/>
+            </TableRow>            
+
         </TableLayout>
 
     </LinearLayout>
