@@ -5,19 +5,21 @@
     android:layout_gravity="center">
 
     <LinearLayout
-        android:id="@+id/buttonsMenu"
+        android:id="@+id/teams_button"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:background="@drawable/semitrans_rounded_corner"
+        android:background="@layout/menu_selector"
         android:orientation="vertical"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:clickable="true">
 
         <ImageButton
             android:contentDescription="@string/menuGames"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/teams"/>
+            android:background="@drawable/teams"
+            android:clickable="false"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
