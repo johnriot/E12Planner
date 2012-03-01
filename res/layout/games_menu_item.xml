@@ -10,7 +10,8 @@
         android:layout_height="120dp"
         android:background="@drawable/semitrans_rounded_corner"
         android:orientation="vertical"
-        android:gravity="center_vertical|center_horizontal">
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_margin="10dp">
 
         <ImageButton
             android:contentDescription="@string/menuGames"

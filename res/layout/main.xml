@@ -21,12 +21,13 @@
 
         <TableLayout
             android:layout_width="280dp"
-            android:layout_height="350dp"
+            android:layout_height="400dp"
             android:stretchColumns="field">
             
             <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:gravity="center">
                 
                     <include layout="@layout/games_menu_item"/>
                     <include layout="@layout/venues_menu_item"/>
@@ -34,7 +35,8 @@
             
             <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:gravity="center">
                 
                     <include layout="@layout/teams_menu_item"/>
                     <include layout="@layout/factfile_menu_item"/>
