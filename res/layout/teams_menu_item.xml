@@ -16,12 +16,12 @@
             android:contentDescription="@string/menuGames"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/footballicon"/>
+            android:background="@drawable/teams"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
             android:textColor="@android:color/primary_text_dark"
-            android:text="@string/menuGames"/>
+            android:text="@string/menuTeams"/>
 
     </LinearLayout>
 </merge>
