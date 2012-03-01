@@ -15,7 +15,32 @@
         android:orientation="vertical"
         android:background="@drawable/euro2012"
         android:padding="0dip"
+        android:gravity="center_vertical|center_horizontal"
         >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:stretchColumns="1">
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <include
+                    layout="@layout/menuitem"/>
+                <include
+                    layout="@layout/menuitem"/>
+            </TableRow>
+        
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <include
+                    layout="@layout/menuitem"/>
+                <include
+                    layout="@layout/menuitem"/>
+            </TableRow>
+        </TableLayout>
 
     </LinearLayout>
 
