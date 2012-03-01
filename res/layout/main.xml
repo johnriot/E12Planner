@@ -20,15 +20,13 @@
         >
 
         <TableLayout
-            android:background="#AAFF0000"
             android:layout_width="280dp"
             android:layout_height="350dp"
             android:stretchColumns="field">
             
             <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="#FF00FF00">
+                android:layout_height="fill_parent">
                 
                     <include layout="@layout/games_menu_item"/>
                     <include layout="@layout/venues_menu_item"/>
@@ -36,8 +34,7 @@
             
             <TableRow
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="#FF00FF00">
+                android:layout_height="fill_parent">
                 
                     <include layout="@layout/teams_menu_item"/>
                     <include layout="@layout/factfile_menu_item"/>
