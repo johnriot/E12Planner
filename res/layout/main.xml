@@ -19,17 +19,16 @@
         >
 
         <TableLayout
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:gravity="center_vertical|center_horizontal"
             android:stretchColumns="1">
             <TableRow
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <include
-                    layout="@layout/menuitem"/>
-                <include
-                    layout="@layout/menuitem"/>
+                <TextView android:text="Ere e is"/>
+                <TextView android:text="Ere e is"/>
             </TableRow>
         
             <TableRow
