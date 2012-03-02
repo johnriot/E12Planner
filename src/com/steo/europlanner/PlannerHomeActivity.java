@@ -37,6 +37,7 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         LinearLayout gamesLayout =
                 (LinearLayout)findViewById(R.id.games_button);
         gamesLayout.setOnClickListener(this);
+
     }
 
     @Override
