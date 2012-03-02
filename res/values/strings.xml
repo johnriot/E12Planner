@@ -7,5 +7,19 @@
     <string name="menuVenues">Venues</string>
     <string name="menuTeams">Teams</string>
     <string name="menuFacts">Facts</string>
+
+    <string name="group_a_name">Group A</string>
+    <string name="group_b_name">Group B</string>
+    <string name="group_c_name">Group C</string>
+    <string name="group_d_name">Group D</string>
+    <string name="group_e_name">Group E</string>
+    <string name="group_f_name">Group F</string>
         
+    <string-array name="group_a_teams">
+        <item>Republic of Ireland</item>
+        <item>Spain</item>
+        <item>Italy</item>
+        <item>France</item>
+    </string-array>
+
 </resources>

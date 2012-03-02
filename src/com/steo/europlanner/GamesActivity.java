@@ -43,13 +43,13 @@ public class GamesActivity extends FragmentActivity {
 
             switch(position){
             case 0:
-                return new GroupFragment("Group A");
+                return new GroupFragment(Groups.GROUP_A);
             case 1:
-                return new GroupFragment("Group B");
+                return new GroupFragment(Groups.GROUP_B);
             case 2:
-                return new GroupFragment("Group C");
+                return new GroupFragment(Groups.GROUP_C);
             case 3:
-                return new GroupFragment("Group D");
+                return new GroupFragment(Groups.GROUP_D);
             }
 
             return null;

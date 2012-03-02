@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 public class GroupFragment extends Fragment {
 
-    private final String mGroupName;
+    private final Groups mGroup;
 
-    public GroupFragment(String groupName) {
-        mGroupName = groupName;
+    public GroupFragment(Groups group) {
+        mGroup = group;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class GroupFragment extends Fragment {
 
         View fragView = inflater.inflate(R.layout.group_fragment, container, false);
         TextView groupName = (TextView)fragView.findViewById(R.id.groupFragmentText);
-        groupName.setText(mGroupName);
+        //groupName.setText(mGroup.getName(container));
 
         return fragView;
     }
