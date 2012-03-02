@@ -13,6 +13,8 @@ public class GamesActivity extends FragmentActivity {
     GroupFragmentAdapter mFragmentAdapter;
     ViewPager mPager;
 
+    private static final int NUM_GROUPS = 4;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +30,14 @@ public class GamesActivity extends FragmentActivity {
         mPager.setCurrentItem(0);
     }
 
-    public static class GroupFragmentAdapter extends FragmentPagerAdapter {
+    public class GroupFragmentAdapter extends FragmentPagerAdapter {
         public GroupFragmentAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public int getCount() {
-            return 4;
+            return NUM_GROUPS;
         }
 
         @Override
@@ -43,13 +45,13 @@ public class GamesActivity extends FragmentActivity {
 
             switch(position){
             case 0:
-                return new GroupFragment(Groups.GROUP_A);
+                return new GroupFragment(Group.GROUP_A, GamesActivity.this);
             case 1:
-                return new GroupFragment(Groups.GROUP_B);
+                return new GroupFragment(Group.GROUP_B, GamesActivity.this);
             case 2:
-                return new GroupFragment(Groups.GROUP_C);
+                return new GroupFragment(Group.GROUP_C, GamesActivity.this);
             case 3:
-                return new GroupFragment(Groups.GROUP_D);
+                return new GroupFragment(Group.GROUP_D, GamesActivity.this);
             }
 
             return null;

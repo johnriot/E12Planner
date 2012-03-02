@@ -12,14 +12,33 @@
     <string name="group_b_name">Group B</string>
     <string name="group_c_name">Group C</string>
     <string name="group_d_name">Group D</string>
-    <string name="group_e_name">Group E</string>
-    <string name="group_f_name">Group F</string>
-        
+
     <string-array name="group_a_teams">
-        <item>Republic of Ireland</item>
+        <item>Poland</item>
+        <item>Greece</item>
+        <item>Russia</item>
+        <item>Czech Republic</item>
+    </string-array>
+
+    <string-array name="group_b_teams">
+        <item>Netherlands</item>
+        <item>Denmark</item>
+        <item>Germany</item>
+        <item>Portugal</item>
+    </string-array>
+
+    <string-array name="group_c_teams">
         <item>Spain</item>
         <item>Italy</item>
+        <item>Republic of Ireland</item>
+        <item>Croatia</item>
+    </string-array>
+
+    <string-array name="group_d_teams">
+        <item>Ukraine</item>
+        <item>Sweden</item>
         <item>France</item>
+        <item>England</item>
     </string-array>
 
 </resources>

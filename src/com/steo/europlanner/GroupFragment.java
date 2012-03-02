@@ -1,5 +1,6 @@
 package com.steo.europlanner;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,10 +10,12 @@ import android.widget.TextView;
 
 public class GroupFragment extends Fragment {
 
-    private final Groups mGroup;
+    private final Group mGroup;
+    Context mContext;
 
-    public GroupFragment(Groups group) {
+    public GroupFragment(Group group, Context context) {
         mGroup = group;
+        mContext = context;
     }
 
     @Override
@@ -21,9 +24,8 @@ public class GroupFragment extends Fragment {
 
         View fragView = inflater.inflate(R.layout.group_fragment, container, false);
         TextView groupName = (TextView)fragView.findViewById(R.id.groupFragmentText);
-        //groupName.setText(mGroup.getName(container));
+        groupName.setText(mGroup.getName(mContext));
 
         return fragView;
     }
-
 }
