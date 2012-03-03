@@ -10,7 +10,7 @@
     >
 
     <TextView
-        android:background="#888888"
+        android:background="#DDDDDD"
         android:layout_width="fill_parent"
         android:gravity="center"
         android:layout_height="wrap_content"

@@ -10,16 +10,17 @@
     <LinearLayout 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#3B5998">
+        android:background="@color/facebook_blue">
         
         <ImageButton
             android:id="@+id/homeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/homeButton"
-            android:src="@drawable/homeicon"
+            android:src="@drawable/homeicon_dark"
             android:background="@null"
             android:clickable="true"
+            android:padding="4dp"
             />
     </LinearLayout>
 
