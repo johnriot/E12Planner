@@ -41,4 +41,6 @@
         <item>England</item>
     </string-array>
 
+    <string name="homeButton">Home Button</string>
+    
 </resources>

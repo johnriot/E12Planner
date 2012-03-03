@@ -6,7 +6,10 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.ImageButton;
 
 public class GamesActivity extends FragmentActivity {
 
@@ -28,6 +31,15 @@ public class GamesActivity extends FragmentActivity {
         mPager.setAdapter(mFragmentAdapter);
 
         mPager.setCurrentItem(0);
+
+        ImageButton homeButton = (ImageButton)findViewById(R.id.homeButton);
+        homeButton.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public class GroupFragmentAdapter extends FragmentPagerAdapter {
