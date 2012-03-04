@@ -13,33 +13,29 @@
     <string name="group_c_name">Group C</string>
     <string name="group_d_name">Group D</string>
 
-    <string-array name="group_a_teams">
-        <item>Poland</item>
-        <item>Greece</item>
-        <item>Russia</item>
-        <item>Czech Republic</item>
-    </string-array>
+    <!-- Group A names -->
+    <string name="polandName">Poland</string>
+    <string name="greeceName">Greece</string>
+    <string name="russiaName">Russia</string>
+    <string name="czechRepName">Czech Republic</string>
 
-    <string-array name="group_b_teams">
-        <item>Netherlands</item>
-        <item>Denmark</item>
-        <item>Germany</item>
-        <item>Portugal</item>
-    </string-array>
+    <!-- Group B names -->
+    <string name="netherlandsName">Netherlands</string>
+    <string name="denmarkName">Denmark</string>
+    <string name="germanyName">Germany</string>
+    <string name="portugalName">Portugal</string>
 
-    <string-array name="group_c_teams">
-        <item>Spain</item>
-        <item>Italy</item>
-        <item>Republic of Ireland</item>
-        <item>Croatia</item>
-    </string-array>
+    <!-- Group C names -->
+    <string name="spainName">Spain</string>
+    <string name="italyName">Italy</string>
+    <string name="irelandName">Republic of Ireland</string>
+    <string name="croatiaName">Croatia</string>
 
-    <string-array name="group_d_teams">
-        <item>Ukraine</item>
-        <item>Sweden</item>
-        <item>France</item>
-        <item>England</item>
-    </string-array>
+    <!-- Group D names -->
+    <string name="ukraineName">Ukraine</string>
+    <string name="swedenName">Sweden</string>
+    <string name="franceName">France</string>
+    <string name="englandName">England</string>
 
     <string name="homeButton">Home Button</string>
     

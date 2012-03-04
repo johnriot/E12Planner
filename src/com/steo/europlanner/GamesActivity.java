@@ -55,19 +55,31 @@ public class GamesActivity extends FragmentActivity {
         @Override
         public Fragment getItem(int position) {
 
+            String groupName = null;
+            Team[] teams = null;
+
             switch(position){
             case 0:
-                return new GroupFragment(Group.GROUP_A, GamesActivity.this);
+                groupName = Group.GROUP_A.getName(GamesActivity.this);
+                teams = Group.GROUP_A.getTeams(GamesActivity.this);
+                break;
             case 1:
-                return new GroupFragment(Group.GROUP_B, GamesActivity.this);
+                groupName = Group.GROUP_B.getName(GamesActivity.this);
+                teams = Group.GROUP_B.getTeams(GamesActivity.this);
+                break;
             case 2:
-                return new GroupFragment(Group.GROUP_C, GamesActivity.this);
+                groupName = Group.GROUP_C.getName(GamesActivity.this);
+                teams = Group.GROUP_C.getTeams(GamesActivity.this);
+                break;
             case 3:
-                return new GroupFragment(Group.GROUP_D, GamesActivity.this);
+                groupName = Group.GROUP_D.getName(GamesActivity.this);
+                teams = Group.GROUP_D.getTeams(GamesActivity.this);
+                break;
+            default:
+                return null;
             }
 
-            return null;
-
+            return new GroupFragment(groupName, teams);
         }
     }
 

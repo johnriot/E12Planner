@@ -1,29 +1,30 @@
 package com.steo.europlanner;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
+import android.content.res.Resources;
 
 public enum Group {
 
     GROUP_A {
+
         @Override
         public String getName(Context context) {
             return context.getResources().getString(R.string.group_a_name);
         }
 
         @Override
-        public String[] getTeams(Context context) {
-            return context.getResources().getStringArray(R.array.group_a_teams);
-        }
+        public Team[] getTeams(Context context) {
 
-        @Override
-        public Drawable[] getTeamIcons(Context context) {
-            Drawable[] icons = new Drawable[GROUP_SIZE];
-            icons[0] = context.getResources().getDrawable(R.drawable.poland);
-            icons[1] = context.getResources().getDrawable(R.drawable.greece);
-            icons[2] = context.getResources().getDrawable(R.drawable.russia);
-            icons[3] = context.getResources().getDrawable(R.drawable.czechrep);
-            return icons;
+            Resources res = context.getResources();
+
+            Team[] teams = new Team[GROUP_SIZE];
+
+            teams[0] = new Team(res.getString(R.string.polandName), R.drawable.poland);
+            teams[1] = new Team(res.getString(R.string.greeceName), R.drawable.greece);
+            teams[2] = new Team(res.getString(R.string.russiaName), R.drawable.russia);
+            teams[3] = new Team(res.getString(R.string.czechRepName), R.drawable.czechrep);
+
+            return teams;
         }
     },
     GROUP_B {
@@ -33,18 +34,18 @@ public enum Group {
         }
 
         @Override
-        public String[] getTeams(Context context) {
-            return context.getResources().getStringArray(R.array.group_b_teams);
-        }
+        public Team[] getTeams(Context context) {
 
-        @Override
-        public Drawable[] getTeamIcons(Context context) {
-            Drawable[] icons = new Drawable[GROUP_SIZE];
-            icons[0] = context.getResources().getDrawable(R.drawable.netherlands);
-            icons[1] = context.getResources().getDrawable(R.drawable.denmark);
-            icons[2] = context.getResources().getDrawable(R.drawable.germany);
-            icons[3] = context.getResources().getDrawable(R.drawable.portugal);
-            return icons;
+            Resources res = context.getResources();
+
+            Team[] teams = new Team[GROUP_SIZE];
+
+            teams[0] = new Team(res.getString(R.string.netherlandsName), R.drawable.netherlands);
+            teams[1] = new Team(res.getString(R.string.denmarkName), R.drawable.denmark);
+            teams[2] = new Team(res.getString(R.string.germanyName), R.drawable.germany);
+            teams[3] = new Team(res.getString(R.string.portugalName), R.drawable.portugal);
+
+            return teams;
         }
     },
     GROUP_C {
@@ -54,18 +55,18 @@ public enum Group {
         }
 
         @Override
-        public String[] getTeams(Context context) {
-            return context.getResources().getStringArray(R.array.group_c_teams);
-        }
+        public Team[] getTeams(Context context) {
 
-        @Override
-        public Drawable[] getTeamIcons(Context context) {
-            Drawable[] icons = new Drawable[GROUP_SIZE];
-            icons[0] = context.getResources().getDrawable(R.drawable.spain);
-            icons[1] = context.getResources().getDrawable(R.drawable.italy);
-            icons[2] = context.getResources().getDrawable(R.drawable.ireland);
-            icons[3] = context.getResources().getDrawable(R.drawable.croatia);
-            return icons;
+            Resources res = context.getResources();
+
+            Team[] teams = new Team[GROUP_SIZE];
+
+            teams[0] = new Team(res.getString(R.string.spainName), R.drawable.spain);
+            teams[1] = new Team(res.getString(R.string.italyName), R.drawable.italy);
+            teams[2] = new Team(res.getString(R.string.irelandName), R.drawable.ireland);
+            teams[3] = new Team(res.getString(R.string.croatiaName), R.drawable.croatia);
+
+            return teams;
         }
     },
     GROUP_D {
@@ -75,24 +76,23 @@ public enum Group {
         }
 
         @Override
-        public String[] getTeams(Context context) {
-            return context.getResources().getStringArray(R.array.group_d_teams);
-        }
+        public Team[] getTeams(Context context) {
 
-        @Override
-        public Drawable[] getTeamIcons(Context context) {
-            Drawable[] icons = new Drawable[GROUP_SIZE];
-            icons[0] = context.getResources().getDrawable(R.drawable.ukraine);
-            icons[1] = context.getResources().getDrawable(R.drawable.sweden);
-            icons[2] = context.getResources().getDrawable(R.drawable.france);
-            icons[3] = context.getResources().getDrawable(R.drawable.england);
-            return icons;
+            Resources res = context.getResources();
+
+            Team[] teams = new Team[GROUP_SIZE];
+
+            teams[0] = new Team(res.getString(R.string.ukraineName), R.drawable.ukraine);
+            teams[1] = new Team(res.getString(R.string.swedenName), R.drawable.sweden);
+            teams[2] = new Team(res.getString(R.string.franceName), R.drawable.france);
+            teams[3] = new Team(res.getString(R.string.englandName), R.drawable.england);
+
+            return teams;
         }
     };
 
     private static final int GROUP_SIZE = 4;
 
+    public abstract Team[] getTeams(Context context);
     public abstract String getName(Context context);
-    public abstract String[]getTeams(Context context);
-    public abstract Drawable[] getTeamIcons(Context context);
 }
