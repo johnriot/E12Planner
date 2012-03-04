@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 public class Group {
 
     private final GroupState mGroupState;
+    private GroupFragment mViewFragment;
 
     public Group(GroupState state) {
         mGroupState = state;
@@ -14,8 +15,12 @@ public class Group {
 
     public Fragment getView(Context ctx) {
 
-        return new GroupFragment(mGroupState.getName(ctx),
-                mGroupState.getTeams(ctx));
+        if(mViewFragment == null) {
+            mViewFragment = new GroupFragment(mGroupState.getName(ctx),
+                    mGroupState.getTeams(ctx));
+        }
+
+        return mViewFragment;
     }
 
     public enum GroupState {
