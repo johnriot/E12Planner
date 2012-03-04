@@ -5,13 +5,14 @@
         android:padding="0dip"
         android:gravity="center_horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF">
 
     <LinearLayout 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/facebook_blue">
-        
+        android:background="@color/logo_yellow">
+
         <ImageButton
             android:id="@+id/homeButton"
             android:layout_width="wrap_content"
