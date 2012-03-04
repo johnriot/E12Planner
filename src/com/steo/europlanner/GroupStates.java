@@ -3,7 +3,7 @@ package com.steo.europlanner;
 import android.content.Context;
 import android.content.res.Resources;
 
-public enum Group {
+public enum GroupStates {
 
     GROUP_A {
 

@@ -60,20 +60,20 @@ public class GamesActivity extends FragmentActivity {
 
             switch(position){
             case 0:
-                groupName = Group.GROUP_A.getName(GamesActivity.this);
-                teams = Group.GROUP_A.getTeams(GamesActivity.this);
+                groupName = GroupStates.GROUP_A.getName(GamesActivity.this);
+                teams = GroupStates.GROUP_A.getTeams(GamesActivity.this);
                 break;
             case 1:
-                groupName = Group.GROUP_B.getName(GamesActivity.this);
-                teams = Group.GROUP_B.getTeams(GamesActivity.this);
+                groupName = GroupStates.GROUP_B.getName(GamesActivity.this);
+                teams = GroupStates.GROUP_B.getTeams(GamesActivity.this);
                 break;
             case 2:
-                groupName = Group.GROUP_C.getName(GamesActivity.this);
-                teams = Group.GROUP_C.getTeams(GamesActivity.this);
+                groupName = GroupStates.GROUP_C.getName(GamesActivity.this);
+                teams = GroupStates.GROUP_C.getTeams(GamesActivity.this);
                 break;
             case 3:
-                groupName = Group.GROUP_D.getName(GamesActivity.this);
-                teams = Group.GROUP_D.getTeams(GamesActivity.this);
+                groupName = GroupStates.GROUP_D.getName(GamesActivity.this);
+                teams = GroupStates.GROUP_D.getTeams(GamesActivity.this);
                 break;
             default:
                 return null;
