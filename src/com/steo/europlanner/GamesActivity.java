@@ -11,6 +11,8 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 
+import com.steo.europlanner.Group.GroupState;
+
 public class GamesActivity extends FragmentActivity {
 
     GroupFragmentAdapter mFragmentAdapter;
@@ -55,31 +57,29 @@ public class GamesActivity extends FragmentActivity {
         @Override
         public Fragment getItem(int position) {
 
-            String groupName = null;
-            Team[] teams = null;
+            //TODO: These groups need to live through the application and be
+            //      persisted between application runs so we can update the
+            //      scores etc
+            Group group = null;
 
             switch(position){
             case 0:
-                groupName = GroupStates.GROUP_A.getName(GamesActivity.this);
-                teams = GroupStates.GROUP_A.getTeams(GamesActivity.this);
+                group = new Group(GroupState.GROUP_A);
                 break;
             case 1:
-                groupName = GroupStates.GROUP_B.getName(GamesActivity.this);
-                teams = GroupStates.GROUP_B.getTeams(GamesActivity.this);
+                group = new Group(GroupState.GROUP_B);
                 break;
             case 2:
-                groupName = GroupStates.GROUP_C.getName(GamesActivity.this);
-                teams = GroupStates.GROUP_C.getTeams(GamesActivity.this);
+                group = new Group(GroupState.GROUP_C);
                 break;
             case 3:
-                groupName = GroupStates.GROUP_D.getName(GamesActivity.this);
-                teams = GroupStates.GROUP_D.getTeams(GamesActivity.this);
+                group = new Group(GroupState.GROUP_D);
                 break;
             default:
                 return null;
             }
 
-            return new GroupFragment(groupName, teams);
+            return group.getView(GamesActivity.this);
         }
     }
 
