@@ -16,6 +16,8 @@ import com.steo.europlanner.Group.GroupState;
 public class GamesActivity extends FragmentActivity {
 
     GroupFragmentAdapter mFragmentAdapter;
+
+    //TODO: Check out this indicator: http://www.zylinc.com/blog-reader/items/viewpaager-page-indicator.html
     ViewPager mPager;
 
     private static final int NUM_GROUPS = 4;
