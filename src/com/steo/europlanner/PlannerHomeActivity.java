@@ -45,11 +45,16 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         switch(view.getId()) {
         case R.id.games_button:
 
-            Intent intent = new Intent(this, GamesActivity.class);
-            startActivity(intent);
+            Intent gamesIntent = new Intent(this, GamesActivity.class);
+            startActivity(gamesIntent);
 
             break;
         case R.id.teams_button:
+
+            Intent teamIntent = new Intent(this, TeamsActivity.class);
+            startActivity(teamIntent);
+
+            break;
         case R.id.venues_button:
         case R.id.factfile_button:
         default:
