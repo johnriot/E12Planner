@@ -6,8 +6,8 @@
 
     <LinearLayout
         android:id="@+id/factfile_button"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@layout/menu_selector"
         android:orientation="vertical"
         android:gravity="center_vertical|center_horizontal"
