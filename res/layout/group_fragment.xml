@@ -25,6 +25,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:padding="5dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/team1Icon"/>
@@ -46,6 +47,7 @@
         android:layout_gravity="left">
 
         <ImageView
+            android:padding="5dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/team2Icon"/>
@@ -67,6 +69,7 @@
         android:layout_gravity="left">
 
         <ImageView
+            android:padding="5dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/team3Icon"/>
@@ -88,6 +91,7 @@
         android:layout_gravity="left">
 
         <ImageView
+            android:padding="5dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:id="@+id/team4Icon"/>
