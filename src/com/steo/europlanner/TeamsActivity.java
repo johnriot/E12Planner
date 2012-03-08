@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 public class TeamsActivity extends FragmentActivity {
 
+    //Link for quick action menu: http://www.londatiga.net/it/how-to-create-quickaction-dialog-in-android/
     private ArrayList<String> mTeams;
 
     @Override
