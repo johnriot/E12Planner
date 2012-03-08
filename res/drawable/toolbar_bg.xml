@@ -1,5 +1,5 @@
 <bitmap 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/actionbar_textured_background"
+    android:src="@drawable/title_bar_textured"
     android:tileMode="repeat"
     />

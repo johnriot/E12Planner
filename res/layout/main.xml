@@ -1,49 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/backgroundLayout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    >
-
-    <LinearLayout
-        android:id="@+id/mainLayout"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:background="@drawable/euro2012"
-        android:padding="0dip"
-        android:gravity="center_vertical|center_horizontal"
-        android:baselineAligned="false"
-        >
+        android:layout_gravity="right"
+        android:background="@color/white"
+        android:id="@+id/homeLayout">
+
+        <ImageView 
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentBottom="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/euro2012"/>
 
         <TableLayout
-            android:layout_width="280dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="fill_parent"
             android:layout_height="400dp"
             android:stretchColumns="field">
-            
+
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center">
-                
+
                     <include layout="@layout/games_menu_item"/>
                     <include layout="@layout/venues_menu_item"/>
             </TableRow>
-            
+
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="center">
-                
+
                     <include layout="@layout/teams_menu_item"/>
                     <include layout="@layout/factfile_menu_item"/>
-            </TableRow>            
-
+            </TableRow>
         </TableLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+    </RelativeLayout>

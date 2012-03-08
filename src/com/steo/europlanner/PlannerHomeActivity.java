@@ -19,8 +19,8 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
         setContentView(R.layout.main);
 
-        LinearLayout mainLayout = (LinearLayout)findViewById(R.id.mainLayout);
-        mainLayout.getBackground().setAlpha(100);
+        //LinearLayout mainLayout = (LinearLayout)findViewById(R.id.mainLayout);
+        //mainLayout.getBackground().setAlpha(100);
 
         LinearLayout factfileLayout =
                 (LinearLayout)findViewById(R.id.factfile_button);
