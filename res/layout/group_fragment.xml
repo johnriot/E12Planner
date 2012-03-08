@@ -102,25 +102,13 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/team1Icon"/>
-            
-        <TextView
-            android:paddingLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:textColor="#FF000000"
-            android:id="@+id/team1Team"/>
-
-    </LinearLayout>
+    <View
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/spacer_gradient"
+        />
 
 </LinearLayout>
