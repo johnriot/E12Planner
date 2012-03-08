@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="right"
@@ -10,7 +11,7 @@
 
         <ImageView 
             android:contentDescription="@string/app_name"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/adView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/euro2012"/>
@@ -39,4 +40,14 @@
                     <include layout="@layout/factfile_menu_item"/>
             </TableRow>
         </TableLayout>
+
+      <com.google.ads.AdView
+          android:layout_alignParentBottom="true"
+          android:id="@id/adView"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          ads:adUnitId="a14f59150c4f295"
+          ads:adSize="BANNER"
+          ads:testDevices="TEST_EMULATOR, 25E8256736752D31F281B90E217EFA79"
+          ads:loadAdOnCreate="true"/>
     </RelativeLayout>
