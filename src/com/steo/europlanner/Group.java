@@ -1,7 +1,6 @@
 package com.steo.europlanner;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 
 public class Group {
@@ -35,14 +34,12 @@ public class Group {
             @Override
             public Team[] getTeams(Context context) {
 
-                Resources res = context.getResources();
-
                 Team[] teams = new Team[GROUP_SIZE];
 
-                teams[0] = new Team(res.getString(R.string.polandName), R.drawable.poland);
-                teams[1] = new Team(res.getString(R.string.greeceName), R.drawable.greece);
-                teams[2] = new Team(res.getString(R.string.russiaName), R.drawable.russia);
-                teams[3] = new Team(res.getString(R.string.czechRepName), R.drawable.czechrep);
+                teams[0] = Team.TeamID.POLAND.getTeam(context);
+                teams[1] = Team.TeamID.GREECE.getTeam(context);
+                teams[2] = Team.TeamID.RUSSIA.getTeam(context);
+                teams[3] = Team.TeamID.CZECH_REPUBLIC.getTeam(context);
 
                 return teams;
             }
@@ -56,14 +53,12 @@ public class Group {
             @Override
             public Team[] getTeams(Context context) {
 
-                Resources res = context.getResources();
-
                 Team[] teams = new Team[GROUP_SIZE];
 
-                teams[0] = new Team(res.getString(R.string.netherlandsName), R.drawable.netherlands);
-                teams[1] = new Team(res.getString(R.string.denmarkName), R.drawable.denmark);
-                teams[2] = new Team(res.getString(R.string.germanyName), R.drawable.germany);
-                teams[3] = new Team(res.getString(R.string.portugalName), R.drawable.portugal);
+                teams[0] = Team.TeamID.NETHERLANDS.getTeam(context);
+                teams[1] = Team.TeamID.DENMARK.getTeam(context);
+                teams[2] = Team.TeamID.GERMANY.getTeam(context);
+                teams[3] = Team.TeamID.PORTUGAL.getTeam(context);
 
                 return teams;
             }
@@ -77,14 +72,12 @@ public class Group {
             @Override
             public Team[] getTeams(Context context) {
 
-                Resources res = context.getResources();
-
                 Team[] teams = new Team[GROUP_SIZE];
 
-                teams[0] = new Team(res.getString(R.string.spainName), R.drawable.spain);
-                teams[1] = new Team(res.getString(R.string.italyName), R.drawable.italy);
-                teams[2] = new Team(res.getString(R.string.irelandName), R.drawable.ireland);
-                teams[3] = new Team(res.getString(R.string.croatiaName), R.drawable.croatia);
+                teams[0] = Team.TeamID.SPAIN.getTeam(context);
+                teams[1] = Team.TeamID.ITALY.getTeam(context);
+                teams[2] = Team.TeamID.REPUBLIC_OF_IRELAND.getTeam(context);
+                teams[3] = Team.TeamID.CROATIA.getTeam(context);
 
                 return teams;
             }
@@ -97,15 +90,12 @@ public class Group {
 
             @Override
             public Team[] getTeams(Context context) {
-
-                Resources res = context.getResources();
-
                 Team[] teams = new Team[GROUP_SIZE];
 
-                teams[0] = new Team(res.getString(R.string.ukraineName), R.drawable.ukraine);
-                teams[1] = new Team(res.getString(R.string.swedenName), R.drawable.sweden);
-                teams[2] = new Team(res.getString(R.string.franceName), R.drawable.france);
-                teams[3] = new Team(res.getString(R.string.englandName), R.drawable.england);
+                teams[0] = Team.TeamID.UKRAINE.getTeam(context);
+                teams[1] = Team.TeamID.SWEDEN.getTeam(context);
+                teams[2] = Team.TeamID.FRANCE.getTeam(context);
+                teams[3] = Team.TeamID.ENGLAND.getTeam(context);
 
                 return teams;
             }

@@ -20,6 +20,11 @@ public class GamesActivity extends FragmentActivity {
 
     private static final int NUM_GROUPS = 4;
 
+    private Group mGroupA;
+    private Group mGroupB;
+    private Group mGroupC;
+    private Group mGroupD;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +47,11 @@ public class GamesActivity extends FragmentActivity {
                 finish();
             }
         });
+
+        mGroupA = new Group(GroupState.GROUP_A);
+        mGroupB = new Group(GroupState.GROUP_B);
+        mGroupC = new Group(GroupState.GROUP_C);
+        mGroupD = new Group(GroupState.GROUP_D);
     }
 
     public class GroupFragmentAdapter extends FragmentPagerAdapter {
@@ -57,30 +67,14 @@ public class GamesActivity extends FragmentActivity {
         @Override
         public Fragment getItem(int position) {
 
-            //TODO: These groups need to live through the application and be
-            //      persisted between application runs so we can update the
-            //      scores etc
-            Group group = null;
-
             switch(position){
-            case 0:
-                group = new Group(GroupState.GROUP_A);
-                break;
-            case 1:
-                group = new Group(GroupState.GROUP_B);
-                break;
-            case 2:
-                group = new Group(GroupState.GROUP_C);
-                break;
-            case 3:
-                group = new Group(GroupState.GROUP_D);
-                break;
-            default:
-                return null;
+                case 0: return mGroupA.getView(GamesActivity.this);
+                case 1: return mGroupB.getView(GamesActivity.this);
+                case 2: return mGroupC.getView(GamesActivity.this);
+                case 3: return mGroupD.getView(GamesActivity.this);
+                default:
+                    return null;
             }
-
-            return group.getView(GamesActivity.this);
         }
     }
-
 }
