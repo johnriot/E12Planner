@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" 
-        android:padding="0dip"
-        android:gravity="center_horizontal"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#FFFFFF">
+        android:layout_gravity="right"
+        android:background="@color/white"
+        android:id="@+id/homeLayout">
 
-    <LinearLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/toolbar_bg">
-
-        <ImageButton
-            android:id="@+id/homeButton"
-            android:layout_width="wrap_content"
+        <LinearLayout 
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/homeButton"
-            android:src="@drawable/homeicon_dark"
-            android:background="@null"
-            android:clickable="true"
-            android:padding="4dp"
-            />
-    </LinearLayout>
+            android:background="@drawable/toolbar_bg"
+            android:layout_below="@id/homeLayout"
+            android:id="@+id/toolbarLayout">
 
-    <android.support.v4.view.ViewPager
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/homeButton"
+                android:src="@drawable/homeicon_dark"
+                android:background="@null"
+                android:clickable="true"
+                android:padding="4dp"
+                />
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@id/toolbarLayout"
             android:id="@+id/groupPager"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-    </android.support.v4.view.ViewPager>
-</LinearLayout>
+            android:layout_height="fill_parent"/>
+
+        <com.google.ads.AdView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/adViewGames"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            ads:adUnitId="a14f59150c4f295"
+            ads:adSize="BANNER"
+            ads:testDevices="TEST_EMULATOR, 25E8256736752D31F281B90E217EFA79"
+            ads:loadAdOnCreate="true"/>
+    </RelativeLayout>
