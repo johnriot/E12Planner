@@ -30,7 +30,7 @@ public class Group {
 
         if(mViewFragment == null) {
             mViewFragment = new GroupFragment(mGroupState.getName(ctx),
-                    mGroupState.getTeams(ctx));
+                    mGroupState.getTeams(ctx), mGroupState.getFixtures());
         }
 
         return mViewFragment;

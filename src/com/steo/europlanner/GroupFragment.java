@@ -1,21 +1,26 @@
 package com.steo.europlanner;
 
+import java.util.ArrayList;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 public class GroupFragment extends Fragment {
 
     private final String mGroupName;
     private final Team[] mTeams;
+    private final ArrayList<Fixture> mFixtures;
 
     private static final int EXPECTED_GROUP_SIZE = 4;
 
-    public GroupFragment(String groupName, Team[] teams) {
+    public GroupFragment(String groupName, Team[] teams, ArrayList<Fixture> fixtures) {
 
         if(teams.length != EXPECTED_GROUP_SIZE) {
             throw new IllegalArgumentException("The group fragment currently " +
@@ -24,6 +29,7 @@ public class GroupFragment extends Fragment {
 
         mGroupName = groupName;
         mTeams = teams;
+        mFixtures = fixtures;
     }
 
     @Override
@@ -60,6 +66,22 @@ public class GroupFragment extends Fragment {
 
         TextView team4name = (TextView)fragView.findViewById(R.id.team4Team);
         team4name.setText(mTeams[3].teamName);
+
+        //Add the fixtures
+        TableLayout fixturesTable = (TableLayout)fragView.findViewById(R.id.fixturesTable);
+
+        for(Fixture fixture : mFixtures) {
+            TableRow fixtureRow = (TableRow) inflater.inflate(
+                    R.layout.fixture_row, fixturesTable, false);
+
+            TextView homeTeam = (TextView)fixtureRow.findViewById(R.id.homeTeam);
+            homeTeam.setText(fixture.getHomeTeam().getTeam(getActivity()).teamName);
+
+            TextView awayTeam = (TextView)fixtureRow.findViewById(R.id.awayTeam);
+            awayTeam.setText(fixture.getAwayTeam().getTeam(getActivity()).teamName);
+
+            fixturesTable.addView(fixtureRow);
+        }
 
         return fragView;
     }
