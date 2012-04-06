@@ -1,16 +1,16 @@
 package com.steo.europlanner;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.inmobi.androidsdk.IMAdRequest;
+import com.inmobi.androidsdk.IMAdView;
 
 public class PlannerHomeActivity extends Activity implements OnClickListener {
 
@@ -21,6 +21,12 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.main);
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adView);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(true);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
 
         LinearLayout newsLayout =
                 (LinearLayout)findViewById(R.id.news_button);
@@ -37,11 +43,6 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         LinearLayout gamesLayout =
                 (LinearLayout)findViewById(R.id.games_button);
         gamesLayout.setOnClickListener(this);
-
-        final TelephonyManager tm =(TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
-
-        String deviceid = tm.getDeviceId();
-        Log.e("STEO", "Device ID = " + deviceid);
     }
 
     @Override

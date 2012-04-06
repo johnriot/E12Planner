@@ -41,14 +41,11 @@
             </TableRow>
         </TableLayout>
 
-      <com.google.ads.AdView
-          android:layout_alignParentBottom="true"
-          android:id="@id/adView"
-          android:layout_width="wrap_content"
-          android:layout_height="50dp"
-          ads:adUnitId="a14f59150c4f295"
-          ads:adSize="BANNER"
-          ads:testing="true"
-          ads:testDevices="TEST_EMULATOR, 25E8256736752D31F281B90E217EFA79"
-          ads:loadAdOnCreate="true"/>
+        <com.inmobi.androidsdk.IMAdView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/adView"
+            appId="4028cba631d63df10131e1d3818b00cc"
+            adSlot="15" />
     </RelativeLayout>

@@ -34,13 +34,12 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"/>
 
-        <com.google.ads.AdView
+        <com.inmobi.androidsdk.IMAdView
             android:layout_alignParentBottom="true"
-            android:id="@+id/adViewGames"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            ads:adUnitId="a14f59150c4f295"
-            ads:adSize="BANNER"
-            ads:testDevices="TEST_EMULATOR, 25E8256736752D31F281B90E217EFA79"
-            ads:loadAdOnCreate="true"/>
+            android:id="@+id/adViewGames"
+            appId="4028cba631d63df10131e1d3818b00cc"
+            adSlot="15"
+            testMode="true" />
     </RelativeLayout>

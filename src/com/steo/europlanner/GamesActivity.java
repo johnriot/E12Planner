@@ -11,6 +11,9 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageButton;
 
+import com.inmobi.androidsdk.IMAdRequest;
+import com.inmobi.androidsdk.IMAdView;
+
 public class GamesActivity extends FragmentActivity {
 
     GroupFragmentAdapter mFragmentAdapter;
@@ -25,6 +28,12 @@ public class GamesActivity extends FragmentActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.games_layout);
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewGames);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(true);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
 
         mTournamentDefn = new TournamentDefinition(this);
 
