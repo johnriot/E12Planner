@@ -22,7 +22,7 @@ public class TeamsActivity extends FragmentActivity {
 
         setContentView(R.layout.teams_layout);
 
-        ImageButton homeButton = (ImageButton)findViewById(R.id.homeButton);
+        ImageButton homeButton = (ImageButton)findViewById(R.id.teamsHomeButton);
         homeButton.setOnClickListener(new OnClickListener() {
 
             @Override

@@ -44,7 +44,7 @@ public class GamesActivity extends FragmentActivity {
 
         mPager.setCurrentItem(0);
 
-        ImageButton homeButton = (ImageButton)findViewById(R.id.homeButton);
+        ImageButton homeButton = (ImageButton)findViewById(R.id.gamesHomeButton);
         homeButton.setOnClickListener(new OnClickListener() {
 
             @Override

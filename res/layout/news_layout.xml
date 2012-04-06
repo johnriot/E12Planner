@@ -2,7 +2,6 @@
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="right"
@@ -17,7 +16,7 @@
             android:id="@+id/toolbarLayout">
 
             <ImageButton
-                android:id="@+id/gamesHomeButton"
+                android:id="@+id/newsHomeButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/homeButton"
@@ -28,17 +27,11 @@
                 />
         </LinearLayout>
 
-        <android.support.v4.view.ViewPager
-            android:layout_below="@id/toolbarLayout"
-            android:id="@+id/groupPager"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"/>
-
         <com.inmobi.androidsdk.IMAdView
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/adViewGames"
+            android:id="@+id/adViewNews"
             appId="4028cba631d63df10131e1d3818b00cc"
             adSlot="15"
             testMode="true" />
