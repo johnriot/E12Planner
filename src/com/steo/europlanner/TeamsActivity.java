@@ -1,7 +1,6 @@
 package com.steo.europlanner;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -15,7 +14,6 @@ import android.widget.ListView;
 public class TeamsActivity extends FragmentActivity {
 
     //Link for quick action menu: http://www.londatiga.net/it/how-to-create-quickaction-dialog-in-android/
-    private ArrayList<String> mTeams;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,18 +31,14 @@ public class TeamsActivity extends FragmentActivity {
             }
         });
 
-        mTeams = new ArrayList<String>(Team.TeamID.values().length);
-        for (Team.TeamID teamId : Team.TeamID.values()) {
-            mTeams.add(teamId.getTeam(this).teamName);
-        }
-
-        Collections.sort(mTeams);
+        String teams[] = this.getResources().getStringArray(R.array.team_names);
+        Arrays.sort(teams);
 
         ListView teamsListView = (ListView)findViewById(R.id.teamsListView);
 
         //temporary simple string adapter / custom to come
         ArrayAdapter<String> teamsAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_2, android.R.id.text1, mTeams);
+                android.R.layout.simple_list_item_2, android.R.id.text1, teams);
         teamsListView.setAdapter(teamsAdapter);
     }
 }

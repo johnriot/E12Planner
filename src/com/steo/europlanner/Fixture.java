@@ -2,35 +2,39 @@ package com.steo.europlanner;
 
 import java.util.Date;
 
-import com.steo.europlanner.Team.TeamID;
 
 public class Fixture {
 
-    private final TeamID mHome;
-    private final TeamID mAway;
-    private final String mLocation;
+    private final int mHomeTeamId;
+    private final int mAwayTeamId;
+    private final int mVenueId;
     private final Date mTime;
+    private String mScore;
 
-    public Fixture(TeamID home, TeamID away, String location, Date time) {
-        mHome = home;
-        mAway = away;
-        mLocation = location;
+    public Fixture(int homeTeamId, int awayTeamId, int venueId, Date time, String score) {
+        mHomeTeamId = homeTeamId;
+        mAwayTeamId = awayTeamId;
+        mVenueId = venueId;
         mTime = time;
     }
 
-    public TeamID getHomeTeam() {
-        return mHome;
+    public int getHomeTeamId() {
+        return mHomeTeamId;
     }
 
-    public TeamID getAwayTeam() {
-        return mAway;
+    public int getAwayTeamId() {
+        return mAwayTeamId;
     }
 
-    public String getLocation() {
-        return mLocation;
+    public int getLocationId() {
+        return mVenueId;
     }
 
     public Date getTime() {
         return mTime;
+    }
+
+    public String getScore() {
+        return mScore;
     }
 }

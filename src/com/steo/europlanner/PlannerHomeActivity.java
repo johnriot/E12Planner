@@ -19,9 +19,6 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
         setContentView(R.layout.main);
 
-        //LinearLayout mainLayout = (LinearLayout)findViewById(R.id.mainLayout);
-        //mainLayout.getBackground().setAlpha(100);
-
         LinearLayout factfileLayout =
                 (LinearLayout)findViewById(R.id.factfile_button);
         factfileLayout.setOnClickListener(this);
@@ -37,7 +34,6 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         LinearLayout gamesLayout =
                 (LinearLayout)findViewById(R.id.games_button);
         gamesLayout.setOnClickListener(this);
-
     }
 
     @Override

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tournamen_defn>
+    <group id="0">
+        <team id="0"/>
+        <team id="1"/>
+        <team id="2"/>
+        <team id="3"/>
+        
+        <fixture hometeam="0" awayteam="1" venue="0" date="June 8, 2012, 17:00" score="x:x"/>
+        <fixture hometeam="2" awayteam="3" venue="1" date="June 8, 2012, 19:45" score="x:x"/>
+        <fixture hometeam="1" awayteam="3" venue="1" date="June 12, 2012, 17:00" score="x:x"/>
+        <fixture hometeam="0" awayteam="2" venue="0" date="June 12, 2012, 19:45" score="x:x"/>
+        <fixture hometeam="3" awayteam="0" venue="1" date="June 16, 2012, 19:45" score="x:x"/>
+        <fixture hometeam="1" awayteam="2" venue="0" date="June 16, 2012, 19:45" score="x:x"/>
+    </group>
+     
+    <group id="1">
+        <team id="4"/>
+        <team id="5"/>
+        <team id="6"/>
+        <team id="7"/>
+    </group>
+    
+    <group id="2">
+        <team id="8"/>
+        <team id="9"/>
+        <team id="10"/>
+        <team id="11"/>
+    </group>
+    
+    <group id="3">
+        <team id="12"/>
+        <team id="13"/>
+        <team id="14"/>
+        <team id="15"/>
+    </group>
+</tournamen_defn>

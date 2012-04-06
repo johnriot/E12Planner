@@ -3,39 +3,68 @@
 
     <string name="app_name">Euro2012Planner</string>
 
+    <string-array name="groups">
+        <item>Group A</item>
+        <item>Group B</item>
+        <item>Group C</item>
+        <item>Group D</item>
+    </string-array>
+
+    <string-array name="venues">
+        <item >National Stadium Warsaw (POL)</item>
+        <item >Municipal Stadium Wroclaw (POL)</item>
+        <item >Metalist Stadium Kharkiv (UKR)</item>
+        <item >Arena Lviv (UKR)</item>
+        <item >Arena Gdansk (POL)</item>
+        <item >Municipal Stadium Poznan (POL)</item>
+        <item >Donbass Arena (UKR)</item>
+        <item >Olympic Stadium Kyiv (UKR)</item>
+    </string-array>
+
+    <string-array name="team_names">
+        <item>Poland</item>
+        <item>Greece</item>
+        <item>Russia</item>
+        <item>Czech Rep.</item>
+        <item>Netherlands</item>
+        <item>Denmark</item>
+        <item>Germany</item>
+        <item>Portugal</item>
+        <item>Spain</item>
+        <item>Italy</item>
+        <item>Rep. Ireland</item>
+        <item>Croatia</item>
+        <item>Ukraine</item>
+        <item>Sweden</item>
+        <item>France</item>
+        <item>England</item>
+    </string-array>
+    
+    <!-- Team drawables, do not translate! 
+         should obviously match team array -->
+    <string-array name="team_icon_resource_names">
+        <item>poland</item>
+        <item>greece</item>
+        <item>russia</item>
+        <item>czechrep</item>
+        <item>netherlands</item>
+        <item>denmark</item>
+        <item>germany</item>
+        <item>portugal</item>
+        <item>spain</item>
+        <item>italy</item>
+        <item>ireland</item>
+        <item>croatia</item>
+        <item>ukraine</item>
+        <item>sweden</item>
+        <item>france</item>
+        <item>england</item>
+    </string-array>
+
     <string name="menuGames">Games</string>
     <string name="menuVenues">Venues</string>
     <string name="menuTeams">Teams</string>
     <string name="menuFacts">Facts</string>
-
-    <string name="group_a_name">Group A</string>
-    <string name="group_b_name">Group B</string>
-    <string name="group_c_name">Group C</string>
-    <string name="group_d_name">Group D</string>
-
-    <!-- Group A names -->
-    <string name="polandName">Poland</string>
-    <string name="greeceName">Greece</string>
-    <string name="russiaName">Russia</string>
-    <string name="czechRepName">Czech Rep.</string>
-
-    <!-- Group B names -->
-    <string name="netherlandsName">Netherlands</string>
-    <string name="denmarkName">Denmark</string>
-    <string name="germanyName">Germany</string>
-    <string name="portugalName">Portugal</string>
-
-    <!-- Group C names -->
-    <string name="spainName">Spain</string>
-    <string name="italyName">Italy</string>
-    <string name="irelandName">Rep. Ireland</string>
-    <string name="croatiaName">Croatia</string>
-
-    <!-- Group D names -->
-    <string name="ukraineName">Ukraine</string>
-    <string name="swedenName">Sweden</string>
-    <string name="franceName">France</string>
-    <string name="englandName">England</string>
 
     <string name="homeButton">Home Button</string>
     
