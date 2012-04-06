@@ -65,6 +65,8 @@
     <string name="menuVenues">Venues</string>
     <string name="menuTeams">Teams</string>
     <string name="menuNews">News</string>
+    
+    <string name="loadingNews">Loading News...</string>
 
     <string name="homeButton">Home Button</string>
     

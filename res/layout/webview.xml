@@ -6,7 +6,7 @@
         android:layout_height="fill_parent"
         android:layout_gravity="right"
         android:background="@color/white"
-        android:id="@+id/homeLayout">
+        android:id="@+id/webViewHomeLayout">
 
         <LinearLayout 
             android:layout_width="fill_parent"
@@ -27,9 +27,9 @@
                 />
         </LinearLayout>
 
-        <ExpandableListView
+        <WebView
             android:layout_below="@id/toolbarLayout"
-            android:id="@+id/newsList"
+            android:id="@+id/webView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
@@ -37,7 +37,7 @@
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/adViewNews"
+            android:id="@+id/adViewWebView"
             appId="4028cba631d63df10131e1d3818b00cc"
             adSlot="15"
             testMode="true" />
