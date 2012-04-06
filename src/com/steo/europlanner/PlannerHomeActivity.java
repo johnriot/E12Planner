@@ -19,9 +19,9 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
         setContentView(R.layout.main);
 
-        LinearLayout factfileLayout =
-                (LinearLayout)findViewById(R.id.factfile_button);
-        factfileLayout.setOnClickListener(this);
+        LinearLayout newsLayout =
+                (LinearLayout)findViewById(R.id.news_button);
+        newsLayout.setOnClickListener(this);
 
         LinearLayout teamsLayout =
                 (LinearLayout)findViewById(R.id.teams_button);
@@ -52,7 +52,7 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
             break;
         case R.id.venues_button:
-        case R.id.factfile_button:
+        case R.id.news_button:
         default:
             Toast.makeText(this, "Not implemented yet.", Toast.LENGTH_LONG).show();
         }

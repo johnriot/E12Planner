@@ -37,7 +37,7 @@
                 android:gravity="center">
 
                     <include layout="@layout/teams_menu_item"/>
-                    <include layout="@layout/factfile_menu_item"/>
+                    <include layout="@layout/news_menu_item"/>
             </TableRow>
         </TableLayout>
 
