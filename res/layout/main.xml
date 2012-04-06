@@ -48,6 +48,7 @@
           android:layout_height="50dp"
           ads:adUnitId="a14f59150c4f295"
           ads:adSize="BANNER"
+          ads:testing="true"
           ads:testDevices="TEST_EMULATOR, 25E8256736752D31F281B90E217EFA79"
           ads:loadAdOnCreate="true"/>
     </RelativeLayout>

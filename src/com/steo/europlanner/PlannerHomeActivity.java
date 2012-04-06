@@ -1,8 +1,11 @@
 package com.steo.europlanner;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -34,6 +37,11 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         LinearLayout gamesLayout =
                 (LinearLayout)findViewById(R.id.games_button);
         gamesLayout.setOnClickListener(this);
+
+        final TelephonyManager tm =(TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
+
+        String deviceid = tm.getDeviceId();
+        Log.e("STEO", "Device ID = " + deviceid);
     }
 
     @Override
