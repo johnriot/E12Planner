@@ -185,7 +185,12 @@ public class NewsActivity extends SherlockActivity {
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
 
         if(item.getItemId() == android.R.id.home) {
-            finish();
+
+            Intent homeIntent = new Intent(this, PlannerHomeActivity.class);
+            homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(homeIntent);
+
+            return true;
         }
         else if(item == mRefreshItem) {
 
@@ -199,5 +204,4 @@ public class NewsActivity extends SherlockActivity {
 
         return super.onMenuItemSelected(featureId, item);
     }
-
 }
