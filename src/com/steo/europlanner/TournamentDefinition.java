@@ -183,7 +183,7 @@ public class TournamentDefinition {
     public ArrayList<Group> getGroups() {
         return mGroups;
     }
-    
+
     public ArrayList<FeedDefn> getFeeds() {
         return mFeeds;
     }
