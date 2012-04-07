@@ -1,16 +1,20 @@
 package com.steo.europlanner;
 
+import java.util.ArrayList;
+
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.Window;
 
 import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.ActionBar.Tab;
+import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.inmobi.androidsdk.IMAdRequest;
@@ -18,7 +22,7 @@ import com.inmobi.androidsdk.IMAdView;
 
 public class GamesActivity extends SherlockFragmentActivity {
 
-    GroupFragmentAdapter mFragmentAdapter;
+    TabsAdapter mTabAdapter;
 
     //TODO: Check out this indicator: http://www.zylinc.com/blog-reader/items/viewpaager-page-indicator.html
     ViewPager mPager;
@@ -49,28 +53,85 @@ public class GamesActivity extends SherlockFragmentActivity {
 
         mTournamentDefn = new TournamentDefinition(this);
 
-        mFragmentAdapter = new GroupFragmentAdapter(getSupportFragmentManager());
-
         mPager = (ViewPager)findViewById(R.id.groupPager);
-        mPager.setAdapter(mFragmentAdapter);
+        getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
+        mTabAdapter = new TabsAdapter(this, mPager);
+        String groupNames[] = getResources().getStringArray(R.array.groups);
+
+        ArrayList<Group> groups = mTournamentDefn.getGroups();
+        for(Group group : groups) {
+
+            mTabAdapter.addTab(bar.newTab().setText(groupNames[group.getGroupId()]),
+                    new GroupFragment(group));
+        }
+
+        mPager.setAdapter(mTabAdapter);
         mPager.setCurrentItem(0);
     }
 
-    public class GroupFragmentAdapter extends FragmentPagerAdapter {
-        public GroupFragmentAdapter(FragmentManager fm) {
-            super(fm);
+
+    public static class TabsAdapter extends FragmentPagerAdapter
+        implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
+
+        private final Context mContext;
+        private final ActionBar mActionBar;
+        private final ViewPager mViewPager;
+        private final ArrayList<GroupFragment> mFragments = new ArrayList<GroupFragment>();
+
+        public TabsAdapter(SherlockFragmentActivity activity, ViewPager pager) {
+            super(activity.getSupportFragmentManager());
+            mContext = activity;
+            mActionBar = activity.getSupportActionBar();
+            mViewPager = pager;
+            mViewPager.setAdapter(this);
+            mViewPager.setOnPageChangeListener(this);
+        }
+
+        public void addTab(ActionBar.Tab tab, GroupFragment fragment) {
+
+            mFragments.add(fragment);
+            tab.setTabListener(this);
+            mActionBar.addTab(tab);
+            notifyDataSetChanged();
         }
 
         @Override
         public int getCount() {
-            return mTournamentDefn.getGroups().size();
+            return mFragments.size();
         }
 
         @Override
-        public Fragment getItem(int position) {
-            return new GroupFragment(mTournamentDefn.getGroups().get(position));
+        public SherlockFragment getItem(int position) {
+            return mFragments.get(position);
+            //TabInfo info = mTabs.get(position);
+            //return (SherlockFragment)Fragment.instantiate(mContext, info.clss.getName(), info.args);
         }
+
+
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        }
+
+
+        @Override
+        public void onPageSelected(int position) {
+            mActionBar.setSelectedNavigationItem(position);
+        }
+
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+        }
+
+
+        @Override
+        public void onTabSelected(Tab tab, FragmentTransaction ft) {
+            mViewPager.setCurrentItem(tab.getPosition());
+        }
+
+        @Override public void onTabUnselected(Tab tab, FragmentTransaction ft) {}
+        @Override public void onTabReselected(Tab tab, FragmentTransaction ft) {}
     }
 
     @Override

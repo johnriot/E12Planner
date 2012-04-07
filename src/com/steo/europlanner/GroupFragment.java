@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,9 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-public class GroupFragment extends Fragment {
+import com.actionbarsherlock.app.SherlockFragment;
+
+public class GroupFragment extends SherlockFragment {
 
     private final Group mGroup;
 
@@ -28,10 +29,6 @@ public class GroupFragment extends Fragment {
         Resources res = this.getResources();
 
         View fragView = inflater.inflate(R.layout.group_fragment, container, false);
-
-        TextView groupNameView = (TextView)fragView.findViewById(R.id.groupName);
-        String groupName = res.getStringArray(R.array.groups)[mGroup.getGroupId()];
-        groupNameView.setText(groupName);
 
         String packageName = getClass().getPackage().getName();
 
