@@ -17,25 +17,24 @@ import com.steo.rss.RSSItem;
 public class FeedsAdapter extends BaseExpandableListAdapter {
 
     private final Context mContext;
-    private final ArrayList<FeedWrapper> mFeeds =
-            new ArrayList<FeedsAdapter.FeedWrapper>();
+    private final ArrayList<FeedDefn> mFeeds = new ArrayList<FeedDefn>();
 
     public FeedsAdapter(Context context) {
         mContext = context;
     }
 
-    public ArrayList<FeedWrapper> getFeeds() {
+    public ArrayList<FeedDefn> getFeeds() {
         return mFeeds;
     }
 
-    public void addFeed(FeedWrapper feed) {
+    public void addFeed(FeedDefn feed) {
         mFeeds.add(feed);
         notifyDataSetChanged();
     }
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return mFeeds.get(groupPosition).feed.getItems().get(childPosition);
+        return mFeeds.get(groupPosition).rssFeed.getItems().get(childPosition);
     }
 
     @Override
@@ -48,7 +47,7 @@ public class FeedsAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild,
             View convertView, ViewGroup parent) {
 
-        RSSItem item = mFeeds.get(groupPosition).feed.getItems().get(childPosition);
+        RSSItem item = mFeeds.get(groupPosition).rssFeed.getItems().get(childPosition);
 
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
@@ -63,7 +62,7 @@ public class FeedsAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return mFeeds.get(groupPosition).feed.getItems().size();
+        return mFeeds.get(groupPosition).rssFeed.getItems().size();
     }
 
     @Override
@@ -86,7 +85,7 @@ public class FeedsAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView,
             ViewGroup parent) {
 
-        FeedWrapper feed = mFeeds.get(groupPosition);
+        FeedDefn feed = mFeeds.get(groupPosition);
 
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(mContext);
@@ -97,7 +96,7 @@ public class FeedsAdapter extends BaseExpandableListAdapter {
         iconView.setImageResource(feed.iconId);
 
         TextView tv = (TextView) convertView.findViewById(R.id.feedGroupTV);
-        tv.setText(feed.name);
+        tv.setText(feed.description);
 
         return convertView;
     }
@@ -112,16 +111,22 @@ public class FeedsAdapter extends BaseExpandableListAdapter {
         return true;
     }
 
-    public static class FeedWrapper {
-        public String name;
-        public RSSFeed feed;
-        public int iconId;
+    public static final class FeedDefn {
 
-        public FeedWrapper(String name, RSSFeed feed, int iconResId) {
-            this.name = name;
-            this.feed = feed;
-            this.iconId = iconResId;
+        public String url;
+        public String description;
+        public boolean loaded;
+        public int iconId;
+        public RSSFeed rssFeed;
+
+        public FeedDefn(String url, String description, int iconId) {
+            this.url = url;
+            this.description = description;
+            this.iconId = iconId;
         }
     }
 
+    public void clearFeeds() {
+        mFeeds.clear();
+    }
 }
