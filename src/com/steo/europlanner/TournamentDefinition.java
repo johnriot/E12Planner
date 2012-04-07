@@ -26,6 +26,8 @@ import org.xml.sax.XMLReader;
 import android.content.Context;
 import android.content.ContextWrapper;
 
+import com.steo.europlanner.FeedsAdapter.FeedDefn;
+
 public class TournamentDefinition {
 
     private static final String mDefinitionFileName = "tournamentdefn.xml";
@@ -34,6 +36,7 @@ public class TournamentDefinition {
 
     private final Context mContext;
     private final ArrayList<Group> mGroups = new ArrayList<Group>();
+    private final ArrayList<FeedDefn> mFeeds = new ArrayList<FeedDefn>();
 
     public TournamentDefinition(Context context) {
         mContext = context;
@@ -94,8 +97,30 @@ public class TournamentDefinition {
                 private static final String DATE_ID = "date";
                 private static final String SCORE_ID = "score";
 
+                private static final String FEED = "feed";
+                private static final String FEED_DESC = "description";
+                private static final String FEED_URL = "url";
+                private static final String FEED_ICON = "iconid";
+
                 @Override public void startElement(String uri, String localName,
                         String qName, Attributes atts) throws SAXException {
+
+                    if(localName.equals(FEED)) {
+                        String url = atts.getValue(FEED_URL);
+                        String desc = atts.getValue(FEED_DESC);
+                        int icon = Integer.parseInt(atts.getValue(FEED_ICON));
+
+                        int iconid = R.drawable.rss_icon;
+                        switch(icon) {
+                        case 0:
+                            iconid = R.drawable.uefa;
+                            break;
+                        case 1:
+                            iconid = R.drawable.bbcicon;
+                        }
+
+                        mFeeds.add(new FeedDefn(url, desc, iconid));
+                    }
 
                     if(localName.equals(GROUP)) {
                         if(mCurrentGroup != null) {
@@ -157,5 +182,9 @@ public class TournamentDefinition {
 
     public ArrayList<Group> getGroups() {
         return mGroups;
+    }
+    
+    public ArrayList<FeedDefn> getFeeds() {
+        return mFeeds;
     }
 }

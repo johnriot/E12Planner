@@ -26,29 +26,17 @@ import com.steo.rss.RSSReaderException;
 
 public class NewsActivity extends SherlockActivity {
 
-    private static final String UEFA_RSS =
-            "http://www.uefa.com/rssfeed/uefaeuro2012/rss.xml";
-    private static final String UEFA_RSS_DESC = "UEFA Official Feed";
-    private static final int UEFA_ICON_RESID = R.drawable.uefa;
-
-    private static final String BBC_RSS =
-            "http://feeds.bbci.co.uk/sport/0/football/rss.xml";
-    private static final String BBC_RSS_DESC = "BBC Official Feed";
-    private static final int BBC_ICON_RESID = R.drawable.bbcicon;
-
-    private static final FeedDefn[] mFeeds = {
-            new FeedDefn(UEFA_RSS, UEFA_RSS_DESC, UEFA_ICON_RESID),
-            new FeedDefn(BBC_RSS, BBC_RSS_DESC, BBC_ICON_RESID)
-    };
-
     private MenuItem mRefreshItem;
     private FeedsAdapter mAdapter;
     private ProgressDialog mProgressDialog;
+    private TournamentDefinition mDefn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        mDefn = new TournamentDefinition(this);
 
         setContentView(R.layout.news_layout);
 
@@ -137,7 +125,7 @@ public class NewsActivity extends SherlockActivity {
     }
 
     private boolean allFeedsLoaded() {
-        for(FeedDefn feed : mFeeds) {
+        for(FeedDefn feed : mDefn.getFeeds()) {
             if(!feed.loaded) return false;
         }
 
@@ -158,7 +146,7 @@ public class NewsActivity extends SherlockActivity {
             }
         };
 
-        for(FeedDefn feed : mFeeds) {
+        for(FeedDefn feed : mDefn.getFeeds()) {
             if(!feed.loaded) {
                 AsyncReader reader = new AsyncReader(readerCallback, feed);
                 reader.execute();
@@ -198,7 +186,7 @@ public class NewsActivity extends SherlockActivity {
             mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
             mAdapter.clearFeeds();
 
-            for(FeedDefn feed : mFeeds) feed.loaded = false;
+            for(FeedDefn feed : mDefn.getFeeds()) feed.loaded = false;
             loadFeeds();
         }
 
