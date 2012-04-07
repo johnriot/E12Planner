@@ -1,0 +1,4 @@
+Needs two libraries:
+
+git clone https://github.com/vladexologija/GroupedTextView.git
+git clone https://github.com/JakeWharton/ActionBarSherlock.git

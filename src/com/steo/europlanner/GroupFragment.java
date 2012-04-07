@@ -8,11 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TableLayout;
-import android.widget.TableRow;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.vladexologija.widget.GroupedTextView;
 
 public class GroupFragment extends SherlockFragment {
 
@@ -55,23 +55,23 @@ public class GroupFragment extends SherlockFragment {
             teamNameView.setText(teamNames[team.getTeamId()]);
         }
 
-        TableLayout fixturesTable = (TableLayout)fragView.findViewById(
-                R.id.fixturesTable);
+        LinearLayout groupFragmentLayout = (LinearLayout)fragView.findViewById(
+                R.id.groupFragmentLayout);
+
+        GroupedTextView gtv = new GroupedTextView(fragView.getContext());
+        gtv.setPadding(20, 20, 20, 0);
 
         ArrayList<Fixture> fixtures = mGroup.getFixtures();
         for(Fixture fixture : fixtures) {
 
-            TableRow fixtureRow = (TableRow) inflater.inflate(
-                    R.layout.fixture_row, fixturesTable, false);
+            TextView tv = new TextView(fragView.getContext());
+            tv.setText("SteoTime");
 
-            TextView homeTeam = (TextView)fixtureRow.findViewById(R.id.homeTeam);
-            homeTeam.setText(teamNames[fixture.getHomeTeamId()]);
-
-            TextView awayTeam = (TextView)fixtureRow.findViewById(R.id.awayTeam);
-            awayTeam.setText(teamNames[fixture.getAwayTeamId()]);
-
-            fixturesTable.addView(fixtureRow);
+            gtv.addPlainTextView("Steo");
+            //(tv);
         }
+
+        groupFragmentLayout.addView(gtv);
 
         return fragView;
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/backgroundLayout"
+    android:id="@+id/groupFragmentLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -105,14 +105,5 @@
         android:layout_height="1dp"
         android:background="@drawable/spacer_gradient"
         />
-
-    <TableLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/fixturesTable"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:shrinkColumns="*"
-        android:stretchColumns="*">
-    </TableLayout>
 
 </LinearLayout>
