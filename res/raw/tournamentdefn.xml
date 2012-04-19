@@ -23,6 +23,7 @@
         <fixture hometeam="0" awayteam="2" venue="0" date="June 12, 2012, 19:45" score="x:x"/>
         <fixture hometeam="3" awayteam="0" venue="1" date="June 16, 2012, 19:45" score="x:x"/>
         <fixture hometeam="1" awayteam="2" venue="0" date="June 16, 2012, 19:45" score="x:x"/>
+     
     </group>
      
     <group id="1">

@@ -28,6 +28,8 @@ import android.content.ContextWrapper;
 
 import com.steo.europlanner.FeedsAdapter.FeedDefn;
 
+import android.util.Log;
+
 public class TournamentDefinition {
 
     private static final String mDefinitionFileName = "tournamentdefn.xml";
@@ -143,8 +145,15 @@ public class TournamentDefinition {
                         String date = atts.getValue(DATE_ID);
                         String score = atts.getValue(SCORE_ID);
 
-                        Fixture fixture = new Fixture(homeTeamId, awayTeamId,
-                                venueId, new Date(), score);
+                        
+                        Team homeTeam = mCurrentGroup.getTeamById(homeTeamId);
+                        Team awayTeam = mCurrentGroup.getTeamById(awayTeamId);
+                        Assert.assertNotNull(homeTeam);
+                        Assert.assertNotNull(awayTeam);
+                        
+                        Fixture fixture = new Fixture(homeTeam, awayTeam,
+                        								venueId, new Date(), score);
+                        
                         mCurrentGroup.addFixture(fixture);
                     }
                 }
@@ -168,6 +177,8 @@ public class TournamentDefinition {
             });
 
             reader.parse(new InputSource(new FileInputStream(mDefnFile)));
+            for(Group group : mGroups)
+            	group.orderTeams();
 
         } catch (ParserConfigurationException ex) {
             Assert.fail("SAX Failure: " + ex.getMessage());

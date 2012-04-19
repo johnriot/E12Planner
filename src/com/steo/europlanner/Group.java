@@ -8,6 +8,7 @@ public class Group {
 
     private final ArrayList<Team> mTeams = new ArrayList<Team>();
     private final ArrayList<Fixture> mFixtures = new ArrayList<Fixture>();
+    private GroupOrdering mOrderer = new GroupOrdering();
 
     public Group(int groupId) {
         mGroupId = groupId;
@@ -31,5 +32,17 @@ public class Group {
 
     public void addFixture(Fixture fixture) {
         mFixtures.add(fixture);
+    }
+    
+    public void orderTeams() {				
+		mOrderer.order(mTeams, mFixtures);
+	}
+    
+    public Team getTeamById(int id) {
+    	for(Team team : mTeams) {
+        	if(team.getTeamId() == id)
+        		return team;
+        }
+    	return null;
     }
 }

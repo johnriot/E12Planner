@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.vladexologija.widget.GroupedTextView;
+//import com.vladexologija.widget.GroupedTextView;
 
 public class GroupFragment extends SherlockFragment {
 
@@ -58,8 +58,8 @@ public class GroupFragment extends SherlockFragment {
         LinearLayout groupFragmentLayout = (LinearLayout)fragView.findViewById(
                 R.id.groupFragmentLayout);
 
-        GroupedTextView gtv = new GroupedTextView(fragView.getContext());
-        gtv.setPadding(20, 20, 20, 0);
+        //GroupedTextView gtv = new GroupedTextView(fragView.getContext());
+        //gtv.setPadding(20, 20, 20, 0);
 
         ArrayList<Fixture> fixtures = mGroup.getFixtures();
         for(Fixture fixture : fixtures) {
@@ -67,11 +67,11 @@ public class GroupFragment extends SherlockFragment {
             TextView tv = new TextView(fragView.getContext());
             tv.setText("SteoTime");
 
-            gtv.addPlainTextView("Steo");
+            //gtv.addPlainTextView("Steo");
             //(tv);
         }
 
-        groupFragmentLayout.addView(gtv);
+        //groupFragmentLayout.addView(gtv);
 
         return fragView;
     }

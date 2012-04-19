@@ -1,29 +1,39 @@
 package com.steo.europlanner;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
 public class Fixture {
 
-    private final int mHomeTeamId;
-    private final int mAwayTeamId;
+	private final Team mHomeTeam;
+	private final Team mAwayTeam;
     private final int mVenueId;
     private final Date mTime;
-    private String mScore;
+    private Score mScore;
 
-    public Fixture(int homeTeamId, int awayTeamId, int venueId, Date time, String score) {
-        mHomeTeamId = homeTeamId;
-        mAwayTeamId = awayTeamId;
+    public Fixture(Team homeTeam, Team awayTeam, int venueId, Date time, String score) {
+    	mHomeTeam = homeTeam;
+    	mAwayTeam = awayTeam;
         mVenueId = venueId;
         mTime = time;
+        mScore = new Score(score);
     }
 
+    public Team getHomeTeam() {
+        return mHomeTeam;
+    }
+
+    public Team getAwayTeam() {
+        return mAwayTeam;
+    }
+    
     public int getHomeTeamId() {
-        return mHomeTeamId;
+        return mHomeTeam.getTeamId();
     }
 
     public int getAwayTeamId() {
-        return mAwayTeamId;
+        return mAwayTeam.getTeamId();
     }
 
     public int getLocationId() {
@@ -34,7 +44,25 @@ public class Fixture {
         return mTime;
     }
 
-    public String getScore() {
+    // TODO: Change name or return
+    public Score getScore() {
         return mScore;
     }
+    
+    // Returns true if the fixture involves only teams from the teams ArrayList argument
+ 	public boolean involvesTeams(ArrayList<Team> teams) {
+		boolean homeTeamFound = false;
+		boolean awayTeamFound = false;
+		for(Team team : teams) {
+			if(!homeTeamFound && mHomeTeam.getTeamId() == team.getTeamId()) {
+				homeTeamFound = true;
+				continue;
+			}
+			if(!awayTeamFound && mAwayTeam.getTeamId() == team.getTeamId()) {
+				awayTeamFound = true;
+				continue;
+			}	
+		}
+ 		return homeTeamFound && awayTeamFound;
+ 	}
 }
