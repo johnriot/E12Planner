@@ -28,8 +28,6 @@ import android.content.ContextWrapper;
 
 import com.steo.europlanner.FeedsAdapter.FeedDefn;
 
-import android.util.Log;
-
 public class TournamentDefinition {
 
     private static final String mDefinitionFileName = "tournamentdefn.xml";

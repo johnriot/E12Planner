@@ -28,16 +28,21 @@ public class Team {
 		mComparisonValue += value;
 	}
 	
-	public void flagUnsorted() {
+	public void setUnsorted() {
 		mSorted = false;
 	}
 	
-	public void flagSorted() {
+	public void setSorted() {
 		mSorted = true;
 	}
 	
 	public boolean isSorted() {
 		return mSorted;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return mTeamId == ((Team)obj).mTeamId;
 	}
 }
 

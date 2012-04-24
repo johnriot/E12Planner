@@ -44,25 +44,12 @@ public class Fixture {
         return mTime;
     }
 
-    // TODO: Change name or return
-    public Score getScore() {
-        return mScore;
-    }
+	public Score getScore() {
+		return mScore;
+	}
     
-    // Returns true if the fixture involves only teams from the teams ArrayList argument
- 	public boolean involvesTeams(ArrayList<Team> teams) {
-		boolean homeTeamFound = false;
-		boolean awayTeamFound = false;
-		for(Team team : teams) {
-			if(!homeTeamFound && mHomeTeam.getTeamId() == team.getTeamId()) {
-				homeTeamFound = true;
-				continue;
-			}
-			if(!awayTeamFound && mAwayTeam.getTeamId() == team.getTeamId()) {
-				awayTeamFound = true;
-				continue;
-			}	
-		}
- 		return homeTeamFound && awayTeamFound;
- 	}
+	// Returns true if the fixture involves only teams from the teams ArrayList argument
+	public boolean involvesTeams(ArrayList<Team> teams) {
+		return teams.contains(mHomeTeam) && teams.contains(mAwayTeam);
+	}
 }

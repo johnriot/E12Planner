@@ -1,77 +1,81 @@
 package com.steo.europlanner;
 
-
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 public class GroupOrdering {
-	private int mTieBreaker = 0;
-	private static final int NUM_TIEBREAKERS = 4;
-	public void order(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
-		// Flag all teams unsorted
-		flagTeamsUnsorted(teams);
-		// First do a straight order by points
+	
+	private static int mTieBreaker;
+	private enum TieBreakers {
+		POINTS_DECIDE,
+		GOAL_DIFF_DECIDES,
+		GOALS_SCORED_DECIDES,
+		GOAL_DIFF_ALL_DECIDES,
+		GOALS_SCORED_ALL_DECIDES,
+		NO_MORE_TIEBREAKERS
+	}
+	
+	public static void order(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+		setTeamsUnsorted(teams);
 		orderByPoints(teams, fixtures);
+		mTieBreaker = TieBreakers.POINTS_DECIDE.ordinal();
 		
-		while(mTieBreaker <= NUM_TIEBREAKERS + 1 && !areAllTeamsSorted(teams)) {
-			orderTies(teams, fixtures);
-			Collections.sort(teams, new TeamsComparator());
-			flagSortedTeams(teams);
+		while(!areAllTeamsSorted(teams)) {
+			try {
+				orderTies(teams, fixtures);
+				Collections.sort(teams, new TeamsComparator());
+				setTeamsSorted(teams);
+				}
+			catch(CantOrderTeamsException e)
+				{
+				// TODO: Should take some action here if teams cannot be sorted on info
+				// available - either sort group based on XML input or prompt user
+				return;
+				}
 			}
 	}
 	
-	/**
-	 * 
-	 * 
-	 */
-	private void orderTies(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
-		// Find ties then try to separate
-		for(int t = 0; t < 4; ++t) {
-			ArrayList<Team> ties = new ArrayList<Team>(teams.size());
-			ties = findTies(t, teams);
+	private static void orderTies(ArrayList<Team> teams, ArrayList<Fixture> fixtures)
+						throws CantOrderTeamsException {
+		ArrayList<Team> ties = new ArrayList<Team>(teams.size());
+		for(int t = 0; t < teams.size(); ++t) {
+			ties = findTiesFromSubset(t, teams);
 			if(ties == null)
 				continue;
 
 			clearComparisonValues(ties);
-			switch (mTieBreaker++) {
-			case 0:
+			switch (TieBreakers.values()[mTieBreaker++]) {
+			case POINTS_DECIDE:
 				orderTiesByPoints(ties, fixtures);
 				break;
-			case 1:
+			case GOAL_DIFF_DECIDES:
 				orderTiesByGoalDifference(ties, fixtures);
 				break;
-			case 2:
+			case GOALS_SCORED_DECIDES:
 				orderTiesByGoalsScored(ties, fixtures);
 				break;
-			case 3:
+			case GOAL_DIFF_ALL_DECIDES:
 				orderTiesByGoalDifferenceAll(ties, fixtures);
 				break;
-			case 4:
+			case GOALS_SCORED_ALL_DECIDES:
 				orderTiesByGoalsScoredAll(ties, fixtures);
 				break;
-			default:
-				System.out.println("Can't break the tie.");
-				break;
+			case NO_MORE_TIEBREAKERS:
+				throw new CantOrderTeamsException();
 			}
+			
 			// Replace tied teams with (possibly) sorted teams 
-			for(int ii = 0; ii < ties.size(); ++ii) {
-				teams.set(ii + t, ties.get(ii));
-			}
-			t += ties.size() - 1;
+			t = replaceTiedWithSortedTeams(t, teams, ties);
 		}
 	}
 
 	/**
 	Orders teams in the group by points
 	*/
-	private void orderByPoints(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
-		// If we have 4 teams then we order between all teams on points
-		if(teams.size() == 4) {
-			// Use all fixtures
-			for(Fixture fixture: fixtures) {
-				// Count all the points for each team based on the score
-				updatePoints(fixture);
-			}
+	private static void orderByPoints(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+		for(Fixture fixture: fixtures) {
+			updatePoints(fixture);
 		}
 	}
 	
@@ -79,7 +83,7 @@ public class GroupOrdering {
 	Orders tying teams based on points in games played against each other
 	a) higher number of points obtained in the matches among the teams in question;
 	*/
-	private void orderTiesByPoints(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+	private static void orderTiesByPoints(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
 		for(Fixture fixture: fixtures) {
 			// Only consider games where the tying teams are present
 			if(fixture.involvesTeams(teams)) {
@@ -93,8 +97,9 @@ public class GroupOrdering {
 	 * b) superior goal difference in the matches among the teams in question
 	 * (if more than two teams finish equal on points);
 	 */
-	private void orderTiesByGoalDifference(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
-		if(teams.size() > 2) {
+	private static void orderTiesByGoalDifference(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+		int minTeams = 2; // Only order then more than two teams tied
+		if(teams.size() > minTeams) {
 			for(Fixture fixture: fixtures) {
 				// Only consider games where the tying teams are present
 				if(fixture.involvesTeams(teams)) {
@@ -109,8 +114,9 @@ public class GroupOrdering {
 	 * c) higher number of goals scored in the matches among the teams in
 	 * question (if more than two teams finish equal on points);
 	 */
-	private void orderTiesByGoalsScored(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
-		if(teams.size() > 2) {
+	private static void orderTiesByGoalsScored(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+		int minTeams = 2; // Only order then more than two teams tied
+		if(teams.size() > minTeams) {
 			for(Fixture fixture : fixtures) {
 				// Only consider games where the tying teams are present
 				if(fixture.involvesTeams(teams)) {
@@ -123,9 +129,8 @@ public class GroupOrdering {
 	/**
 	 * Separate tying teams by goal difference in fixtures among those teams
 	 * d) superior goal difference in all the group matches;
-	 * 
 	 */
-	private void orderTiesByGoalDifferenceAll(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+	private static void orderTiesByGoalDifferenceAll(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
 		for(Fixture fixture : fixtures) {
 			updateGoalDifference(fixture);
 		}
@@ -136,13 +141,13 @@ public class GroupOrdering {
 	 * c) higher number of goals scored in the matches among the teams in
 	 * question (if more than two teams finish equal on points);
 	 */
-	private void orderTiesByGoalsScoredAll(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+	private static void orderTiesByGoalsScoredAll(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
 		for(Fixture fixture: fixtures) {
 			updateGoalsFor(fixture);
 		}
 	}
 	
-	private void updatePoints(Fixture fixture) {
+	private static void updatePoints(Fixture fixture) {
 		if(!fixture.getScore().hasGameBeenPlayed()) {
 			return;
 		}
@@ -151,10 +156,12 @@ public class GroupOrdering {
 		Team awayTeam = fixture.getAwayTeam();
 		int homeScore = fixture.getScore().getHomeScore();
 		int awayScore = fixture.getScore().getAwayScore();
-		if(homeScore > awayScore)
+		if(homeScore > awayScore) {
 			updatePointsWin(homeTeam);
-		else if(homeScore < awayScore)
+		}
+		else if(homeScore < awayScore) {
 			updatePointsWin(awayTeam);
+		}
 		else {
 			updatePointsTie(homeTeam);
 			updatePointsTie(awayTeam);
@@ -163,16 +170,18 @@ public class GroupOrdering {
 	
 	
 	
-	private void updatePointsWin(Team winTeam) {
-		winTeam.addComparisonValue(3);
+	private static void updatePointsWin(Team winTeam) {
+		int pointsForWin = 3;
+		winTeam.addComparisonValue(pointsForWin);
 	}
 	
-	private void updatePointsTie(Team tieTeam) {
-		tieTeam.addComparisonValue(1);
+	private static void updatePointsTie(Team tieTeam) {
+		int pointsForTie = 1;
+		tieTeam.addComparisonValue(pointsForTie);
 	}
 	
 	// Count goals for as the comparison value
-	private void updateGoalsFor(Fixture fixture) {
+	private static void updateGoalsFor(Fixture fixture) {
 		if(!fixture.getScore().hasGameBeenPlayed()) {
 			return;
 		}
@@ -187,7 +196,7 @@ public class GroupOrdering {
 	}
 	
 	// Count goals for as the comparison value
-	private void updateGoalDifference(Fixture fixture) {
+	private static void updateGoalDifference(Fixture fixture) {
 		if(!fixture.getScore().hasGameBeenPlayed()) {
 			return;
 		}
@@ -202,26 +211,42 @@ public class GroupOrdering {
 	}
 	
 	// Finds tying teams from a given index (returns null if none)
-	private ArrayList<Team> findTies(int startIndx, ArrayList<Team> teams) {
-		if(teams.get(startIndx).isSorted())
+	private static ArrayList<Team> findTiesFromSubset(int startIndx, ArrayList<Team> teams) {
+		if(teams.get(startIndx).isSorted()) {
 			return null;
-		
-		ArrayList<Team> teamArray = new ArrayList<Team>();
-		teamArray.add(teams.get(startIndx));
-		for(int ii = startIndx + 1; ii < 4; ++ii) {
-			if(!teams.get(ii).isSorted() && teams.get(ii).getComparisonValue() == teams.get(ii).getComparisonValue())
-				teamArray.add(teams.get(ii));
 		}
-		if(teamArray.size() == 1)
-			return null;
 		
-		return teamArray;
+		ArrayList<Team> tiedTeams = new ArrayList<Team>();
+		tiedTeams.add(teams.get(startIndx));
+		for(int ii = startIndx + 1; ii < teams.size(); ++ii) {
+			if(!teams.get(ii).isSorted()) {
+				tiedTeams.add(teams.get(ii));
+			}
+		}
+		if(tiedTeams.size() == 1) {
+			return null;
+		}
+			
+		return tiedTeams;
+	}
+	
+	/*
+	 * @return The next index from which to try and sort the ArrayList teams
+	 * Function will replace teams with ties, whether or not we have managed to sort
+	 * ties on this sorting step - worst case everything remains the same.
+	 */
+	static private int replaceTiedWithSortedTeams(int startIndx, ArrayList<Team> teams,
+															ArrayList<Team> ties) {
+		for(int ii = 0; ii < ties.size(); ++ii) {
+			teams.set(ii + startIndx, ties.get(ii));
+		}
+		return startIndx + ties.size() - 1;
 	}
 	
 	/**
 	 * After we've done a sorting step need to check if teams are indeed sorted
 	 */
-	private void flagSortedTeams(ArrayList<Team> teams) {
+	private static void setTeamsSorted(ArrayList<Team> teams) {
 		for(int t = 0; t < teams.size(); ++t) {
 			// If the team is not level with teams either side of it, then it's sorted
 			Team tBefore = t > 0 ? teams.get(t - 1) : null;
@@ -230,7 +255,7 @@ public class GroupOrdering {
 			
 			if( (tBefore == null || tBefore.getComparisonValue() > team.getComparisonValue())
 				&& (tAfter == null || tAfter.getComparisonValue() < team.getComparisonValue())) {
-				team.flagSorted();
+				team.setSorted();
 			}
 		}
 	}
@@ -238,16 +263,16 @@ public class GroupOrdering {
 	/**
 	 * Flags all teams as unsorted
 	 */
-	private void flagTeamsUnsorted(ArrayList<Team> teams) {
+	private static void setTeamsUnsorted(ArrayList<Team> teams) {
 		for(Team t : teams) {
-			t.flagUnsorted();	
+			t.setUnsorted();	
 		}
 	}
 	
 	/**
 	 * Returns true if all the teams are sorted
 	 */
-	private boolean areAllTeamsSorted(ArrayList<Team> teams) {
+	private static boolean areAllTeamsSorted(ArrayList<Team> teams) {
 		for(Team t: teams) {
 			if(!t.isSorted())
 				return false;
@@ -256,9 +281,14 @@ public class GroupOrdering {
 	}
 	
 	// Sets comparison values to zero for the teams
-	private void clearComparisonValues(ArrayList<Team> teams) {
-		for(Team t : teams)
+	private static void clearComparisonValues(ArrayList<Team> teams) {
+		for(Team t : teams) {
 			t.setComparsonValue(0);
+		}
 	}
+}
+
+@SuppressWarnings("serial")
+class CantOrderTeamsException extends Exception {
 }
 

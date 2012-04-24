@@ -34,15 +34,15 @@ public class Group {
         mFixtures.add(fixture);
     }
     
-    public void orderTeams() {				
+	public void orderTeams() {				
 		mOrderer.order(mTeams, mFixtures);
 	}
     
-    public Team getTeamById(int id) {
-    	for(Team team : mTeams) {
-        	if(team.getTeamId() == id)
-        		return team;
-        }
-    	return null;
-    }
+	public Team getTeamById(int id) {
+		for(Team team : mTeams) {
+			if(team.getTeamId() == id)
+				return team;
+		}
+		return null;
+	}
 }
