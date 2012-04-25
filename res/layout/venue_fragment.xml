@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/venueFragmentLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+            android:id="@+id/venue0Venue"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/spacer_gradient"
+        />
+
+</LinearLayout>
