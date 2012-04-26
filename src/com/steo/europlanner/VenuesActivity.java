@@ -31,7 +31,7 @@ public class VenuesActivity extends SherlockFragmentActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.games_layout); // TODO - copy games layout into new file venues_layout
+        setContentView(R.layout.venues_layout);
 
         BitmapDrawable bg = (BitmapDrawable)getResources().getDrawable(R.drawable.toolbar_bg);
         bg.setTileModeXY(TileMode.REPEAT, TileMode.REPEAT);
@@ -43,7 +43,7 @@ public class VenuesActivity extends SherlockFragmentActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewGames); // TODO - change to Venues
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewVenues);
         IMAdRequest adRequest = new IMAdRequest();
         adRequest.setTestMode(true);
         adView.setIMAdRequest(adRequest);
@@ -51,7 +51,7 @@ public class VenuesActivity extends SherlockFragmentActivity {
 
         mTournamentDefn = new TournamentDefinition(this);
 
-        mPager = (ViewPager)findViewById(R.id.groupPager); // TODO - change to venuePager
+        mPager = (ViewPager)findViewById(R.id.venuePager);
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         mTabAdapter = new TabsAdapter(this, mPager);
@@ -102,8 +102,6 @@ public class VenuesActivity extends SherlockFragmentActivity {
         @Override
         public SherlockFragment getItem(int position) {
             return mFragments.get(position);
-            //TabInfo info = mTabs.get(position);
-            //return (SherlockFragment)Fragment.instantiate(mContext, info.clss.getName(), info.args);
         }
 
 

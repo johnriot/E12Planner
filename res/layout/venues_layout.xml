@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right"
+        android:background="@color/white"
+        android:id="@+id/homeLayout">
+
+        <com.inmobi.androidsdk.IMAdView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/adViewVenues"
+            appId="4028cba631d63df10131e1d3818b00cc"
+            adSlot="15"
+            testMode="true" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/venuePager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/adViewVenues"/>
+
+    </RelativeLayout>

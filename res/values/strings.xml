@@ -17,20 +17,43 @@
     </string-array>
 
     <string-array name="venues">
-        <item >National Stadium Warsaw (POL)</item>
-        <item >Municipal Stadium Wroclaw (POL)</item>
-        <item >Metalist Stadium Kharkiv (UKR)</item>
-        <item >Arena Lviv (UKR)</item>
-        <item >Arena Gdansk (POL)</item>
-        <item >Municipal Stadium Poznan (POL)</item>
-        <item >Donbass Arena (UKR)</item>
-        <item >Olympic Stadium Kyiv (UKR)</item>
+        <item >National Stadium Warsaw, Poland</item>
+        <item >Municipal Stadium Wroclaw, Poland</item>
+        <item >Metalist Stadium Kharkiv, Ukraine</item>
+        <item >Arena Lviv, Ukraine</item>
+        <item >PGE Arena Gdansk, Poland</item>
+        <item >Municipal Stadium Poznan, Poland</item>
+        <item >Donbass Arena, Ukraine</item>
+        <item >Olympic Stadium Kyiv, Ukraine</item>
     </string-array>
+    	
+    <string-array name="venue_capacities">
+        <item >50,000 Capacity</item>
+        <item >40,000 Capacity</item>
+        <item >35,000 Capacity</item>
+        <item >30,000 Capacity</item>
+        <item >40,000 Capacity</item>
+        <item >40,000 Capacity</item>
+        <item >50,000 Capacity</item>
+        <item >60,000 Capacity</item>
+    </string-array>
+    
+    <string-array name="venue_games_description">
+        <item >Group A, Quarter-Final 1, Semi-Final 2</item>
+        <item >Group A</item>
+        <item >Group B</item>
+        <item >Group B</item>
+        <item >Group C, Quarter-Final 2</item>
+        <item >Group C</item>
+        <item >Group D, Quarter-Final 3, Semi-Final 1</item>
+        <item >Group D, Quarter-Final 4, FINAL</item>
+    </string-array>
+    
     
     <!-- Venues_Short, do not translate! 
          should obviously match venues array -->
     <string-array name="venues_short">
-        <item >Warsaw</item>
+        <item >warsaw</item>
         <item >Wroclaw</item>
         <item >Kharkiv</item>
         <item >Lviv</item>

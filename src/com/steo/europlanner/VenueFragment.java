@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -23,21 +23,37 @@ public class VenueFragment extends SherlockFragment {
                              Bundle savedInstanceState) {
 
         Resources res = this.getResources();
-
+        
         View fragView = inflater.inflate(R.layout.venue_fragment, container, false);
 
         String packageName = getClass().getPackage().getName();
-
-        String venueNames[] = res.getStringArray(R.array.venues);
         
-        String venueNameViewIdStr = "venue0Venue";
+        String venueNamesShort[] = res.getStringArray(R.array.venues_short);
+        for(String venueName: venueNamesShort)
+        	venueName = venueName.toLowerCase();
+        String imageViewIdStr = "venueImage";
+        int imageViewId = res.getIdentifier(imageViewIdStr, "id", packageName);
+        ImageView venueImageView = (ImageView)fragView.findViewById(imageViewId);
+        venueImageView.setImageResource(res.getIdentifier(venueNamesShort[mVenue.getVenueId()],
+                "drawable", packageName));
+
+        String venueNamesLong[] = res.getStringArray(R.array.venues);
+        String venueNameViewIdStr = "venueName";
         int venueNameViewId = res.getIdentifier(venueNameViewIdStr, "id", packageName);
         TextView venueNameView = (TextView)fragView.findViewById(venueNameViewId);
-        venueNameView.setText(venueNames[mVenue.getVenueId()]);
+        venueNameView.setText(venueNamesLong[mVenue.getVenueId()]);
         
-
-        LinearLayout venueFragmentLayout = (LinearLayout)fragView.findViewById(
-                R.id.venueFragmentLayout); 
+        String venueCapacities[] = res.getStringArray(R.array.venue_capacities);
+        String venueCapacityViewIdStr = "venueCapacity";
+        int venueCapacityViewId = res.getIdentifier(venueCapacityViewIdStr, "id", packageName);
+        TextView venueCapacityView = (TextView)fragView.findViewById(venueCapacityViewId);
+        venueCapacityView.setText(venueCapacities[mVenue.getVenueId()]);
+        
+        String venueGamesDescription[] = res.getStringArray(R.array.venue_games_description);
+        String venueGamesDescriptionViewIdStr = "venueCapacity";
+        int venueGamesDescriptionViewId = res.getIdentifier(venueGamesDescriptionViewIdStr, "id", packageName);
+        TextView venueGamesDescriptionView = (TextView)fragView.findViewById(venueGamesDescriptionViewId);
+        venueGamesDescriptionView.setText(venueGamesDescription[mVenue.getVenueId()]);
 
         return fragView;
     }
