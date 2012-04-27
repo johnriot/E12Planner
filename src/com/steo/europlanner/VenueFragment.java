@@ -50,7 +50,7 @@ public class VenueFragment extends SherlockFragment {
         venueCapacityView.setText(venueCapacities[mVenue.getVenueId()]);
         
         String venueGamesDescription[] = res.getStringArray(R.array.venue_games_description);
-        String venueGamesDescriptionViewIdStr = "venueCapacity";
+        String venueGamesDescriptionViewIdStr = "venueGamesDescription";
         int venueGamesDescriptionViewId = res.getIdentifier(venueGamesDescriptionViewIdStr, "id", packageName);
         TextView venueGamesDescriptionView = (TextView)fragView.findViewById(venueGamesDescriptionViewId);
         venueGamesDescriptionView.setText(venueGamesDescription[mVenue.getVenueId()]);

@@ -23,7 +23,7 @@
         <item >Arena Lviv, Ukraine</item>
         <item >PGE Arena Gdansk, Poland</item>
         <item >Municipal Stadium Poznan, Poland</item>
-        <item >Donbass Arena, Ukraine</item>
+        <item >Donbass Arena Donetsk, Ukraine</item>
         <item >Olympic Stadium Kyiv, Ukraine</item>
     </string-array>
     	
@@ -54,13 +54,13 @@
          should obviously match venues array -->
     <string-array name="venues_short">
         <item >warsaw</item>
-        <item >Wroclaw</item>
-        <item >Kharkiv</item>
-        <item >Lviv</item>
-        <item >Gdansk</item>
-        <item >Poznan</item>
-        <item >Donbass</item>
-        <item >Kyiv</item>
+        <item >wroclaw</item>
+        <item >kharkiv</item>
+        <item >lviv</item>
+        <item >gdansk</item>
+        <item >poznan</item>
+        <item >donetsk</item>
+        <item >kyiv</item>
     </string-array>
 
     <string-array name="team_names">
