@@ -48,8 +48,7 @@
         <item >Group D, Quarter-Final 3, Semi-Final 1</item>
         <item >Group D, Quarter-Final 4, FINAL</item>
     </string-array>
-    
-    
+
     <!-- Venues_Short, do not translate! 
          should obviously match venues array -->
     <string-array name="venues_short">
@@ -112,4 +111,12 @@
 
     <string name="homeButton">Home Button</string>
     <string name="cdVenuDesc">Venues</string>
+
+    <string name="played_hdr">P</string>
+    <string name="goals_for_hdr">F</string>
+    <string name="goals_against_hdr">A</string>
+    <string name="points_hdr">Pts</string>
+    
+    <string name="cdIcon">Icon</string>
+
 </resources>
