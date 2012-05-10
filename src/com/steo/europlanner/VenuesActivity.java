@@ -2,7 +2,6 @@ package com.steo.europlanner;
 
 import java.util.ArrayList;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
@@ -10,7 +9,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.view.Window;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
@@ -29,7 +27,6 @@ public class VenuesActivity extends SherlockFragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.venues_layout);
 
@@ -72,14 +69,13 @@ public class VenuesActivity extends SherlockFragmentActivity {
     public static class TabsAdapter extends FragmentPagerAdapter
         implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
-        private final Context mContext;
         private final ActionBar mActionBar;
         private final ViewPager mViewPager;
         private final ArrayList<VenueFragment> mFragments = new ArrayList<VenueFragment>();
 
         public TabsAdapter(SherlockFragmentActivity activity, ViewPager pager) {
             super(activity.getSupportFragmentManager());
-            mContext = activity;
+
             mActionBar = activity.getSupportActionBar();
             mViewPager = pager;
             mViewPager.setAdapter(this);

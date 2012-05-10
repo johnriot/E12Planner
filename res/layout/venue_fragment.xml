@@ -16,6 +16,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:contentDescription="@string/cdVenuDesc"
             android:padding="5dp"
             android:layout_width="240dp"
             android:layout_height="135dp"
