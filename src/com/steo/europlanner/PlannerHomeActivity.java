@@ -68,6 +68,11 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
             break;
         case R.id.venues_button:
+        	
+        	Intent venuesIntent = new Intent(this, VenuesActivity.class);
+            startActivity(venuesIntent);
+
+            break;
         default:
             Toast.makeText(this, "Not implemented yet.", Toast.LENGTH_LONG).show();
         }

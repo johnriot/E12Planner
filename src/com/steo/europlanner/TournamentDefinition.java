@@ -37,12 +37,14 @@ public class TournamentDefinition {
     private final Context mContext;
     private final ArrayList<Group> mGroups = new ArrayList<Group>();
     private final ArrayList<FeedDefn> mFeeds = new ArrayList<FeedDefn>();
+    private final ArrayList<Venue> mVenues = new ArrayList<Venue>();    
 
     public TournamentDefinition(Context context) {
         mContext = context;
 
         initialise();
         refreshDataStructre();
+        createVenues();
     }
 
     //Checks if the packaged defn file needs to be copied to user data dir
@@ -188,9 +190,21 @@ public class TournamentDefinition {
             Assert.fail("Parser Failure: " + ex.getMessage());
         }
     }
+    
+    private void createVenues() {
+    	// Hardcoded 8 venues
+    	for(int ii = 0; ii < 8; ++ii) {
+    		mVenues.add(new Venue(ii));
+    	}
+    		
+    }
 
     public ArrayList<Group> getGroups() {
         return mGroups;
+    }
+    
+    public ArrayList<Venue> getVenues() {
+        return mVenues;
     }
 
     public ArrayList<FeedDefn> getFeeds() {
