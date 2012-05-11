@@ -29,11 +29,11 @@ public class VenueFragment extends SherlockFragment {
                              Bundle savedInstanceState) {
 
         Resources res = this.getResources();
-        
+
         View fragView = inflater.inflate(R.layout.venue_fragment, container, false);
 
         String packageName = getClass().getPackage().getName();
-        
+
         String venueNamesShort[] = res.getStringArray(R.array.venues_short);
         String imageViewIdStr = "venueImage";
         int imageViewId = res.getIdentifier(imageViewIdStr, "id", packageName);
@@ -46,7 +46,7 @@ public class VenueFragment extends SherlockFragment {
         int venueNameViewId = res.getIdentifier(venueNameViewIdStr, "id", packageName);
         TextView venueNameView = (TextView)fragView.findViewById(venueNameViewId);
         venueNameView.setText(venueNamesLong[mVenue.getVenueId()]);
-        
+
         String venueCapacities[] = res.getStringArray(R.array.venue_capacities);
         String venueCapacityViewIdStr = "venueCapacity";
         int venueCapacityViewId = res.getIdentifier(venueCapacityViewIdStr, "id", packageName);
@@ -80,7 +80,7 @@ public class VenueFragment extends SherlockFragment {
 				}
 	        });
         }
-        
+
         return fragView;
     }
 }

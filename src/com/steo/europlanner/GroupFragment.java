@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -36,8 +35,8 @@ public class GroupFragment extends SherlockFragment {
         String crestIds[] = res.getStringArray(R.array.team_icon_resource_names);
 
         ArrayList<Team> teams = mStage.getTeams();
-        //This view supports 4 teams
         if(mStage.getId() < 4) { // group stages
+        //This view supports 4 teams
 	        for(int i = 0; i < 4; i++) {
 	
 	            Team team = teams.get(i);
@@ -54,17 +53,31 @@ public class GroupFragment extends SherlockFragment {
 	            TextView teamNameView = (TextView)fragView.findViewById(teamNameViewId);
 	
 	            teamNameView.setText(teamNames[team.getTeamId()]);
+	
+	            String gamesPlayedIdStr = "team" + i + "played";
+	            int gamesPlayedViewId = res.getIdentifier(gamesPlayedIdStr, "id", packageName);
+	            TextView gamesPlayedView = (TextView)fragView.findViewById(gamesPlayedViewId);
+	
+	            gamesPlayedView.setText("3");
+	
+	            String forIdStr = "team" + i + "for";
+	            int forViewId = res.getIdentifier(forIdStr, "id", packageName);
+	            TextView forView = (TextView)fragView.findViewById(forViewId);
+	
+	            forView.setText("3");
+	
+	            String againstIdStr = "team" + i + "against";
+	            int againstViewId = res.getIdentifier(againstIdStr, "id", packageName);
+	            TextView againstView = (TextView)fragView.findViewById(againstViewId);
+	
+	            againstView.setText("3");
+	
+	            String pointsIdStr = "team" + i + "pts";
+	            int pointsViewId = res.getIdentifier(pointsIdStr, "id", packageName);
+	            TextView pointsView = (TextView)fragView.findViewById(pointsViewId);
+	
+	            pointsView.setText("3");
 	        }
-        }
-        
-        LinearLayout groupFragmentLayout = (LinearLayout)fragView.findViewById(
-                R.id.groupFragmentLayout);
-
-        ArrayList<Fixture> fixtures = mStage.getFixtures();
-        for(Fixture fixture : fixtures) {
-
-            TextView tv = new TextView(fragView.getContext());
-            tv.setText("SteoTime");
         }
 
         return fragView;
