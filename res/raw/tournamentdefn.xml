@@ -1,69 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tournamen_defn>
 
-	<feed 
-		description="UEFA Official Feed" 
-		url="http://www.uefa.com/rssfeed/uefaeuro2012/rss.xml"
-		iconid="0"/>
+    <feed description="UEFA Official Feed" url="http://www.uefa.com/rssfeed/uefaeuro2012/rss.xml" iconid="0" />
+    <feed description="BBC Feed" url="http://feeds.bbci.co.uk/sport/0/football/rss.xml" iconid="1" />
 
-	<feed 
-		description="BBC Feed" 
-		url="http://feeds.bbci.co.uk/sport/0/football/rss.xml"
-		iconid="1"/>
+    <group id="0">
+        <team id="0" />
+        <team id="1" />
+        <team id="2" />
+        <team id="3" />
 
-	<group id="0">
-		<team id="0"/>
-		<team id="1"/>
-		<team id="2"/>
-		<team id="3"/>
-        
-		<fixture hometeam="0" awayteam="1" venue="0" date="June 8, 2012, 17:00" score="x:x"/>
-		<fixture hometeam="2" awayteam="3" venue="1" date="June 8, 2012, 19:45" score="x:x"/>
-		<fixture hometeam="1" awayteam="3" venue="1" date="June 12, 2012, 17:00" score="x:x"/>
-		<fixture hometeam="0" awayteam="2" venue="0" date="June 12, 2012, 19:45" score="x:x"/>
-		<fixture hometeam="3" awayteam="0" venue="1" date="June 16, 2012, 19:45" score="x:x"/>
-		<fixture hometeam="1" awayteam="2" venue="0" date="June 16, 2012, 19:45" score="x:x"/>
-	</group>
-     
-	<group id="1">
-		<team id="4"/>
-		<team id="5"/>
-		<team id="6"/>
-		<team id="7"/>
-        
-		<fixture hometeam="4" awayteam="5" venue="2" date="June 9, 2012, 16:00" score="x:x"/>
-		<fixture hometeam="6" awayteam="7" venue="3" date="June 9, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="5" awayteam="7" venue="3" date="June 13, 2012, 16:00" score="x:x"/>
-		<fixture hometeam="4" awayteam="6" venue="2" date="June 13, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="7" awayteam="4" venue="2" date="June 17, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="5" awayteam="6" venue="3" date="June 17, 2012, 18:45" score="x:x"/>
-	</group>
-    
-	<group id="2">
-		<team id="8"/>
-		<team id="9"/>
-		<team id="10"/>
-		<team id="11"/>
-        
-		<fixture hometeam="8" awayteam="9" venue="4" date="June 10, 2012, 16:00" score="x:x"/>
-		<fixture hometeam="10" awayteam="11" venue="5" date="June 10, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="9" awayteam="11" venue="5" date="June 14, 2012, 16:00" score="x:x"/>
-		<fixture hometeam="8" awayteam="10" venue="4" date="June 14, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="11" awayteam="8" venue="4" date="June 18, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="9" awayteam="10" venue="5" date="June 18, 2012, 18:45" score="x:x"/>
-	</group>
-    
-	<group id="3">
-		<team id="12"/>
-		<team id="13"/>
-		<team id="14"/>
-		<team id="15"/>
-        
-		<fixture hometeam="12" awayteam="13" venue="6" date="June 11, 2012, 16:00" score="x:x"/>
-		<fixture hometeam="14" awayteam="15" venue="7" date="June 11, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="13" awayteam="15" venue="6" date="June 15, 2012, 16:00" score="x:x"/>
-		<fixture hometeam="12" awayteam="14" venue="7" date="June 15, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="15" awayteam="12" venue="6" date="June 19, 2012, 18:45" score="x:x"/>
-		<fixture hometeam="13" awayteam="14" venue="7" date="June 19, 2012, 18:45" score="x:x"/>
-	</group>
+        <fixture hometeam="0" awayteam="1" venue="0" date="June 8, 2012, 17:00" score="x:x" />
+        <fixture hometeam="2" awayteam="3" venue="1" date="June 8, 2012, 19:45" score="x:x" />
+        <fixture hometeam="1" awayteam="3" venue="1" date="June 12, 2012, 17:00" score="x:x" />
+        <fixture hometeam="0" awayteam="2" venue="0" date="June 12, 2012, 19:45" score="x:x" />
+        <fixture hometeam="3" awayteam="0" venue="1" date="June 16, 2012, 19:45" score="x:x" />
+        <fixture hometeam="1" awayteam="2" venue="0" date="June 16, 2012, 19:45" score="x:x" />
+    </group>
+
+    <group id="1">
+        <team id="4" />
+        <team id="5" />
+        <team id="6" />
+        <team id="7" />
+
+        <fixture hometeam="4" awayteam="5" venue="2" date="June 9, 2012, 16:00" score="x:x" />
+        <fixture hometeam="6" awayteam="7" venue="3" date="June 9, 2012, 18:45" score="x:x" />
+        <fixture hometeam="5" awayteam="7" venue="3" date="June 13, 2012, 16:00" score="x:x" />
+        <fixture hometeam="4" awayteam="6" venue="2" date="June 13, 2012, 18:45" score="x:x" />
+        <fixture hometeam="7" awayteam="4" venue="2" date="June 17, 2012, 18:45" score="x:x" />
+        <fixture hometeam="5" awayteam="6" venue="3" date="June 17, 2012, 18:45" score="x:x" />
+    </group>
+
+    <group id="2">
+        <team id="8" />
+        <team id="9" />
+        <team id="10" />
+        <team id="11" />
+
+        <fixture hometeam="8" awayteam="9" venue="4" date="June 10, 2012, 16:00" score="x:x" />
+        <fixture hometeam="10" awayteam="11" venue="5" date="June 10, 2012, 18:45" score="x:x" />
+        <fixture hometeam="9" awayteam="11" venue="5" date="June 14, 2012, 16:00" score="x:x" />
+        <fixture hometeam="8" awayteam="10" venue="4" date="June 14, 2012, 18:45" score="x:x" />
+        <fixture hometeam="11" awayteam="8" venue="4" date="June 18, 2012, 18:45" score="x:x" />
+        <fixture hometeam="9" awayteam="10" venue="5" date="June 18, 2012, 18:45" score="x:x" />
+    </group>
+
+    <group id="3">
+        <team id="12" />
+        <team id="13" />
+        <team id="14" />
+        <team id="15" />
+
+        <fixture hometeam="12" awayteam="13" venue="6" date="June 11, 2012, 16:00" score="x:x" />
+        <fixture hometeam="14" awayteam="15" venue="7" date="June 11, 2012, 18:45" score="x:x" />
+        <fixture hometeam="13" awayteam="15" venue="6" date="June 15, 2012, 16:00" score="x:x" />
+        <fixture hometeam="12" awayteam="14" venue="7" date="June 15, 2012, 18:45" score="x:x" />
+        <fixture hometeam="15" awayteam="12" venue="6" date="June 19, 2012, 18:45" score="x:x" />
+        <fixture hometeam="13" awayteam="14" venue="7" date="June 19, 2012, 18:45" score="x:x" />
+    </group>
+
+    <knockout id="4"> <!-- Knockout Id for quarter final is the next number after the highest group id -->
+        <team_placeholder id="0" /> <!-- Winner Group A -->
+        <team_placeholder id="1" /> <!-- Second Group B -->
+        <team_placeholder id="2" /> <!-- Winner Group B -->
+        <team_placeholder id="3" /> <!-- Second Group A -->
+        <team_placeholder id="4" /> <!-- Winner Group C -->
+        <team_placeholder id="5" /> <!-- Second Group D -->
+        <team_placeholder id="6" /> <!-- Winner Group D -->
+        <team_placeholder id="7" /> <!-- Second Group C -->
+
+        <knockout_fixture hometeam="0" awayteam="1" venue="0" date="June 21, 2012, 18:45" score="x:x" />
+        <knockout_fixture hometeam="2" awayteam="3" venue="4" date="June 22, 2012, 18:45" score="x:x" />
+        <knockout_fixture hometeam="4" awayteam="5" venue="6" date="June 23, 2012, 18:45" score="x:x" />
+        <knockout_fixture hometeam="6" awayteam="7" venue="7" date="June 24, 2012, 18:45" score="x:x" />
+    </knockout>
+
+    <knockout id="5"> <!-- Semi-Final -->
+        <team_placeholder id="0" /> <!-- Winner Quarter-Final 1 -->
+        <team_placeholder id="1" /> <!-- Winner Quarter-Final 2 -->
+        <team_placeholder id="2" /> <!-- Winner Quarter-Final 3 -->
+        <team_placeholder id="3" /> <!-- Winner Quarter-Final 4 -->
+
+        <knockout_fixture hometeam="0" awayteam="2" venue="6" date="June 27, 2012, 18:45" score="x:x" />
+        <knockout_fixture hometeam="1" awayteam="3" venue="0" date="June 28, 2012, 18:45" score="x:x" />
+    </knockout>
+
+    <knockout id="6"> <!-- FINAL -->
+        <team_placeholder id="0" /> <!-- Winner Semi-Final 1 -->
+        <team_placeholder id="1" /> <!-- Winner Semi-Final 2 -->
+
+        <knockout_fixture hometeam="0" awayteam="1" venue="7" date="July 1, 2012, 18:45" score="x:x" />
+    </knockout>
+
 </tournamen_defn>

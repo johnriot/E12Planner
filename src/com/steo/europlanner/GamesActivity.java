@@ -62,12 +62,24 @@ public class GamesActivity extends SherlockFragmentActivity {
         ArrayList<Group> groups = mTournamentDefn.getGroups();
         for(Group group : groups) {
 
-            mTabAdapter.addTab(bar.newTab().setText(groupNames[group.getGroupId()]),
+            mTabAdapter.addTab(bar.newTab().setText(groupNames[group.getId()]),
                     new GroupFragment(group));
+        }
+        
+        int numGroups = groups.size();
+        String knockoutNames[] = getResources().getStringArray(R.array.knockout);
+        ArrayList<Knockout> knockoutStages = mTournamentDefn.getKnockoutStages();
+        for(Knockout knockout : knockoutStages) {
+
+            mTabAdapter.addTab(bar.newTab().setText(knockoutNames[knockout.getId() - numGroups]),
+                    new GroupFragment(knockout));
         }
 
         mPager.setAdapter(mTabAdapter);
-        mPager.setCurrentItem(0);
+        
+        Bundle extras = getIntent().getExtras();
+        int groupIndx = extras != null ? extras.getInt("groupKnockout") : 0;
+        mPager.setCurrentItem(groupIndx);
     }
 
 

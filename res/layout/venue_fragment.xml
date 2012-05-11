@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     >
 
     <LinearLayout
@@ -67,7 +67,29 @@
             android:layout_height="30dp"
             android:gravity="center"
             android:textColor="#FF000000"
-            android:id="@+id/venueGamesDescription"/>
+			android:clickable="true"
+			android:background="@android:drawable/list_selector_background"            
+            android:id="@+id/venueGamesDescription0"/>
+        
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+            android:clickable="true"
+			android:background="@android:drawable/list_selector_background"
+            android:id="@+id/venueGamesDescription1"/>
+        
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+            android:clickable="true"
+			android:background="@android:drawable/list_selector_background"
+            android:id="@+id/venueGamesDescription2"/>
 
     </LinearLayout>
 

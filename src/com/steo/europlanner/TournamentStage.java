@@ -1,26 +1,25 @@
 package com.steo.europlanner;
 
+import java.util.ArrayList;
 
-public class Group extends TournamentStage {
-
-    //private final int mGroupId;
-
-    //private final ArrayList<Team> mTeams = new ArrayList<Team>();
-    //private final ArrayList<Fixture> mFixtures = new ArrayList<Fixture>();
-    //private final GroupOrdering mOrderer = new GroupOrdering();
-
-    public Group(int groupId) {
-    	super(groupId);
-        //mGroupId = groupId;
+public abstract class TournamentStage {
+	
+	private final int mId;
+	
+	private final ArrayList<Team> mTeams = new ArrayList<Team>();
+    private final ArrayList<Fixture> mFixtures = new ArrayList<Fixture>();
+    private final GroupOrdering mOrderer = new GroupOrdering();
+	
+    public TournamentStage(int id) {
+    	mId = id;
+    }
+    
+    public int getId() {
+        return mId;
     }
 
-    /*
-    public int getGroupId() {
-        return mGroupId;
-    }
-
-    @Override
-    public ArrayList<Team> getGroupTeams() {
+    //@Override
+    public ArrayList<Team> getTeams() {
         return mTeams;
     }
 
@@ -46,5 +45,5 @@ public class Group extends TournamentStage {
 				return team;
 		}
 		return null;
-	}*/
+	}
 }
