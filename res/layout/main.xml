@@ -14,7 +14,7 @@
             android:layout_above="@+id/adView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/euro2012"/>
+            android:src="@drawable/euro2012ball"/>
 
         <TableLayout
             android:layout_alignParentTop="true"
