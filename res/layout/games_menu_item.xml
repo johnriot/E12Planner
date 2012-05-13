@@ -24,7 +24,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
             android:textColor="@android:color/black"
-            android:text="@string/menuGames"/>
+            android:text="@string/menuGames"
+            android:id="@+id/gamesMenuTv"
+            android:textSize="@dimen/menu_item_text_size"/>
 
     </LinearLayout>
 </merge>

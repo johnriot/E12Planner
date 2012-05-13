@@ -107,7 +107,7 @@
     <string name="menuTeams">Teams</string>
     <string name="menuNews">News</string>
     
-    <string name="loadingNews">Loading News#8230;</string>
+    <string name="loadingNews">Loading News&#8230;</string>
 
     <string name="homeButton">Home Button</string>
     <string name="cdVenuDesc">Venues</string>

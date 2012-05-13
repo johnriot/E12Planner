@@ -2,17 +2,22 @@ package com.steo.europlanner;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
 
 public class PlannerHomeActivity extends Activity implements OnClickListener {
+
+    //private static final String fontName = "fonts/GoodDog.otf";
+    private static final String fontName = "fonts/RockSalt.ttf";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,20 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         LinearLayout gamesLayout =
                 (LinearLayout)findViewById(R.id.games_button);
         gamesLayout.setOnClickListener(this);
+
+        Typeface font = Typeface.createFromAsset(getAssets(), fontName);
+
+        TextView newsTv = (TextView)findViewById(R.id.newsMenuTv);
+        newsTv.setTypeface(font);
+
+        TextView gamesTv = (TextView)findViewById(R.id.gamesMenuTv);
+        gamesTv.setTypeface(font);
+
+        TextView venuesTv = (TextView)findViewById(R.id.venuesMenuTv);
+        venuesTv.setTypeface(font);
+
+        TextView teamsTv = (TextView)findViewById(R.id.teamsMenuTv);
+        teamsTv.setTypeface(font);
     }
 
     @Override
@@ -68,7 +87,7 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
             break;
         case R.id.venues_button:
-        	
+
         	Intent venuesIntent = new Intent(this, VenuesActivity.class);
             startActivity(venuesIntent);
 
