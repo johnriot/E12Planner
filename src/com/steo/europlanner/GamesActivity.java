@@ -28,6 +28,8 @@ public class GamesActivity extends SherlockFragmentActivity {
     ViewPager mPager;
     TournamentDefinition mTournamentDefn;
 
+    public static final String GROUP_KNOCKOUT = "groupKnockout";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +67,7 @@ public class GamesActivity extends SherlockFragmentActivity {
             mTabAdapter.addTab(bar.newTab().setText(groupNames[group.getId()]),
                     new GroupFragment(group));
         }
-        
+
         int numGroups = groups.size();
         String knockoutNames[] = getResources().getStringArray(R.array.knockout);
         ArrayList<Knockout> knockoutStages = mTournamentDefn.getKnockoutStages();
@@ -76,9 +78,12 @@ public class GamesActivity extends SherlockFragmentActivity {
         }
 
         mPager.setAdapter(mTabAdapter);
-        
+
         Bundle extras = getIntent().getExtras();
-        int groupIndx = extras != null ? extras.getInt("groupKnockout") : 0;
+        int groupIndx = 0;
+        if(extras != null) {
+            groupIndx = extras.getInt(GROUP_KNOCKOUT);
+        }
         mPager.setCurrentItem(groupIndx);
     }
 

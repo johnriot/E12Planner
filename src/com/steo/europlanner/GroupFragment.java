@@ -15,13 +15,13 @@ import com.actionbarsherlock.app.SherlockFragment;
 
 public class GroupFragment extends SherlockFragment {
 
-    //private final Group mGroup;
-	private final TournamentStage mStage;
+    private final TournamentStage mStage;
+    public final int NUMBER_GROUPS = 4;
 
     public GroupFragment(TournamentStage stage) {
-    	mStage = stage;
+        mStage = stage;
     }
-    
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,27 +36,27 @@ public class GroupFragment extends SherlockFragment {
         String crestIds[] = res.getStringArray(R.array.team_icon_resource_names);
 
         ArrayList<Team> teams = mStage.getTeams();
-        //This view supports 4 teams
-        if(mStage.getId() < 4) { // group stages
-	        for(int i = 0; i < 4; i++) {
-	
-	            Team team = teams.get(i);
-	
-	            String iconViewIdStr = "team" + i + "Icon";
-	            int iconViewId = res.getIdentifier(iconViewIdStr, "id", packageName);
-	            ImageView teamIconView = (ImageView)fragView.findViewById(iconViewId);
-	
-	            teamIconView.setImageResource(res.getIdentifier(crestIds[team.getTeamId()],
-	                    "drawable", packageName));
-	
-	            String teamNameViewIdStr = "team" + i + "Team";
-	            int teamNameViewId = res.getIdentifier(teamNameViewIdStr, "id", packageName);
-	            TextView teamNameView = (TextView)fragView.findViewById(teamNameViewId);
-	
-	            teamNameView.setText(teamNames[team.getTeamId()]);
-	        }
+        if(mStage.getId() < NUMBER_GROUPS) {
+          //This view supports 4 teams
+            for(int i = 0; i < 4; i++) {
+
+               Team team = teams.get(i);
+
+                String iconViewIdStr = "team" + i + "Icon";
+                int iconViewId = res.getIdentifier(iconViewIdStr, "id", packageName);
+                ImageView teamIconView = (ImageView)fragView.findViewById(iconViewId);
+
+                teamIconView.setImageResource(res.getIdentifier(crestIds[team.getTeamId()],
+                        "drawable", packageName));
+
+                String teamNameViewIdStr = "team" + i + "Team";
+                int teamNameViewId = res.getIdentifier(teamNameViewIdStr, "id", packageName);
+                TextView teamNameView = (TextView)fragView.findViewById(teamNameViewId);
+
+                teamNameView.setText(teamNames[team.getTeamId()]);
+            }
         }
-        
+
         LinearLayout groupFragmentLayout = (LinearLayout)fragView.findViewById(
                 R.id.groupFragmentLayout);
 
