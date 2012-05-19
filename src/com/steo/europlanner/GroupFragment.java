@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -55,16 +54,6 @@ public class GroupFragment extends SherlockFragment {
 
                 teamNameView.setText(teamNames[team.getTeamId()]);
             }
-        }
-
-        LinearLayout groupFragmentLayout = (LinearLayout)fragView.findViewById(
-                R.id.groupFragmentLayout);
-
-        ArrayList<Fixture> fixtures = mStage.getFixtures();
-        for(Fixture fixture : fixtures) {
-
-            TextView tv = new TextView(fragView.getContext());
-            tv.setText("SteoTime");
         }
 
         return fragView;
