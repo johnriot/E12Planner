@@ -2,6 +2,7 @@ package com.steo.europlanner;
 
 import java.util.ArrayList;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.view.Window;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
@@ -26,9 +28,12 @@ public class GamesActivity extends SherlockFragmentActivity {
     ViewPager mPager;
     TournamentDefinition mTournamentDefn;
 
+    public static final String GROUP_KNOCKOUT = "groupKnockout";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.games_layout);
 
@@ -59,24 +64,41 @@ public class GamesActivity extends SherlockFragmentActivity {
         ArrayList<Group> groups = mTournamentDefn.getGroups();
         for(Group group : groups) {
 
-            mTabAdapter.addTab(bar.newTab().setText(groupNames[group.getGroupId()]),
+            mTabAdapter.addTab(bar.newTab().setText(groupNames[group.getId()]),
                     new GroupFragment(group));
         }
 
+        int numGroups = groups.size();
+        String knockoutNames[] = getResources().getStringArray(R.array.knockout);
+        ArrayList<Knockout> knockoutStages = mTournamentDefn.getKnockoutStages();
+        for(Knockout knockout : knockoutStages) {
+
+            mTabAdapter.addTab(bar.newTab().setText(knockoutNames[knockout.getId() - numGroups]),
+                    new GroupFragment(knockout));
+        }
+
         mPager.setAdapter(mTabAdapter);
-        mPager.setCurrentItem(0);
+
+        Bundle extras = getIntent().getExtras();
+        int groupIndx = 0;
+        if(extras != null) {
+            groupIndx = extras.getInt(GROUP_KNOCKOUT);
+        }
+        mPager.setCurrentItem(groupIndx);
     }
 
 
     public static class TabsAdapter extends FragmentPagerAdapter
         implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
+        private final Context mContext;
         private final ActionBar mActionBar;
         private final ViewPager mViewPager;
         private final ArrayList<GroupFragment> mFragments = new ArrayList<GroupFragment>();
 
         public TabsAdapter(SherlockFragmentActivity activity, ViewPager pager) {
             super(activity.getSupportFragmentManager());
+            mContext = activity;
             mActionBar = activity.getSupportActionBar();
             mViewPager = pager;
             mViewPager.setAdapter(this);

@@ -6,7 +6,7 @@
     android:layout_gravity="center">
 
     <ImageView
-        android:contentDescription="@string/cdVenuDesc"
+        android:contentDescription="@string/cdVenueDesc"
         android:id="@+id/groupIcon"
         android:layout_gravity="center"
         android:layout_height="40dip"

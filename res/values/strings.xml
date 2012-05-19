@@ -2,66 +2,61 @@
 <resources>
 
     <string name="app_name">Euro2012Planner</string>
-    
     <string name="news_title">News Channel</string>
     <string name="games_title">Fixtures</string>
     <string name="venues_title">Venues</string>
-
     <string name="refresh_text">Refresh</string>
-    
+
     <string-array name="groups">
         <item>Group A</item>
         <item>Group B</item>
         <item>Group C</item>
         <item>Group D</item>
     </string-array>
-
-    <string-array name="venues">
-        <item >National Stadium Warsaw, Poland</item>
-        <item >Municipal Stadium Wroclaw, Poland</item>
-        <item >Metalist Stadium Kharkiv, Ukraine</item>
-        <item >Arena Lviv, Ukraine</item>
-        <item >PGE Arena Gdansk, Poland</item>
-        <item >Municipal Stadium Poznan, Poland</item>
-        <item >Donbass Arena Donetsk, Ukraine</item>
-        <item >Olympic Stadium Kyiv, Ukraine</item>
-    </string-array>
-    	
-    <string-array name="venue_capacities">
-        <item >50,000 Capacity</item>
-        <item >40,000 Capacity</item>
-        <item >35,000 Capacity</item>
-        <item >30,000 Capacity</item>
-        <item >40,000 Capacity</item>
-        <item >40,000 Capacity</item>
-        <item >50,000 Capacity</item>
-        <item >60,000 Capacity</item>
+    
+    <string-array name="knockout">
+        <item>Quarter-Final</item>
+        <item>Semi-Final</item>
+        <item>FINAL</item>
     </string-array>
     
-    <string-array name="venue_games_description">
-        <item >Group A, Quarter-Final 1, Semi-Final 2</item>
-        <item >Group A</item>
-        <item >Group B</item>
-        <item >Group B</item>
-        <item >Group C, Quarter-Final 2</item>
-        <item >Group C</item>
-        <item >Group D, Quarter-Final 3, Semi-Final 1</item>
-        <item >Group D, Quarter-Final 4, FINAL</item>
+    <string-array name="venues">
+        <item>National Stadium Warsaw, Poland</item>
+        <item>Municipal Stadium Wroclaw, Poland</item>
+        <item>Metalist Stadium Kharkiv, Ukraine</item>
+        <item>Arena Lviv, Ukraine</item>
+        <item>PGE Arena Gdansk, Poland</item>
+        <item>Municipal Stadium Poznan, Poland</item>
+        <item>Donbass Arena Donetsk, Ukraine</item>
+        <item>Olympic Stadium Kyiv, Ukraine</item>
     </string-array>
 
-    <!-- Venues_Short, do not translate! 
-         should obviously match venues array -->
+    <!--
+         Venues_Short, do not translate! 
+         should obviously match venues array
+    -->
     <string-array name="venues_short">
-        <item >warsaw</item>
-        <item >wroclaw</item>
-        <item >kharkiv</item>
-        <item >lviv</item>
-        <item >gdansk</item>
-        <item >poznan</item>
-        <item >donetsk</item>
-        <item >kyiv</item>
+        <item>warsaw</item>
+        <item>wroclaw</item>
+        <item>kharkiv</item>
+        <item>lviv</item>
+        <item>gdansk</item>
+        <item>poznan</item>
+        <item>donetsk</item>
+        <item>kyiv</item>
     </string-array>
-
+    
+    <string-array name="venue_capacities">
+        <item>50,000 Capacity</item>
+        <item>40,000 Capacity</item>
+        <item>35,000 Capacity</item>
+        <item>30,000 Capacity</item>
+        <item>40,000 Capacity</item>
+        <item>40,000 Capacity</item>
+        <item>50,000 Capacity</item>
+        <item>60,000 Capacity</item>
+    </string-array>
+    
     <string-array name="team_names">
         <item>Poland</item>
         <item>Greece</item>
@@ -80,9 +75,11 @@
         <item>France</item>
         <item>England</item>
     </string-array>
-    
-    <!-- Team drawables, do not translate! 
-         should obviously match team array -->
+
+    <!--
+         Team drawables, do not translate! 
+         should obviously match team array
+    -->
     <string-array name="team_icon_resource_names">
         <item>poland</item>
         <item>greece</item>
@@ -106,17 +103,8 @@
     <string name="menuVenues">Venues</string>
     <string name="menuTeams">Teams</string>
     <string name="menuNews">News</string>
-    
     <string name="loadingNews">Loading News&#8230;</string>
-
     <string name="homeButton">Home Button</string>
-    <string name="cdVenuDesc">Venues</string>
 
-    <string name="played_hdr">P</string>
-    <string name="goals_for_hdr">F</string>
-    <string name="goals_against_hdr">A</string>
-    <string name="points_hdr">Pts</string>
-    
-    <string name="cdIcon">Icon</string>
-
+    <string name="cdVenueDesc">Venues</string>
 </resources>

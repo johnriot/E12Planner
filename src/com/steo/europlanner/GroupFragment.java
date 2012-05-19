@@ -8,16 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
 public class GroupFragment extends SherlockFragment {
 
-    private final Group mGroup;
+    private final TournamentStage mStage;
+    public final int NUMBER_GROUPS = 4;
 
-    public GroupFragment(Group group) {
-        mGroup = group;
+    public GroupFragment(TournamentStage stage) {
+        mStage = stage;
     }
 
     @Override
@@ -33,48 +35,36 @@ public class GroupFragment extends SherlockFragment {
         String teamNames[] = res.getStringArray(R.array.team_names);
         String crestIds[] = res.getStringArray(R.array.team_icon_resource_names);
 
-        ArrayList<Team> teams = mGroup.getGroupTeams();
-        //This view supports 4 teams
-        for(int i = 0; i < 4; i++) {
+        ArrayList<Team> teams = mStage.getTeams();
+        if(mStage.getId() < NUMBER_GROUPS) {
+          //This view supports 4 teams
+            for(int i = 0; i < 4; i++) {
 
-            Team team = teams.get(i);
+               Team team = teams.get(i);
 
-            String iconViewIdStr = "team" + i + "Icon";
-            int iconViewId = res.getIdentifier(iconViewIdStr, "id", packageName);
-            ImageView teamIconView = (ImageView)fragView.findViewById(iconViewId);
+                String iconViewIdStr = "team" + i + "Icon";
+                int iconViewId = res.getIdentifier(iconViewIdStr, "id", packageName);
+                ImageView teamIconView = (ImageView)fragView.findViewById(iconViewId);
 
-            teamIconView.setImageResource(res.getIdentifier(crestIds[team.getTeamId()],
-                    "drawable", packageName));
+                teamIconView.setImageResource(res.getIdentifier(crestIds[team.getTeamId()],
+                        "drawable", packageName));
 
-            String teamNameViewIdStr = "team" + i + "Team";
-            int teamNameViewId = res.getIdentifier(teamNameViewIdStr, "id", packageName);
-            TextView teamNameView = (TextView)fragView.findViewById(teamNameViewId);
+                String teamNameViewIdStr = "team" + i + "Team";
+                int teamNameViewId = res.getIdentifier(teamNameViewIdStr, "id", packageName);
+                TextView teamNameView = (TextView)fragView.findViewById(teamNameViewId);
 
-            teamNameView.setText(teamNames[team.getTeamId()]);
+                teamNameView.setText(teamNames[team.getTeamId()]);
+            }
+        }
 
-            String gamesPlayedIdStr = "team" + i + "played";
-            int gamesPlayedViewId = res.getIdentifier(gamesPlayedIdStr, "id", packageName);
-            TextView gamesPlayedView = (TextView)fragView.findViewById(gamesPlayedViewId);
+        LinearLayout groupFragmentLayout = (LinearLayout)fragView.findViewById(
+                R.id.groupFragmentLayout);
 
-            gamesPlayedView.setText("3");
+        ArrayList<Fixture> fixtures = mStage.getFixtures();
+        for(Fixture fixture : fixtures) {
 
-            String forIdStr = "team" + i + "for";
-            int forViewId = res.getIdentifier(forIdStr, "id", packageName);
-            TextView forView = (TextView)fragView.findViewById(forViewId);
-
-            forView.setText("3");
-
-            String againstIdStr = "team" + i + "against";
-            int againstViewId = res.getIdentifier(againstIdStr, "id", packageName);
-            TextView againstView = (TextView)fragView.findViewById(againstViewId);
-
-            againstView.setText("3");
-
-            String pointsIdStr = "team" + i + "pts";
-            int pointsViewId = res.getIdentifier(pointsIdStr, "id", packageName);
-            TextView pointsView = (TextView)fragView.findViewById(pointsViewId);
-
-            pointsView.setText("3");
+            TextView tv = new TextView(fragView.getContext());
+            tv.setText("SteoTime");
         }
 
         return fragView;

@@ -36,15 +36,16 @@ public class TournamentDefinition {
 
     private final Context mContext;
     private final ArrayList<Group> mGroups = new ArrayList<Group>();
+    private final ArrayList<Knockout> mKnockoutStages = new ArrayList<Knockout>();
     private final ArrayList<FeedDefn> mFeeds = new ArrayList<FeedDefn>();
-    private final ArrayList<Venue> mVenues = new ArrayList<Venue>();    
+    private final ArrayList<Venue> mVenues = new ArrayList<Venue>();
 
     public TournamentDefinition(Context context) {
         mContext = context;
 
         initialise();
-        refreshDataStructre();
         createVenues();
+        refreshDataStructre();
     }
 
     //Checks if the packaged defn file needs to be copied to user data dir
@@ -85,6 +86,7 @@ public class TournamentDefinition {
             reader.setContentHandler(new ContentHandler() {
 
                 private Group mCurrentGroup;
+                private Knockout mCurrentKnockout;
 
                 private static final String GROUP = "group";
                 private static final String GROUP_ID = "id";
@@ -103,6 +105,14 @@ public class TournamentDefinition {
                 private static final String FEED_DESC = "description";
                 private static final String FEED_URL = "url";
                 private static final String FEED_ICON = "iconid";
+
+                private static final String KNOCKOUT = "knockout";
+                private static final String KNOCKOUT_ID = "id";
+
+                private static final String TEAM_PLACEHOLDER = "team_placeholder";
+                private static final String TEAM_PLACEHOLDER_ID = "id";
+
+                private static final String KNOCKOUT_FIXTURE = "knockout_fixture";
 
                 @Override public void startElement(String uri, String localName,
                         String qName, Attributes atts) throws SAXException {
@@ -145,16 +155,51 @@ public class TournamentDefinition {
                         String date = atts.getValue(DATE_ID);
                         String score = atts.getValue(SCORE_ID);
 
-                        
+
                         Team homeTeam = mCurrentGroup.getTeamById(homeTeamId);
                         Team awayTeam = mCurrentGroup.getTeamById(awayTeamId);
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
-                        
+
                         Fixture fixture = new Fixture(homeTeam, awayTeam,
-                        								venueId, new Date(), score);
-                        
+                                                        venueId, new Date(), score);
+
                         mCurrentGroup.addFixture(fixture);
+                        mVenues.get(venueId).addGroupKnockoutId(mCurrentGroup.getId());
+                    }
+
+                    if(localName.equals(KNOCKOUT)) {
+                        if(mCurrentKnockout != null) {
+                        	mKnockoutStages.add(mCurrentKnockout);
+                        }
+
+                        mCurrentKnockout = new Knockout(Integer.parseInt(
+                                atts.getValue(KNOCKOUT_ID)));
+                    }
+                    else if(localName.equals(TEAM_PLACEHOLDER)) {
+                        mCurrentKnockout.addTeam(new Team(Integer.parseInt(
+                                atts.getValue(TEAM_PLACEHOLDER_ID))));
+                    }
+                    else if(localName.equals(KNOCKOUT_FIXTURE)) {
+
+                        int homeTeamId = Integer.parseInt(atts.getValue(HOME_TEAM_ID));
+                        int awayTeamId = Integer.parseInt(atts.getValue(AWAY_TEAM_ID));
+                        int venueId = Integer.parseInt(atts.getValue(VENUE_ID));
+                        @SuppressWarnings("unused")
+                        String date = atts.getValue(DATE_ID);
+                        String score = atts.getValue(SCORE_ID);
+
+
+                        Team homeTeam = mCurrentKnockout.getTeamById(homeTeamId);
+                        Team awayTeam = mCurrentKnockout.getTeamById(awayTeamId);
+                        Assert.assertNotNull(homeTeam);
+                        Assert.assertNotNull(awayTeam);
+
+                        Fixture fixture = new Fixture(homeTeam, awayTeam,
+                                                    venueId, new Date(), score);
+
+                        mCurrentKnockout.addFixture(fixture);
+                        mVenues.get(venueId).addGroupKnockoutId(mCurrentKnockout.getId());
                     }
                 }
 
@@ -163,6 +208,10 @@ public class TournamentDefinition {
                     if(mCurrentGroup != null) {
                         mGroups.add(mCurrentGroup);
                     }
+                    if(mCurrentKnockout != null) {
+                        mKnockoutStages.add(mCurrentKnockout);
+                    }
+
                 }
 
                 @Override public void startPrefixMapping(String prefix, String uri) throws SAXException {}
@@ -178,7 +227,7 @@ public class TournamentDefinition {
 
             reader.parse(new InputSource(new FileInputStream(mDefnFile)));
             for(Group group : mGroups)
-            	group.orderTeams();
+                group.orderTeams();
 
         } catch (ParserConfigurationException ex) {
             Assert.fail("SAX Failure: " + ex.getMessage());
@@ -190,19 +239,23 @@ public class TournamentDefinition {
             Assert.fail("Parser Failure: " + ex.getMessage());
         }
     }
-    
+
     private void createVenues() {
-    	// Hardcoded 8 venues
-    	for(int ii = 0; ii < 8; ++ii) {
-    		mVenues.add(new Venue(ii));
-    	}
-    		
+        // Hardcoded 8 venues
+        for(int ii = 0; ii < 8; ++ii) {
+            mVenues.add(new Venue(ii));
+        }
+
     }
 
     public ArrayList<Group> getGroups() {
         return mGroups;
     }
-    
+
+    public ArrayList<Knockout> getKnockoutStages() {
+        return mKnockoutStages;
+    }
+
     public ArrayList<Venue> getVenues() {
         return mVenues;
     }
