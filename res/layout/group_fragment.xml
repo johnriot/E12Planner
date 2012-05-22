@@ -9,93 +9,164 @@
     android:gravity="center_horizontal"
     >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:orientation="horizontal">
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
 
-        <ImageView
-            android:padding="5dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/team0Icon"/>
+        <TableRow
+            android:id="@+id/tableHeader"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
 
-        <TextView
-            android:paddingLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:textColor="#FF000000"
-            android:id="@+id/team0Team"/>
+            <TextView android:text=""/>
+            <TextView android:text=""/>
+            <TextView
+                android:text="@string/played_hdr"
+                android:gravity="left"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:text="@string/goals_for_hdr"
+                android:gravity="left"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:text="@string/goals_against_hdr"
+                android:gravity="left"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:text="@string/points_hdr"
+                android:gravity="left"
+                android:textColor="#FF000000"/>
+        </TableRow>
 
-    </LinearLayout>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:contentDescription="@string/cdIcon"
+                android:padding="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/team0Icon" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="left">
 
-        <ImageView
-            android:padding="5dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/team1Icon"/>
+            <TextView
+                android:id="@+id/team0Team"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="5dp"
+                android:textColor="#FF000000" />
 
-        <TextView
-            android:paddingLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:textColor="#FF000000"
-            android:id="@+id/team1Team"/>
+            <TextView
+                android:id="@+id/team0played"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team0for"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team0against"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team0pts"
+                android:textColor="#FF000000"/>
+        </TableRow>
+        
+        <TableRow >
+            <ImageView
+                android:contentDescription="@string/cdIcon"
+                android:padding="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/team1Icon"/>
 
-    </LinearLayout>
+            <TextView
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|left"
+                android:textColor="#FF000000"
+                android:id="@+id/team1Team"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="left">
+            <TextView
+                android:id="@+id/team1played"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team1for"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team1against"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team1pts"
+                android:textColor="#FF000000"/>
+        </TableRow>
+        
+        <TableRow >
+            <ImageView
+                android:contentDescription="@string/cdIcon"
+                android:padding="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/team2Icon"/>
 
-        <ImageView
-            android:padding="5dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/team2Icon"/>
+            <TextView
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|left"
+                android:textColor="#FF000000"
+                android:id="@+id/team2Team"/>
 
-        <TextView
-            android:paddingLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:textColor="#FF000000"
-            android:id="@+id/team2Team"/>
+            <TextView
+                android:id="@+id/team2played"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team2for"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team2against"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team2pts"
+                android:textColor="#FF000000"/>
+        </TableRow>
+        
+        <TableRow >
+            <ImageView
+                android:contentDescription="@string/cdIcon"
+                android:padding="5dp"
+                android:gravity="left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/team3Icon"/>
 
-    </LinearLayout>
+            <TextView
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|left"
+                android:textColor="#FF000000"
+                android:id="@+id/team3Team"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="left">
-
-        <ImageView
-            android:padding="5dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:id="@+id/team3Icon"/>
-
-        <TextView
-            android:paddingLeft="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:textColor="#FF000000"
-            android:id="@+id/team3Team"/>
-
-    </LinearLayout>
+            <TextView
+                android:id="@+id/team3played"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team3for"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team3against"
+                android:textColor="#FF000000"/>
+            <TextView
+                android:id="@+id/team3pts"
+                android:textColor="#FF000000"/>
+        </TableRow>
+    </TableLayout>
 
     <View
         android:layout_marginTop="5dip"
