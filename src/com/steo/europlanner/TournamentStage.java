@@ -45,4 +45,45 @@ public abstract class TournamentStage {
         }
         return null;
     }
+
+    public int getFixturesPlayed(Team team) {
+        int played = 0;
+        for(Fixture fixture : mFixtures) {
+            if(fixture.involvesTeam(team) && fixture.hasGameBeenPlayed()) {
+                played++;
+            }
+        }
+        return played;
+    }
+
+    public int getGoalsFor(Team team) {
+        int goals = 0;
+        for(Fixture fixture : mFixtures) {
+            if(fixture.involvesTeam(team) && fixture.hasGameBeenPlayed()) {
+                goals += fixture.getGoalsFor(team);
+            }
+        }
+        return goals;
+    }
+
+    public int getGoalsAgainst(Team team) {
+        int goals = 0;
+        for(Fixture fixture : mFixtures) {
+            if(fixture.involvesTeam(team) && fixture.hasGameBeenPlayed()) {
+                goals += fixture.getGoalsAgainst(team);
+            }
+        }
+        return goals;
+    }
+
+    public int getPoints(Team team) {
+        int points = 0;
+        for(Fixture fixture : mFixtures) {
+            if(fixture.involvesTeam(team) && fixture.hasGameBeenPlayed()) {
+                points += fixture.getPoints(team);
+            }
+        }
+        return points;
+    }
+
 }

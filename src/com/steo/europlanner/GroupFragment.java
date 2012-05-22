@@ -59,25 +59,27 @@ public class GroupFragment extends SherlockFragment {
                 int gamesPlayedViewId = res.getIdentifier(gamesPlayedIdStr, "id", packageName);
                 TextView gamesPlayedView = (TextView)fragView.findViewById(gamesPlayedViewId);
 
-                gamesPlayedView.setText("3");
+
+                gamesPlayedView.setText("" + mStage.getFixturesPlayed(team));
 
                 String forIdStr = "team" + i + "for";
                 int forViewId = res.getIdentifier(forIdStr, "id", packageName);
                 TextView forView = (TextView)fragView.findViewById(forViewId);
 
-                forView.setText("3");
+
+                forView.setText("" + mStage.getGoalsFor(team));
 
                 String againstIdStr = "team" + i + "against";
                 int againstViewId = res.getIdentifier(againstIdStr, "id", packageName);
                 TextView againstView = (TextView)fragView.findViewById(againstViewId);
 
-                againstView.setText("3");
+                againstView.setText("" + mStage.getGoalsAgainst(team));
 
                 String pointsIdStr = "team" + i + "pts";
                 int pointsViewId = res.getIdentifier(pointsIdStr, "id", packageName);
                 TextView pointsView = (TextView)fragView.findViewById(pointsViewId);
 
-                pointsView.setText("3");
+                pointsView.setText("" + mStage.getPoints(team));
             }
         }
 
