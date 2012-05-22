@@ -106,6 +106,13 @@
     <string name="loadingNews">Loading News&#8230;</string>
     <string name="homeButton">Home Button</string>
 
+    <string name="played_hdr">P</string>
+    <string name="goals_for_hdr">F</string>
+    <string name="goals_against_hdr">A</string>
+    <string name="points_hdr">Pts</string>
+
+    <string name="cdIcon">Icon</string>
+
     <string name="cdVenueDesc">Venues</string>
 
     <string name="played_hdr">P</string>
