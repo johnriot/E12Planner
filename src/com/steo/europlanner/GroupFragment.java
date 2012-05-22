@@ -16,6 +16,7 @@ public class GroupFragment extends SherlockFragment {
 
     private final TournamentStage mStage;
     public final int NUMBER_GROUPS = 4;
+    public final int NUMBER_TEAMS_PER_GROUP = 4;
 
     public GroupFragment(TournamentStage stage) {
         mStage = stage;
@@ -36,8 +37,8 @@ public class GroupFragment extends SherlockFragment {
 
         ArrayList<Team> teams = mStage.getTeams();
         if(mStage.getId() < NUMBER_GROUPS) {
-          //This view supports 4 teams
-            for(int i = 0; i < 4; i++) {
+            //This view supports 4 teams
+            for(int i = 0; i < NUMBER_TEAMS_PER_GROUP; i++) {
 
                Team team = teams.get(i);
 
@@ -53,6 +54,30 @@ public class GroupFragment extends SherlockFragment {
                 TextView teamNameView = (TextView)fragView.findViewById(teamNameViewId);
 
                 teamNameView.setText(teamNames[team.getTeamId()]);
+
+                String gamesPlayedIdStr = "team" + i + "played";
+                int gamesPlayedViewId = res.getIdentifier(gamesPlayedIdStr, "id", packageName);
+                TextView gamesPlayedView = (TextView)fragView.findViewById(gamesPlayedViewId);
+
+                gamesPlayedView.setText("3");
+
+                String forIdStr = "team" + i + "for";
+                int forViewId = res.getIdentifier(forIdStr, "id", packageName);
+                TextView forView = (TextView)fragView.findViewById(forViewId);
+
+                forView.setText("3");
+
+                String againstIdStr = "team" + i + "against";
+                int againstViewId = res.getIdentifier(againstIdStr, "id", packageName);
+                TextView againstView = (TextView)fragView.findViewById(againstViewId);
+
+                againstView.setText("3");
+
+                String pointsIdStr = "team" + i + "pts";
+                int pointsViewId = res.getIdentifier(pointsIdStr, "id", packageName);
+                TextView pointsView = (TextView)fragView.findViewById(pointsViewId);
+
+                pointsView.setText("3");
             }
         }
 
