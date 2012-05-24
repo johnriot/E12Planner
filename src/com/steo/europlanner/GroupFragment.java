@@ -40,7 +40,7 @@ public class GroupFragment extends SherlockFragment {
             //This view supports 4 teams
             for(int i = 0; i < NUMBER_TEAMS_PER_GROUP; i++) {
 
-               Team team = teams.get(i);
+                Team team = teams.get(i);
 
                 String iconViewIdStr = "team" + i + "Icon";
                 int iconViewId = res.getIdentifier(iconViewIdStr, "id", packageName);

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<squad_defn>
+
+    <squad id="0"> <!-- Poland -->
+        <player position ="G" number ="-" name ="Łukasz Fabiański" dob ="April 18, 1985" />
+        <player position ="G" number ="-" name ="Wojciech Szczęsny" dob ="April 18, 1990" />
+        <player position ="G" number ="-" name ="Przemysław Tytoń" dob ="January 4, 1987" />
+        <player position ="D" number ="-" name ="Marcin Wasilewski" dob ="June 9, 1980" />
+        <player position ="D" number ="-" name ="Jakub Wawrzyniak" dob ="July 7, 1983" />
+        <player position ="D" number ="-" name ="Tomasz Jodłowiec " dob ="March 22, 1985" />
+        <player position ="D" number ="-" name ="Łukasz Piszczek" dob ="June 3, 1985" />
+        <player position ="D" number ="-" name ="Grzegorz Wojtkowiak" dob ="January 26, 1984" />
+        <player position ="D" number ="-" name ="Kamil Glik" dob ="February 3, 1988" />
+        <player position ="D" number ="-" name ="Damien Perquis" dob ="October 4, 1984" />
+        <player position ="D" number ="-" name ="Sebastian Boenisch" dob ="February 1, 1987" />
+        <player position ="D" number ="-" name ="Marcin Kamiński" dob ="January 15, 1992" />
+        <player position ="M" number ="-" name ="Dariusz Dudka" dob ="December 9, 1983" />
+        <player position ="M" number ="-" name ="Jakub Błaszczykowski (c)" dob ="December 14, 1985" />
+        <player position ="M" number ="-" name ="Rafał Murawski" dob ="October 9, 1981" />
+        <player position ="M" number ="-" name ="Ludovic Obraniak" dob ="November 10, 1984" />
+        <player position ="M" number ="-" name ="Adrian Mierzejewski" dob ="November 4, 1986" />
+        <player position ="M" number ="-" name ="Maciej Rybus" dob ="August 19, 1989" />
+        <player position ="M" number ="-" name ="Adam Matuszczyk" dob ="February 14, 1989" />
+        <player position ="M" number ="-" name ="Kamil Grosicki" dob ="June 8, 1988" />
+        <player position ="M" number ="-" name ="Eugen Polanski" dob ="March 17, 1986" />
+        <player position ="M" number ="-" name ="Rafał Wolski" dob ="November 10, 1992" />
+        <player position ="F" number ="-" name ="Robert Lewandowski" dob ="August 21, 1988" />
+        <player position ="F" number ="-" name ="Paweł Brożek" dob ="April 21, 1983" />
+        <player position ="F" number ="-" name ="Michał Kucharczyk" dob ="March 20, 1991" />
+        <player position ="F" number ="-" name ="Artur Sobiech" dob ="June 12, 1990" />
+    </squad>
+
+    <squad id="1"> <!--  Greece -->
+        <player position ="G" number ="-" name ="Kostas Chalkias" dob ="May 30, 1974" />
+        <player position ="G" number ="-" name ="Alexandros Tzorvas" dob ="August 12, 1982" />
+        <player position ="G" number ="-" name ="Michalis Sifakis" dob ="September 9, 1984" />
+        <player position ="D" number ="-" name ="Vasilis Torosidis" dob ="June 10, 1985" />
+        <player position ="D" number ="-" name ="Avraam Papadopoulos" dob ="December 3, 1984" />
+        <player position ="D" number ="-" name ="Sokratis Papastathopoulos" dob ="June 9, 1988" />
+        <player position ="D" number ="-" name ="Kyriakos Papadopoulos" dob ="February 23, 1992" />
+        <player position ="D" number ="-" name ="Giorgos Tzavelas" dob ="November 26, 1987" />
+        <player position ="D" number ="-" name ="José Holebas" dob ="June 27, 1984" />
+        <player position ="D" number ="-" name ="Stelios Malezas" dob ="March 11, 1985" />
+        <player position ="M" number ="-" name ="Giorgos Karagounis (c)" dob ="March 6, 1977" />
+        <player position ="M" number ="-" name ="Kostas Katsouranis" dob ="June 21, 1979" />
+        <player position ="M" number ="-" name ="Alexandros Tziolis" dob ="February 13, 1985" />
+        <player position ="M" number ="-" name ="Sotiris Ninis" dob ="April 3, 1990" />
+        <player position ="M" number ="-" name ="Giannis Fetfatzidis" dob ="December 21, 1990" />
+        <player position ="M" number ="-" name ="Grigoris Makos" dob ="January 18, 1987" />
+        <player position ="M" number ="-" name ="Giorgos Fotakis" dob ="October 29, 1981" />
+        <player position ="M" number ="-" name ="Panagiotis Kone" dob ="July 26, 1987" />
+        <player position ="M" number ="-" name ="Giannis Maniatis" dob ="October 12, 1986" />
+        <player position ="M" number ="-" name ="Kostas Fortounis" dob ="October 16, 1992" />
+        <player position ="F" number ="-" name ="Nikos Lyberopoulos" dob ="August 4, 1975" />
+        <player position ="F" number ="-" name ="Theofanis Gekas" dob ="May 23, 1980" />
+        <player position ="F" number ="-" name ="Dimitris Salpigidis" dob ="August 18, 1981" />
+        <player position ="F" number ="-" name ="Giorgos Samaras" dob ="February 21, 1985" />
+        <player position ="F" number ="-" name ="Kostas Mitroglou" dob ="March 12, 1988" />
+    </squad>
+    
+    <squad id="2"> <!--  Russia -->
+        <player position ="G" number ="-" name ="Igor Akinfeev" dob ="April 8, 1986" />
+        <player position ="G" number ="-" name ="Vyacheslav Malafeev" dob ="March 4, 1979" />
+        <player position ="G" number ="-" name ="Anton Shunin" dob ="January 27, 1987" />
+        <player position ="D" number ="-" name ="Sergei Ignashevich" dob ="July 14, 1979" />
+        <player position ="D" number ="-" name ="Aleksandr Anyukov" dob ="September 28, 1982" />
+        <player position ="D" number ="-" name ="Yuri Zhirkov" dob ="August 20, 1983" />
+        <player position ="D" number ="-" name ="Aleksei Berezutski" dob ="June 20, 1982" />
+        <player position ="D" number ="-" name ="Roman Shishkin" dob ="January 27, 1987" />
+        <player position ="D" number ="-" name ="Roman Sharonov" dob ="September 8, 1976" />
+        <player position ="D" number ="-" name ="Dmitri Kombarov" dob ="January 22, 1987" />
+        <player position ="D" number ="-" name ="Vladimir Granat" dob ="May 22, 1987" />
+        <player position ="M" number ="-" name ="Igor Semshov" dob ="April 6, 1978" />
+        <player position ="M" number ="-" name ="Konstantin Zyryanov" dob ="October 5, 1977" />
+        <player position ="M" number ="-" name ="Marat Izmailov" dob ="September 21, 1982" />
+        <player position ="M" number ="-" name ="Igor Denisov" dob ="May 17, 1984" />
+        <player position ="M" number ="-" name ="Roman Shirokov" dob ="July 6, 1981" />
+        <player position ="M" number ="-" name ="Alan Dzagoev" dob ="June 17, 1990" />
+        <player position ="M" number ="-" name ="Denis Glushakov" dob ="January 27, 1987" />
+        <player position ="M" number ="-" name ="Magomed Ozdoev" dob ="November 5, 1992" />
+        <player position ="F" number ="-" name ="Andrei Arshavin (c)" dob ="May 29, 1981" />
+        <player position ="F" number ="-" name ="Aleksandr Kerzhakov" dob ="November 27, 1982" />
+        <player position ="F" number ="-" name ="Roman Pavlyuchenko" dob ="December 15, 1981" />
+        <player position ="F" number ="-" name ="Pavel Pogrebnyak" dob ="November 8, 1983" />
+        <player position ="F" number ="-" name ="Aleksandr Kokorin" dob ="March 19, 1991" />
+        <player position ="F" number ="-" name ="Artem Dzyuba" dob ="August 22, 1988" />
+    </squad>
+    
+    <squad id="3"> <!-- Czech Republic -->
+        <player position ="G" number ="-" name ="Petr Cech" dob ="May 20, 1982" />
+        <player position ="G" number ="-" name ="Jaroslav Drobný" dob ="October 18, 1979" />
+        <player position ="G" number ="-" name ="Tomáš Grigar" dob ="February 1, 1983" />
+        <player position ="G" number ="-" name ="Jan Laštuvka" dob ="July 7, 1982" />
+        <player position ="D" number ="-" name ="Michal Kadlec" dob ="December 13, 1984" />
+        <player position ="D" number ="-" name ="Tomáš Sivok" dob ="September 15, 1983" />
+        <player position ="D" number ="-" name ="Daniel Pudil" dob ="September 27, 1985" />
+        <player position ="D" number ="-" name ="Roman Hubník" dob ="June 6, 1984" />
+        <player position ="D" number ="-" name ="Theodor Gebre Selassie" dob ="December 24, 1986" />
+        <player position ="D" number ="-" name ="David Limberský" dob ="October 6, 1983" />
+        <player position ="D" number ="-" name ="Marek Suchý" dob ="March 29, 1988" />
+        <player position ="D" number ="-" name ="František Rajtoral" dob ="March 12, 1986" />
+        <player position ="M" number ="-" name ="Tomáš Rosický (c)" dob ="October 4, 1980" />
+        <player position ="M" number ="-" name ="Jaroslav Plašil" dob ="January 5, 1982" />
+        <player position ="M" number ="-" name ="Tomáš Hübschman" dob ="September 4, 1981" />
+        <player position ="M" number ="-" name ="Jan Rezek" dob ="May 5, 1982" />
+        <player position ="M" number ="-" name ="Milan Petržela" dob ="June 19, 1983" />
+        <player position ="M" number ="-" name ="Daniel Kolár" dob ="October 27, 1985" />
+        <player position ="M" number ="-" name ="Václav Pilar" dob ="October 13, 1988" />
+        <player position ="M" number ="-" name ="Petr Jirácek" dob ="March 2, 1986" />
+        <player position ="F" number ="-" name ="Milan Baroš" dob ="October 28, 1981" />
+        <player position ="F" number ="-" name ="Tomáš Necid" dob ="August 13, 1989" />
+        <player position ="F" number ="-" name ="David Lafata" dob ="September 18, 1981" />
+        <player position ="F" number ="-" name ="Tomáš Pekhart" dob ="May 26, 1989" />
+    </squad>
+    
+    <squad id="4"> <!-- Netherlands -->
+        <player position ="D" number ="-" name ="Vurnon Anita" dob ="April 3, 1989" />
+        <player position ="D" number ="-" name ="Jetro Willems" dob ="March 30, 1994" />
+        <player position ="M" number ="-" name ="Rafael van der Vaart" dob ="February 11, 1983" />
+        <player position ="M" number ="-" name ="Wesley Sneijder" dob ="June 9, 1984" />
+        <player position ="M" number ="-" name ="Mark van Bommel (c)" dob ="April 22, 1977" />
+        <player position ="M" number ="-" name ="Nigel de Jong" dob ="November 30, 1984" />
+        <player position ="M" number ="-" name ="Arjen Robben" dob ="January 23, 1984" />
+        <player position ="M" number ="-" name ="Stijn Schaars" dob ="January 11, 1984" />
+        <player position ="M" number ="-" name ="Kevin Strootman" dob ="February 13, 1990" />
+        <player position ="M" number ="-" name ="Adam Maher" dob ="July 20, 1993" />
+        <player position ="F" number ="-" name ="Dirk Kuyt" dob ="July 22, 1980" />
+        <player position ="F" number ="-" name ="Robin van Persie" dob ="August 6, 1983" />
+        <player position ="F" number ="-" name ="Klaas-Jan Huntelaar" dob ="August 12, 1983" />
+        <player position ="F" number ="-" name ="Ibrahim Afellay" dob ="April 2, 1986" />
+        <player position ="F" number ="-" name ="Luuk de Jong" dob ="August 27, 1990" />
+        <player position ="F" number ="-" name ="Jeremain Lens" dob ="November 24, 1987" />
+        <player position ="F" number ="-" name ="Siem de Jong" dob ="January 28, 1989" />
+        <player position ="F" number ="-" name ="Luciano Narsingh" dob ="September 13, 1990" />
+    </squad>
+    
+    <squad id="5"> <!-- Denmark -->
+        <player position ="G" number ="-" name ="Thomas Sørensen" dob ="June 12, 1976" />
+        <player position ="G" number ="-" name ="Stephan Andersen" dob ="November 26, 1981" />
+        <player position ="G" number ="-" name ="Anders Lindegaard" dob ="April 13, 1984" />
+        <player position ="D" number ="-" name ="Lars Jacobsen" dob ="September 20, 1979" />
+        <player position ="D" number ="-" name ="Daniel Agger (c)" dob ="December 12, 1984" />
+        <player position ="D" number ="-" name ="Simon Kjær" dob ="March 26, 1989" />
+        <player position ="D" number ="-" name ="Simon Poulsen" dob ="October 7, 1984" />
+        <player position ="D" number ="-" name ="Andreas Bjelland" dob ="July 11, 1988" />
+        <player position ="D" number ="-" name ="Daniel Wass" dob ="May 31, 1989" />
+        <player position ="M" number ="-" name ="Christian Poulsen" dob ="February 28, 1980" />
+        <player position ="M" number ="-" name ="Thomas Kahlenberg" dob ="March 20, 1983" />
+        <player position ="M" number ="-" name ="William Kvist" dob ="February 24, 1985" />
+        <player position ="M" number ="-" name ="Michael Silberbauer" dob ="July 7, 1981" />
+        <player position ="M" number ="-" name ="Christian Eriksen" dob ="February 14, 1992" />
+        <player position ="M" number ="-" name ="Jakob Poulsen" dob ="July 7, 1983" />
+        <player position ="M" number ="-" name ="Lasse Schøne" dob ="May 27, 1986" />
+        <player position ="M" number ="-" name ="Niki Zimling" dob ="April 19, 1985" />
+        <player position ="F" number ="-" name ="Dennis Rommedahl" dob ="July 22, 1978" />
+        <player position ="F" number ="-" name ="Nicklas Bendtner" dob ="January 16, 1988" />
+        <player position ="F" number ="-" name ="Michael Krohn-Dehli" dob ="June 6, 1983" />
+        <player position ="F" number ="-" name ="Tobias Mikkelsen" dob ="September 18, 1986" />
+    </squad>
+    
+    <squad id="6"> <!-- Germany -->
+        <player position ="G" number ="-" name ="Marc-André ter Stegen" dob ="April 30, 1992" />
+        <player position ="D" number ="-" name ="Philipp Lahm (c)" dob ="November 11, 1983" />
+        <player position ="D" number ="-" name ="Per Mertesacker" dob ="September 29, 1984" />
+        <player position ="D" number ="-" name ="Jérôme Boateng" dob ="September 3, 1988" />
+        <player position ="D" number ="-" name ="Holger Badstuber" dob ="March 13, 1989" />
+        <player position ="D" number ="-" name ="Mats Hummels" dob ="December 16, 1988" />
+        <player position ="D" number ="-" name ="Benedikt Höwedes" dob ="February 29, 1988" />
+        <player position ="D" number ="-" name ="Marcel Schmelzer" dob ="January 22, 1988" />
+        <player position ="M" number ="-" name ="Lukas Podolski" dob ="June 4, 1985" />
+        <player position ="M" number ="-" name ="Bastian Schweinsteiger" dob ="August 1, 1984" />
+        <player position ="M" number ="-" name ="Mesut Özil" dob ="October 15, 1988" />
+        <player position ="M" number ="-" name ="Thomas Müller" dob ="September 13, 1989" />
+        <player position ="M" number ="-" name ="Sami Khedira" dob ="April 4, 1987" />
+        <player position ="M" number ="-" name ="Toni Kroos" dob ="January 4, 1990" />
+        <player position ="M" number ="-" name ="Mario Götze" dob ="June 3, 1992" />
+        <player position ="M" number ="-" name ="André Schürrle" dob ="November 6, 1990" />
+        <player position ="M" number ="-" name ="Lars Bender" dob ="April 27, 1989" />
+        <player position ="M" number ="-" name ="Marco Reus" dob ="May 31, 1989" />
+        <player position ="M" number ="-" name ="Sven Bender" dob ="April 27, 1989" />
+        <player position ="M" number ="-" name ="Ilkay Gündogan" dob ="October 24, 1990" />
+        <player position ="M" number ="-" name ="Julian Draxler" dob ="September 20, 1993" />
+        <player position ="F" number ="-" name ="Miroslav Klose" dob ="June 9, 1978" />
+        <player position ="F" number ="-" name ="Mario Gomez" dob ="July 10, 1985" />
+        <player position ="F" number ="-" name ="Cacau" dob ="March 27, 1981" />
+    </squad>
+
+    <squad id="7"> <!-- Portugal -->
+        <player position ="G" number ="-" name ="Eduardo" dob ="September 19, 1982" />
+        <player position ="G" number ="-" name ="Rui Patrício" dob ="February 15, 1988" />
+        <player position ="G" number ="-" name ="Beto" dob ="May 1, 1982" />
+        <player position ="D" number ="-" name ="Bruno Alves" dob ="November 27, 1981" />
+        <player position ="D" number ="-" name ="Pepe" dob ="February 26, 1983" />
+        <player position ="D" number ="-" name ="Fábio Coentrão" dob ="March 11, 1988" />
+        <player position ="D" number ="-" name ="João Pereira" dob ="February 25, 1984" />
+        <player position ="D" number ="-" name ="Rolando" dob ="August 31, 1985" />
+        <player position ="D" number ="-" name ="Ricardo Costa" dob ="May 16, 1981" />
+        <player position ="D" number ="-" name ="Miguel Lopes" dob ="December 19, 1986" />
+        <player position ="M" number ="-" name ="Raul Meireles" dob ="March 17, 1983" />
+        <player position ="M" number ="-" name ="João Moutinho" dob ="September 8, 1986" />
+        <player position ="M" number ="-" name ="Miguel Veloso" dob ="May 11, 1986" />
+        <player position ="M" number ="-" name ="Hugo Viana" dob ="January 15, 1983" />
+        <player position ="M" number ="-" name ="Rúben Micael" dob ="August 19, 1986" />
+        <player position ="M" number ="-" name ="Custódio" dob ="May 24, 1983" />
+        <player position ="F" number ="-" name ="Cristiano Ronaldo (c)" dob ="February 5, 1985" />
+        <player position ="F" number ="-" name ="Nani" dob ="November 17, 1986" />
+        <player position ="F" number ="-" name ="Hélder Postiga" dob ="August 2, 1982" />
+        <player position ="F" number ="-" name ="Hugo Almeida" dob ="May 23, 1984" />
+        <player position ="F" number ="-" name ="Ricardo Quaresma" dob ="September 26, 1983" />
+        <player position ="F" number ="-" name ="Silvestre Varela" dob ="February 2, 1985" />
+        <player position ="F" number ="-" name ="Nélson Oliveira" dob ="August 8, 1991" />
+    </squad>
+    
+    <squad id="8"> <!-- Spain -->
+        <player position ="G" number ="-" name ="Iker Casillas (c)" dob ="May 20, 1981" />
+        <player position ="G" number ="-" name ="Pepe Reina" dob ="August 30, 1982" />
+        <player position ="G" number ="-" name ="David de Gea" dob ="November 7, 1990" />
+        <player position ="D" number ="-" name ="Sergio Ramos" dob ="March 30, 1986" />
+        <player position ="D" number ="-" name ="Álvaro Arbeloa" dob ="January 17, 1983" />
+        <player position ="D" number ="-" name ="Raúl Albiol" dob ="September 4, 1985" />
+        <player position ="D" number ="-" name ="Nacho Monreal" dob ="February 26, 1986" />
+        <player position ="D" number ="-" name ="Jordi Alba" dob ="March 21, 1989" />
+        <player position ="D" number ="-" name ="Álvaro Domínguez" dob ="May 16, 1989" />
+        <player position ="D" number ="-" name ="Juanfran" dob ="January 9, 1985" />
+        <player position ="M" number ="-" name ="Xabi Alonso" dob ="November 25, 1981" />
+        <player position ="M" number ="-" name ="David Silva" dob ="January 8, 1986" />
+        <player position ="M" number ="-" name ="Santi Cazorla" dob ="December 13, 1984" />
+        <player position ="M" number ="-" name ="Jesús Navas" dob ="November 21, 1985" />
+        <player position ="M" number ="-" name ="Bruno Soriano" dob ="June 12, 1984" />
+        <player position ="M" number ="-" name ="Beñat" dob ="February 19, 1987" />
+        <player position ="M" number ="-" name ="Isco" dob ="April 21, 1992" />
+        <player position ="M" number ="-" name ="Javi García" dob ="February 8, 1987" />
+        <player position ="M" number ="-" name ="Juan Mata" dob ="April 28, 1988" />
+        <player position ="F" number ="-" name ="Álvaro Negredo" dob ="August 20, 1985" />
+        <player position ="F" number ="-" name ="Roberto Soldado" dob ="May 27, 1985" />
+        <player position ="F" number ="-" name ="Fernando Torres" dob ="March 20, 1984" />
+        <player position ="F" number ="-" name ="Adrián López" dob ="January 8, 1988" />
+    </squad>
+    
+    <squad id="9"> <!-- Italy -->
+        <player position ="G" number ="-" name ="Gianluigi Buffon (c)" dob ="January 28, 1978" />
+        <player position ="G" number ="-" name ="Emiliano Viviano" dob ="December 1, 1985" />
+        <player position ="G" number ="-" name ="Morgan De Sanctis" dob ="March 26, 1977" />
+        <player position ="G" number ="-" name ="Salvatore Sirigu" dob ="January 12, 1987" />
+        <player position ="D" number ="-" name ="Giorgio Chiellini" dob ="August 14, 1984" />
+        <player position ="D" number ="-" name ="Andrea Barzagli" dob ="May 8, 1981" />
+        <player position ="D" number ="-" name ="Domenico Criscito" dob ="December 30, 1986" />
+        <player position ="D" number ="-" name ="Christian Maggio" dob ="February 11, 1982" />
+        <player position ="D" number ="-" name ="Leonardo Bonucci" dob ="May 1, 1987" />
+        <player position ="D" number ="-" name ="Andrea Ranocchia" dob ="February 16, 1988" />
+        <player position ="D" number ="-" name ="Federico Balzaretti" dob ="December 6, 1981" />
+        <player position ="D" number ="-" name ="Salvatore Bocchetti" dob ="November 30, 1986" />
+        <player position ="D" number ="-" name ="Ignazio Abate" dob ="November 12, 1986" />
+        <player position ="D" number ="-" name ="Angelo Ogbonna" dob ="May 23, 1988" />
+        <player position ="D" number ="-" name ="Davide Astori" dob ="January 7, 1987" />
+        <player position ="M" number ="-" name ="Andrea Pirlo" dob ="May 19, 1979" />
+        <player position ="M" number ="-" name ="Daniele De Rossi" dob ="July 24, 1983" />
+        <player position ="M" number ="-" name ="Riccardo Montolivo" dob ="January 18, 1985" />
+        <player position ="M" number ="-" name ="Claudio Marchisio" dob ="January 19, 1986" />
+        <player position ="M" number ="-" name ="Antonio Nocerino" dob ="April 9, 1985" />
+        <player position ="M" number ="-" name ="Thiago Motta" dob ="August 28, 1982" />
+        <player position ="M" number ="-" name ="Alessandro Diamanti" dob ="May 2, 1983" />
+        <player position ="M" number ="-" name ="Luca Cigarini" dob ="June 20, 1986" />
+        <player position ="M" number ="-" name ="Emanuele Giaccherini" dob ="May 5, 1985" />
+        <player position ="M" number ="-" name ="Ezequiel Schelotto" dob ="May 23, 1989" />
+        <player position ="M" number ="-" name ="Marco Verratti" dob ="November 5, 1992" />
+        <player position ="F" number ="-" name ="Antonio Di Natale" dob ="October 13, 1977" />
+        <player position ="F" number ="-" name ="Antonio Cassano" dob ="July 12, 1982" />
+        <player position ="F" number ="-" name ="Mario Balotelli" dob ="August 12, 1990" />
+        <player position ="F" number ="-" name ="Sebastian Giovinco" dob ="January 26, 1987" />
+        <player position ="F" number ="-" name ="Fabio Borini" dob ="March 29, 1991" />
+        <player position ="F" number ="-" name ="Mattia Destro" dob ="March 20, 1991" />
+    </squad>
+    
+    <squad id="10"> <!-- Ireland. C'mon the boys! -->
+        <player position ="G" number ="-" name ="Shay Given" dob ="April 20, 1976" />
+        <player position ="G" number ="-" name ="Keiren Westwood" dob ="October 23, 1984" />
+        <player position ="G" number ="-" name ="David Forde" dob ="December 20, 1979" />
+        <player position ="D" number ="-" name ="Sean St Ledger" dob ="December 28, 1984" />
+        <player position ="D" number ="-" name ="Stephen Ward" dob ="August 20, 1985" />
+        <player position ="D" number ="-" name ="John O'Shea" dob ="April 30, 1981" />
+        <player position ="D" number ="-" name ="Richard Dunne" dob ="September 21, 1979" />
+        <player position ="D" number ="-" name ="Stephen Kelly" dob ="September 6, 1983" />
+        <player position ="D" number ="-" name ="Darren O'Dea" dob ="February 4, 1987" />
+        <player position ="D" number ="-" name ="Kevin Foley" dob ="November 1, 1984" />
+        <player position ="M" number ="-" name ="Glenn Whelan" dob ="January 13, 1984" />
+        <player position ="M" number ="-" name ="Keith Andrews" dob ="September 13, 1980" />
+        <player position ="M" number ="-" name ="Damien Duff" dob ="March 2, 1979" />
+        <player position ="M" number ="-" name ="Stephen Hunt" dob ="August 1, 1981" />
+        <player position ="M" number ="-" name ="Darron Gibson" dob ="October 25, 1987" />
+        <player position ="M" number ="-" name ="Keith Fahey" dob ="January 15, 1983" />
+        <player position ="M" number ="-" name ="James McClean" dob ="April 22, 1989" />
+        <player position ="F" number ="-" name ="Aiden McGeady" dob ="April 4, 1986" />
+        <player position ="F" number ="-" name ="Kevin Doyle" dob ="September 18, 1983" />
+        <player position ="F" number ="-" name ="Robbie Keane (c)" dob ="July 8, 1980" />
+        <player position ="F" number ="-" name ="Shane Long" dob ="January 22, 1987" />
+        <player position ="F" number ="-" name ="Jonathan Walters" dob ="September 20, 1983" />
+        <player position ="F" number ="-" name ="Simon Cox" dob ="April 28, 1987" />
+    </squad>
+    
+    <squad id="11"> <!-- Croatia -->
+        <player position ="G" number ="-" name ="Stipe Pletikosa" dob ="January 8, 1979" />
+        <player position ="G" number ="-" name ="Danijel Subašic" dob ="October 27, 1984" />
+        <player position ="G" number ="-" name ="Goran Blaževic" dob ="June 7, 1986" />
+        <player position ="G" number ="-" name ="Ivan Kelava" dob ="February 20, 1988" />
+        <player position ="D" number ="-" name ="Josip Šimunic" dob ="February 18, 1978" />
+        <player position ="D" number ="-" name ="Vedran Corluka" dob ="February 5, 1986" />
+        <player position ="D" number ="-" name ="Danijel Pranjic" dob ="December 2, 1981" />
+        <player position ="D" number ="-" name ="Ivan Strinic" dob ="July 17, 1987" />
+        <player position ="D" number ="-" name ="Dejan Lovren" dob ="July 5, 1989" />
+        <player position ="D" number ="-" name ="Gordon Schildenfeld" dob ="March 18, 1985" />
+        <player position ="D" number ="-" name ="Domagoj Vida" dob ="April 29, 1989" />
+        <player position ="D" number ="-" name ="Šime Vrsaljko" dob ="January 10, 1992" />
+        <player position ="D" number ="-" name ="Jurica Buljat" dob ="September 12, 1986" />
+        <player position ="M" number ="-" name ="Darijo Srna (c)" dob ="May 1, 1982" />
+        <player position ="M" number ="-" name ="Niko Kranjcar" dob ="August 13, 1984" />
+        <player position ="M" number ="-" name ="Luka Modric" dob ="September 9, 1985" />
+        <player position ="M" number ="-" name ="Ivan Rakitic" dob ="March 10, 1988" />
+        <player position ="M" number ="-" name ="Ognjen Vukojevic" dob ="December 20, 1983" />
+        <player position ="M" number ="-" name ="Tomislav Dujmovic" dob ="February 26, 1981" />
+        <player position ="M" number ="-" name ="Ivan Perišic" dob ="February 2, 1989" />
+        <player position ="M" number ="-" name ="Ivo Ilicevic" dob ="September 14, 1986" />
+        <player position ="M" number ="-" name ="Milan Badelj" dob ="February 25, 1989" />
+        <player position ="F" number ="-" name ="Ivica Olic" dob ="September 14, 1979" />
+        <player position ="F" number ="-" name ="Eduardo" dob ="February 25, 1983" />
+        <player position ="F" number ="-" name ="Mario Mandžukic" dob ="May 21, 1986" />
+        <player position ="F" number ="-" name ="Nikica Jelavic" dob ="August 27, 1985" />
+    </squad>
+    
+    <squad id="12"> <!-- Ukraine -->
+        <player position ="G" number ="-" name ="Andriy Pyatov" dob ="June 28, 1984" />
+        <player position ="G" number ="-" name ="Oleksandr Horyainov" dob ="June 29, 1975" />
+        <player position ="G" number ="-" name ="Maksym Koval" dob ="December 9, 1992" />
+        <player position ="G" number ="-" name ="Oleksandr Bandura" dob ="May 30, 1986" />
+        <player position ="D" number ="-" name ="Oleksandr Kucher" dob ="October 22, 1982" />
+        <player position ="D" number ="-" name ="Taras Mykhalyk" dob ="October 28, 1983" />
+        <player position ="D" number ="-" name ="Vyacheslav Shevchuk" dob ="May 13, 1979" />
+        <player position ="D" number ="-" name ="Vitaliy Mandzyuk" dob ="January 24, 1986" />
+        <player position ="D" number ="-" name ="Yaroslav Rakitskiy" dob ="August 3, 1989" />
+        <player position ="D" number ="-" name ="Yevhen Khacheridi" dob ="July 28, 1987" />
+        <player position ="D" number ="-" name ="Bohdan Butko" dob ="January 13, 1991" />
+        <player position ="D" number ="-" name ="Yevhen Selin" dob ="May 9, 1988" />
+        <player position ="M" number ="-" name ="Anatoliy Tymoshchuk" dob ="March 30, 1979" />
+        <player position ="M" number ="-" name ="Oleh Husyev" dob ="April 25, 1983" />
+        <player position ="M" number ="-" name ="Ruslan Rotan" dob ="October 29, 1981" />
+        <player position ="M" number ="-" name ="Serhiy Nazarenko" dob ="February 16, 1980" />
+        <player position ="M" number ="-" name ="Oleksandr Aliyev" dob ="February 3, 1985" />
+        <player position ="M" number ="-" name ="Yevhen Konoplyanka" dob ="September 29, 1989" />
+        <player position ="M" number ="-" name ="Taras Stepanenko" dob ="August 8, 1989" />
+        <player position ="M" number ="-" name ="Denys Harmash" dob ="April 19, 1990" />
+        <player position ="F" number ="-" name ="Andriy Shevchenko (c)" dob ="September 29, 1976" />
+        <player position ="F" number ="-" name ="Andriy Voronin" dob ="July 21, 1979" />
+        <player position ="F" number ="-" name ="Artem Milevskiy" dob ="January 12, 1985" />
+        <player position ="F" number ="-" name ="Yevhen Seleznyov" dob ="July 20, 1985" />
+        <player position ="F" number ="-" name ="Marko Devych" dob ="October 27, 1983" />
+        <player position ="F" number ="-" name ="Andriy Yarmolenko" dob ="October 23, 1989" />
+    </squad>
+    
+    <squad id="13"> <!-- Sweden -->
+        <player position ="G" number ="-" name ="Andreas Isaksson" dob ="October 3, 1981" />
+        <player position ="G" number ="-" name ="Johan Wiland" dob ="January 24, 1981" />
+        <player position ="G" number ="-" name ="Pär Hansson" dob ="June 22, 1986" />
+        <player position ="D" number ="-" name ="Mikael Lustig" dob ="December 13, 1986" />
+        <player position ="D" number ="-" name ="Olof Mellberg" dob ="September 3, 1977" />
+        <player position ="D" number ="-" name ="Andreas Granqvist" dob ="April 16, 1985" />
+        <player position ="D" number ="-" name ="Martin Olsson" dob ="May 17, 1988" />
+        <player position ="D" number ="-" name ="Jonas Olsson" dob ="March 10, 1983" />
+        <player position ="D" number ="-" name ="Mikael Antonsson" dob ="May 31, 1981" />
+        <player position ="D" number ="-" name ="Behrang Safari" dob ="February 9, 1985" />
+        <player position ="M" number ="-" name ="Rasmus Elm" dob ="March 17, 1988" />
+        <player position ="M" number ="-" name ="Sebastian Larsson" dob ="June 6, 1985" />
+        <player position ="M" number ="-" name ="Anders Svensson" dob ="July 17, 1976" />
+        <player position ="M" number ="-" name ="Kim Källström" dob ="August 24, 1982" />
+        <player position ="M" number ="-" name ="Pontus Wernbloom" dob ="June 25, 1986" />
+        <player position ="M" number ="-" name ="Samuel Holmén" dob ="June 28, 1984" />
+        <player position ="M" number ="-" name ="Emir Bajrami" dob ="March 7, 1988" />
+        <player position ="M" number ="-" name ="Christian Wilhelmsson" dob ="December 8, 1979" />
+        <player position ="F" number ="-" name ="Zlatan Ibrahimovic (c)" dob ="October 3, 1981" />
+        <player position ="F" number ="-" name ="Johan Elmander" dob ="May 27, 1981" />
+        <player position ="F" number ="-" name ="Tobias Hysén" dob ="March 9, 1982" />
+        <player position ="F" number ="-" name ="Ola Toivonen" dob ="July 3, 1986" />
+        <player position ="F" number ="-" name ="Markus Rosenberg" dob ="September 27, 1982" />
+    </squad>
+
+    <squad id="14"> <!-- France -->
+        <player position ="G" number ="-" name ="Hugo Lloris (c)" dob ="December 26, 1986" />
+        <player position ="G" number ="-" name ="Steve Mandanda" dob ="March 28, 1985" />
+        <player position ="G" number ="-" name ="Cédric Carrasso" dob ="December 30, 1981" />
+        <player position ="D" number ="-" name ="Patrice Evra" dob ="May 15, 1981" />
+        <player position ="D" number ="-" name ="Philippe Mexès" dob ="March 30, 1982" />
+        <player position ="D" number ="-" name ="Adil Rami" dob ="December 27, 1985" />
+        <player position ="D" number ="-" name ="Anthony Réveillère" dob ="November 10, 1979" />
+        <player position ="D" number ="-" name ="Gaël Clichy" dob ="July 26, 1985" />
+        <player position ="D" number ="-" name ="Mathieu Debuchy" dob ="July 28, 1985" />
+        <player position ="D" number ="-" name ="Laurent Koscielny" dob ="September 10, 1985" />
+        <player position ="D" number ="-" name ="Mapou Yanga-Mbiwa" dob ="May 15, 1989" />
+        <player position ="M" number ="-" name ="Florent Malouda" dob ="June 13, 1980" />
+        <player position ="M" number ="-" name ="Franck Ribéry" dob ="April 7, 1983" />
+        <player position ="M" number ="-" name ="Alou Diarra" dob ="July 15, 1981" />
+        <player position ="M" number ="-" name ="Yoann Gourcuff" dob ="July 1, 1986" />
+        <player position ="M" number ="-" name ="Samir Nasri" dob ="June 27, 1987" />
+        <player position ="M" number ="-" name ="Yann M'Vila" dob ="June 29, 1990" />
+        <player position ="M" number ="-" name ="Yohan Cabaye" dob ="January 14, 1986" />
+        <player position ="M" number ="-" name ="Marvin Martin" dob ="January 10, 1988" />
+        <player position ="M" number ="-" name ="Hatem Ben Arfa" dob ="March 7, 1987" />
+        <player position ="M" number ="-" name ="Blaise Matuidi" dob ="April 9, 1987" />
+        <player position ="M" number ="-" name ="Mathieu Valbuena" dob ="January 2, 1987" />
+        <player position ="F" number ="-" name ="Karim Benzema" dob ="December 19, 1987" />
+        <player position ="F" number ="-" name ="Loïc Rémy" dob ="January 2, 1987" />
+        <player position ="F" number ="-" name ="Jérémy Ménez" dob ="May 7, 1987" />
+        <player position ="F" number ="-" name ="Olivier Giroud" dob ="September 30, 1986" />
+    </squad>
+
+    <squad id="15"> <!-- England -->
+        <player position ="G" number ="-" name ="Joe Hart" dob ="April 19, 1987" />
+        <player position ="G" number ="-" name ="Robert Green" dob ="January 18, 1980" />
+        <player position ="G" number ="-" name ="John Ruddy" dob ="October 24, 1986" />
+        <player position ="D" number ="-" name ="Glen Johnson" dob ="August 23, 1984" />
+        <player position ="D" number ="-" name ="Ashley Cole" dob ="December 20, 1980" />
+        <player position ="D" number ="-" name ="Gary Cahill" dob ="December 19, 1985" />
+        <player position ="D" number ="-" name ="John Terry" dob ="December 7, 1980" />
+        <player position ="D" number ="-" name ="Leighton Baines" dob ="December 11, 1984" />
+        <player position ="D" number ="-" name ="Joleon Lescott" dob ="August 16, 1982" />
+        <player position ="D" number ="-" name ="Phil Jones" dob ="February 21, 1992" />
+        <player position ="M" number ="-" name ="Steven Gerrard ©" dob ="May 30, 1980" />
+        <player position ="M" number ="-" name ="Scott Parker" dob ="October 13, 1980" />
+        <player position ="M" number ="-" name ="Frank Lampard" dob ="June 20, 1978" />
+        <player position ="M" number ="-" name ="Ashley Young" dob ="July 9, 1985" />
+        <player position ="M" number ="-" name ="Theo Walcott" dob ="March 16, 1989" />
+        <player position ="M" number ="-" name ="James Milner" dob ="January 4, 1986" />
+        <player position ="M" number ="-" name ="Gareth Barry" dob ="February 23, 1981" />
+        <player position ="M" number ="-" name ="Stewart Downing" dob ="July 22, 1984" />
+        <player position ="M" number ="-" name ="Alex Oxlade-Chamberlain" dob ="August 15, 1993" />
+        <player position ="F" number ="-" name ="Andy Carroll" dob ="January 6, 1989" />
+        <player position ="F" number ="-" name ="Wayne Rooney" dob ="October 24, 1985" />
+        <player position ="F" number ="-" name ="Jermain Defoe" dob ="October 7, 1982" />
+        <player position ="F" number ="-" name ="Danny Welbeck" dob ="November 26, 1990" />
+    </squad>
+
+</squad_defn>

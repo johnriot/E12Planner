@@ -113,5 +113,9 @@
     <string name="goals_against_hdr">A</string>
     <string name="points_hdr">Pts</string>
 
+    <string name="jersey_hdr">#</string>
+    <string name="player_hdr">Player</string>
+    <string name="age_hdr">Age</string>
+
     <string name="cdIcon">Icon</string>
 </resources>
