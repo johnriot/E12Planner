@@ -26,19 +26,19 @@
             <TextView android:text=""/>
             <TextView
                 android:text="@string/played_hdr"
-                android:gravity="left"
+                android:gravity="center_vertical|left"
                 android:textColor="#FF000000"/>
             <TextView
                 android:text="@string/goals_for_hdr"
-                android:gravity="left"
+                android:gravity="center_vertical|left"
                 android:textColor="#FF000000"/>
             <TextView
                 android:text="@string/goals_against_hdr"
-                android:gravity="left"
+                android:gravity="center_vertical|left"
                 android:textColor="#FF000000"/>
             <TextView
                 android:text="@string/points_hdr"
-                android:gravity="left"
+                android:gravity="center_vertical|left"
                 android:textColor="#FF000000"/>
         </TableRow>
 
@@ -64,16 +64,20 @@
 
             <TextView
                 android:id="@+id/team0played"
+                android:gravity="center_vertical|left"
                 android:textColor="#FF000000"/>
             <TextView
                 android:id="@+id/team0for"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team0against"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team0pts"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
         </TableRow>
         
         <TableRow >
@@ -94,16 +98,20 @@
 
             <TextView
                 android:id="@+id/team1played"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team1for"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team1against"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team1pts"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
         </TableRow>
         
         <TableRow >
@@ -124,16 +132,20 @@
 
             <TextView
                 android:id="@+id/team2played"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team2for"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team2against"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team2pts"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
         </TableRow>
         
         <TableRow >
@@ -155,16 +167,20 @@
 
             <TextView
                 android:id="@+id/team3played"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team3for"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team3against"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
             <TextView
                 android:id="@+id/team3pts"
-                android:textColor="#FF000000"/>
+                android:textColor="#FF000000"
+                android:gravity="center_vertical|left"/>
         </TableRow>
     </TableLayout>
 
