@@ -1,35 +1,37 @@
 package com.neoware.europlanner;
 
 import android.content.Intent;
+import android.graphics.Shader.TileMode;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ListView;
 
-public class TeamsActivity extends FragmentActivity {
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuItem;
+
+public class TeamsActivity extends SherlockFragmentActivity {
 
     //Link for quick action menu: http://www.londatiga.net/it/how-to-create-quickaction-dialog-in-android/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.teams_layout);
 
-        ImageButton homeButton = (ImageButton)findViewById(R.id.teamsHomeButton);
-        homeButton.setOnClickListener(new OnClickListener() {
+        BitmapDrawable bg = (BitmapDrawable)getResources().getDrawable(R.drawable.toolbar_bg);
+        bg.setTileModeXY(TileMode.REPEAT, TileMode.REPEAT);
 
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        ActionBar bar = getSupportActionBar();
+        bar.setBackgroundDrawable(bg);
+        bar.setTitle(R.string.games_title);
+        bar.setHomeButtonEnabled(true);
+        bar.setDisplayHomeAsUpEnabled(true);
+        bar.setDisplayUseLogoEnabled(true);
 
         final String teams[] = this.getResources().getStringArray(R.array.team_names);
         //Arrays.sort(teams); // Removing sort as unsorted list preserves the position = id equivalence
@@ -51,5 +53,20 @@ public class TeamsActivity extends FragmentActivity {
                 startActivity(squadIntent);
             }
         });
+    }
+
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home) {
+
+            Intent homeIntent = new Intent(this, PlannerHomeActivity.class);
+            homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(homeIntent);
+
+            return true;
+        }
+
+        return super.onMenuItemSelected(featureId, item);
     }
 }

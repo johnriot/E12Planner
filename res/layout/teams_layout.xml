@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" 
-        android:padding="0dip"
-        android:gravity="center_horizontal"
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#FFFFFF">
+        android:layout_gravity="right"
+        android:background="@color/white"
+        android:id="@+id/teamsLayout">
 
-    <LinearLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/toolbar_bg">
+        <com.inmobi.androidsdk.IMAdView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/adViewTeams"
+            appId="4028cba631d63df10131e1d3818b00cc"
+            adSlot="15"
+            testMode="true" />
 
-        <ImageButton
-            android:id="@+id/teamsHomeButton"
+        <ListView
+            android:id="@+id/teamsListView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/homeButton"
-            android:src="@drawable/homeicon_dark"
-            android:background="@null"
-            android:clickable="true"
-            android:padding="4dp"
-            />
-    </LinearLayout>
-    
-    <ListView
-        android:id="@+id/teamsListView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#CCCCCC"
-        android:padding="20dp"/>
-</LinearLayout>
+            android:background="#CCCCCC"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
