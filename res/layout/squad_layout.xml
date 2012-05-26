@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" 
+        android:padding="0dip"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF">
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_bg">
+
+        <ImageButton
+            android:id="@+id/squadHomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/homeButton"
+            android:src="@drawable/homeicon_dark"
+            android:background="@null"
+            android:clickable="true"
+            android:padding="4dp"
+            />
+    </LinearLayout>
+
+    <ScrollView 
+    android:layout_height="wrap_content"  
+    android:id="@+id/scrollView1" 
+    android:layout_width="fill_parent">
+    
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+            <TableRow
+                android:id="@+id/tableHeader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                >
+                <TextView android:text=""/>
+                <TextView
+                    android:text="@string/jersey_hdr"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView android:text="Player"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:text="@string/age_hdr"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player0Icon" />
+                <TextView
+                    android:id="@+id/player0Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player0Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player0Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player1Icon" />
+                <TextView
+                    android:id="@+id/player1Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player1Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player1Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player2Icon" />
+                <TextView
+                    android:id="@+id/player2Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player2Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player2Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player3Icon" />
+                <TextView
+                    android:id="@+id/player3Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player3Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player3Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player4Icon" />
+                <TextView
+                    android:id="@+id/player4Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player4Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player4Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player5Icon" />
+                <TextView
+                    android:id="@+id/player5Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player5Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player5Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player6Icon" />
+                <TextView
+                    android:id="@+id/player6Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player6Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player6Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player7Icon" />
+                <TextView
+                    android:id="@+id/player7Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player7Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player7Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player8Icon" />
+                <TextView
+                    android:id="@+id/player8Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player8Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player8Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player9Icon" />
+                <TextView
+                    android:id="@+id/player9Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player9Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player9Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player10Icon" />
+                <TextView
+                    android:id="@+id/player10Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player10Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player10Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player11Icon" />
+                <TextView
+                    android:id="@+id/player11Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player11Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player11Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player12Icon" />
+                <TextView
+                    android:id="@+id/player12Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player12Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player12Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+    
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player13Icon" />
+                <TextView
+                    android:id="@+id/player13Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player13Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player13Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player14Icon" />
+                <TextView
+                    android:id="@+id/player14Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player14Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player14Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player15Icon" />
+                <TextView
+                    android:id="@+id/player15Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player15Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player15Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player16Icon" />
+                <TextView
+                    android:id="@+id/player16Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player16Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player16Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player17Icon" />
+                <TextView
+                    android:id="@+id/player17Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player17Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player17Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player18Icon" />
+                <TextView
+                    android:id="@+id/player18Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player18Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player18Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player19Icon" />
+                <TextView
+                    android:id="@+id/player19Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player19Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player19Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player20Icon" />
+                <TextView
+                    android:id="@+id/player20Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player20Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player20Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player21Icon" />
+                <TextView
+                    android:id="@+id/player21Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player21Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player21Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player22Icon" />
+                <TextView
+                    android:id="@+id/player22Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player22Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player22Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player23Icon" />
+                <TextView
+                    android:id="@+id/player23Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player23Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player23Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player24Icon" />
+                <TextView
+                    android:id="@+id/player24Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player24Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player24Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player25Icon" />
+                <TextView
+                    android:id="@+id/player25Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player25Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player25Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player26Icon" />
+                <TextView
+                    android:id="@+id/player26Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player26Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player26Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player27Icon" />
+                <TextView
+                    android:id="@+id/player27Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player27Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player27Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player28Icon" />
+                <TextView
+                    android:id="@+id/player28Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player28Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player28Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player29Icon" />
+                <TextView
+                    android:id="@+id/player29Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player29Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player29Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player30Icon" />
+                <TextView
+                    android:id="@+id/player30Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player30Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player30Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+            
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:contentDescription="@string/cdIcon"
+                    android:padding="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/player31Icon" />
+                <TextView
+                    android:id="@+id/player31Number"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+                <TextView
+                    android:id="@+id/player31Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:textColor="#FF000000" />
+                <TextView
+                    android:id="@+id/player31Age"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FF000000"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
