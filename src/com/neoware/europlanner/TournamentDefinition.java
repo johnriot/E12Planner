@@ -7,6 +7,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -25,6 +27,7 @@ import org.xml.sax.XMLReader;
 
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.util.Log;
 
 import com.neoware.europlanner.FeedsAdapter.FeedDefn;
 
@@ -151,8 +154,7 @@ public class TournamentDefinition {
                         int homeTeamId = Integer.parseInt(atts.getValue(HOME_TEAM_ID));
                         int awayTeamId = Integer.parseInt(atts.getValue(AWAY_TEAM_ID));
                         int venueId = Integer.parseInt(atts.getValue(VENUE_ID));
-                        @SuppressWarnings("unused")
-                        String date = atts.getValue(DATE_ID);
+                        String dateStr = atts.getValue(DATE_ID);
                         String score = atts.getValue(SCORE_ID);
 
 
@@ -161,8 +163,19 @@ public class TournamentDefinition {
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
+                        SimpleDateFormat format = new SimpleDateFormat("MMM d, yyyy, HH:MM, zzz");
+                        //DateFormat format =
+                          //      DateFormat.getDateInstance(DateFormat.LONG, Locale.US);
+                        Date date = null;
+                        try {
+                            Log.e("STEO", "Parsing " + dateStr);
+                            date = format.parse(dateStr);
+                        } catch(ParseException pe) {
+                            Assert.fail(pe.getMessage());
+                        }
+
                         Fixture fixture = new Fixture(homeTeam, awayTeam,
-                                                        venueId, new Date(), score);
+                                                        venueId, date, score);
 
                         mCurrentGroup.addFixture(fixture);
                         mVenues.get(venueId).addGroupKnockoutId(mCurrentGroup.getId());

@@ -1,6 +1,8 @@
 package com.neoware.europlanner;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -8,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
@@ -17,6 +21,9 @@ public class GroupFragment extends SherlockFragment {
     private final TournamentStage mStage;
     public final int NUMBER_GROUPS = 4;
     public final int NUMBER_TEAMS_PER_GROUP = 4;
+
+    private static final SimpleDateFormat DATE_FORMAT =
+            new SimpleDateFormat("E, dd MMM, HH:mm");
 
     public GroupFragment(TournamentStage stage) {
         mStage = stage;
@@ -59,13 +66,11 @@ public class GroupFragment extends SherlockFragment {
                 int gamesPlayedViewId = res.getIdentifier(gamesPlayedIdStr, "id", packageName);
                 TextView gamesPlayedView = (TextView)fragView.findViewById(gamesPlayedViewId);
 
-
                 gamesPlayedView.setText("" + mStage.getFixturesPlayed(team));
 
                 String forIdStr = "team" + i + "for";
                 int forViewId = res.getIdentifier(forIdStr, "id", packageName);
                 TextView forView = (TextView)fragView.findViewById(forViewId);
-
 
                 forView.setText("" + mStage.getGoalsFor(team));
 
@@ -81,6 +86,37 @@ public class GroupFragment extends SherlockFragment {
 
                 pointsView.setText("" + mStage.getPoints(team));
             }
+        }
+
+        TableLayout fixturesTable = (TableLayout)fragView.findViewById(R.id.fixturesTable);
+
+        ArrayList<Fixture> fixtures = mStage.getFixtures();
+        Date currentDate = null;
+        for(Fixture fixture : fixtures) {
+
+            if(!fixture.getTime().equals(currentDate)) {
+
+                TableRow dateRow = (TableRow) inflater.inflate(
+                        R.layout.fixtures_table_day_row, null);
+
+                TextView dateView = (TextView)dateRow.findViewById(
+                        R.id.fixturesTableDate);
+                dateView.setText(DATE_FORMAT.format(fixture.getTime()));
+
+                fixturesTable.addView(dateRow);
+                currentDate = fixture.getTime();
+            }
+
+            TableRow fixtureRow = (TableRow) inflater.inflate(
+                    R.layout.fixtures_table_fixture_row, null);
+
+            TextView fixtureView = (TextView)fixtureRow.findViewById(
+                    R.id.fixturesTableFixture);
+            fixtureView.setText("Do proper layout: " +
+                    teamNames[fixture.getHomeTeamId()] + " v " +
+                    teamNames[fixture.getAwayTeamId()]);
+
+            fixturesTable.addView(fixtureRow);
         }
 
         return fragView;

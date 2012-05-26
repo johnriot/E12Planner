@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/groupFragmentLayout"
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout
+    android:id="@+id/groupFragmentLayout"
     android:orientation="vertical"
     android:background="@color/white"
     android:gravity="center_horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     >
 
     <TableLayout
@@ -193,5 +197,15 @@
         android:background="@drawable/spacer_gradient"
         />
 
-</LinearLayout>
+    <TableLayout
+        android:id="@+id/fixturesTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        android:layout_margin="15dp">
 
+    </TableLayout>
+
+</LinearLayout>
+</ScrollView>
