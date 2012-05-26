@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragment;
-import com.steo.europlanner.R;
 
 public class VenueFragment extends SherlockFragment {
 

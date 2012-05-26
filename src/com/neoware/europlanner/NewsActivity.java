@@ -9,7 +9,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 
@@ -23,7 +22,6 @@ import com.neoware.europlanner.FeedsAdapter.FeedDefn;
 import com.neoware.rss.RSSItem;
 import com.neoware.rss.RSSReader;
 import com.neoware.rss.RSSReaderException;
-import com.steo.europlanner.R;
 
 public class NewsActivity extends SherlockActivity {
 
@@ -35,7 +33,6 @@ public class NewsActivity extends SherlockActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         mDefn = new TournamentDefinition(this);
 

@@ -27,7 +27,6 @@ import android.content.Context;
 import android.content.ContextWrapper;
 
 import com.neoware.europlanner.FeedsAdapter.FeedDefn;
-import com.steo.europlanner.R;
 
 public class TournamentDefinition {
 

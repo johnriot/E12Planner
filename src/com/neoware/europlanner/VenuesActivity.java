@@ -18,7 +18,6 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
-import com.steo.europlanner.R;
 
 public class VenuesActivity extends SherlockFragmentActivity {
 

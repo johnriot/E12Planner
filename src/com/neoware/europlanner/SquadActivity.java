@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.neoware.europlanner.Player.PlayerPositionException;
-import com.steo.europlanner.R;
 
 public class SquadActivity extends FragmentActivity {
 

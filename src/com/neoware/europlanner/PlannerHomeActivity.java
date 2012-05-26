@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
-import com.steo.europlanner.R;
 
 public class PlannerHomeActivity extends Activity implements OnClickListener {
 

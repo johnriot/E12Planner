@@ -21,8 +21,6 @@ import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-import com.steo.europlanner.R;
-
 import android.content.Context;
 import android.content.ContextWrapper;
 

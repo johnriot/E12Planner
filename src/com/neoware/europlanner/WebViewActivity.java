@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.view.Window;
 import android.webkit.WebView;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -12,7 +11,6 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
-import com.steo.europlanner.R;
 
 public class WebViewActivity extends SherlockActivity {
 
@@ -21,7 +19,6 @@ public class WebViewActivity extends SherlockActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.webview);
 

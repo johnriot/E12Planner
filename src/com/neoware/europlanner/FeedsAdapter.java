@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import com.neoware.rss.RSSFeed;
 import com.neoware.rss.RSSItem;
-import com.steo.europlanner.R;
 
 public class FeedsAdapter extends BaseExpandableListAdapter {
 
