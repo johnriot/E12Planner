@@ -27,7 +27,6 @@ import org.xml.sax.XMLReader;
 
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.util.Log;
 
 import com.neoware.europlanner.FeedsAdapter.FeedDefn;
 
@@ -163,12 +162,9 @@ public class TournamentDefinition {
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
-                        SimpleDateFormat format = new SimpleDateFormat("MMM d, yyyy, HH:MM, zzz");
-                        //DateFormat format =
-                          //      DateFormat.getDateInstance(DateFormat.LONG, Locale.US);
+                        SimpleDateFormat format = new SimpleDateFormat("MMM d, yyyy, HH:mm, zzz");
                         Date date = null;
                         try {
-                            Log.e("STEO", "Parsing " + dateStr);
                             date = format.parse(dateStr);
                         } catch(ParseException pe) {
                             Assert.fail(pe.getMessage());
