@@ -124,4 +124,5 @@
     <string name="fixtureIconAwayCD">Away Team Icon</string>
 
     <string name="scoreSeperator"> - </string>
+    <string name="scoreSeperatorUnplayed"> v </string>
 </resources>

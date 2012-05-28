@@ -91,6 +91,7 @@ public class GroupFragment extends SherlockFragment {
         TableLayout fixturesTable = (TableLayout)fragView.findViewById(R.id.fixturesTable);
 
         String scoreSep = res.getString(R.string.scoreSeperator);
+        String scoreSepUnplayed = res.getString(R.string.scoreSeperatorUnplayed);
 
         ArrayList<Fixture> fixtures = mStage.getFixtures();
         Date currentDate = null;
@@ -138,7 +139,7 @@ public class GroupFragment extends SherlockFragment {
                 scoreTv.setText(scoreStr);
             }
             else {
-                scoreTv.setText(scoreSep);
+                scoreTv.setText(scoreSepUnplayed);
             }
 
             fixturesTable.addView(fixtureRow);
