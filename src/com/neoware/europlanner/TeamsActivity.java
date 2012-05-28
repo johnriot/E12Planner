@@ -28,7 +28,7 @@ public class TeamsActivity extends SherlockFragmentActivity {
 
         ActionBar bar = getSupportActionBar();
         bar.setBackgroundDrawable(bg);
-        bar.setTitle(R.string.games_title);
+        bar.setTitle(R.string.teams_title);
         bar.setHomeButtonEnabled(true);
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);

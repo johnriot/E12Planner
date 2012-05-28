@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" 
-        android:padding="0dip"
-        android:gravity="center_horizontal"
+ <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" 
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#FFFFFF">
+        android:layout_height="fill_parent" 
+        android:layout_gravity="right"
+        android:background="@color/white"
+        android:id="@+id/squadLayout">
 
-    <LinearLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/toolbar_bg">
-
-        <ImageButton
-            android:id="@+id/squadHomeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/homeButton"
-            android:src="@drawable/homeicon_dark"
-            android:background="@null"
-            android:clickable="true"
-            android:padding="4dp"
-            />
-    </LinearLayout>
+     <com.inmobi.androidsdk.IMAdView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/adViewTeams"
+            appId="4028cba631d63df10131e1d3818b00cc"
+            adSlot="15"
+            testMode="true" />
 
     <ScrollView 
-    android:layout_height="wrap_content"  
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
     android:id="@+id/scrollView1" 
     android:layout_width="fill_parent">
     
@@ -46,7 +40,8 @@
                     android:text="@string/jersey_hdr"
                     android:gravity="center_horizontal"
                     android:textColor="#FF000000"/>
-                <TextView android:text="Player"
+                <TextView
+                    android:text="@string/player_hdr"
                     android:gravity="center_horizontal"
                     android:textColor="#FF000000"/>
                 <TextView
@@ -922,4 +917,4 @@
         </TableLayout>
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>

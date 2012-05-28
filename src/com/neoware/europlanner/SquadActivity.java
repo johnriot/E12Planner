@@ -1,19 +1,23 @@
 package com.neoware.europlanner;
 
-import junit.framework.Assert;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Shader.TileMode;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuItem;
+import com.inmobi.androidsdk.IMAdRequest;
+import com.inmobi.androidsdk.IMAdView;
 import com.neoware.europlanner.Player.PlayerPositionException;
 
-public class SquadActivity extends FragmentActivity {
+public class SquadActivity extends SherlockFragmentActivity {
 
     public static final String TEAM_INDEX = "team_indx";
     SquadDefinition mSquadDefn;
@@ -21,18 +25,24 @@ public class SquadActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.squad_layout);
 
-        ImageButton homeButton = (ImageButton)findViewById(R.id.squadHomeButton);
-        homeButton.setOnClickListener(new OnClickListener() {
+        BitmapDrawable bg = (BitmapDrawable)getResources().getDrawable(R.drawable.toolbar_bg);
+        bg.setTileModeXY(TileMode.REPEAT, TileMode.REPEAT);
 
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        ActionBar bar = getSupportActionBar();
+        bar.setBackgroundDrawable(bg);
+        bar.setTitle(R.string.teams_title);
+        bar.setHomeButtonEnabled(true);
+        bar.setDisplayHomeAsUpEnabled(true);
+        bar.setDisplayUseLogoEnabled(true);
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewTeams);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(true);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
 
         Bundle extras = getIntent().getExtras();
         int teamIndx = 0;
@@ -76,8 +86,40 @@ public class SquadActivity extends FragmentActivity {
                 playerAgeView.setText(playerAge.toString());
 
             } catch (PlayerPositionException ex) {
-                Assert.fail("Squad XML data corrupt: " + ex.getMessage());
+                HandleException(ex);
             }
         }
+    }
+
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home) {
+
+            Intent homeIntent = new Intent(this, PlannerHomeActivity.class);
+            homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(homeIntent);
+
+            return true;
+        }
+
+        return super.onMenuItemSelected(featureId, item);
+    }
+
+    private void HandleException(PlayerPositionException ex) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Server Error");
+        alertDialogBuilder
+            .setMessage("Error Updating Squad Info. Please Try Again in 1 Minute.")
+            .setCancelable(true)
+            .setPositiveButton("OK",new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog,int id) {
+                    dialog.cancel();
+                }
+              });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }
