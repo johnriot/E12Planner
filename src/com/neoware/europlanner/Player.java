@@ -9,10 +9,10 @@ import junit.framework.Assert;
 
 public class Player {
 
-    String mPos;
-    String mNumber;
-    String mName;
-    Date mDateOfBirth;
+    private final String mPos;
+    private final String mNumber;
+    private final String mName;
+    private Date mDateOfBirth;
 
 
     public Player(String pos, String number, String name, String dob) {
