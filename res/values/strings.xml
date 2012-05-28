@@ -119,4 +119,9 @@
     <string name="age_hdr">Age</string>
 
     <string name="cdIcon">Icon</string>
+    
+    <string name="fixtureIconHomeCD">Home Team Icon</string>
+    <string name="fixtureIconAwayCD">Away Team Icon</string>
+
+    <string name="scoreSeperator"> - </string>
 </resources>
