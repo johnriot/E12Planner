@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads" 
+    <RelativeLayout 
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
         android:layout_gravity="right"
         android:background="@color/white"
         android:id="@+id/teamsLayout">
@@ -18,11 +18,13 @@
             adSlot="15"
             testMode="true" />
 
-        <ListView
-            android:id="@+id/teamsListView"
-            android:layout_width="wrap_content"
+        <ListView 
             android:layout_height="wrap_content"
-            android:background="#CCCCCC"
-            android:padding="20dp"/>
+            android:layout_width="match_parent"
+            android:id="@+id/teamsListView"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/adViewTeams"
+            android:layout_margin="15dp"
+            />
 
     </RelativeLayout>
