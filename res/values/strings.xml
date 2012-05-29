@@ -99,6 +99,45 @@
         <item>france</item>
         <item>england</item>
     </string-array>
+    
+    <string-array name="qf_placeholder_names">
+        <item>1st Group A</item>
+        <item>2nd Group B</item>
+        <item>1st Group B</item>
+        <item>2nd Group A</item>
+        <item>1st Group C</item>
+        <item>2nd Group D</item>
+        <item>1st Group D</item>
+        <item>2nd Group C</item>
+    </string-array>
+    
+    <string-array name="sf_placeholder_names">
+        <item>Winner QF 1</item>
+        <item>Winner QF 2</item>
+        <item>Winner QF 3</item>
+        <item>Winner QF 4</item>
+    </string-array>
+    
+    <string-array name="f_placeholder_names">
+        <item>Winner SF 1</item>
+        <item>Winner SF 2</item>
+    </string-array>
+    
+    <string-array name="qf_game_titles">
+        <item>QF1</item>
+        <item>QF2</item>
+        <item>QF3</item>
+        <item>QF4</item>
+    </string-array>
+    
+    <string-array name="sf_game_titles">
+        <item>SF1</item>
+        <item>SF2</item>
+    </string-array>
+    
+    <string-array name="f_game_titles">
+        <item>F</item>
+    </string-array>
 
     <string name="menuGames">Games</string>
     <string name="menuVenues">Venues</string>

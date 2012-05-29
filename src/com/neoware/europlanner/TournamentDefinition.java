@@ -194,8 +194,7 @@ public class TournamentDefinition {
                         int homeTeamId = Integer.parseInt(atts.getValue(HOME_TEAM_ID));
                         int awayTeamId = Integer.parseInt(atts.getValue(AWAY_TEAM_ID));
                         int venueId = Integer.parseInt(atts.getValue(VENUE_ID));
-                        @SuppressWarnings("unused")
-                        String date = atts.getValue(DATE_ID);
+                        String dateStr = atts.getValue(DATE_ID);
                         String score = atts.getValue(SCORE_ID);
 
 
@@ -204,8 +203,16 @@ public class TournamentDefinition {
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
+                        SimpleDateFormat format = new SimpleDateFormat("MMM d, yyyy, HH:mm, zzz");
+                        Date date = null;
+                        try {
+                            date = format.parse(dateStr);
+                        } catch(ParseException pe) {
+                            Assert.fail(pe.getMessage());
+                        }
+
                         Fixture fixture = new Fixture(homeTeam, awayTeam,
-                                                    venueId, new Date(), score);
+                                                    venueId, date, score);
 
                         mCurrentKnockout.addFixture(fixture);
                         mVenues.get(venueId).addGroupKnockoutId(mCurrentKnockout.getId());
