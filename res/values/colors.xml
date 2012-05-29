@@ -3,4 +3,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="logo_yellow_alpha">#AAc57616</color>
     <color name="logo_yellow">#c57616</color>
+    
+    <color name="team_group_selected">#AAAAAA</color>
+    <color name="team_group_not_selected">#000000</color>
+    
+    <color name="team_selected">#AAAAAA</color>
+    <color name="team_not_selected">#FFFFFF</color>
 </resources>

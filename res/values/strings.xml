@@ -127,4 +127,6 @@
 
     <string name="scoreSeperator"> - </string>
     <string name="scoreSeperatorUnplayed"> v </string>
+
+    <string name="teamsIconCD">Team Icon</string>
 </resources>
