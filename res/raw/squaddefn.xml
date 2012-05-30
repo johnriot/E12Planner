@@ -238,41 +238,28 @@
     
     <squad id="9"> <!-- Italy -->
         <player position ="G" number ="1" name ="Gianluigi Buffon (c)" dob ="January 28, 1978" />
-        <player position ="D" number ="-" name ="Christian Maggio" dob ="February 11, 1982" />
-        <player position ="D" number ="-" name ="Giorgio Chiellini" dob ="August 14, 1984" />
-        
-        
-        
-        
-        <player position ="G" number ="-" name ="Emiliano Viviano" dob ="December 1, 1985" />
-        <player position ="G" number ="-" name ="Morgan De Sanctis" dob ="March 26, 1977" />
-        <player position ="G" number ="-" name ="Salvatore Sirigu" dob ="January 12, 1987" />
-        <player position ="D" number ="-" name ="Andrea Barzagli" dob ="May 8, 1981" />
-        <player position ="D" number ="-" name ="Domenico Criscito" dob ="December 30, 1986" />
-        <player position ="D" number ="-" name ="Leonardo Bonucci" dob ="May 1, 1987" />
-        <player position ="D" number ="-" name ="Andrea Ranocchia" dob ="February 16, 1988" />
-        <player position ="D" number ="-" name ="Federico Balzaretti" dob ="December 6, 1981" />
-        <player position ="D" number ="-" name ="Salvatore Bocchetti" dob ="November 30, 1986" />
-        <player position ="D" number ="-" name ="Ignazio Abate" dob ="November 12, 1986" />
-        <player position ="D" number ="-" name ="Angelo Ogbonna" dob ="May 23, 1988" />
-        <player position ="D" number ="-" name ="Davide Astori" dob ="January 7, 1987" />
-        <player position ="M" number ="-" name ="Andrea Pirlo" dob ="May 19, 1979" />
-        <player position ="M" number ="-" name ="Daniele De Rossi" dob ="July 24, 1983" />
-        <player position ="M" number ="-" name ="Riccardo Montolivo" dob ="January 18, 1985" />
-        <player position ="M" number ="-" name ="Claudio Marchisio" dob ="January 19, 1986" />
-        <player position ="M" number ="-" name ="Antonio Nocerino" dob ="April 9, 1985" />
-        <player position ="M" number ="-" name ="Thiago Motta" dob ="August 28, 1982" />
-        <player position ="M" number ="-" name ="Alessandro Diamanti" dob ="May 2, 1983" />
-        <player position ="M" number ="-" name ="Luca Cigarini" dob ="June 20, 1986" />
-        <player position ="M" number ="-" name ="Emanuele Giaccherini" dob ="May 5, 1985" />
-        <player position ="M" number ="-" name ="Ezequiel Schelotto" dob ="May 23, 1989" />
-        <player position ="M" number ="-" name ="Marco Verratti" dob ="November 5, 1992" />
-        <player position ="F" number ="-" name ="Antonio Di Natale" dob ="October 13, 1977" />
-        <player position ="F" number ="-" name ="Antonio Cassano" dob ="July 12, 1982" />
-        <player position ="F" number ="-" name ="Mario Balotelli" dob ="August 12, 1990" />
-        <player position ="F" number ="-" name ="Sebastian Giovinco" dob ="January 26, 1987" />
-        <player position ="F" number ="-" name ="Fabio Borini" dob ="March 29, 1991" />
-        <player position ="F" number ="-" name ="Mattia Destro" dob ="March 20, 1991" />
+        <player position ="D" number ="2" name ="Christian Maggio" dob ="February 11, 1982" />
+        <player position ="D" number ="3" name ="Giorgio Chiellini" dob ="August 14, 1984" />
+        <player position ="D" number ="4" name ="Angelo Ogbonna" dob ="May 23, 1988" />
+        <player position ="M" number ="5" name ="Thiago Motta" dob ="August 28, 1982" />
+        <player position ="D" number ="6" name ="Federico Balzaretti" dob ="December 6, 1981" />
+        <player position ="D" number ="7" name ="Ignazio Abate" dob ="November 12, 1986" />
+        <player position ="M" number ="8" name ="Claudio Marchisio" dob ="January 19, 1986" />
+        <player position ="F" number ="9" name ="Mario Balotelli" dob ="August 12, 1990" />
+        <player position ="F" number ="10" name ="Antonio Cassano" dob ="July 12, 1982" />
+        <player position ="F" number ="11" name ="Antonio Di Natale" dob ="October 13, 1977" />
+        <player position ="G" number ="12" name ="Salvatore Sirigu" dob ="January 12, 1987" />
+        <player position ="M" number ="13" name ="Emanuele Giaccherini" dob ="May 5, 1985" />
+        <player position ="G" number ="14" name ="Morgan De Sanctis" dob ="March 26, 1977" />
+        <player position ="D" number ="15" name ="Andrea Barzagli" dob ="May 8, 1981" />
+        <player position ="M" number ="16" name ="Daniele De Rossi" dob ="July 24, 1983" />
+        <player position ="F" number ="17" name ="Fabio Borini" dob ="March 29, 1991" />
+        <player position ="M" number ="18" name ="Riccardo Montolivo" dob ="January 18, 1985" />
+        <player position ="D" number ="19" name ="Leonardo Bonucci" dob ="May 1, 1987" />
+        <player position ="F" number ="20" name ="Sebastian Giovinco" dob ="January 26, 1987" />
+        <player position ="M" number ="21" name ="Andrea Pirlo" dob ="May 19, 1979" />
+        <player position ="M" number ="22" name ="Alessandro Diamanti" dob ="May 2, 1983" />
+        <player position ="M" number ="23" name ="Antonio Nocerino" dob ="April 9, 1985" />
     </squad>
     
     <squad id="10"> <!-- Ireland. C'mon the boys! -->
