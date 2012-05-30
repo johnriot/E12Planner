@@ -107,24 +107,29 @@
     </squad>
     
     <squad id="4"> <!-- Netherlands -->
-        <player position ="D" number ="-" name ="Vurnon Anita" dob ="April 3, 1989" />
-        <player position ="D" number ="-" name ="Jetro Willems" dob ="March 30, 1994" />
-        <player position ="M" number ="-" name ="Rafael van der Vaart" dob ="February 11, 1983" />
-        <player position ="M" number ="-" name ="Wesley Sneijder" dob ="June 9, 1984" />
-        <player position ="M" number ="-" name ="Mark van Bommel (c)" dob ="April 22, 1977" />
-        <player position ="M" number ="-" name ="Nigel de Jong" dob ="November 30, 1984" />
-        <player position ="M" number ="-" name ="Arjen Robben" dob ="January 23, 1984" />
-        <player position ="M" number ="-" name ="Stijn Schaars" dob ="January 11, 1984" />
-        <player position ="M" number ="-" name ="Kevin Strootman" dob ="February 13, 1990" />
-        <player position ="M" number ="-" name ="Adam Maher" dob ="July 20, 1993" />
-        <player position ="F" number ="-" name ="Dirk Kuyt" dob ="July 22, 1980" />
-        <player position ="F" number ="-" name ="Robin van Persie" dob ="August 6, 1983" />
-        <player position ="F" number ="-" name ="Klaas-Jan Huntelaar" dob ="August 12, 1983" />
-        <player position ="F" number ="-" name ="Ibrahim Afellay" dob ="April 2, 1986" />
-        <player position ="F" number ="-" name ="Luuk de Jong" dob ="August 27, 1990" />
-        <player position ="F" number ="-" name ="Jeremain Lens" dob ="November 24, 1987" />
-        <player position ="F" number ="-" name ="Siem de Jong" dob ="January 28, 1989" />
-        <player position ="F" number ="-" name ="Luciano Narsingh" dob ="September 13, 1990" />
+        <player position ="G" number ="1" name ="Maarten Stekelenburg" dob ="September 22, 1982" />
+        <player position ="D" number ="2" name ="Gergory Van der Wiel" dob ="February 3, 1988" />
+        <player position ="D" number ="3" name ="John Heitinga" dob ="November 15, 1983" />
+        <player position ="D" number ="4" name ="Joris Mathijsen" dob ="April 5, 1980" />
+        <player position ="D" number ="5" name ="Wilfred Bouma" dob ="June 15, 1978" />
+        <player position ="M" number ="6" name ="Mark van Bommel (c)" dob ="April 22, 1977" />
+        <player position ="F" number ="7" name ="Dirk Kuyt" dob ="July 22, 1980" />
+        <player position ="M" number ="8" name ="Nigel de Jong" dob ="November 30, 1984" />
+        <player position ="F" number ="9" name ="Klaas-Jan Huntelaar" dob ="August 12, 1983" />
+        <player position ="M" number ="10" name ="Wesley Sneijder" dob ="June 9, 1984" />
+        <player position ="M" number ="11" name ="Arjen Robben" dob ="January 23, 1984" />
+        <player position ="G" number ="12" name ="Michel Vorm" dob ="October 20, 1983" />
+        <player position ="D" number ="13" name ="Ron Vlaar" dob ="February 16, 1985" />
+        <player position ="M" number ="14" name ="Stijn Schaars" dob ="January 11, 1984" />
+        <player position ="D" number ="15" name ="Jetro Willems" dob ="March 30, 1994" />
+        <player position ="F" number ="16" name ="Robin van Persie" dob ="August 6, 1983" />
+        <player position ="M" number ="17" name ="Kevin Strootman" dob ="February 13, 1990" />
+        <player position ="F" number ="18" name ="Luuk de Jong" dob ="August 27, 1990" />
+        <player position ="F" number ="19" name ="Luciano Narsingh" dob ="September 13, 1990" />
+        <player position ="F" number ="20" name ="Ibrahim Afellay" dob ="April 2, 1986" />
+        <player position ="D" number ="21" name ="Khalid Boulahrouz" dob ="December 28, 1981" />
+        <player position ="G" number ="22" name ="Tim Krul" dob ="April 3, 1988" />
+        <player position ="M" number ="23" name ="Rafael van der Vaart" dob ="February 11, 1983" />
     </squad>
     
     <squad id="5"> <!-- Denmark -->
