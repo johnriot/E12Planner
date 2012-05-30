@@ -185,29 +185,29 @@
     </squad>
 
     <squad id="7"> <!-- Portugal -->
-        <player position ="G" number ="-" name ="Eduardo" dob ="September 19, 1982" />
-        <player position ="G" number ="-" name ="Rui Patrício" dob ="February 15, 1988" />
-        <player position ="G" number ="-" name ="Beto" dob ="May 1, 1982" />
-        <player position ="D" number ="-" name ="Bruno Alves" dob ="November 27, 1981" />
-        <player position ="D" number ="-" name ="Pepe" dob ="February 26, 1983" />
-        <player position ="D" number ="-" name ="Fábio Coentrão" dob ="March 11, 1988" />
-        <player position ="D" number ="-" name ="João Pereira" dob ="February 25, 1984" />
-        <player position ="D" number ="-" name ="Rolando" dob ="August 31, 1985" />
-        <player position ="D" number ="-" name ="Ricardo Costa" dob ="May 16, 1981" />
-        <player position ="D" number ="-" name ="Miguel Lopes" dob ="December 19, 1986" />
-        <player position ="M" number ="-" name ="Raul Meireles" dob ="March 17, 1983" />
-        <player position ="M" number ="-" name ="João Moutinho" dob ="September 8, 1986" />
-        <player position ="M" number ="-" name ="Miguel Veloso" dob ="May 11, 1986" />
-        <player position ="M" number ="-" name ="Hugo Viana" dob ="January 15, 1983" />
-        <player position ="M" number ="-" name ="Rúben Micael" dob ="August 19, 1986" />
-        <player position ="M" number ="-" name ="Custódio" dob ="May 24, 1983" />
-        <player position ="F" number ="-" name ="Cristiano Ronaldo (c)" dob ="February 5, 1985" />
-        <player position ="F" number ="-" name ="Nani" dob ="November 17, 1986" />
-        <player position ="F" number ="-" name ="Hélder Postiga" dob ="August 2, 1982" />
-        <player position ="F" number ="-" name ="Hugo Almeida" dob ="May 23, 1984" />
-        <player position ="F" number ="-" name ="Ricardo Quaresma" dob ="September 26, 1983" />
-        <player position ="F" number ="-" name ="Silvestre Varela" dob ="February 2, 1985" />
-        <player position ="F" number ="-" name ="Nélson Oliveira" dob ="August 8, 1991" />
+        <player position ="G" number ="1" name ="Eduardo" dob ="September 19, 1982" />
+        <player position ="D" number ="2" name ="Bruno Alves" dob ="November 27, 1981" />
+        <player position ="D" number ="3" name ="Pepe" dob ="February 26, 1983" />
+        <player position ="M" number ="4" name ="Miguel Veloso" dob ="May 11, 1986" />
+        <player position ="D" number ="5" name ="Fábio Coentrão" dob ="March 11, 1988" />
+        <player position ="M" number ="6" name ="Custódio" dob ="May 24, 1983" />
+        <player position ="F" number ="7" name ="Cristiano Ronaldo (c)" dob ="February 5, 1985" />
+        <player position ="M" number ="8" name ="João Moutinho" dob ="September 8, 1986" />
+        <player position ="F" number ="9" name ="Hugo Almeida" dob ="May 23, 1984" />
+        <player position ="F" number ="10" name ="Ricardo Quaresma" dob ="September 26, 1983" />
+        <player position ="F" number ="11" name ="Nélson Oliveira" dob ="August 8, 1991" />
+        <player position ="G" number ="12" name ="Rui Patrício" dob ="February 15, 1988" />
+        <player position ="D" number ="13" name ="Ricardo Costa" dob ="May 16, 1981" />
+        <player position ="D" number ="14" name ="Rolando" dob ="August 31, 1985" />
+        <player position ="M" number ="15" name ="Rúben Micael" dob ="August 19, 1986" />
+        <player position ="M" number ="16" name ="Raul Meireles" dob ="March 17, 1983" />
+        <player position ="F" number ="17" name ="Nani" dob ="November 17, 1986" />
+        <player position ="F" number ="18" name ="Silvestre Varela" dob ="February 2, 1985" />
+        <player position ="D" number ="19" name ="Miguel Lopes" dob ="December 19, 1986" />
+        <player position ="M" number ="20" name ="Hugo Viana" dob ="January 15, 1983" />
+        <player position ="D" number ="21" name ="João Pereira" dob ="February 25, 1984" />
+        <player position ="G" number ="22" name ="Beto" dob ="May 1, 1982" />
+        <player position ="F" number ="23" name ="Hélder Postiga" dob ="August 2, 1982" />
     </squad>
     
     <squad id="8"> <!-- Spain -->
