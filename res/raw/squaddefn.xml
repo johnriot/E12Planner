@@ -133,27 +133,29 @@
     </squad>
     
     <squad id="5"> <!-- Denmark -->
-        <player position ="G" number ="-" name ="Thomas Sørensen" dob ="June 12, 1976" />
-        <player position ="G" number ="-" name ="Stephan Andersen" dob ="November 26, 1981" />
-        <player position ="G" number ="-" name ="Anders Lindegaard" dob ="April 13, 1984" />
-        <player position ="D" number ="-" name ="Lars Jacobsen" dob ="September 20, 1979" />
-        <player position ="D" number ="-" name ="Daniel Agger (c)" dob ="December 12, 1984" />
-        <player position ="D" number ="-" name ="Simon Kjær" dob ="March 26, 1989" />
-        <player position ="D" number ="-" name ="Simon Poulsen" dob ="October 7, 1984" />
-        <player position ="D" number ="-" name ="Andreas Bjelland" dob ="July 11, 1988" />
-        <player position ="D" number ="-" name ="Daniel Wass" dob ="May 31, 1989" />
-        <player position ="M" number ="-" name ="Christian Poulsen" dob ="February 28, 1980" />
-        <player position ="M" number ="-" name ="Thomas Kahlenberg" dob ="March 20, 1983" />
-        <player position ="M" number ="-" name ="William Kvist" dob ="February 24, 1985" />
-        <player position ="M" number ="-" name ="Michael Silberbauer" dob ="July 7, 1981" />
-        <player position ="M" number ="-" name ="Christian Eriksen" dob ="February 14, 1992" />
-        <player position ="M" number ="-" name ="Jakob Poulsen" dob ="July 7, 1983" />
-        <player position ="M" number ="-" name ="Lasse Schøne" dob ="May 27, 1986" />
-        <player position ="M" number ="-" name ="Niki Zimling" dob ="April 19, 1985" />
-        <player position ="F" number ="-" name ="Dennis Rommedahl" dob ="July 22, 1978" />
-        <player position ="F" number ="-" name ="Nicklas Bendtner" dob ="January 16, 1988" />
-        <player position ="F" number ="-" name ="Michael Krohn-Dehli" dob ="June 6, 1983" />
-        <player position ="F" number ="-" name ="Tobias Mikkelsen" dob ="September 18, 1986" />
+        <player position ="G" number ="1" name ="Stephan Andersen" dob ="November 26, 1981" />
+        <player position ="M" number ="2" name ="Christian Poulsen" dob ="February 28, 1980" />
+        <player position ="D" number ="3" name ="Simon Kjær" dob ="March 26, 1989" />
+        <player position ="D" number ="4" name ="Daniel Agger (c)" dob ="December 12, 1984" />
+        <player position ="D" number ="5" name ="Simon Poulsen" dob ="October 7, 1984" />
+        <player position ="D" number ="6" name ="Lars Jacobsen" dob ="September 20, 1979" />
+        <player position ="M" number ="7" name ="William Kvist" dob ="February 24, 1985" />
+        <player position ="M" number ="8" name ="Christian Eriksen" dob ="February 14, 1992" />
+        <player position ="F" number ="9" name ="Michael Krohn-Dehli" dob ="June 6, 1983" />
+        <player position ="F" number ="10" name ="Dennis Rommedahl" dob ="July 22, 1978" />
+        <player position ="F" number ="11" name ="Nicklas Bendtner" dob ="January 16, 1988" />
+        <player position ="D" number ="12" name ="Andreas Bjelland" dob ="July 11, 1988" />
+        <player position ="D" number ="13" name ="Jores Okore" dob ="August 11, 1992" />
+        <player position ="M" number ="14" name ="Lasse Schøne" dob ="May 27, 1986" />
+        <player position ="M" number ="15" name ="Michael Silberbauer" dob ="July 7, 1981" />
+        <player position ="G" number ="16" name ="Anders Lindegaard" dob ="April 13, 1984" />
+        <player position ="G" number ="17" name ="Nicklas Pedersen" dob ="October 10, 1987" />
+        <player position ="D" number ="18" name ="Daniel Wass" dob ="May 31, 1989" />
+        <player position ="M" number ="19" name ="Jakob Poulsen" dob ="July 7, 1983" />
+        <player position ="M" number ="20" name ="Thomas Kahlenberg" dob ="March 20, 1983" />
+        <player position ="M" number ="21" name ="Niki Zimling" dob ="April 19, 1985" />
+        <player position ="M" number ="22" name ="Kasper Schmeichel" dob ="November 5, 1986" />
+        <player position ="F" number ="23" name ="Tobias Mikkelsen" dob ="September 18, 1986" />
     </squad>
     
     <squad id="6"> <!-- Germany -->
