@@ -263,29 +263,29 @@
     </squad>
     
     <squad id="10"> <!-- Ireland. C'mon the boys! -->
-        <player position ="G" number ="-" name ="Shay Given" dob ="April 20, 1976" />
-        <player position ="G" number ="-" name ="Keiren Westwood" dob ="October 23, 1984" />
-        <player position ="G" number ="-" name ="David Forde" dob ="December 20, 1979" />
-        <player position ="D" number ="-" name ="Sean St Ledger" dob ="December 28, 1984" />
-        <player position ="D" number ="-" name ="Stephen Ward" dob ="August 20, 1985" />
-        <player position ="D" number ="-" name ="John O'Shea" dob ="April 30, 1981" />
-        <player position ="D" number ="-" name ="Richard Dunne" dob ="September 21, 1979" />
-        <player position ="D" number ="-" name ="Stephen Kelly" dob ="September 6, 1983" />
-        <player position ="D" number ="-" name ="Darren O'Dea" dob ="February 4, 1987" />
-        <player position ="D" number ="-" name ="Kevin Foley" dob ="November 1, 1984" />
-        <player position ="M" number ="-" name ="Glenn Whelan" dob ="January 13, 1984" />
-        <player position ="M" number ="-" name ="Keith Andrews" dob ="September 13, 1980" />
-        <player position ="M" number ="-" name ="Damien Duff" dob ="March 2, 1979" />
-        <player position ="M" number ="-" name ="Stephen Hunt" dob ="August 1, 1981" />
-        <player position ="M" number ="-" name ="Darron Gibson" dob ="October 25, 1987" />
-        <player position ="M" number ="-" name ="Keith Fahey" dob ="January 15, 1983" />
-        <player position ="M" number ="-" name ="James McClean" dob ="April 22, 1989" />
-        <player position ="F" number ="-" name ="Aiden McGeady" dob ="April 4, 1986" />
-        <player position ="F" number ="-" name ="Kevin Doyle" dob ="September 18, 1983" />
-        <player position ="F" number ="-" name ="Robbie Keane (c)" dob ="July 8, 1980" />
-        <player position ="F" number ="-" name ="Shane Long" dob ="January 22, 1987" />
-        <player position ="F" number ="-" name ="Jonathan Walters" dob ="September 20, 1983" />
-        <player position ="F" number ="-" name ="Simon Cox" dob ="April 28, 1987" />
+        <player position ="G" number ="1" name ="Shay Given" dob ="April 20, 1976" />
+        <player position ="D" number ="2" name ="Sean St Ledger" dob ="December 28, 1984" />
+        <player position ="D" number ="3" name ="Stephen Ward" dob ="August 20, 1985" />
+        <player position ="D" number ="4" name ="John O'Shea" dob ="April 30, 1981" />
+        <player position ="D" number ="5" name ="Richard Dunne" dob ="September 21, 1979" />
+        <player position ="M" number ="6" name ="Glenn Whelan" dob ="January 13, 1984" />
+        <player position ="F" number ="7" name ="Aiden McGeady" dob ="April 4, 1986" />
+        <player position ="M" number ="8" name ="Keith Andrews" dob ="September 13, 1980" />
+        <player position ="F" number ="9" name ="Kevin Doyle" dob ="September 18, 1983" />
+        <player position ="F" number ="10" name ="Robbie Keane (c)" dob ="July 8, 1980" />
+        <player position ="M" number ="11" name ="Damien Duff" dob ="March 2, 1979" />
+        <player position ="D" number ="12" name ="Stephen Kelly" dob ="September 6, 1983" />
+        <player position ="D" number ="13" name ="Paul McShane" dob ="January 6, 1986" />
+        <player position ="F" number ="14" name ="Jonathan Walters" dob ="September 20, 1983" />
+        <player position ="M" number ="15" name ="Darron Gibson" dob ="October 25, 1987" />
+        <player position ="G" number ="16" name ="Keiren Westwood" dob ="October 23, 1984" />
+        <player position ="M" number ="17" name ="Stephen Hunt" dob ="August 1, 1981" />
+        <player position ="D" number ="18" name ="Darren O'Dea" dob ="February 4, 1987" />
+        <player position ="F" number ="19" name ="Shane Long" dob ="January 22, 1987" />
+        <player position ="F" number ="20" name ="Simon Cox" dob ="April 28, 1987" />
+        <player position ="M" number ="21" name ="Paul Green" dob ="April 10, 1983" />
+        <player position ="M" number ="22" name ="James McClean" dob ="April 22, 1989" />
+        <player position ="G" number ="23" name ="David Forde" dob ="December 20, 1979" />
     </squad>
     
     <squad id="11"> <!-- Croatia -->
