@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
@@ -19,6 +20,7 @@ import com.actionbarsherlock.view.MenuItem;
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
 import com.neoware.europlanner.FeedsAdapter.FeedDefn;
+import com.neoware.rss.RSSFault;
 import com.neoware.rss.RSSItem;
 import com.neoware.rss.RSSReader;
 import com.neoware.rss.RSSReaderException;
@@ -111,6 +113,9 @@ public class NewsActivity extends SherlockActivity {
             } catch (RSSReaderException ex) {
                 mErrorMessage = ex.getMessage();
                 return null;
+            } catch (RSSFault ex) {
+                mErrorMessage = ex.getMessage();
+                return null;
             }
         }
 
@@ -135,12 +140,26 @@ public class NewsActivity extends SherlockActivity {
         AsyncReader.ReaderCompleteCallback readerCallback =
                 new AsyncReader.ReaderCompleteCallback() {
 
+            private boolean mErrorShown = false;
+
             @Override
             public void onReaderComplete(FeedDefn feed, String errorMessage) {
-                mAdapter.addFeed(feed);
+
                 if(allFeedsLoaded()) {
                     mProgressDialog.dismiss();
                 }
+
+                if(feed == null) {
+
+                    if(!mErrorShown) {
+                        Toast.makeText(NewsActivity.this, R.string.feedLoadingError, Toast.LENGTH_SHORT).show();
+                        mErrorShown = true;
+                    }
+
+                    return;
+                }
+
+                mAdapter.addFeed(feed);
             }
         };
 
