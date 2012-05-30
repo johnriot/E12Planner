@@ -127,4 +127,7 @@
     <string name="scoreSeperatorUnplayed"> v </string>
 
     <string name="teamsIconCD">Team Icon</string>
+    
+    <!-- Do not translate -->
+    <string name="adsId">4028cba631d63df10131e1d3818b00cc</string>
 </resources>
