@@ -5,12 +5,7 @@
     android:layout_height="fill_parent"
     android:layout_gravity="center"
     >
-<!--  
-    <LinearLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
--->
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="30dp"
@@ -33,6 +28,7 @@
                 android:id="@+id/fixturesTableHomeTeam"
                 android:gravity="center_vertical|right"
                 android:padding="5dp"
+                android:singleLine="true"
                 />
     
             <TextView
@@ -50,7 +46,9 @@
                 android:layout_weight="30"
                 android:id="@+id/fixturesTableAwayTeam"
                 android:gravity="center_vertical|left"
-                android:padding="5dp"/>
+                android:padding="5dp"
+                android:singleLine="true"
+                />
     
             <ImageView
                 android:layout_height="wrap_content"
@@ -61,15 +59,5 @@
                 android:layout_gravity="center"
                 />
         </LinearLayout>
-<!--
-        <TextView
-            android:layout_height="30dp" 
-            android:layout_width="match_parent"
-            android:id="@+id/fixtureVenue"
-            android:clickable="true"
-            android:background="@android:drawable/list_selector_background"
-            android:layout_margin="10dp"
-            android:gravity="center"/>
-    </LinearLayout>
--->
+
 </TableRow>
