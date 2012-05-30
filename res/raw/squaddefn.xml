@@ -211,40 +211,44 @@
     </squad>
     
     <squad id="8"> <!-- Spain -->
-        <player position ="G" number ="-" name ="Iker Casillas (c)" dob ="May 20, 1981" />
-        <player position ="G" number ="-" name ="Pepe Reina" dob ="August 30, 1982" />
-        <player position ="G" number ="-" name ="David de Gea" dob ="November 7, 1990" />
-        <player position ="D" number ="-" name ="Sergio Ramos" dob ="March 30, 1986" />
-        <player position ="D" number ="-" name ="Álvaro Arbeloa" dob ="January 17, 1983" />
-        <player position ="D" number ="-" name ="Raúl Albiol" dob ="September 4, 1985" />
-        <player position ="D" number ="-" name ="Nacho Monreal" dob ="February 26, 1986" />
-        <player position ="D" number ="-" name ="Jordi Alba" dob ="March 21, 1989" />
-        <player position ="D" number ="-" name ="Álvaro Domínguez" dob ="May 16, 1989" />
-        <player position ="D" number ="-" name ="Juanfran" dob ="January 9, 1985" />
-        <player position ="M" number ="-" name ="Xabi Alonso" dob ="November 25, 1981" />
-        <player position ="M" number ="-" name ="David Silva" dob ="January 8, 1986" />
-        <player position ="M" number ="-" name ="Santi Cazorla" dob ="December 13, 1984" />
-        <player position ="M" number ="-" name ="Jesús Navas" dob ="November 21, 1985" />
-        <player position ="M" number ="-" name ="Bruno Soriano" dob ="June 12, 1984" />
-        <player position ="M" number ="-" name ="Beñat" dob ="February 19, 1987" />
-        <player position ="M" number ="-" name ="Isco" dob ="April 21, 1992" />
-        <player position ="M" number ="-" name ="Javi García" dob ="February 8, 1987" />
-        <player position ="M" number ="-" name ="Juan Mata" dob ="April 28, 1988" />
-        <player position ="F" number ="-" name ="Álvaro Negredo" dob ="August 20, 1985" />
-        <player position ="F" number ="-" name ="Roberto Soldado" dob ="May 27, 1985" />
-        <player position ="F" number ="-" name ="Fernando Torres" dob ="March 20, 1984" />
-        <player position ="F" number ="-" name ="Adrián López" dob ="January 8, 1988" />
+        <player position ="G" number ="1" name ="Iker Casillas (c)" dob ="May 20, 1981" />
+        <player position ="D" number ="2" name ="Raúl Albiol" dob ="September 4, 1985" />
+        <player position ="D" number ="3" name ="Gerard Piqué" dob ="February 2, 1987" />
+        <player position ="M" number ="4" name ="Javi Martínez" dob ="September 2, 1988" />
+        <player position ="M" number ="5" name ="Juanfran" dob ="January 9, 1985" />
+        <player position ="M" number ="6" name ="Andrés Iniesta" dob ="May 11, 1984" />
+        <player position ="F" number ="7" name ="Pedro" dob ="July 28, 1987" />
+        <player position ="M" number ="8" name ="Xavi" dob ="January 25, 1980" />
+        <player position ="F" number ="9" name ="Fernando Torres" dob ="March 20, 1984" />
+        <player position ="M" number ="10" name ="Cesc Fàbregas" dob ="May 7, 1987" />
+        <player position ="F" number ="11" name ="Álvaro Negredo" dob ="August 20, 1985" />
+        <player position ="G" number ="12" name ="Víctor Valdés" dob ="January 14, 1982" />
+        <player position ="M" number ="13" name ="Juan Mata" dob ="April 28, 1988" />
+        <player position ="M" number ="14" name ="Xabi Alonso" dob ="November 25, 1981" />
+        <player position ="D" number ="15" name ="Sergio Ramos" dob ="March 30, 1986" />
+        <player position ="M" number ="16" name ="Sergio Busquets" dob ="July 16, 1987" />
+        <player position ="D" number ="17" name ="Álvaro Arbeloa" dob ="January 17, 1983" />
+        <player position ="D" number ="18" name ="Jordi Alba" dob ="March 21, 1989" />
+        <player position ="D" number ="19" name ="Fernando Llorente" dob ="February 26, 1985" />
+        <player position ="M" number ="20" name ="Santi Cazorla" dob ="December 13, 1984" />
+        <player position ="M" number ="21" name ="David Silva" dob ="January 8, 1986" />
+        <player position ="M" number ="22" name ="Jesús Navas" dob ="November 21, 1985" />
+        <player position ="G" number ="23" name ="Pepe Reina" dob ="August 30, 1982" />
     </squad>
     
     <squad id="9"> <!-- Italy -->
-        <player position ="G" number ="-" name ="Gianluigi Buffon (c)" dob ="January 28, 1978" />
+        <player position ="G" number ="1" name ="Gianluigi Buffon (c)" dob ="January 28, 1978" />
+        <player position ="D" number ="-" name ="Christian Maggio" dob ="February 11, 1982" />
+        <player position ="D" number ="-" name ="Giorgio Chiellini" dob ="August 14, 1984" />
+        
+        
+        
+        
         <player position ="G" number ="-" name ="Emiliano Viviano" dob ="December 1, 1985" />
         <player position ="G" number ="-" name ="Morgan De Sanctis" dob ="March 26, 1977" />
         <player position ="G" number ="-" name ="Salvatore Sirigu" dob ="January 12, 1987" />
-        <player position ="D" number ="-" name ="Giorgio Chiellini" dob ="August 14, 1984" />
         <player position ="D" number ="-" name ="Andrea Barzagli" dob ="May 8, 1981" />
         <player position ="D" number ="-" name ="Domenico Criscito" dob ="December 30, 1986" />
-        <player position ="D" number ="-" name ="Christian Maggio" dob ="February 11, 1982" />
         <player position ="D" number ="-" name ="Leonardo Bonucci" dob ="May 1, 1987" />
         <player position ="D" number ="-" name ="Andrea Ranocchia" dob ="February 16, 1988" />
         <player position ="D" number ="-" name ="Federico Balzaretti" dob ="December 6, 1981" />
