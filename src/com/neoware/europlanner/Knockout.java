@@ -103,7 +103,9 @@ public class Knockout extends TournamentStage {
                 scoreTv.setText(scoreSepUnplayed);
             }
 
-            TextView fixtureTv = (TextView)fixtureRow.findViewById(R.id.knockoutVenue);
+            TableRow venueRow = (TableRow) inflater.inflate(
+                    R.layout.fixtures_table_venue_row, null);
+            TextView fixtureTv = (TextView)venueRow.findViewById(R.id.fixtureVenue);
 
             SpannableString venue = new SpannableString(venues[fixture.getLocationId()]);
             venue.setSpan(new UnderlineSpan(), 0, venue.length(), 0);
@@ -119,6 +121,7 @@ public class Knockout extends TournamentStage {
             });
 
             fixturesTable.addView(fixtureRow);
+            fixturesTable.addView(venueRow);
         }
         return fragView;
     }
