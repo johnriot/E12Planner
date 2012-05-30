@@ -113,6 +113,7 @@ public class TournamentDefinition {
 
                 private static final String TEAM_PLACEHOLDER = "team_placeholder";
                 private static final String TEAM_PLACEHOLDER_ID = "id";
+                private static final String KNOCKOUT_TEAM = "knockout_team";
 
                 private static final String KNOCKOUT_FIXTURE = "knockout_fixture";
 
@@ -187,7 +188,11 @@ public class TournamentDefinition {
                     }
                     else if(localName.equals(TEAM_PLACEHOLDER)) {
                         mCurrentKnockout.addTeam(new Team(Integer.parseInt(
-                                atts.getValue(TEAM_PLACEHOLDER_ID))));
+                                atts.getValue(TEAM_PLACEHOLDER_ID)), false));
+                    }
+                    else if(localName.equals(KNOCKOUT_TEAM)) {
+                        mCurrentKnockout.addTeam(new Team(Integer.parseInt(
+                                atts.getValue(TEAM_ID))));
                     }
                     else if(localName.equals(KNOCKOUT_FIXTURE)) {
 

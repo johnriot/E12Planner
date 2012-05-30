@@ -12,6 +12,14 @@ public class Team {
         mTeamId = teamId;
     }
 
+    public Team(int teamId, boolean realTeam) {
+        mTeamId = teamId;
+    }
+
+    public boolean isRealTeam() {
+        return mTeamId < Knockout.KNOCKOUT_ID_OFFSET;
+    }
+
     public int getTeamId() {
         return mTeamId;
     }

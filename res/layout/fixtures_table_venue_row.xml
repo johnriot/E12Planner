@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/fixture_gradient"
+    >
+    
+    <TextView
+        android:layout_height="30dp" 
+        android:layout_width="match_parent"
+        android:id="@+id/fixtureVenue"
+        android:clickable="true"
+        android:background="@android:drawable/list_selector_background"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+
+</TableRow>
+

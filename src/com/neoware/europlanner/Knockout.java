@@ -3,11 +3,15 @@ package com.neoware.europlanner;
 import java.util.Date;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -15,6 +19,7 @@ import android.widget.TextView;
 public class Knockout extends TournamentStage {
 
     private static final int KNOCKOUT_FRAGMENT_RESOURCE = R.layout.knockout_fragment;
+    public static final int KNOCKOUT_ID_OFFSET = 100;
 
     public Knockout(int id) {
         super(id);
@@ -22,12 +27,13 @@ public class Knockout extends TournamentStage {
 
     @Override
     public View drawView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState, Resources res, Activity activity) {
+            Bundle savedInstanceState, Resources res, final Activity activity) {
 
         View fragView = inflater.inflate(KNOCKOUT_FRAGMENT_RESOURCE, container, false);
 
         TableLayout fixturesTable = (TableLayout)fragView.findViewById(R.id.knockoutTable);
 
+        String venues[] = res.getStringArray(R.array.venues);
         String scoreSep = res.getString(R.string.scoreSeperator);
         String scoreSepUnplayed = res.getString(R.string.scoreSeperatorUnplayed);
 
@@ -48,12 +54,12 @@ public class Knockout extends TournamentStage {
 
         Date currentDate = null;
         int i = 0;
-        for(Fixture fixture : mFixtures) {
+        for(final Fixture fixture : mFixtures) {
 
             if(!fixture.getTime().equals(currentDate)) {
 
                 TableRow titleRow = (TableRow) inflater.inflate(
-                        R.layout.knockout_table_row, null);
+                        R.layout.knockout_table_day_row, null);
 
                 TextView titleView = (TextView)titleRow.findViewById(
                         R.id.knockoutTableTitle);
@@ -67,26 +73,59 @@ public class Knockout extends TournamentStage {
                 currentDate = fixture.getTime();
             }
 
-            TableRow fixtureRow = (TableRow) inflater.inflate(
-                    R.layout.placeholder_table_row, null);
+            TableRow fixtureRow = null;
+            // Decide which Teams are Real and which are Placeholders; draw view accordingly
+            if(fixture.getHomeTeam().isRealTeam() && fixture.getAwayTeam().isRealTeam()) {
+                fixtureRow = (TableRow) inflater.inflate(
+                        R.layout.fixtures_table_fixture_row, null);
+            }
+            else if(fixture.getHomeTeam().isRealTeam()) {
+                fixtureRow = (TableRow) inflater.inflate(
+                        R.layout.knockout_t_f_left_real, null);
+            }
+            else if(fixture.getAwayTeam().isRealTeam()) {
+                fixtureRow = (TableRow) inflater.inflate(
+                        R.layout.knockout_t_f_right_real, null);
+            }
+            else { // both real teams (not placeholders)
+                fixtureRow = (TableRow) inflater.inflate(
+                        R.layout.knockout_t_f_neither_real, null);
+            }
+
+            String crestIds[] = res.getStringArray(R.array.team_icon_resource_names);
+            String teamNames[] = res.getStringArray(R.array.team_names);
+            String packageName = getClass().getPackage().getName();
 
             TextView homeTeamTV = (TextView)fixtureRow.findViewById(
                     R.id.fixturesTableHomeTeam);
-            homeTeamTV.setText(teamPlaceholders[fixture.getHomeTeamId()]);
 
-            //ImageView homeTeamIV = (ImageView)fixtureRow.findViewById(
-            //        R.id.fixturesTableHomeTeamIcon);
-            //homeTeamIV.setImageResource(res.getIdentifier(crestIds[fixture.getHomeTeamId()],
-            //        "drawable", packageName));
+
+            if(fixture.getHomeTeam().isRealTeam()) {
+                homeTeamTV.setText(teamNames[fixture.getHomeTeamId()]);
+                ImageView homeTeamIV = (ImageView)fixtureRow.findViewById(
+                        R.id.fixturesTableHomeTeamIcon);
+                homeTeamIV.setImageResource(res.getIdentifier(crestIds[fixture.getHomeTeamId()],
+                        "drawable", packageName));
+            }
+            else {
+                homeTeamTV.setText(teamPlaceholders[fixture.getHomeTeamId() - KNOCKOUT_ID_OFFSET]);
+            }
+
 
             TextView awayTeamTV = (TextView)fixtureRow.findViewById(
                     R.id.fixturesTableAwayTeam);
-            awayTeamTV.setText(teamPlaceholders[fixture.getAwayTeamId()]);
 
-            //ImageView awayTeamIV = (ImageView)fixtureRow.findViewById(
-            //        R.id.fixturesTableAwayTeamIcon);
-            //awayTeamIV.setImageResource(res.getIdentifier(crestIds[fixture.getAwayTeamId()],
-            //        "drawable", packageName));
+
+            if(fixture.getAwayTeam().isRealTeam()) {
+                awayTeamTV.setText(teamNames[fixture.getAwayTeamId()]);
+                ImageView awayTeamIV = (ImageView)fixtureRow.findViewById(
+                        R.id.fixturesTableAwayTeamIcon);
+                awayTeamIV.setImageResource(res.getIdentifier(crestIds[fixture.getAwayTeamId()],
+                        "drawable", packageName));
+            }
+            else {
+                awayTeamTV.setText(teamPlaceholders[fixture.getAwayTeamId() - KNOCKOUT_ID_OFFSET]);
+            }
 
             TextView scoreTv = (TextView)fixtureRow.findViewById(
                     R.id.fixturesTableScore);
@@ -99,7 +138,25 @@ public class Knockout extends TournamentStage {
                 scoreTv.setText(scoreSepUnplayed);
             }
 
+            TableRow venueRow = (TableRow) inflater.inflate(
+                    R.layout.fixtures_table_venue_row, null);
+            TextView fixtureTv = (TextView)venueRow.findViewById(R.id.fixtureVenue);
+
+            SpannableString venue = new SpannableString(venues[fixture.getLocationId()]);
+            venue.setSpan(new UnderlineSpan(), 0, venue.length(), 0);
+            fixtureTv.setText(venue);
+
+            fixtureTv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent venueIntent = new Intent(activity, VenuesActivity.class);
+                    venueIntent.putExtra(VenuesActivity.VENUE_ID, fixture.getLocationId());
+                    activity.startActivity(venueIntent);
+                }
+            });
+
             fixturesTable.addView(fixtureRow);
+            fixturesTable.addView(venueRow);
         }
         return fragView;
     }
