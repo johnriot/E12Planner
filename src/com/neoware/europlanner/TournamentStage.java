@@ -1,17 +1,29 @@
 package com.neoware.europlanner;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
+import android.app.Activity;
+import android.content.res.Resources;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 public abstract class TournamentStage {
 
-    private final int mId;
-
-    private final ArrayList<Team> mTeams = new ArrayList<Team>();
-    private final ArrayList<Fixture> mFixtures = new ArrayList<Fixture>();
+    protected final int mId;
+    protected final ArrayList<Team> mTeams = new ArrayList<Team>();
+    protected final ArrayList<Fixture> mFixtures = new ArrayList<Fixture>();
+    protected static final SimpleDateFormat DATE_FORMAT =
+            new SimpleDateFormat("E, dd MMM, HH:mm");
 
     public TournamentStage(int id) {
         mId = id;
     }
+
+    public abstract View drawView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState, Resources res, Activity activity);
 
     public int getId() {
         return mId;

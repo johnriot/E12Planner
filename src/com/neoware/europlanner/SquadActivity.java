@@ -31,9 +31,16 @@ public class SquadActivity extends SherlockFragmentActivity {
         BitmapDrawable bg = (BitmapDrawable)getResources().getDrawable(R.drawable.toolbar_bg);
         bg.setTileModeXY(TileMode.REPEAT, TileMode.REPEAT);
 
+        final String teams[] = this.getResources().getStringArray(R.array.team_names);
+        Bundle extras = getIntent().getExtras();
+        int teamIndx = 0;
+        if(extras != null) {
+            teamIndx = extras.getInt(TEAM_INDEX);
+        }
+
         ActionBar bar = getSupportActionBar();
         bar.setBackgroundDrawable(bg);
-        bar.setTitle(R.string.teams_title);
+        bar.setTitle(teams[teamIndx]);
         bar.setHomeButtonEnabled(true);
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
@@ -44,11 +51,6 @@ public class SquadActivity extends SherlockFragmentActivity {
         adView.setIMAdRequest(adRequest);
         adView.loadNewAd();
 
-        Bundle extras = getIntent().getExtras();
-        int teamIndx = 0;
-        if(extras != null) {
-            teamIndx = extras.getInt(TEAM_INDEX);
-        }
         mSquadDefn = new SquadDefinition(this, teamIndx);
 
         Resources res = this.getResources();
@@ -108,9 +110,9 @@ public class SquadActivity extends SherlockFragmentActivity {
 
     private void HandleException(PlayerPositionException ex) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle("Server Error");
+        alertDialogBuilder.setTitle(R.string.server_error_title);
         alertDialogBuilder
-            .setMessage("Error Updating Squad Info. Please Try Again in 1 Minute.")
+            .setMessage(R.string.server_error_body)
             .setCancelable(true)
             .setPositiveButton("OK",new DialogInterface.OnClickListener() {
                 @Override

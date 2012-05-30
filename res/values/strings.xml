@@ -14,13 +14,13 @@
         <item>Group C</item>
         <item>Group D</item>
     </string-array>
-    
+
     <string-array name="knockout">
         <item>Quarter-Final</item>
         <item>Semi-Final</item>
         <item>FINAL</item>
     </string-array>
-    
+
     <string-array name="venues">
         <item>National Stadium Warsaw, Poland</item>
         <item>Municipal Stadium Wroclaw, Poland</item>
@@ -46,7 +46,7 @@
         <item>donetsk</item>
         <item>kyiv</item>
     </string-array>
-    
+
     <string-array name="venue_capacities">
         <item>50,000 Capacity</item>
         <item>40,000 Capacity</item>
@@ -57,7 +57,7 @@
         <item>50,000 Capacity</item>
         <item>60,000 Capacity</item>
     </string-array>
-    
+
     <string-array name="team_names">
         <item>Poland</item>
         <item>Greece</item>
@@ -100,6 +100,45 @@
         <item>england</item>
     </string-array>
 
+    <string-array name="qf_placeholder_names">
+        <item>1st Group A</item>
+        <item>2nd Group B</item>
+        <item>1st Group B</item>
+        <item>2nd Group A</item>
+        <item>1st Group C</item>
+        <item>2nd Group D</item>
+        <item>1st Group D</item>
+        <item>2nd Group C</item>
+    </string-array>
+
+    <string-array name="sf_placeholder_names">
+        <item>Winner QF 1</item>
+        <item>Winner QF 2</item>
+        <item>Winner QF 3</item>
+        <item>Winner QF 4</item>
+    </string-array>
+
+    <string-array name="f_placeholder_names">
+        <item>Winner SF 1</item>
+        <item>Winner SF 2</item>
+    </string-array>
+
+    <string-array name="qf_game_titles">
+        <item>QF1</item>
+        <item>QF2</item>
+        <item>QF3</item>
+        <item>QF4</item>
+    </string-array>
+
+    <string-array name="sf_game_titles">
+        <item>SF1</item>
+        <item>SF2</item>
+    </string-array>
+
+    <string-array name="f_game_titles">
+        <item>F</item>
+    </string-array>
+
     <string name="menuGames">Games</string>
     <string name="menuVenues">Venues</string>
     <string name="menuTeams">Teams</string>
@@ -117,6 +156,8 @@
     <string name="jersey_hdr">#</string>
     <string name="player_hdr">Player</string>
     <string name="age_hdr">Age</string>
+    <string name="server_error_title">Server Error</string>
+    <string name="server_error_body">Error Updating Squad Info. Please Try Again in 1 Minute.</string>
 
     <string name="cdIcon">Icon</string>
     
