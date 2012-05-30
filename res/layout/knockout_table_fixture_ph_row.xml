@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/fixture_gradient"
+    >
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+    
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="40"
+                android:id="@+id/fixturesTableHomeTeam"
+                android:gravity="center_vertical|right"
+                android:padding="5dp"
+                android:singleLine="true"
+                />
+    
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="20"
+                android:id="@+id/fixturesTableScore"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+    
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="40"
+                android:id="@+id/fixturesTableAwayTeam"
+                android:gravity="center_vertical|left"
+                android:padding="5dp"
+                android:singleLine="true"
+                />
+    
+        </LinearLayout>
+    
+        <TextView
+            android:layout_height="30dp" 
+            android:layout_width="match_parent"
+            android:id="@+id/knockoutVenue"
+            android:clickable="true"
+            android:background="@android:drawable/list_selector_background"
+            android:layout_margin="10dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</TableRow>

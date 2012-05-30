@@ -3,8 +3,11 @@ package com.neoware.europlanner;
 import java.util.Date;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,12 +25,13 @@ public class Knockout extends TournamentStage {
 
     @Override
     public View drawView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState, Resources res, Activity activity) {
+            Bundle savedInstanceState, Resources res, final Activity activity) {
 
         View fragView = inflater.inflate(KNOCKOUT_FRAGMENT_RESOURCE, container, false);
 
         TableLayout fixturesTable = (TableLayout)fragView.findViewById(R.id.knockoutTable);
 
+        String venues[] = res.getStringArray(R.array.venues);
         String scoreSep = res.getString(R.string.scoreSeperator);
         String scoreSepUnplayed = res.getString(R.string.scoreSeperatorUnplayed);
 
@@ -48,12 +52,12 @@ public class Knockout extends TournamentStage {
 
         Date currentDate = null;
         int i = 0;
-        for(Fixture fixture : mFixtures) {
+        for(final Fixture fixture : mFixtures) {
 
             if(!fixture.getTime().equals(currentDate)) {
 
                 TableRow titleRow = (TableRow) inflater.inflate(
-                        R.layout.knockout_table_row, null);
+                        R.layout.knockout_table_day_row, null);
 
                 TextView titleView = (TextView)titleRow.findViewById(
                         R.id.knockoutTableTitle);
@@ -68,7 +72,7 @@ public class Knockout extends TournamentStage {
             }
 
             TableRow fixtureRow = (TableRow) inflater.inflate(
-                    R.layout.placeholder_table_row, null);
+                    R.layout.knockout_table_fixture_ph_row, null);
 
             TextView homeTeamTV = (TextView)fixtureRow.findViewById(
                     R.id.fixturesTableHomeTeam);
@@ -98,6 +102,21 @@ public class Knockout extends TournamentStage {
             else {
                 scoreTv.setText(scoreSepUnplayed);
             }
+
+            TextView fixtureTv = (TextView)fixtureRow.findViewById(R.id.knockoutVenue);
+
+            SpannableString venue = new SpannableString(venues[fixture.getLocationId()]);
+            venue.setSpan(new UnderlineSpan(), 0, venue.length(), 0);
+            fixtureTv.setText(venue);
+
+            fixtureTv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent venueIntent = new Intent(activity, VenuesActivity.class);
+                    venueIntent.putExtra(VenuesActivity.VENUE_ID, fixture.getLocationId());
+                    activity.startActivity(venueIntent);
+                }
+            });
 
             fixturesTable.addView(fixtureRow);
         }
