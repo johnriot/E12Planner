@@ -2,8 +2,12 @@ package com.neoware.europlanner;
 
 import java.util.Date;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +29,7 @@ public class Group extends TournamentStage {
 
     @Override
     public View drawView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState, Resources res) {
+            Bundle savedInstanceState, Resources res, final Activity activity) {
 
 
         View fragView = inflater.inflate(GROUP_FRAGMENT_RESOURCE, container, false);
@@ -81,11 +85,12 @@ public class Group extends TournamentStage {
 
             TableLayout fixturesTable = (TableLayout)fragView.findViewById(R.id.fixturesTable);
 
+            String venues[] = res.getStringArray(R.array.venues);
             String scoreSep = res.getString(R.string.scoreSeperator);
             String scoreSepUnplayed = res.getString(R.string.scoreSeperatorUnplayed);
 
             Date currentDate = null;
-            for(Fixture fixture : mFixtures) {
+            for(final Fixture fixture : mFixtures) {
 
                 if(!fixture.getTime().equals(currentDate)) {
 
@@ -131,6 +136,21 @@ public class Group extends TournamentStage {
                 else {
                     scoreTv.setText(scoreSepUnplayed);
                 }
+
+                TextView fixtureTv = (TextView)fixtureRow.findViewById(R.id.fixtureVenue);
+
+                SpannableString venue = new SpannableString(venues[fixture.getLocationId()]);
+                venue.setSpan(new UnderlineSpan(), 0, venue.length(), 0);
+                fixtureTv.setText(venue);
+
+                fixtureTv.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent venueIntent = new Intent(activity, VenuesActivity.class);
+                        venueIntent.putExtra(VenuesActivity.VENUE_ID, fixture.getLocationId());
+                        activity.startActivity(venueIntent);
+                    }
+                });
 
                 fixturesTable.addView(fixtureRow);
             }

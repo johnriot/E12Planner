@@ -18,7 +18,8 @@ public class GroupFragment extends SherlockFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return mStage.drawView(inflater, container, savedInstanceState, this.getResources());
+
+        return mStage.drawView(inflater, container, savedInstanceState, this.getResources(), getActivity());
     }
 
 }

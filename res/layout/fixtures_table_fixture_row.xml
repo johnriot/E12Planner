@@ -4,57 +4,70 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center"
+    android:background="@drawable/fixture_gradient"
     >
 
-    <LinearLayout
+    <LinearLayout 
         android:layout_width="fill_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <ImageView
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="10"
-            android:contentDescription="@string/fixtureIconHomeCD"
-            android:id="@+id/fixturesTableHomeTeamIcon"
-            android:layout_gravity="center"
-            />
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+    
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:contentDescription="@string/fixtureIconHomeCD"
+                android:id="@+id/fixturesTableHomeTeamIcon"
+                android:layout_gravity="center"
+                />
+    
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="30"
+                android:id="@+id/fixturesTableHomeTeam"
+                android:gravity="center_vertical|right"
+                android:padding="5dp"
+                />
+    
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="20"
+                android:id="@+id/fixturesTableScore"
+                android:gravity="center"
+                android:padding="5dp"
+                />
+    
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="30"
+                android:id="@+id/fixturesTableAwayTeam"
+                android:gravity="center_vertical|left"
+                android:padding="5dp"/>
+    
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:contentDescription="@string/fixtureIconHomeCD"
+                android:id="@+id/fixturesTableAwayTeamIcon"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+        
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="30"
-            android:id="@+id/fixturesTableHomeTeam"
-            android:gravity="center_vertical|right"
-            android:padding="5dp"
-            />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="20"
-            android:id="@+id/fixturesTableScore"
-            android:gravity="center"
-            android:padding="5dp"
-            />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="30"
-            android:id="@+id/fixturesTableAwayTeam"
-            android:gravity="center_vertical|left"
-            android:padding="5dp"/>
-
-        <ImageView
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="10"
-            android:contentDescription="@string/fixtureIconHomeCD"
-            android:id="@+id/fixturesTableAwayTeamIcon"
-            android:layout_gravity="center"
-            />
+            android:layout_height="30dp" 
+            android:layout_width="match_parent"
+            android:id="@+id/fixtureVenue"
+            android:layout_margin="10dp"
+            android:gravity="center"/>
     </LinearLayout>
-
 </TableRow>

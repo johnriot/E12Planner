@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/adViewWebView"
-            appId="4028cba631d63df10131e1d3818b00cc"
+            appId="@string/adsId"
             adSlot="15"
             testMode="true" />
 

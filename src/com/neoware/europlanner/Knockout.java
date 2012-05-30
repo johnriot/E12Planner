@@ -2,6 +2,7 @@ package com.neoware.europlanner;
 
 import java.util.Date;
 
+import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,7 +22,7 @@ public class Knockout extends TournamentStage {
 
     @Override
     public View drawView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState, Resources res) {
+            Bundle savedInstanceState, Resources res, Activity activity) {
 
         View fragView = inflater.inflate(KNOCKOUT_FRAGMENT_RESOURCE, container, false);
 

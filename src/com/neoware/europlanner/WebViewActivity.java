@@ -5,6 +5,7 @@ import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
@@ -15,6 +16,18 @@ import com.inmobi.androidsdk.IMAdView;
 public class WebViewActivity extends SherlockActivity {
 
     public static final String URL_EXTRA = "URL";
+
+    /**
+     * @brief This is our custom web view client that will force all redirects to stay
+     * within the webview itself
+     */
+    private class LocalRedirectClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return false;
+        }
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,6 +53,14 @@ public class WebViewActivity extends SherlockActivity {
 
         WebView wv = (WebView)findViewById(R.id.webView);
         wv.getSettings().setUserAgentString("Android");
+
+        wv.setWebViewClient(new LocalRedirectClient());
+
+        wv.getSettings().setJavaScriptEnabled(true);
+        wv.getSettings().setLoadWithOverviewMode(true);
+        wv.getSettings().setUseWideViewPort(true);
+        wv.getSettings().setSupportZoom(true);
+        wv.getSettings().setBuiltInZoomControls(true);
 
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
