@@ -159,30 +159,29 @@
     </squad>
     
     <squad id="6"> <!-- Germany -->
-        <player position ="G" number ="-" name ="Marc-André ter Stegen" dob ="April 30, 1992" />
-        <player position ="D" number ="-" name ="Philipp Lahm (c)" dob ="November 11, 1983" />
-        <player position ="D" number ="-" name ="Per Mertesacker" dob ="September 29, 1984" />
-        <player position ="D" number ="-" name ="Jérôme Boateng" dob ="September 3, 1988" />
-        <player position ="D" number ="-" name ="Holger Badstuber" dob ="March 13, 1989" />
-        <player position ="D" number ="-" name ="Mats Hummels" dob ="December 16, 1988" />
-        <player position ="D" number ="-" name ="Benedikt Höwedes" dob ="February 29, 1988" />
-        <player position ="D" number ="-" name ="Marcel Schmelzer" dob ="January 22, 1988" />
-        <player position ="M" number ="-" name ="Lukas Podolski" dob ="June 4, 1985" />
-        <player position ="M" number ="-" name ="Bastian Schweinsteiger" dob ="August 1, 1984" />
-        <player position ="M" number ="-" name ="Mesut Özil" dob ="October 15, 1988" />
-        <player position ="M" number ="-" name ="Thomas Müller" dob ="September 13, 1989" />
-        <player position ="M" number ="-" name ="Sami Khedira" dob ="April 4, 1987" />
-        <player position ="M" number ="-" name ="Toni Kroos" dob ="January 4, 1990" />
-        <player position ="M" number ="-" name ="Mario Götze" dob ="June 3, 1992" />
-        <player position ="M" number ="-" name ="André Schürrle" dob ="November 6, 1990" />
-        <player position ="M" number ="-" name ="Lars Bender" dob ="April 27, 1989" />
-        <player position ="M" number ="-" name ="Marco Reus" dob ="May 31, 1989" />
-        <player position ="M" number ="-" name ="Sven Bender" dob ="April 27, 1989" />
-        <player position ="M" number ="-" name ="Ilkay Gündogan" dob ="October 24, 1990" />
-        <player position ="M" number ="-" name ="Julian Draxler" dob ="September 20, 1993" />
-        <player position ="F" number ="-" name ="Miroslav Klose" dob ="June 9, 1978" />
-        <player position ="F" number ="-" name ="Mario Gomez" dob ="July 10, 1985" />
-        <player position ="F" number ="-" name ="Cacau" dob ="March 27, 1981" />
+        <player position ="G" number ="1" name ="Manuel Neuer" dob ="March 27, 1986" />
+        <player position ="M" number ="2" name ="Ilkay Gündogan" dob ="October 24, 1990" />
+        <player position ="D" number ="3" name ="Marcel Schmelzer" dob ="January 22, 1988" />
+        <player position ="D" number ="4" name ="Benedikt Höwedes" dob ="February 29, 1988" />
+        <player position ="D" number ="5" name ="Mats Hummels" dob ="December 16, 1988" />
+        <player position ="M" number ="6" name ="Sami Khedira" dob ="April 4, 1987" />
+        <player position ="M" number ="7" name ="Bastian Schweinsteiger" dob ="August 1, 1984" />
+        <player position ="M" number ="8" name ="Mesut Özil" dob ="October 15, 1988" />
+        <player position ="M" number ="9" name ="André Schürrle" dob ="November 6, 1990" />
+        <player position ="M" number ="10" name ="Lukas Podolski" dob ="June 4, 1985" />
+        <player position ="F" number ="11" name ="Miroslav Klose" dob ="June 9, 1978" />
+        <player position ="G" number ="12" name ="Tim Wiese" dob ="December 17, 1981" />
+        <player position ="M" number ="13" name ="Thomas Müller" dob ="September 13, 1989" />
+        <player position ="D" number ="14" name ="Holger Badstuber" dob ="March 13, 1989" />
+        <player position ="M" number ="15" name ="Lars Bender" dob ="April 27, 1989" />
+        <player position ="D" number ="16" name ="Philipp Lahm (c)" dob ="November 11, 1983" />
+        <player position ="D" number ="17" name ="Per Mertesacker" dob ="September 29, 1984" />
+        <player position ="M" number ="18" name ="Toni Kroos" dob ="January 4, 1990" />
+        <player position ="M" number ="19" name ="Mario Götze" dob ="June 3, 1992" />
+        <player position ="D" number ="20" name ="Jérôme Boateng" dob ="September 3, 1988" />
+        <player position ="M" number ="21" name ="Marco Reus" dob ="May 31, 1989" />
+        <player position ="G" number ="22" name ="Ron-Robert Zieler" dob ="February 12, 1989" />
+        <player position ="F" number ="23" name ="Mario Gomez" dob ="July 10, 1985" />
     </squad>
 
     <squad id="7"> <!-- Portugal -->
