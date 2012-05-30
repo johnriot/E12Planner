@@ -2,32 +2,30 @@
 <squad_defn>
 
     <squad id="0"> <!-- Poland -->
-        <player position ="G" number ="-" name ="Łukasz Fabiański" dob ="April 18, 1985" />
-        <player position ="G" number ="-" name ="Wojciech Szczęsny" dob ="April 18, 1990" />
-        <player position ="G" number ="-" name ="Przemysław Tytoń" dob ="January 4, 1987" />
-        <player position ="D" number ="-" name ="Marcin Wasilewski" dob ="June 9, 1980" />
-        <player position ="D" number ="-" name ="Jakub Wawrzyniak" dob ="July 7, 1983" />
-        <player position ="D" number ="-" name ="Tomasz Jodłowiec " dob ="March 22, 1985" />
-        <player position ="D" number ="-" name ="Łukasz Piszczek" dob ="June 3, 1985" />
-        <player position ="D" number ="-" name ="Grzegorz Wojtkowiak" dob ="January 26, 1984" />
-        <player position ="D" number ="-" name ="Kamil Glik" dob ="February 3, 1988" />
-        <player position ="D" number ="-" name ="Damien Perquis" dob ="October 4, 1984" />
-        <player position ="D" number ="-" name ="Sebastian Boenisch" dob ="February 1, 1987" />
-        <player position ="D" number ="-" name ="Marcin Kamiński" dob ="January 15, 1992" />
-        <player position ="M" number ="-" name ="Dariusz Dudka" dob ="December 9, 1983" />
-        <player position ="M" number ="-" name ="Jakub Błaszczykowski (c)" dob ="December 14, 1985" />
-        <player position ="M" number ="-" name ="Rafał Murawski" dob ="October 9, 1981" />
-        <player position ="M" number ="-" name ="Ludovic Obraniak" dob ="November 10, 1984" />
-        <player position ="M" number ="-" name ="Adrian Mierzejewski" dob ="November 4, 1986" />
-        <player position ="M" number ="-" name ="Maciej Rybus" dob ="August 19, 1989" />
-        <player position ="M" number ="-" name ="Adam Matuszczyk" dob ="February 14, 1989" />
-        <player position ="M" number ="-" name ="Kamil Grosicki" dob ="June 8, 1988" />
-        <player position ="M" number ="-" name ="Eugen Polanski" dob ="March 17, 1986" />
-        <player position ="M" number ="-" name ="Rafał Wolski" dob ="November 10, 1992" />
-        <player position ="F" number ="-" name ="Robert Lewandowski" dob ="August 21, 1988" />
-        <player position ="F" number ="-" name ="Paweł Brożek" dob ="April 21, 1983" />
-        <player position ="F" number ="-" name ="Michał Kucharczyk" dob ="March 20, 1991" />
-        <player position ="F" number ="-" name ="Artur Sobiech" dob ="June 12, 1990" />
+    
+        <player position ="G" number ="1" name ="Wojciech Szczęsny" dob ="April 18, 1990" />
+        <player position ="G" number ="12" name ="Grzegorz Sandomierski" dob ="September 5, 1989" />
+        <player position ="G" number ="22" name ="Przemysław Tytoń" dob ="January 4, 1987" />
+        <player position ="D" number ="13" name ="Marcin Wasilewski" dob ="June 9, 1980" />
+        <player position ="D" number ="14" name ="Jakub Wawrzyniak" dob ="July 7, 1983" />
+        <player position ="D" number ="20" name ="Łukasz Piszczek" dob ="June 3, 1985" />
+        <player position ="D" number ="3" name ="Grzegorz Wojtkowiak" dob ="January 26, 1984" />
+        <player position ="D" number ="15" name ="Damien Perquis" dob ="October 4, 1984" />
+        <player position ="D" number ="2" name ="Sebastian Boenisch" dob ="February 1, 1987" />
+        <player position ="D" number ="4" name ="Marcin Kamiński" dob ="January 15, 1992" />
+        <player position ="M" number ="5" name ="Dariusz Dudka" dob ="December 9, 1983" />
+        <player position ="M" number ="16" name ="Jakub Błaszczykowski (c)" dob ="December 14, 1985" />
+        <player position ="M" number ="11" name ="Rafał Murawski" dob ="October 9, 1981" />
+        <player position ="M" number ="10" name ="Ludovic Obraniak" dob ="November 10, 1984" />
+        <player position ="M" number ="18" name ="Adrian Mierzejewski" dob ="November 4, 1986" />
+        <player position ="M" number ="8" name ="Maciej Rybus" dob ="August 19, 1989" />
+        <player position ="M" number ="6" name ="Adam Matuszczyk" dob ="February 14, 1989" />
+        <player position ="M" number ="21" name ="Kamil Grosicki" dob ="June 8, 1988" />
+        <player position ="M" number ="7" name ="Eugen Polanski" dob ="March 17, 1986" />
+        <player position ="M" number ="19" name ="Rafał Wolski" dob ="November 10, 1992" />
+        <player position ="F" number ="9" name ="Robert Lewandowski" dob ="August 21, 1988" />
+        <player position ="F" number ="23" name ="Paweł Brożek" dob ="April 21, 1983" />
+        <player position ="F" number ="17" name ="Artur Sobiech" dob ="June 12, 1990" />
     </squad>
 
     <squad id="1"> <!--  Greece -->
