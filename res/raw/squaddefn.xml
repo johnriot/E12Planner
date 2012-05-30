@@ -55,31 +55,29 @@
     </squad>
     
     <squad id="2"> <!--  Russia -->
-        <player position ="G" number ="-" name ="Igor Akinfeev" dob ="April 8, 1986" />
-        <player position ="G" number ="-" name ="Vyacheslav Malafeev" dob ="March 4, 1979" />
-        <player position ="G" number ="-" name ="Anton Shunin" dob ="January 27, 1987" />
-        <player position ="D" number ="-" name ="Sergei Ignashevich" dob ="July 14, 1979" />
-        <player position ="D" number ="-" name ="Aleksandr Anyukov" dob ="September 28, 1982" />
-        <player position ="D" number ="-" name ="Yuri Zhirkov" dob ="August 20, 1983" />
-        <player position ="D" number ="-" name ="Aleksei Berezutski" dob ="June 20, 1982" />
-        <player position ="D" number ="-" name ="Roman Shishkin" dob ="January 27, 1987" />
-        <player position ="D" number ="-" name ="Roman Sharonov" dob ="September 8, 1976" />
-        <player position ="D" number ="-" name ="Dmitri Kombarov" dob ="January 22, 1987" />
-        <player position ="D" number ="-" name ="Vladimir Granat" dob ="May 22, 1987" />
-        <player position ="M" number ="-" name ="Igor Semshov" dob ="April 6, 1978" />
-        <player position ="M" number ="-" name ="Konstantin Zyryanov" dob ="October 5, 1977" />
-        <player position ="M" number ="-" name ="Marat Izmailov" dob ="September 21, 1982" />
-        <player position ="M" number ="-" name ="Igor Denisov" dob ="May 17, 1984" />
-        <player position ="M" number ="-" name ="Roman Shirokov" dob ="July 6, 1981" />
-        <player position ="M" number ="-" name ="Alan Dzagoev" dob ="June 17, 1990" />
-        <player position ="M" number ="-" name ="Denis Glushakov" dob ="January 27, 1987" />
-        <player position ="M" number ="-" name ="Magomed Ozdoev" dob ="November 5, 1992" />
-        <player position ="F" number ="-" name ="Andrei Arshavin (c)" dob ="May 29, 1981" />
-        <player position ="F" number ="-" name ="Aleksandr Kerzhakov" dob ="November 27, 1982" />
-        <player position ="F" number ="-" name ="Roman Pavlyuchenko" dob ="December 15, 1981" />
-        <player position ="F" number ="-" name ="Pavel Pogrebnyak" dob ="November 8, 1983" />
-        <player position ="F" number ="-" name ="Aleksandr Kokorin" dob ="March 19, 1991" />
-        <player position ="F" number ="-" name ="Artem Dzyuba" dob ="August 22, 1988" />
+        <player position ="G" number ="1" name ="Igor Akinfeev" dob ="April 8, 1986" />
+        <player position ="D" number ="2" name ="Aleksandr Anyukov" dob ="September 28, 1982" />
+        <player position ="D" number ="3" name ="Roman Sharonov" dob ="September 8, 1976" />
+        <player position ="D" number ="4" name ="Sergei Ignashevich" dob ="July 14, 1979" />
+        <player position ="D" number ="5" name ="Yuri Zhirkov" dob ="August 20, 1983" />
+        <player position ="M" number ="6" name ="Roman Shirokov" dob ="July 6, 1981" />
+        <player position ="M" number ="7" name ="Igor Denisov" dob ="May 17, 1984" />
+        <player position ="M" number ="8" name ="Konstantin Zyryanov" dob ="October 5, 1977" />
+        <player position ="M" number ="9" name ="Marat Izmailov" dob ="September 21, 1982" />
+        <player position ="F" number ="10" name ="Andrei Arshavin (c)" dob ="May 29, 1981" />
+        <player position ="F" number ="11" name ="Aleksandr Kerzhakov" dob ="November 27, 1982" />
+        <player position ="D" number ="12" name ="Aleksei Berezutski" dob ="June 20, 1982" />
+        <player position ="G" number ="13" name ="Anton Shunin" dob ="January 27, 1987" />
+        <player position ="F" number ="14" name ="Roman Pavlyuchenko" dob ="December 15, 1981" />
+        <player position ="D" number ="15" name ="Dmitri Kombarov" dob ="January 22, 1987" />
+        <player position ="G" number ="16" name ="Vyacheslav Malafeev" dob ="March 4, 1979" />
+        <player position ="M" number ="17" name ="Alan Dzagoev" dob ="June 17, 1990" />
+        <player position ="F" number ="18" name ="Aleksandr Kokorin" dob ="March 19, 1991" />
+        <player position ="D" number ="19" name ="Vladimir Granat" dob ="May 22, 1987" />
+        <player position ="F" number ="20" name ="Pavel Pogrebnyak" dob ="November 8, 1983" />
+        <player position ="D" number ="21" name ="Kirill Nababkin" dob ="September 8, 1986" />
+        <player position ="M" number ="22" name ="Denis Glushakov" dob ="January 27, 1987" />
+        <player position ="M" number ="23" name ="Igor Semshov" dob ="April 6, 1978" />
     </squad>
     
     <squad id="3"> <!-- Czech Republic -->
