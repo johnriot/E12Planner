@@ -81,30 +81,29 @@
     </squad>
     
     <squad id="3"> <!-- Czech Republic -->
-        <player position ="G" number ="-" name ="Petr Cech" dob ="May 20, 1982" />
-        <player position ="G" number ="-" name ="Jaroslav Drobný" dob ="October 18, 1979" />
-        <player position ="G" number ="-" name ="Tomáš Grigar" dob ="February 1, 1983" />
-        <player position ="G" number ="-" name ="Jan Laštuvka" dob ="July 7, 1982" />
-        <player position ="D" number ="-" name ="Michal Kadlec" dob ="December 13, 1984" />
-        <player position ="D" number ="-" name ="Tomáš Sivok" dob ="September 15, 1983" />
-        <player position ="D" number ="-" name ="Daniel Pudil" dob ="September 27, 1985" />
-        <player position ="D" number ="-" name ="Roman Hubník" dob ="June 6, 1984" />
-        <player position ="D" number ="-" name ="Theodor Gebre Selassie" dob ="December 24, 1986" />
-        <player position ="D" number ="-" name ="David Limberský" dob ="October 6, 1983" />
-        <player position ="D" number ="-" name ="Marek Suchý" dob ="March 29, 1988" />
-        <player position ="D" number ="-" name ="František Rajtoral" dob ="March 12, 1986" />
-        <player position ="M" number ="-" name ="Tomáš Rosický (c)" dob ="October 4, 1980" />
-        <player position ="M" number ="-" name ="Jaroslav Plašil" dob ="January 5, 1982" />
-        <player position ="M" number ="-" name ="Tomáš Hübschman" dob ="September 4, 1981" />
-        <player position ="M" number ="-" name ="Jan Rezek" dob ="May 5, 1982" />
-        <player position ="M" number ="-" name ="Milan Petržela" dob ="June 19, 1983" />
-        <player position ="M" number ="-" name ="Daniel Kolár" dob ="October 27, 1985" />
-        <player position ="M" number ="-" name ="Václav Pilar" dob ="October 13, 1988" />
-        <player position ="M" number ="-" name ="Petr Jirácek" dob ="March 2, 1986" />
-        <player position ="F" number ="-" name ="Milan Baroš" dob ="October 28, 1981" />
-        <player position ="F" number ="-" name ="Tomáš Necid" dob ="August 13, 1989" />
-        <player position ="F" number ="-" name ="David Lafata" dob ="September 18, 1981" />
-        <player position ="F" number ="-" name ="Tomáš Pekhart" dob ="May 26, 1989" />
+        <player position ="G" number ="1" name ="Petr Cech" dob ="May 20, 1982" />
+        <player position ="D" number ="2" name ="Theodor Gebre Selassie" dob ="December 24, 1986" />
+        <player position ="D" number ="3" name ="Michal Kadlec" dob ="December 13, 1984" />
+        <player position ="D" number ="4" name ="Marek Suchý" dob ="March 29, 1988" />
+        <player position ="D" number ="5" name ="Roman Hubník" dob ="June 6, 1984" />
+        <player position ="D" number ="6" name ="Tomáš Sivok" dob ="September 15, 1983" />
+        <player position ="F" number ="7" name ="Tomáš Necid" dob ="August 13, 1989" />
+        <player position ="D" number ="8" name ="David Limberský" dob ="October 6, 1983" />
+        <player position ="M" number ="9" name ="Jan Rezek" dob ="May 5, 1982" />
+        <player position ="M" number ="10" name ="Tomáš Rosický (c)" dob ="October 4, 1980" />
+        <player position ="M" number ="11" name ="Milan Petržela" dob ="June 19, 1983" />
+        <player position ="D" number ="12" name ="František Rajtoral" dob ="March 12, 1986" />
+        <player position ="M" number ="13" name ="Jaroslav Plašil" dob ="January 5, 1982" />
+        <player position ="M" number ="14" name ="Václav Pilar" dob ="October 13, 1988" />
+        <player position ="F" number ="15" name ="Milan Baroš" dob ="October 28, 1981" />
+        <player position ="G" number ="16" name ="Jan Laštuvka" dob ="July 7, 1982" />
+        <player position ="M" number ="17" name ="Tomáš Hübschman" dob ="September 4, 1981" />
+        <player position ="M" number ="18" name ="Daniel Kolár" dob ="October 27, 1985" />
+        <player position ="M" number ="19" name ="Petr Jirácek" dob ="March 2, 1986" />
+        <player position ="F" number ="20" name ="Tomáš Pekhart" dob ="May 26, 1989" />
+        <player position ="F" number ="21" name ="David Lafata" dob ="September 18, 1981" />
+        <player position ="M" number ="22" name ="Vladimír Darida" dob ="August 8, 1990" />
+        <player position ="G" number ="23" name ="Jaroslav Drobný" dob ="October 18, 1979" />
     </squad>
     
     <squad id="4"> <!-- Netherlands -->
