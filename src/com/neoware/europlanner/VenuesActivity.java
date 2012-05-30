@@ -20,9 +20,11 @@ import com.inmobi.androidsdk.IMAdView;
 
 public class VenuesActivity extends SherlockFragmentActivity {
 
-    TabsAdapter mTabAdapter;
-    ViewPager mPager;
-    TournamentDefinition mTournamentDefn;
+    private TabsAdapter mTabAdapter;
+    private ViewPager mPager;
+    private TournamentDefinition mTournamentDefn;
+
+    public static final String VENUE_ID = "venueid";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,7 +64,13 @@ public class VenuesActivity extends SherlockFragmentActivity {
         }
 
         mPager.setAdapter(mTabAdapter);
-        mPager.setCurrentItem(0);
+
+        Bundle extras = getIntent().getExtras();
+        int venueIndex = 0;
+        if(extras != null) {
+            venueIndex = extras.getInt(VENUE_ID);
+        }
+        mPager.setCurrentItem(venueIndex);
     }
 
 

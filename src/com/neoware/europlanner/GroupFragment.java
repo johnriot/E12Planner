@@ -4,8 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,12 +93,13 @@ public class GroupFragment extends SherlockFragment {
 
         TableLayout fixturesTable = (TableLayout)fragView.findViewById(R.id.fixturesTable);
 
+        String venues[] = res.getStringArray(R.array.venues);
         String scoreSep = res.getString(R.string.scoreSeperator);
         String scoreSepUnplayed = res.getString(R.string.scoreSeperatorUnplayed);
 
         ArrayList<Fixture> fixtures = mStage.getFixtures();
         Date currentDate = null;
-        for(Fixture fixture : fixtures) {
+        for(final Fixture fixture : fixtures) {
 
             if(!fixture.getTime().equals(currentDate)) {
 
@@ -141,6 +145,21 @@ public class GroupFragment extends SherlockFragment {
             else {
                 scoreTv.setText(scoreSepUnplayed);
             }
+
+            TextView fixtureTv = (TextView)fixtureRow.findViewById(R.id.fixtureVenue);
+
+            SpannableString venue = new SpannableString(venues[fixture.getLocationId()]);
+            venue.setSpan(new UnderlineSpan(), 0, venue.length(), 0);
+            fixtureTv.setText(venue);
+
+            fixtureTv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent venueIntent = new Intent(GroupFragment.this.getActivity(), VenuesActivity.class);
+                    venueIntent.putExtra(VenuesActivity.VENUE_ID, fixture.getLocationId());
+                    startActivity(venueIntent);
+                }
+            });
 
             fixturesTable.addView(fixtureRow);
         }
