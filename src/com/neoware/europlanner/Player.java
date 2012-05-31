@@ -19,8 +19,8 @@ public class Player {
         mPos = pos;
         mNumber = number;
         mName = name;
-        DateFormat format =
-                DateFormat.getDateInstance(DateFormat.LONG, Locale.US);
+                DateFormat format =
+                        DateFormat.getDateInstance(DateFormat.LONG, Locale.US);
         try {
             mDateOfBirth = format.parse(dob);
         } catch(ParseException pe) {

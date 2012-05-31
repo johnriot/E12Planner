@@ -11,6 +11,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -157,13 +158,13 @@ public class TournamentDefinition {
                         String dateStr = atts.getValue(DATE_ID);
                         String score = atts.getValue(SCORE_ID);
 
-
                         Team homeTeam = mCurrentGroup.getTeamById(homeTeamId);
                         Team awayTeam = mCurrentGroup.getTeamById(awayTeamId);
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
-                        SimpleDateFormat format = new SimpleDateFormat("MMM d, yyyy, HH:mm, zzz");
+                        SimpleDateFormat format = new SimpleDateFormat(
+                                "MMM d, yyyy, HH:mm, zzz", Locale.US);
                         Date date = null;
                         try {
                             date = format.parse(dateStr);
@@ -202,13 +203,14 @@ public class TournamentDefinition {
                         String dateStr = atts.getValue(DATE_ID);
                         String score = atts.getValue(SCORE_ID);
 
-
                         Team homeTeam = mCurrentKnockout.getTeamById(homeTeamId);
                         Team awayTeam = mCurrentKnockout.getTeamById(awayTeamId);
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
-                        SimpleDateFormat format = new SimpleDateFormat("MMM d, yyyy, HH:mm, zzz");
+                        SimpleDateFormat format = new SimpleDateFormat(
+                                "MMM d, yyyy, HH:mm, zzz", Locale.US);
+
                         Date date = null;
                         try {
                             date = format.parse(dateStr);
