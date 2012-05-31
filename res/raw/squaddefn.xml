@@ -393,29 +393,29 @@
     </squad>
 
     <squad id="15"> <!-- England -->
-        <player position ="G" number ="-" name ="Joe Hart" dob ="April 19, 1987" />
-        <player position ="G" number ="-" name ="Robert Green" dob ="January 18, 1980" />
-        <player position ="G" number ="-" name ="John Ruddy" dob ="October 24, 1986" />
-        <player position ="D" number ="-" name ="Glen Johnson" dob ="August 23, 1984" />
-        <player position ="D" number ="-" name ="Ashley Cole" dob ="December 20, 1980" />
-        <player position ="D" number ="-" name ="Gary Cahill" dob ="December 19, 1985" />
-        <player position ="D" number ="-" name ="John Terry" dob ="December 7, 1980" />
-        <player position ="D" number ="-" name ="Leighton Baines" dob ="December 11, 1984" />
-        <player position ="D" number ="-" name ="Joleon Lescott" dob ="August 16, 1982" />
-        <player position ="D" number ="-" name ="Phil Jones" dob ="February 21, 1992" />
-        <player position ="M" number ="-" name ="Steven Gerrard (c)" dob ="May 30, 1980" />
-        <player position ="M" number ="-" name ="Scott Parker" dob ="October 13, 1980" />
-        <player position ="M" number ="-" name ="Frank Lampard" dob ="June 20, 1978" />
-        <player position ="M" number ="-" name ="Ashley Young" dob ="July 9, 1985" />
-        <player position ="M" number ="-" name ="Theo Walcott" dob ="March 16, 1989" />
-        <player position ="M" number ="-" name ="James Milner" dob ="January 4, 1986" />
-        <player position ="M" number ="-" name ="Gareth Barry" dob ="February 23, 1981" />
-        <player position ="M" number ="-" name ="Stewart Downing" dob ="July 22, 1984" />
-        <player position ="M" number ="-" name ="Alex Oxlade-Chamberlain" dob ="August 15, 1993" />
-        <player position ="F" number ="-" name ="Andy Carroll" dob ="January 6, 1989" />
-        <player position ="F" number ="-" name ="Wayne Rooney" dob ="October 24, 1985" />
-        <player position ="F" number ="-" name ="Jermain Defoe" dob ="October 7, 1982" />
-        <player position ="F" number ="-" name ="Danny Welbeck" dob ="November 26, 1990" />
+        <player position ="G" number ="1" name ="Joe Hart" dob ="April 19, 1987" />
+        <player position ="D" number ="2" name ="Glen Johnson" dob ="August 23, 1984" />
+        <player position ="D" number ="3" name ="Ashley Cole" dob ="December 20, 1980" />
+        <player position ="M" number ="4" name ="Steven Gerrard (c)" dob ="May 30, 1980" />
+        <player position ="D" number ="5" name ="Gary Cahill" dob ="December 19, 1985" />
+        <player position ="D" number ="6" name ="John Terry" dob ="December 7, 1980" />
+        <player position ="M" number ="7" name ="Theo Walcott" dob ="March 16, 1989" />
+        <player position ="M" number ="8" name ="Frank Lampard" dob ="June 20, 1978" />
+        <player position ="F" number ="9" name ="Andy Carroll" dob ="January 6, 1989" />
+        <player position ="F" number ="10" name ="Wayne Rooney" dob ="October 24, 1985" />
+        <player position ="M" number ="11" name ="Ashley Young" dob ="July 9, 1985" />
+        <player position ="D" number ="12" name ="Leighton Baines" dob ="December 11, 1984" />
+        <player position ="G" number ="13" name ="Robert Green" dob ="January 18, 1980" />
+        <player position ="D" number ="14" name ="Phil Jones" dob ="February 21, 1992" />
+        <player position ="D" number ="15" name ="Joleon Lescott" dob ="August 16, 1982" />
+        <player position ="M" number ="16" name ="James Milner" dob ="January 4, 1986" />
+        <player position ="M" number ="17" name ="Scott Parker" dob ="October 13, 1980" />
+        <player position ="D" number ="18" name ="Phil Jagielka" dob ="August 17, 1982" />
+        <player position ="M" number ="19" name ="Stewart Downing" dob ="July 22, 1984" />
+        <player position ="M" number ="20" name ="Alex Oxlade-Chamberlain" dob ="August 15, 1993" />
+        <player position ="F" number ="21" name ="Jermain Defoe" dob ="October 7, 1982" />
+        <player position ="F" number ="22" name ="Danny Welbeck" dob ="November 26, 1990" />
+        <player position ="G" number ="23" name ="Jack Butland" dob ="March 10, 1993" />
     </squad>
 
 </squad_defn>
