@@ -169,9 +169,21 @@
 
     <string name="daysToGo">%d days to go!</string>
     <string name="oneDayToGo">One day to go!</string>
+    
+    <string name="aboutMenu">About</string>
 
     <string name="teamsIconCD">Team Icon</string>
     <string name="feedLoadingError">Unable to load news. Please check your internet connection.</string>
     <!-- Do not translate -->
     <string name="adsId">4028cba631d63df10131e1d3818b00cc</string>
+    
+    <string name="aboutHeader">About</string>
+    <string name="aboutText">Euro 2012 Planner Application developed by John O\'Halloran and Stephen Roberts &#169; 2012.\n\n Attributes for stadium images:\n\n
+        http://www.euro2012.uke.gov.pl/public/Page/Stadiums/Poznan/Rys0.jpg\n\n
+        http://pics.livejournal.com/tov_tob/pic/005xw8b3\n\n
+        http://en.wikipedia.org/wiki/File:Stadion_Narodowy_w_Warszawie_20120422.jpg\n\n
+        http://en.wikipedia.org/wiki/File:PGE_Arena.jpeg\n\n
+        http://en.wikipedia.org/wiki/File:Stadion_Wroclaw_z_lotu_ptaka.jpg\n\n
+        http://en.wikipedia.org/wiki/File:Donezk_Donbass_Arena_01.JPG\n\n
+        </string>
 </resources>

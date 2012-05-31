@@ -1,9 +1,14 @@
 package com.neoware.europlanner;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -93,6 +98,37 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
             break;
         default:
             Toast.makeText(this, "Not implemented yet.", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.layout.about_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+        case R.id.menu_about:
+
+            AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+            alertDialog.setTitle(R.string.aboutMenu);
+            alertDialog.setMessage(getResources().getString(R.string.aboutText));
+            alertDialog.setButton(getResources().getString(android.R.string.ok),
+                    new DialogInterface.OnClickListener() {
+               @Override
+            public void onClick(DialogInterface dialog, int which) {
+                  // here you can add functions
+               }
+            });
+            alertDialog.show();
+
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
         }
     }
 }
