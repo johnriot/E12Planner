@@ -37,6 +37,9 @@ public class TournamentDefinition {
 
     private File mDefnFile;
 
+    private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat(
+            "MMM d, yyyy, HH:mm, zzz", Locale.US);
+
     private final Context mContext;
     private final ArrayList<Group> mGroups = new ArrayList<Group>();
     private final ArrayList<Knockout> mKnockoutStages = new ArrayList<Knockout>();
@@ -163,11 +166,9 @@ public class TournamentDefinition {
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
-                        SimpleDateFormat format = new SimpleDateFormat(
-                                "MMM d, yyyy, HH:mm, zzz", Locale.US);
                         Date date = null;
                         try {
-                            date = format.parse(dateStr);
+                            date = DATE_FORMATTER.parse(dateStr);
                         } catch(ParseException pe) {
                             Assert.fail(pe.getMessage());
                         }
@@ -208,12 +209,9 @@ public class TournamentDefinition {
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
-                        SimpleDateFormat format = new SimpleDateFormat(
-                                "MMM d, yyyy, HH:mm, zzz", Locale.US);
-
                         Date date = null;
                         try {
-                            date = format.parse(dateStr);
+                            date = DATE_FORMATTER.parse(dateStr);
                         } catch(ParseException pe) {
                             Assert.fail(pe.getMessage());
                         }
