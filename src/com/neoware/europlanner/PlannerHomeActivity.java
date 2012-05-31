@@ -123,10 +123,9 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
                         +getResources().getString(R.string.aboutText));
                 alertDialog.setButton(getResources().getString(android.R.string.ok),
                         new DialogInterface.OnClickListener() {
-                   @Override
-                public void onClick(DialogInterface dialog, int which) {
-                      // here you can add functions
-                   }
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {}
                 });
                 alertDialog.show();
             }
