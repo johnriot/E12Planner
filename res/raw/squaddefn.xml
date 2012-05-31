@@ -289,32 +289,29 @@
     </squad>
     
     <squad id="11"> <!-- Croatia -->
-        <player position ="G" number ="-" name ="Stipe Pletikosa" dob ="January 8, 1979" />
-        <player position ="G" number ="-" name ="Danijel Subašic" dob ="October 27, 1984" />
-        <player position ="G" number ="-" name ="Goran Blaževic" dob ="June 7, 1986" />
-        <player position ="G" number ="-" name ="Ivan Kelava" dob ="February 20, 1988" />
-        <player position ="D" number ="-" name ="Josip Šimunic" dob ="February 18, 1978" />
-        <player position ="D" number ="-" name ="Vedran Corluka" dob ="February 5, 1986" />
-        <player position ="D" number ="-" name ="Danijel Pranjic" dob ="December 2, 1981" />
-        <player position ="D" number ="-" name ="Ivan Strinic" dob ="July 17, 1987" />
-        <player position ="D" number ="-" name ="Dejan Lovren" dob ="July 5, 1989" />
-        <player position ="D" number ="-" name ="Gordon Schildenfeld" dob ="March 18, 1985" />
-        <player position ="D" number ="-" name ="Domagoj Vida" dob ="April 29, 1989" />
-        <player position ="D" number ="-" name ="Šime Vrsaljko" dob ="January 10, 1992" />
-        <player position ="D" number ="-" name ="Jurica Buljat" dob ="September 12, 1986" />
-        <player position ="M" number ="-" name ="Darijo Srna (c)" dob ="May 1, 1982" />
-        <player position ="M" number ="-" name ="Niko Kranjcar" dob ="August 13, 1984" />
-        <player position ="M" number ="-" name ="Luka Modric" dob ="September 9, 1985" />
-        <player position ="M" number ="-" name ="Ivan Rakitic" dob ="March 10, 1988" />
-        <player position ="M" number ="-" name ="Ognjen Vukojevic" dob ="December 20, 1983" />
-        <player position ="M" number ="-" name ="Tomislav Dujmovic" dob ="February 26, 1981" />
-        <player position ="M" number ="-" name ="Ivan Perišic" dob ="February 2, 1989" />
-        <player position ="M" number ="-" name ="Ivo Ilicevic" dob ="September 14, 1986" />
-        <player position ="M" number ="-" name ="Milan Badelj" dob ="February 25, 1989" />
-        <player position ="F" number ="-" name ="Ivica Olic" dob ="September 14, 1979" />
-        <player position ="F" number ="-" name ="Eduardo" dob ="February 25, 1983" />
-        <player position ="F" number ="-" name ="Mario Mandžukic" dob ="May 21, 1986" />
-        <player position ="F" number ="-" name ="Nikica Jelavic" dob ="August 27, 1985" />
+        <player position ="G" number ="1" name ="Stipe Pletikosa" dob ="January 8, 1979" />
+        <player position ="D" number ="2" name ="Ivan Strinic" dob ="July 17, 1987" />
+        <player position ="D" number ="3" name ="Josip Šimunic" dob ="February 18, 1978" />
+        <player position ="D" number ="4" name ="Jurica Buljat" dob ="September 12, 1986" />
+        <player position ="D" number ="5" name ="Vedran Corluka" dob ="February 5, 1986" />
+        <player position ="D" number ="6" name ="Danijel Pranjic" dob ="December 2, 1981" />
+        <player position ="M" number ="7" name ="Ivan Rakitic" dob ="March 10, 1988" />
+        <player position ="M" number ="8" name ="Ognjen Vukojevic" dob ="December 20, 1983" />
+        <player position ="F" number ="9" name ="Nikica Jelavic" dob ="August 27, 1985" />
+        <player position ="M" number ="10" name ="Luka Modric" dob ="September 9, 1985" />
+        <player position ="M" number ="11" name ="Darijo Srna (c)" dob ="May 1, 1982" />
+        <player position ="G" number ="12" name ="Ivan Kelava" dob ="February 20, 1988" />
+        <player position ="D" number ="13" name ="Gordon Schildenfeld" dob ="March 18, 1985" />
+        <player position ="M" number ="14" name ="Milan Badelj" dob ="February 25, 1989" />
+        <player position ="M" number ="15" name ="Ivo Ilicevic" dob ="September 14, 1986" />
+        <player position ="M" number ="16" name ="Tomislav Dujmovic" dob ="February 26, 1981" />
+        <player position ="F" number ="17" name ="Mario Mandžukic" dob ="May 21, 1986" />
+        <player position ="F" number ="18" name ="Ivica Olic" dob ="September 14, 1979" />
+        <player position ="M" number ="19" name ="Niko Kranjcar" dob ="August 13, 1984" />
+        <player position ="M" number ="20" name ="Ivan Perišic" dob ="February 2, 1989" />
+        <player position ="D" number ="21" name ="Domagoj Vida" dob ="April 29, 1989" />
+        <player position ="F" number ="22" name ="Eduardo" dob ="February 25, 1983" />
+        <player position ="G" number ="23" name ="Danijel Subašic" dob ="October 27, 1984" />
     </squad>
     
     <squad id="12"> <!-- Ukraine -->
