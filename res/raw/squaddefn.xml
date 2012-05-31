@@ -2,7 +2,7 @@
 <squad_defn>
 
     <squad id="0"> <!-- Poland -->
-    
+
         <player position ="G" number ="1" name ="Wojciech Szczęsny" dob ="April 18, 1990" />
         <player position ="D" number ="2" name ="Sebastian Boenisch" dob ="February 1, 1987" />
         <player position ="D" number ="3" name ="Grzegorz Wojtkowiak" dob ="January 26, 1984" />
@@ -53,7 +53,7 @@
         <player position ="M" number ="22" name ="Kostas Fortounis" dob ="October 16, 1992" />
         <player position ="M" number ="23" name ="Giannis Fetfatzidis" dob ="December 21, 1990" />
     </squad>
-    
+
     <squad id="2"> <!--  Russia -->
         <player position ="G" number ="1" name ="Igor Akinfeev" dob ="April 8, 1986" />
         <player position ="D" number ="2" name ="Aleksandr Anyukov" dob ="September 28, 1982" />
@@ -79,7 +79,7 @@
         <player position ="M" number ="22" name ="Denis Glushakov" dob ="January 27, 1987" />
         <player position ="M" number ="23" name ="Igor Semshov" dob ="April 6, 1978" />
     </squad>
-    
+
     <squad id="3"> <!-- Czech Republic -->
         <player position ="G" number ="1" name ="Petr Cech" dob ="May 20, 1982" />
         <player position ="D" number ="2" name ="Theodor Gebre Selassie" dob ="December 24, 1986" />
@@ -105,7 +105,7 @@
         <player position ="M" number ="22" name ="Vladimír Darida" dob ="August 8, 1990" />
         <player position ="G" number ="23" name ="Jaroslav Drobný" dob ="October 18, 1979" />
     </squad>
-    
+
     <squad id="4"> <!-- Netherlands -->
         <player position ="G" number ="1" name ="Maarten Stekelenburg" dob ="September 22, 1982" />
         <player position ="D" number ="2" name ="Gergory Van der Wiel" dob ="February 3, 1988" />
@@ -131,7 +131,7 @@
         <player position ="G" number ="22" name ="Tim Krul" dob ="April 3, 1988" />
         <player position ="M" number ="23" name ="Rafael van der Vaart" dob ="February 11, 1983" />
     </squad>
-    
+
     <squad id="5"> <!-- Denmark -->
         <player position ="G" number ="1" name ="Stephan Andersen" dob ="November 26, 1981" />
         <player position ="M" number ="2" name ="Christian Poulsen" dob ="February 28, 1980" />
@@ -157,7 +157,7 @@
         <player position ="M" number ="22" name ="Kasper Schmeichel" dob ="November 5, 1986" />
         <player position ="F" number ="23" name ="Tobias Mikkelsen" dob ="September 18, 1986" />
     </squad>
-    
+
     <squad id="6"> <!-- Germany -->
         <player position ="G" number ="1" name ="Manuel Neuer" dob ="March 27, 1986" />
         <player position ="M" number ="2" name ="Ilkay Gündogan" dob ="October 24, 1990" />
@@ -209,7 +209,7 @@
         <player position ="G" number ="22" name ="Beto" dob ="May 1, 1982" />
         <player position ="F" number ="23" name ="Hélder Postiga" dob ="August 2, 1982" />
     </squad>
-    
+
     <squad id="8"> <!-- Spain -->
         <player position ="G" number ="1" name ="Iker Casillas (c)" dob ="May 20, 1981" />
         <player position ="D" number ="2" name ="Raúl Albiol" dob ="September 4, 1985" />
@@ -235,7 +235,7 @@
         <player position ="M" number ="22" name ="Jesús Navas" dob ="November 21, 1985" />
         <player position ="G" number ="23" name ="Pepe Reina" dob ="August 30, 1982" />
     </squad>
-    
+
     <squad id="9"> <!-- Italy -->
         <player position ="G" number ="1" name ="Gianluigi Buffon (c)" dob ="January 28, 1978" />
         <player position ="D" number ="2" name ="Christian Maggio" dob ="February 11, 1982" />
@@ -261,7 +261,7 @@
         <player position ="M" number ="22" name ="Alessandro Diamanti" dob ="May 2, 1983" />
         <player position ="M" number ="23" name ="Antonio Nocerino" dob ="April 9, 1985" />
     </squad>
-    
+
     <squad id="10"> <!-- Ireland. C'mon the boys! -->
         <player position ="G" number ="1" name ="Shay Given" dob ="April 20, 1976" />
         <player position ="D" number ="2" name ="Sean St Ledger" dob ="December 28, 1984" />
@@ -287,7 +287,7 @@
         <player position ="M" number ="22" name ="James McClean" dob ="April 22, 1989" />
         <player position ="G" number ="23" name ="David Forde" dob ="December 20, 1979" />
     </squad>
-    
+
     <squad id="11"> <!-- Croatia -->
         <player position ="G" number ="1" name ="Stipe Pletikosa" dob ="January 8, 1979" />
         <player position ="D" number ="2" name ="Ivan Strinic" dob ="July 17, 1987" />
@@ -313,36 +313,33 @@
         <player position ="F" number ="22" name ="Eduardo" dob ="February 25, 1983" />
         <player position ="G" number ="23" name ="Danijel Subašic" dob ="October 27, 1984" />
     </squad>
-    
+
     <squad id="12"> <!-- Ukraine -->
-        <player position ="G" number ="-" name ="Andriy Pyatov" dob ="June 28, 1984" />
-        <player position ="G" number ="-" name ="Oleksandr Horyainov" dob ="June 29, 1975" />
-        <player position ="G" number ="-" name ="Maksym Koval" dob ="December 9, 1992" />
-        <player position ="G" number ="-" name ="Oleksandr Bandura" dob ="May 30, 1986" />
-        <player position ="D" number ="-" name ="Oleksandr Kucher" dob ="October 22, 1982" />
-        <player position ="D" number ="-" name ="Taras Mykhalyk" dob ="October 28, 1983" />
-        <player position ="D" number ="-" name ="Vyacheslav Shevchuk" dob ="May 13, 1979" />
-        <player position ="D" number ="-" name ="Vitaliy Mandzyuk" dob ="January 24, 1986" />
-        <player position ="D" number ="-" name ="Yaroslav Rakitskiy" dob ="August 3, 1989" />
-        <player position ="D" number ="-" name ="Yevhen Khacheridi" dob ="July 28, 1987" />
-        <player position ="D" number ="-" name ="Bohdan Butko" dob ="January 13, 1991" />
-        <player position ="D" number ="-" name ="Yevhen Selin" dob ="May 9, 1988" />
-        <player position ="M" number ="-" name ="Anatoliy Tymoshchuk" dob ="March 30, 1979" />
-        <player position ="M" number ="-" name ="Oleh Husyev" dob ="April 25, 1983" />
-        <player position ="M" number ="-" name ="Ruslan Rotan" dob ="October 29, 1981" />
-        <player position ="M" number ="-" name ="Serhiy Nazarenko" dob ="February 16, 1980" />
-        <player position ="M" number ="-" name ="Oleksandr Aliyev" dob ="February 3, 1985" />
-        <player position ="M" number ="-" name ="Yevhen Konoplyanka" dob ="September 29, 1989" />
-        <player position ="M" number ="-" name ="Taras Stepanenko" dob ="August 8, 1989" />
-        <player position ="M" number ="-" name ="Denys Harmash" dob ="April 19, 1990" />
-        <player position ="F" number ="-" name ="Andriy Shevchenko (c)" dob ="September 29, 1976" />
-        <player position ="F" number ="-" name ="Andriy Voronin" dob ="July 21, 1979" />
-        <player position ="F" number ="-" name ="Artem Milevskiy" dob ="January 12, 1985" />
-        <player position ="F" number ="-" name ="Yevhen Seleznyov" dob ="July 20, 1985" />
-        <player position ="F" number ="-" name ="Marko Devych" dob ="October 27, 1983" />
-        <player position ="F" number ="-" name ="Andriy Yarmolenko" dob ="October 23, 1989" />
+        <player position ="G" number ="1" name ="Maksym Koval" dob ="December 9, 1992" />
+        <player position ="D" number ="2" name ="Yevhen Selin" dob ="May 9, 1988" />
+        <player position ="D" number ="3" name ="Yevhen Khacheridi" dob ="July 28, 1987" />
+        <player position ="M" number ="4" name ="Anatoliy Tymoshchuk" dob ="March 30, 1979" />
+        <player position ="D" number ="5" name ="Oleksandr Kucher" dob ="October 22, 1982" />
+        <player position ="M" number ="6" name ="Denys Harmash" dob ="April 19, 1990" />
+        <player position ="F" number ="7" name ="Andriy Shevchenko (c)" dob ="September 29, 1976" />
+        <player position ="M" number ="8" name ="Oleksandr Aliyev" dob ="February 3, 1985" />
+        <player position ="M" number ="9" name ="Oleh Husyev" dob ="April 25, 1983" />
+        <player position ="F" number ="10" name ="Andriy Voronin" dob ="July 21, 1979" />
+        <player position ="F" number ="11" name ="Andriy Yarmolenko" dob ="October 23, 1989" />
+        <player position ="G" number ="12" name ="Andriy Pyatov" dob ="June 28, 1984" />
+        <player position ="D" number ="13" name ="Vyacheslav Shevchuk" dob ="May 13, 1979" />
+        <player position ="M" number ="14" name ="Ruslan Rotan" dob ="October 29, 1981" />
+        <player position ="F" number ="15" name ="Artem Milevskiy" dob ="January 12, 1985" />
+        <player position ="F" number ="16" name ="Yevhen Seleznyov" dob ="July 20, 1985" />
+        <player position ="D" number ="17" name ="Taras Mykhalyk" dob ="October 28, 1983" />
+        <player position ="M" number ="18" name ="Serhiy Nazarenko" dob ="February 16, 1980" />
+        <player position ="M" number ="19" name ="Yevhen Konoplyanka" dob ="September 29, 1989" />
+        <player position ="D" number ="20" name ="Yaroslav Rakitskiy" dob ="August 3, 1989" />
+        <player position ="D" number ="21" name ="Bohdan Butko" dob ="January 13, 1991" />
+        <player position ="F" number ="22" name ="Marko Devych" dob ="October 27, 1983" />
+        <player position ="G" number ="23" name ="Oleksandr Horyainov" dob ="June 29, 1975" />
     </squad>
-    
+
     <squad id="13"> <!-- Sweden -->
         <player position ="G" number ="-" name ="Andreas Isaksson" dob ="October 3, 1981" />
         <player position ="G" number ="-" name ="Johan Wiland" dob ="January 24, 1981" />
