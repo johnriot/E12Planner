@@ -29,7 +29,7 @@
         <item>PGE Arena Gdansk, Poland</item>
         <item>Municipal Stadium Poznan, Poland</item>
         <item>Donbass Arena Donetsk, Ukraine</item>
-        <item>Olympic Stadium Kyiv, Ukraine</item>
+        <item>Olympic Stadium Kiev, Ukraine</item>
     </string-array>
 
     <!--
@@ -44,7 +44,7 @@
         <item>gdansk</item>
         <item>poznan</item>
         <item>donetsk</item>
-        <item>kyiv</item>
+        <item>kiev</item>
     </string-array>
 
     <string-array name="venue_capacities">
