@@ -367,32 +367,29 @@
     </squad>
 
     <squad id="14"> <!-- France -->
-        <player position ="G" number ="-" name ="Hugo Lloris (c)" dob ="December 26, 1986" />
-        <player position ="G" number ="-" name ="Steve Mandanda" dob ="March 28, 1985" />
-        <player position ="G" number ="-" name ="Cédric Carrasso" dob ="December 30, 1981" />
-        <player position ="D" number ="-" name ="Patrice Evra" dob ="May 15, 1981" />
-        <player position ="D" number ="-" name ="Philippe Mexès" dob ="March 30, 1982" />
-        <player position ="D" number ="-" name ="Adil Rami" dob ="December 27, 1985" />
-        <player position ="D" number ="-" name ="Anthony Réveillère" dob ="November 10, 1979" />
-        <player position ="D" number ="-" name ="Gaël Clichy" dob ="July 26, 1985" />
-        <player position ="D" number ="-" name ="Mathieu Debuchy" dob ="July 28, 1985" />
-        <player position ="D" number ="-" name ="Laurent Koscielny" dob ="September 10, 1985" />
-        <player position ="D" number ="-" name ="Mapou Yanga-Mbiwa" dob ="May 15, 1989" />
-        <player position ="M" number ="-" name ="Florent Malouda" dob ="June 13, 1980" />
-        <player position ="M" number ="-" name ="Franck Ribéry" dob ="April 7, 1983" />
-        <player position ="M" number ="-" name ="Alou Diarra" dob ="July 15, 1981" />
-        <player position ="M" number ="-" name ="Yoann Gourcuff" dob ="July 1, 1986" />
-        <player position ="M" number ="-" name ="Samir Nasri" dob ="June 27, 1987" />
-        <player position ="M" number ="-" name ="Yann M'Vila" dob ="June 29, 1990" />
-        <player position ="M" number ="-" name ="Yohan Cabaye" dob ="January 14, 1986" />
-        <player position ="M" number ="-" name ="Marvin Martin" dob ="January 10, 1988" />
-        <player position ="M" number ="-" name ="Hatem Ben Arfa" dob ="March 7, 1987" />
-        <player position ="M" number ="-" name ="Blaise Matuidi" dob ="April 9, 1987" />
-        <player position ="M" number ="-" name ="Mathieu Valbuena" dob ="January 2, 1987" />
-        <player position ="F" number ="-" name ="Karim Benzema" dob ="December 19, 1987" />
-        <player position ="F" number ="-" name ="Loïc Rémy" dob ="January 2, 1987" />
-        <player position ="F" number ="-" name ="Jérémy Ménez" dob ="May 7, 1987" />
-        <player position ="F" number ="-" name ="Olivier Giroud" dob ="September 30, 1986" />
+        <player position ="G" number ="1" name ="Hugo Lloris (c)" dob ="December 26, 1986" />
+        <player position ="D" number ="2" name ="Mathieu Debuchy" dob ="July 28, 1985" />
+        <player position ="D" number ="3" name ="Patrice Evra" dob ="May 15, 1981" />
+        <player position ="D" number ="4" name ="Adil Rami" dob ="December 27, 1985" />
+        <player position ="D" number ="5" name ="Philippe Mexès" dob ="March 30, 1982" />
+        <player position ="M" number ="6" name ="Yohan Cabaye" dob ="January 14, 1986" />
+        <player position ="M" number ="7" name ="Franck Ribéry" dob ="April 7, 1983" />
+        <player position ="M" number ="8" name ="Mathieu Valbuena" dob ="January 2, 1987" />
+        <player position ="F" number ="9" name ="Olivier Giroud" dob ="September 30, 1986" />
+        <player position ="F" number ="10" name ="Karim Benzema" dob ="December 19, 1987" />
+        <player position ="M" number ="11" name ="Samir Nasri" dob ="June 27, 1987" />
+        <player position ="M" number ="12" name ="Blaise Matuidi" dob ="April 9, 1987" />
+        <player position ="D" number ="13" name ="Anthony Réveillère" dob ="November 10, 1979" />
+        <player position ="F" number ="14" name ="Jérémy Ménez" dob ="May 7, 1987" />
+        <player position ="M" number ="15" name ="Florent Malouda" dob ="June 13, 1980" />
+        <player position ="G" number ="16" name ="Steve Mandanda" dob ="March 28, 1985" />
+        <player position ="M" number ="17" name ="Yann M'Vila" dob ="June 29, 1990" />
+        <player position ="M" number ="18" name ="Alou Diarra" dob ="July 15, 1981" />
+        <player position ="M" number ="19" name ="Marvin Martin" dob ="January 10, 1988" />
+        <player position ="M" number ="20" name ="Hatem Ben Arfa" dob ="March 7, 1987" />
+        <player position ="D" number ="21" name ="Laurent Koscielny" dob ="September 10, 1985" />
+        <player position ="D" number ="22" name ="Gaël Clichy" dob ="July 26, 1985" />
+        <player position ="G" number ="23" name ="Cédric Carrasso" dob ="December 30, 1981" />
     </squad>
 
     <squad id="15"> <!-- England -->
