@@ -341,29 +341,29 @@
     </squad>
 
     <squad id="13"> <!-- Sweden -->
-        <player position ="G" number ="-" name ="Andreas Isaksson" dob ="October 3, 1981" />
-        <player position ="G" number ="-" name ="Johan Wiland" dob ="January 24, 1981" />
-        <player position ="G" number ="-" name ="Pär Hansson" dob ="June 22, 1986" />
-        <player position ="D" number ="-" name ="Mikael Lustig" dob ="December 13, 1986" />
-        <player position ="D" number ="-" name ="Olof Mellberg" dob ="September 3, 1977" />
-        <player position ="D" number ="-" name ="Andreas Granqvist" dob ="April 16, 1985" />
-        <player position ="D" number ="-" name ="Martin Olsson" dob ="May 17, 1988" />
-        <player position ="D" number ="-" name ="Jonas Olsson" dob ="March 10, 1983" />
-        <player position ="D" number ="-" name ="Mikael Antonsson" dob ="May 31, 1981" />
-        <player position ="D" number ="-" name ="Behrang Safari" dob ="February 9, 1985" />
-        <player position ="M" number ="-" name ="Rasmus Elm" dob ="March 17, 1988" />
-        <player position ="M" number ="-" name ="Sebastian Larsson" dob ="June 6, 1985" />
-        <player position ="M" number ="-" name ="Anders Svensson" dob ="July 17, 1976" />
-        <player position ="M" number ="-" name ="Kim Källström" dob ="August 24, 1982" />
-        <player position ="M" number ="-" name ="Pontus Wernbloom" dob ="June 25, 1986" />
-        <player position ="M" number ="-" name ="Samuel Holmén" dob ="June 28, 1984" />
-        <player position ="M" number ="-" name ="Emir Bajrami" dob ="March 7, 1988" />
-        <player position ="M" number ="-" name ="Christian Wilhelmsson" dob ="December 8, 1979" />
-        <player position ="F" number ="-" name ="Zlatan Ibrahimovic (c)" dob ="October 3, 1981" />
-        <player position ="F" number ="-" name ="Johan Elmander" dob ="May 27, 1981" />
-        <player position ="F" number ="-" name ="Tobias Hysén" dob ="March 9, 1982" />
-        <player position ="F" number ="-" name ="Ola Toivonen" dob ="July 3, 1986" />
-        <player position ="F" number ="-" name ="Markus Rosenberg" dob ="September 27, 1982" />
+        <player position ="G" number ="1" name ="Andreas Isaksson" dob ="October 3, 1981" />
+        <player position ="D" number ="2" name ="Mikael Lustig" dob ="December 13, 1986" />
+        <player position ="D" number ="3" name ="Olof Mellberg" dob ="September 3, 1977" />
+        <player position ="D" number ="4" name ="Andreas Granqvist" dob ="April 16, 1985" />
+        <player position ="D" number ="5" name ="Martin Olsson" dob ="May 17, 1988" />
+        <player position ="M" number ="6" name ="Rasmus Elm" dob ="March 17, 1988" />
+        <player position ="M" number ="7" name ="Sebastian Larsson" dob ="June 6, 1985" />
+        <player position ="M" number ="8" name ="Anders Svensson" dob ="July 17, 1976" />
+        <player position ="M" number ="9" name ="Kim Källström" dob ="August 24, 1982" />
+        <player position ="F" number ="10" name ="Zlatan Ibrahimovic (c)" dob ="October 3, 1981" />
+        <player position ="F" number ="11" name ="Johan Elmander" dob ="May 27, 1981" />
+        <player position ="G" number ="12" name ="Johan Wiland" dob ="January 24, 1981" />
+        <player position ="D" number ="13" name ="Jonas Olsson" dob ="March 10, 1983" />
+        <player position ="F" number ="14" name ="Tobias Hysén" dob ="March 9, 1982" />
+        <player position ="D" number ="15" name ="Mikael Antonsson" dob ="May 31, 1981" />
+        <player position ="M" number ="16" name ="Pontus Wernbloom" dob ="June 25, 1986" />
+        <player position ="D" number ="17" name ="Behrang Safari" dob ="February 9, 1985" />
+        <player position ="M" number ="18" name ="Samuel Holmén" dob ="June 28, 1984" />
+        <player position ="M" number ="19" name ="Emir Bajrami" dob ="March 7, 1988" />
+        <player position ="F" number ="20" name ="Ola Toivonen" dob ="July 3, 1986" />
+        <player position ="M" number ="21" name ="Christian Wilhelmsson" dob ="December 8, 1979" />
+        <player position ="F" number ="22" name ="Markus Rosenberg" dob ="September 27, 1982" />
+        <player position ="G" number ="23" name ="Pär Hansson" dob ="June 22, 1986" />
     </squad>
 
     <squad id="14"> <!-- France -->
