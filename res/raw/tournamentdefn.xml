@@ -10,12 +10,12 @@
         <team id="2" />
         <team id="3" />
 
-        <fixture hometeam="0" awayteam="1" venue="0" date="June 8, 2012, 17:00, GMT" score="x:x" />
-        <fixture hometeam="2" awayteam="3" venue="1" date="June 8, 2012, 19:45, GMT" score="x:x" />
-        <fixture hometeam="1" awayteam="3" venue="1" date="June 12, 2012, 17:00, GMT" score="x:x" />
-        <fixture hometeam="0" awayteam="2" venue="0" date="June 12, 2012, 19:45, GMT" score="x:x" />
-        <fixture hometeam="3" awayteam="0" venue="1" date="June 16, 2012, 19:45, GMT" score="x:x" />
-        <fixture hometeam="1" awayteam="2" venue="0" date="June 16, 2012, 19:45, GMT" score="x:x" />
+        <fixture hometeam="0" awayteam="1" venue="0" date="June 8, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="2" awayteam="3" venue="1" date="June 8, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="1" awayteam="3" venue="1" date="June 12, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="0" awayteam="2" venue="0" date="June 12, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="3" awayteam="0" venue="1" date="June 16, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="1" awayteam="2" venue="0" date="June 16, 2012, 18:45, GMT" score="x:x" />
     </group>
 
     <group id="1">
