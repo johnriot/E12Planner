@@ -1,6 +1,8 @@
 package com.neoware.europlanner;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
@@ -9,11 +11,13 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
@@ -27,6 +31,8 @@ public class GamesActivity extends SherlockFragmentActivity {
     TournamentDefinition mTournamentDefn;
 
     public static final String GROUP_KNOCKOUT = "groupKnockout";
+
+    private MenuItem mRefreshItem;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -158,7 +164,49 @@ public class GamesActivity extends SherlockFragmentActivity {
 
             return true;
         }
+        else if(item == mRefreshItem) {
+
+            Calendar startCal = Calendar.getInstance();
+            startCal.setTime(new Date("06/08/2012 19:00"));
+
+            Calendar nowCal = Calendar.getInstance();
+            nowCal.setTime(new Date());
+
+            String text = null;
+            long days = daysBetween(nowCal, startCal);
+            if(days == 1) {
+               text = getResources().getString(R.string.oneDayToGo);
+            }
+            else {
+                text = getResources().getString(R.string.daysToGo, days);
+            }
+
+            if(days >= 1) {
+                Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+            }
+        }
 
         return super.onMenuItemSelected(featureId, item);
+    }
+
+    public static long daysBetween(Calendar startDate, Calendar endDate) {
+        Calendar date = (Calendar) startDate.clone();
+        long daysBetween = 0;
+        while (date.before(endDate)) {
+          date.add(Calendar.DAY_OF_MONTH, 1);
+          daysBetween++;
+        }
+        return daysBetween;
+      }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        mRefreshItem = menu.add(R.string.refresh_text)
+            .setIcon(R.drawable.ic_refresh_dark);
+        mRefreshItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+
+        return true;
     }
 }

@@ -167,6 +167,9 @@
     <string name="scoreSeperator"> - </string>
     <string name="scoreSeperatorUnplayed"> v </string>
 
+    <string name="daysToGo">%d days to go!</string>
+    <string name="oneDayToGo">One day to go!</string>
+
     <string name="teamsIconCD">Team Icon</string>
     <string name="feedLoadingError">Unable to load news. Please check your internet connection.</string>
     <!-- Do not translate -->
