@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
@@ -114,17 +115,22 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         switch (item.getItemId()) {
         case R.id.menu_about:
 
-            AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-            alertDialog.setTitle(R.string.aboutMenu);
-            alertDialog.setMessage(getResources().getString(R.string.aboutText));
-            alertDialog.setButton(getResources().getString(android.R.string.ok),
-                    new DialogInterface.OnClickListener() {
-               @Override
-            public void onClick(DialogInterface dialog, int which) {
-                  // here you can add functions
-               }
-            });
-            alertDialog.show();
+            try {
+                AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+                alertDialog.setTitle(R.string.aboutMenu);
+                alertDialog.setMessage("v" + getPackageManager().getPackageInfo(
+                        getPackageName(), 0).versionName + "\n\n"
+                        +getResources().getString(R.string.aboutText));
+                alertDialog.setButton(getResources().getString(android.R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                   @Override
+                public void onClick(DialogInterface dialog, int which) {
+                      // here you can add functions
+                   }
+                });
+                alertDialog.show();
+            }
+            catch(NameNotFoundException ex) { }
 
             return true;
         default:
