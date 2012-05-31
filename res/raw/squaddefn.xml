@@ -269,7 +269,7 @@
         <player position ="D" number ="4" name ="John O'Shea" dob ="April 30, 1981" />
         <player position ="D" number ="5" name ="Richard Dunne" dob ="September 21, 1979" />
         <player position ="M" number ="6" name ="Glenn Whelan" dob ="January 13, 1984" />
-        <player position ="F" number ="7" name ="Aiden McGeady" dob ="April 4, 1986" />
+        <player position ="M" number ="7" name ="Aiden McGeady" dob ="April 4, 1986" />
         <player position ="M" number ="8" name ="Keith Andrews" dob ="September 13, 1980" />
         <player position ="F" number ="9" name ="Kevin Doyle" dob ="September 18, 1983" />
         <player position ="F" number ="10" name ="Robbie Keane (c)" dob ="July 8, 1980" />
