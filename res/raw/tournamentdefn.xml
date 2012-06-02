@@ -52,12 +52,12 @@
         <team id="14" />
         <team id="15" />
 
-        <fixture hometeam="12" awayteam="13" venue="6" date="June 11, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="14" awayteam="15" venue="7" date="June 11, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="13" awayteam="15" venue="6" date="June 15, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="12" awayteam="14" venue="7" date="June 15, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="15" awayteam="12" venue="6" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="14" awayteam="15" venue="6" date="June 11, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="12" awayteam="13" venue="7" date="June 11, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="12" awayteam="14" venue="6" date="June 15, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="13" awayteam="15" venue="7" date="June 15, 2012, 18:45, GMT" score="x:x" />
         <fixture hometeam="13" awayteam="14" venue="7" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="15" awayteam="12" venue="6" date="June 19, 2012, 18:45, GMT" score="x:x" />
     </group>
 
     <knockout id="4"> <!-- Knockout Id for quarter final is the next number after the highest group id -->
