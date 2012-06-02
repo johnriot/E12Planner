@@ -7,7 +7,10 @@ import android.content.res.Resources;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.widget.ImageView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -56,8 +59,40 @@ public class SquadActivity extends SherlockFragmentActivity {
         Resources res = this.getResources();
         String packageName = getClass().getPackage().getName();
 
+        LayoutInflater inflater = LayoutInflater.from(this);
+        TableLayout squadTable = (TableLayout)findViewById(R.id.squadTableLayout);
+
         // for every player in the squad
         for(int i = 0; i < mSquadDefn.getSquad().getSize(); ++i) {
+
+            TableRow playerRow = (TableRow)inflater.inflate(
+                    R.layout.sqaud_table_row, null);
+
+            try {
+
+                Player player = mSquadDefn.getSquad().getPlayer(i);
+
+                ImageView iconViewV = (ImageView)playerRow.findViewById(R.id.playerIcon);
+                String playerIcon = player.getPositionFilename();
+                iconViewV.setImageResource((res.getIdentifier(playerIcon,
+                        "drawable", packageName)));
+
+                TextView playerNumberV = (TextView)playerRow.findViewById(R.id.playerNumber);
+                playerNumberV.setText(player.getNumber());
+
+                TextView playerNameV = (TextView)playerRow.findViewById(R.id.playerName);
+                playerNameV.setText(player.getName());
+
+                TextView playerAgeV = (TextView)playerRow.findViewById(R.id.playerAge);
+                playerAgeV.setText(player.getAge().toString());
+
+                squadTable.addView(playerRow);
+
+            } catch (PlayerPositionException ex) {
+                HandleException(ex);
+            }
+
+            /*
             String iconViewIdStr = "player" + i + "Icon";
             int iconViewId = res.getIdentifier(iconViewIdStr, "id", packageName);
             ImageView playerIconView = (ImageView)findViewById(iconViewId);
@@ -90,6 +125,8 @@ public class SquadActivity extends SherlockFragmentActivity {
             } catch (PlayerPositionException ex) {
                 HandleException(ex);
             }
+
+                */
         }
     }
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:gravity="center">
+    <ImageView
+        android:contentDescription="@string/cdIcon"
+        android:padding="5dp"
+        android:layout_width="@dimen/squad_icon_size"
+        android:layout_height="@dimen/squad_icon_size"
+        android:id="@+id/playerIcon" />
+    <TextView
+        android:id="@+id/playerNumber"
+        android:gravity="center_horizontal"
+        android:textColor="#FF000000"/>
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="5dp"
+        android:textColor="#FF000000" />
+    <TextView
+        android:id="@+id/playerAge"
+        android:gravity="center_horizontal"
+        android:textColor="#FF000000"/>
+</TableRow>

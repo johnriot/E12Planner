@@ -58,7 +58,7 @@ public class Player {
         return mName;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         Date today = new Date();
         int years = today.getYear() - mDateOfBirth.getYear() - 1;
         if(today.getMonth() > mDateOfBirth.getMonth()) {
