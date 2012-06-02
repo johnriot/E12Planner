@@ -36,7 +36,7 @@ public class NewsActivity extends SherlockActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mDefn = new TournamentDefinition(this);
+        mDefn = TournamentDefinition.getTournamentDefnInstance(this);
 
         setContentView(R.layout.news_layout);
 

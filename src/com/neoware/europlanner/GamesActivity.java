@@ -56,7 +56,7 @@ public class GamesActivity extends SherlockFragmentActivity {
         adView.setIMAdRequest(adRequest);
         adView.loadNewAd();
 
-        mTournamentDefn = new TournamentDefinition(this);
+        mTournamentDefn = TournamentDefinition.getTournamentDefnInstance(this);
 
         mPager = (ViewPager)findViewById(R.id.groupPager);
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);

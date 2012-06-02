@@ -48,7 +48,7 @@ public class VenuesActivity extends SherlockFragmentActivity {
         adView.setIMAdRequest(adRequest);
         adView.loadNewAd();
 
-        mTournamentDefn = new TournamentDefinition(this);
+        mTournamentDefn = TournamentDefinition.getTournamentDefnInstance(this);
 
         mPager = (ViewPager)findViewById(R.id.venuePager);
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);

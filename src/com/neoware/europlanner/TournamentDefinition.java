@@ -33,31 +33,40 @@ public class TournamentDefinition {
 
     private File mDefnFile;
 
-    private final Context mContext;
     private final ArrayList<Group> mGroups = new ArrayList<Group>();
     private final ArrayList<Knockout> mKnockoutStages = new ArrayList<Knockout>();
     private final ArrayList<FeedDefn> mFeeds = new ArrayList<FeedDefn>();
     private final ArrayList<Venue> mVenues = new ArrayList<Venue>();
 
-    public TournamentDefinition(Context context) {
-        mContext = context;
+    private static TournamentDefinition DEFN_SINGLETON = null;
 
-        initialise();
+    public static TournamentDefinition getTournamentDefnInstance(Context context) {
+
+        if(DEFN_SINGLETON == null) {
+            DEFN_SINGLETON = new TournamentDefinition(context);
+        }
+
+        return DEFN_SINGLETON;
+    }
+
+    private TournamentDefinition(Context context) {
+
+        initialise(context);
         createVenues();
         refreshDataStructre();
     }
 
     //Checks if the packaged defn file needs to be copied to user data dir
-    private void initialise() {
+    private void initialise(Context context) {
 
-        ContextWrapper wrapper = new ContextWrapper(mContext);
+        ContextWrapper wrapper = new ContextWrapper(context);
         File homeDir = wrapper.getFilesDir();
         mDefnFile = new File(homeDir, mDefinitionFileName);
 
         //For dev always copy - DONT SHIP WITH THIS!!!!!
         if(!mDefnFile.exists() /* true */) {
 
-            InputStream defnInputStream = mContext.getResources().openRawResource(
+            InputStream defnInputStream = context.getResources().openRawResource(
                     R.raw.tournamentdefn);
 
             try {
