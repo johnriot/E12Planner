@@ -123,26 +123,20 @@ public class GamesActivity extends SherlockFragmentActivity {
         @Override
         public SherlockFragment getItem(int position) {
             return mFragments.get(position);
-            //TabInfo info = mTabs.get(position);
-            //return (SherlockFragment)Fragment.instantiate(mContext, info.clss.getName(), info.args);
         }
-
 
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         }
-
 
         @Override
         public void onPageSelected(int position) {
             mActionBar.setSelectedNavigationItem(position);
         }
 
-
         @Override
         public void onPageScrollStateChanged(int state) {
         }
-
 
         @Override
         public void onTabSelected(Tab tab, FragmentTransaction ft) {

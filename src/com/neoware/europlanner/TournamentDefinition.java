@@ -7,11 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -37,9 +33,6 @@ public class TournamentDefinition {
 
     private File mDefnFile;
 
-    private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat(
-            "MMM d, yyyy, HH:mm, zzz", Locale.US);
-
     private final Context mContext;
     private final ArrayList<Group> mGroups = new ArrayList<Group>();
     private final ArrayList<Knockout> mKnockoutStages = new ArrayList<Knockout>();
@@ -62,7 +55,7 @@ public class TournamentDefinition {
         mDefnFile = new File(homeDir, mDefinitionFileName);
 
         //For dev always copy - DONT SHIP WITH THIS!!!!!
-        if(true /*!userDefnFile.exists()*/) {
+        if(!mDefnFile.exists() /* true */) {
 
             InputStream defnInputStream = mContext.getResources().openRawResource(
                     R.raw.tournamentdefn);
@@ -166,15 +159,8 @@ public class TournamentDefinition {
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
-                        Date date = null;
-                        try {
-                            date = DATE_FORMATTER.parse(dateStr);
-                        } catch(ParseException pe) {
-                            Assert.fail(pe.getMessage());
-                        }
-
                         Fixture fixture = new Fixture(homeTeam, awayTeam,
-                                                        venueId, date, score);
+                                                        venueId, dateStr, score);
 
                         mCurrentGroup.addFixture(fixture);
                         mVenues.get(venueId).addGroupKnockoutId(mCurrentGroup.getId());
@@ -209,15 +195,8 @@ public class TournamentDefinition {
                         Assert.assertNotNull(homeTeam);
                         Assert.assertNotNull(awayTeam);
 
-                        Date date = null;
-                        try {
-                            date = DATE_FORMATTER.parse(dateStr);
-                        } catch(ParseException pe) {
-                            Assert.fail(pe.getMessage());
-                        }
-
                         Fixture fixture = new Fixture(homeTeam, awayTeam,
-                                                    venueId, date, score);
+                                                    venueId, dateStr, score);
 
                         mCurrentKnockout.addFixture(fixture);
                         mVenues.get(venueId).addGroupKnockoutId(mCurrentKnockout.getId());

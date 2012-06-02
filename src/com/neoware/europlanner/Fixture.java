@@ -1,18 +1,26 @@
 package com.neoware.europlanner;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
+
+import junit.framework.Assert;
 
 
 public class Fixture {
 
+    private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat(
+            "MMM d, yyyy, HH:mm, zzz", Locale.US);
+
     private final Team mHomeTeam;
     private final Team mAwayTeam;
     private final int mVenueId;
-    private final Date mTime;
+    private final String mTime;
     private final Score mScore;
 
-    public Fixture(Team homeTeam, Team awayTeam, int venueId, Date time, String score) {
+    public Fixture(Team homeTeam, Team awayTeam, int venueId, String time, String score) {
         mHomeTeam = homeTeam;
         mAwayTeam = awayTeam;
         mVenueId = venueId;
@@ -41,7 +49,13 @@ public class Fixture {
     }
 
     public Date getTime() {
-        return mTime;
+        try {
+            return DATE_FORMATTER.parse(mTime);
+        } catch(ParseException pe) {
+            Assert.fail(pe.getMessage());
+        }
+
+        return null;
     }
 
     public Score getScore() {

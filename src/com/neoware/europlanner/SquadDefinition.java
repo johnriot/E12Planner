@@ -50,7 +50,7 @@ public class SquadDefinition {
         mDefnFile = new File(homeDir, mDefinitionFileName);
 
         //For dev always copy - DONT SHIP WITH THIS!!!!!
-        if(true /*!userDefnFile.exists()*/) {
+        if(!mDefnFile.exists() /* true*/) {
 
             InputStream defnInputStream = mContext.getResources().openRawResource(
                     R.raw.squaddefn);
