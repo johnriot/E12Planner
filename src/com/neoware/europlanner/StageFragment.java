@@ -11,6 +11,7 @@ public class StageFragment extends SherlockFragment {
 
     @Override
     public View getView() {
+
         return super.getView();
     }
 

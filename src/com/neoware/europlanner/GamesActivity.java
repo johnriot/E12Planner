@@ -2,9 +2,9 @@ package com.neoware.europlanner;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
@@ -13,8 +13,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
@@ -37,6 +35,7 @@ public class GamesActivity extends E12ServiceActivity {
     public static final String GROUP_KNOCKOUT = "groupKnockout";
 
     private MenuItem mRefreshItem;
+    private ProgressDialog mProgressDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -159,6 +158,12 @@ public class GamesActivity extends E12ServiceActivity {
             mViewPager.setCurrentItem(tab.getPosition());
         }
 
+        //Without this, notifyDataSetChanged does FUCK ALL
+        @Override
+        public int getItemPosition(Object object) {
+            return POSITION_NONE;
+        }
+
         @Override public void onTabUnselected(Tab tab, FragmentTransaction ft) {}
         @Override public void onTabReselected(Tab tab, FragmentTransaction ft) {}
     }
@@ -175,25 +180,7 @@ public class GamesActivity extends E12ServiceActivity {
             return true;
         }
         else if(item == mRefreshItem) {
-
-            Calendar startCal = Calendar.getInstance();
-            startCal.setTime(new Date("06/08/2012 19:00"));
-
-            Calendar nowCal = Calendar.getInstance();
-            nowCal.setTime(new Date());
-
-            String text = null;
-            long days = daysBetween(nowCal, startCal);
-            if(days == 1) {
-               text = getResources().getString(R.string.oneDayToGo);
-            }
-            else {
-                text = getResources().getString(R.string.daysToGo, days);
-            }
-
-            if(days >= 1) {
-                Toast.makeText(this, text, Toast.LENGTH_LONG).show();
-            }
+            readGamesFromServer();
         }
 
         return super.onMenuItemSelected(featureId, item);
@@ -222,11 +209,23 @@ public class GamesActivity extends E12ServiceActivity {
 
     @Override
     protected void onServiceConnected() {
+        readGamesFromServer();
+    }
+
+    @Override
+    protected void onServiceDisconnected() { }
+
+    private void readGamesFromServer() {
+
+        String loading = getResources().getString(R.string.loadingResults);
+        mProgressDialog = ProgressDialog.show(this, "", loading, true);
 
         mBinder.loadTournamentDefnFromServer(new DataLoadedCallback() {
 
             @Override
             public void errorLoadingData(String error) {
+
+                mProgressDialog.hide();
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(GamesActivity.this);
                 alertDialogBuilder.setTitle(R.string.errorHeader);
@@ -247,12 +246,9 @@ public class GamesActivity extends E12ServiceActivity {
 
             @Override
             public void dataReady() {
-                Log.e("STEO", "Data rec" );
+                mProgressDialog.hide();
                 mTabAdapter.notifyDataSetChanged();
             }
         });
     }
-
-    @Override
-    protected void onServiceDisconnected() { }
 }
