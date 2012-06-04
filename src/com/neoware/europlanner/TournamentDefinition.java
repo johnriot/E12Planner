@@ -49,6 +49,10 @@ public class TournamentDefinition {
         return DEFN_SINGLETON;
     }
 
+    public static void refreshTournamentDefnInstance(Context context) {
+        DEFN_SINGLETON = new TournamentDefinition(context);
+    }
+
     private TournamentDefinition(Context context) {
 
         initialise(context);
@@ -234,6 +238,7 @@ public class TournamentDefinition {
                 @Override public void characters(char[] ch, int start, int length) throws SAXException {}
             });
 
+            //new ByteArrayInputStream(data.getBytes())
             reader.parse(new InputSource(new FileInputStream(mDefnFile)));
             for(Group group : mGroups)
                 group.orderTeams();

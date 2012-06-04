@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
@@ -21,8 +23,9 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
+import com.neoware.europlanner.E12DataService.DataLoadedCallback;
 
-public class GamesActivity extends SherlockFragmentActivity {
+public class GamesActivity extends E12ServiceActivity {
 
     TabsAdapter mTabAdapter;
 
@@ -61,13 +64,28 @@ public class GamesActivity extends SherlockFragmentActivity {
         mPager = (ViewPager)findViewById(R.id.groupPager);
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
+
         mTabAdapter = new TabsAdapter(this, mPager);
+        mPager.setAdapter(mTabAdapter);
+
+        addGroupsAndKnockout();
+
+        Bundle extras = getIntent().getExtras();
+        int groupIndx = 0;
+        if(extras != null) {
+            groupIndx = extras.getInt(GROUP_KNOCKOUT);
+        }
+
+        mPager.setCurrentItem(groupIndx);
+    }
+
+    public void addGroupsAndKnockout() {
         String groupNames[] = getResources().getStringArray(R.array.groups);
 
         ArrayList<Group> groups = mTournamentDefn.getGroups();
         for(Group group : groups) {
 
-            mTabAdapter.addTab(bar.newTab().setText(groupNames[group.getId()]),
+            mTabAdapter.addTab(getSupportActionBar().newTab().setText(groupNames[group.getId()]),
                     new GroupFragment(group));
         }
 
@@ -76,20 +94,18 @@ public class GamesActivity extends SherlockFragmentActivity {
         ArrayList<Knockout> knockoutStages = mTournamentDefn.getKnockoutStages();
         for(Knockout knockout : knockoutStages) {
 
-            mTabAdapter.addTab(bar.newTab().setText(knockoutNames[knockout.getId() - numGroups]),
+            mTabAdapter.addTab(getSupportActionBar().newTab().setText(knockoutNames[knockout.getId() - numGroups]),
                     new GroupFragment(knockout));
         }
-
-        mPager.setAdapter(mTabAdapter);
-
-        Bundle extras = getIntent().getExtras();
-        int groupIndx = 0;
-        if(extras != null) {
-            groupIndx = extras.getInt(GROUP_KNOCKOUT);
-        }
-        mPager.setCurrentItem(groupIndx);
     }
 
+    public void clearTabsAdapter() {
+        int cnt = mTabAdapter.getCount();
+
+        for(int i = 0; i < cnt; i++) {
+            mTabAdapter.destroyItem(null, i, mTabAdapter.getItem(i));
+        }
+    }
 
     public static class TabsAdapter extends FragmentPagerAdapter
         implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
@@ -203,4 +219,39 @@ public class GamesActivity extends SherlockFragmentActivity {
 
         return true;
     }
+
+    @Override
+    protected void onServiceConnected() {
+
+        mBinder.loadTournamentDefnFromServer(new DataLoadedCallback() {
+
+            @Override
+            public void errorLoadingData(String error) {
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(GamesActivity.this);
+                alertDialogBuilder.setTitle(R.string.errorHeader);
+                alertDialogBuilder
+                    .setMessage(error)
+                    .setCancelable(true)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog,int id) {
+                            dialog.cancel();
+                        }
+                      });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
+            }
+
+            @Override
+            public void dataReady() {
+                //TODO: Update views
+            }
+        });
+    }
+
+    @Override
+    protected void onServiceDisconnected() { }
 }

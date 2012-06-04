@@ -190,5 +190,9 @@
         http://www.lenam-travel.co.uk/\n\n
         http://en.wikipedia.org/wiki/File:Tango_12_match_ball_of_UEFA_EURO_2012.png\n\n
         Come on you boys in green!!\n\n
-        </string>
+    </string>
+
+    <string name="errorHeader">Error</string>
+    <string name="loadingTournError">Unable to load latest tournament data. Data may be out of date.</string>
+    <string name="loadingSquadError">Unable to load latest squad data. Sqauds may be out of date.</string>
 </resources>

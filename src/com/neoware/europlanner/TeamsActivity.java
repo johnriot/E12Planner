@@ -15,12 +15,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
 
-public class TeamsActivity extends SherlockFragmentActivity {
+public class TeamsActivity extends E12ServiceActivity {
 
     private static final int TEAMS_PER_GROUP = 4;
 
@@ -184,5 +183,17 @@ public class TeamsActivity extends SherlockFragmentActivity {
         public boolean isTeam = false;
         public int teamID = 0;
         public int groupID = 0;
+    }
+
+    @Override
+    protected void onServiceConnected() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    protected void onServiceDisconnected() {
+        // TODO Auto-generated method stub
+
     }
 }
