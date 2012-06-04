@@ -270,6 +270,21 @@ public class TournamentDefinition {
         return mKnockoutStages;
     }
 
+    //Bit of a hack, could probably have one arraylist of stages and dividers as
+    //ints of where group ends and KO starts
+    public TournamentStage getStage(int id) {
+
+        for(TournamentStage stage : mGroups) {
+            if(stage.getId() == id) return stage;
+        }
+
+        for(TournamentStage stage : mKnockoutStages) {
+            if(stage.getId() == id) return stage;
+        }
+
+        return null;
+    }
+
     public ArrayList<Venue> getVenues() {
         return mVenues;
     }

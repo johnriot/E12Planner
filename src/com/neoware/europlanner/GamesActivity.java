@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -86,16 +87,15 @@ public class GamesActivity extends E12ServiceActivity {
         for(Group group : groups) {
 
             mTabAdapter.addTab(getSupportActionBar().newTab().setText(groupNames[group.getId()]),
-                    new GroupFragment(group));
+                    new StageFragment(group.getId()));
         }
 
         int numGroups = groups.size();
         String knockoutNames[] = getResources().getStringArray(R.array.knockout);
         ArrayList<Knockout> knockoutStages = mTournamentDefn.getKnockoutStages();
         for(Knockout knockout : knockoutStages) {
-
             mTabAdapter.addTab(getSupportActionBar().newTab().setText(knockoutNames[knockout.getId() - numGroups]),
-                    new GroupFragment(knockout));
+                    new StageFragment(knockout.getId()));
         }
     }
 
@@ -112,7 +112,7 @@ public class GamesActivity extends E12ServiceActivity {
 
         private final ActionBar mActionBar;
         private final ViewPager mViewPager;
-        private final ArrayList<GroupFragment> mFragments = new ArrayList<GroupFragment>();
+        private final ArrayList<StageFragment> mFragments = new ArrayList<StageFragment>();
 
         public TabsAdapter(SherlockFragmentActivity activity, ViewPager pager) {
             super(activity.getSupportFragmentManager());
@@ -123,7 +123,7 @@ public class GamesActivity extends E12ServiceActivity {
             mViewPager.setOnPageChangeListener(this);
         }
 
-        public void addTab(ActionBar.Tab tab, GroupFragment fragment) {
+        public void addTab(ActionBar.Tab tab, StageFragment fragment) {
 
             mFragments.add(fragment);
             tab.setTabListener(this);
@@ -247,7 +247,8 @@ public class GamesActivity extends E12ServiceActivity {
 
             @Override
             public void dataReady() {
-                //TODO: Update views
+                Log.e("STEO", "Data rec" );
+                mTabAdapter.notifyDataSetChanged();
             }
         });
     }
