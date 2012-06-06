@@ -48,12 +48,6 @@ public class SquadActivity extends SherlockFragmentActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewTeams);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         mSquadDefn = new SquadDefinition(this, teamIndx);
 
         Resources res = this.getResources();
@@ -128,6 +122,18 @@ public class SquadActivity extends SherlockFragmentActivity {
 
                 */
         }
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewSquad);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(Settings.USE_TEST_ADS);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
     }
 
     @Override

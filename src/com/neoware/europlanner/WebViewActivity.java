@@ -45,12 +45,6 @@ public class WebViewActivity extends SherlockActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewWebView);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         WebView wv = (WebView)findViewById(R.id.webView);
         wv.getSettings().setUserAgentString("Android");
 
@@ -66,6 +60,18 @@ public class WebViewActivity extends SherlockActivity {
         if(extras != null) {
             wv.loadUrl(extras.getString(URL_EXTRA));
         }
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewWebView);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(Settings.USE_TEST_ADS);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
     }
 
     @Override

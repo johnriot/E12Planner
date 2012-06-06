@@ -50,12 +50,6 @@ public class NewsActivity extends SherlockActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewNews);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         final ExpandableListView listView = (ExpandableListView)
                 findViewById(R.id.newsList);
 
@@ -86,6 +80,18 @@ public class NewsActivity extends SherlockActivity {
         });
 
         loadFeeds();
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewNews);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(Settings.USE_TEST_ADS);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
     }
 
     private static class AsyncReader extends AsyncTask<String, Void, FeedDefn> {

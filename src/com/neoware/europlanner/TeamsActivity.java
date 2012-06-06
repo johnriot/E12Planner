@@ -39,12 +39,6 @@ public class TeamsActivity extends E12ServiceActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewTeams);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         final String teams[] = getResources().getStringArray(R.array.team_names);
         final String groups[] = getResources().getStringArray(R.array.groups);
 
@@ -70,6 +64,18 @@ public class TeamsActivity extends E12ServiceActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewTeams);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(Settings.USE_TEST_ADS);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
     }
 
     @Override

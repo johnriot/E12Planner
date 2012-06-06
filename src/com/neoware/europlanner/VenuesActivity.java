@@ -42,12 +42,6 @@ public class VenuesActivity extends SherlockFragmentActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewVenues);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         mTournamentDefn = TournamentDefinition.getTournamentDefnInstance(this);
 
         mPager = (ViewPager)findViewById(R.id.venuePager);
@@ -73,6 +67,17 @@ public class VenuesActivity extends SherlockFragmentActivity {
         mPager.setCurrentItem(venueIndex);
     }
 
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewVenues);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(Settings.USE_TEST_ADS);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
+    }
 
     public static class TabsAdapter extends FragmentPagerAdapter
         implements ActionBar.TabListener, ViewPager.OnPageChangeListener {

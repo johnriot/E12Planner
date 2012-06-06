@@ -33,12 +33,6 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
         setContentView(R.layout.main);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adView);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         LinearLayout newsLayout =
                 (LinearLayout)findViewById(R.id.news_button);
         newsLayout.setOnClickListener(this);
@@ -68,6 +62,18 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
         TextView teamsTv = (TextView)findViewById(R.id.teamsMenuTv);
         teamsTv.setTypeface(font);
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adView);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(Settings.USE_TEST_ADS);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
     }
 
     @Override

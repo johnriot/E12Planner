@@ -53,12 +53,6 @@ public class GamesActivity extends E12ServiceActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewGames);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         mTournamentDefn = TournamentDefinition.getTournamentDefnInstance(this);
 
         mPager = (ViewPager)findViewById(R.id.groupPager);
@@ -77,6 +71,18 @@ public class GamesActivity extends E12ServiceActivity {
         }
 
         mPager.setCurrentItem(groupIndx);
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        IMAdView adView = (IMAdView) findViewById(R.id.adViewGames);
+        IMAdRequest adRequest = new IMAdRequest();
+        adRequest.setTestMode(Settings.USE_TEST_ADS);
+        adView.setIMAdRequest(adRequest);
+        adView.loadNewAd();
     }
 
     public void addGroupsAndKnockout() {
@@ -225,7 +231,7 @@ public class GamesActivity extends E12ServiceActivity {
             @Override
             public void errorLoadingData(String error) {
 
-                mProgressDialog.hide();
+                mProgressDialog.dismiss();
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(GamesActivity.this);
                 alertDialogBuilder.setTitle(R.string.errorHeader);
@@ -246,7 +252,7 @@ public class GamesActivity extends E12ServiceActivity {
 
             @Override
             public void dataReady() {
-                mProgressDialog.hide();
+                mProgressDialog.dismiss();
                 mTabAdapter.notifyDataSetChanged();
             }
         });
