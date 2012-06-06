@@ -1,34 +1,37 @@
 package com.neoware.europlanner;
 
+
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 import junit.framework.Assert;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.Window;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
+import com.neoware.europlanner.E12DataService.DataLoadedCallback;
 
-public class PlannerHomeActivity extends Activity implements OnClickListener {
+public class PlannerHomeActivity extends E12ServiceActivity implements OnClickListener {
 
     //private static final String fontName = "fonts/GoodDog.otf";
     private static final String fontName = "fonts/RockSalt.ttf";
+    private static final int UEFA_FEED = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,6 +76,17 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
     public void onResume() {
 
         super.onResume();
+        if(mBinder != null) {
+            if(TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(UEFA_FEED) == false) {
+
+                displayTickerText(getResources().getString(R.string.ticker_text));
+                getAndDisplayFeed();
+            }
+            else {
+                String tickerText = makeTickerText();
+                displayTickerText(tickerText);
+            }
+        }
 
         if(Settings.USE_LIVE_ADS) {
             AdView adview = (AdView)findViewById(R.id.adViewPlannerActivityHome);
@@ -122,7 +136,7 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater = getMenuInflater();
+        MenuInflater menuInflater = this.getSupportMenuInflater();
         menuInflater.inflate(R.layout.about_menu, menu);
         return true;
     }
@@ -153,5 +167,82 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         default:
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    /**
+     * Gets feeds either synchronously (in the case that we saved them from before)
+     * or asynchronously (in the case that we are reading them now) and displays
+     * them in a News Ticker across the screen.
+     */
+    private void getAndDisplayFeed() {
+
+        if(TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(UEFA_FEED) == true) {
+            String newsTicker = makeTickerText();
+            displayTickerText(newsTicker);
+        }
+
+        else {
+            mBinder.loadNewsFeeds(new DataLoadedCallback() {
+
+                @Override
+                public void errorLoadingData(String error) {
+
+                    displayTickerText(error);
+                }
+
+
+                @Override
+                public void dataReady() {
+
+                    if(TournamentDefinition.getTournamentDefnInstance(PlannerHomeActivity.this).areFeedRssItemsSaved(UEFA_FEED)) {
+                        String newsTicker = makeTickerText();
+                        displayTickerText(newsTicker);
+                    }
+                }
+            });
+        }
+    }
+
+    private String makeTickerText() {
+
+        ArrayList<String> titles = FeedsReader.getAllTitles(UEFA_FEED, this);
+        int titlesSize = titles.size();
+        int randomPosition = (int) Math.floor((Math.random()*titles.size()));
+        String newsTicker = getResources().getString(R.string.uefa_feed_lead) + "    ";
+
+        // Write the string from a random point so that users will see a different
+        // headline first each time.
+        for(int i = randomPosition; i < titlesSize; i++) {
+            newsTicker += titles.get(i) + "    ";
+        }
+        for(int i = 0; i < randomPosition; i++) {
+            newsTicker += titles.get(i) + "    ";
+        }
+
+        newsTicker += getResources().getString(R.string.uefa_feed_tail);
+        return newsTicker;
+    }
+
+    private void displayTickerText(String ticker) {
+        TextView tickerTv = (TextView)findViewById(R.id.news_ticker);
+        tickerTv.setText(ticker);
+        tickerTv.setSelected(true);
+        tickerTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newsIntent = new Intent(PlannerHomeActivity.this, NewsActivity.class);
+                startActivity(newsIntent);
+            }
+        });
+    }
+
+    @Override
+    protected void onServiceConnected() {
+        getAndDisplayFeed();
+    }
+
+    @Override
+    protected void onServiceDisconnected() {
+        // TODO Auto-generated method stub
     }
 }

@@ -292,4 +292,14 @@ public class TournamentDefinition {
     public ArrayList<FeedDefn> getFeeds() {
         return mFeeds;
     }
+
+    public boolean areFeedRssItemsSaved(int index) {
+        boolean retVal = false;
+        try {
+            retVal = mFeeds.get(index).rssFeed.getItems() != null;
+        } catch (NullPointerException e) {
+            retVal = false;
+        }
+        return retVal;
+    }
 }

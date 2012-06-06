@@ -175,6 +175,12 @@
     <string name="feedLoadingError">Unable to load news. Please check your internet connection.</string>
     <!-- Do not translate -->
     <string name="adsId">4028cba631d63df10131e1d3818b00cc</string>
+    
+    <!-- News Ticker -->
+    <string name="ticker_text">UEFA News Loading.... Touch for Full Index!</string>
+    <string name="loadingFeedError">News Channel Temporarily Unavailable.</string>
+    <string name="uefa_feed_lead">UEFA NEWS FEED....</string>
+    <string name="uefa_feed_tail">*END OF FEED*....</string>
 
     <string name="aboutHeader">About</string>
     <string name="aboutText">Euro 2012 Planner Application developed by John
@@ -305,5 +311,5 @@
     <string name="prediction15">2nd in group, quarter final exit</string>
     <string name="starman15">Given his chance this kid could provide England with the spark they need. He will be largely unknown to most teams having only broken through this year but he has searing pace and is an intelligent player. Well built with an eye for goal, I expect Hodgson to use Ox as his game changer.</string>
     <string name="starmanname15">Alex Oxlade-Chamberlain</string>
-    
+
 </resources>

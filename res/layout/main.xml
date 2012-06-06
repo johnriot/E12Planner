@@ -11,10 +11,27 @@
 
         <ImageView 
             android:contentDescription="@string/app_name"
-            android:layout_above="@+id/adViewPlannerActivityHome"
+            android:layout_above="@+id/news_ticker"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/euro2012ball"/>
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_above="@+id/adViewPlannerActivityHome"
+            android:text="@string/ticker_text"
+            android:id="@+id/news_ticker"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="#FFF00000"
+            android:clickable="true"
+            android:textColor="@color/white"
+            />
 
         <TableLayout
             android:layout_alignParentTop="true"

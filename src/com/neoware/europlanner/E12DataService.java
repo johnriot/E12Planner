@@ -27,6 +27,7 @@ import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.neoware.europlanner.FeedsAdapter.FeedDefn;
 import com.neoware.europlanner.ReadDataAsyncTask.OnDataLoadedCallback;
 
 public class E12DataService extends Service {
@@ -47,9 +48,32 @@ public class E12DataService extends Service {
     //Same process so don't worry about IPC
     public class E12DataServiceBinder extends Binder {
 
+//<<<<<<< HEAD
         public void loadSquadsDefnFromServer(DataLoadedCallback callback, boolean forceLoad) {
             loadSquadsDefn(callback, forceLoad);
         }
+/*=======
+        public void loadSquadDataFromServer(DataLoadedCallback callback) {
+            loadSquadData(callback);
+        }
+
+        public void loadTournamentDefnFromServer(DataLoadedCallback callback) {
+            loadTournamentDefn(callback);
+        }
+*/
+        public void loadNewsFeeds(DataLoadedCallback callback) {
+            loadFeeds(callback);
+        }
+
+/*        public String getSquadData(Context context) {
+
+            ContextWrapper wrapper = new ContextWrapper(context);
+            File homeDir = wrapper.getFilesDir();
+            File squadFile = new File(homeDir, SQUAD_DATA);
+            return readFile(squadFile);
+>>>>>>> 809ea7d... Finished News Ticker implementation using service
+
+        }*/
 
         public void loadTournamentDefnFromServer(DataLoadedCallback callback, boolean forceLoad) {
             loadTournamentDefn(callback, forceLoad);
@@ -158,6 +182,33 @@ public class E12DataService extends Service {
                }
             }
         }).execute(ReadDataAsyncTask.TOURN_DEFN_DATA_URL);
+    }
+
+    private void loadFeeds(final DataLoadedCallback callback)
+    {
+        final FeedsReader reader = new FeedsReader(this);
+
+        reader.loadFeeds(new AsyncFeedsReader.ReaderCompleteCallback() {
+
+            @Override
+            public void onReaderComplete(FeedDefn feed, String errorMessage) {
+
+
+                if(feed == null) {
+
+                    Log.w(getClass().getSimpleName(), "Error: Feed is not valid");
+                    String sanitisedError = getResources().getString(R.string.loadingFeedError);
+                    callback.errorLoadingData(sanitisedError);
+                    return;
+                }
+
+                if(reader.allFeedsLoaded()) {
+                    callback.dataReady();
+                }
+
+                reader.addFeedToAdapter(feed);
+            }
+        });
     }
 
     @Override
