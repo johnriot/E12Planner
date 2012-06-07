@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Euro2012Planner</string>
+    <string name="news_title">Canal de Noticías</string>
+    <string name="games_title">Horario de los partidos</string>
+    <string name="venues_title">Estadios</string>
+    <string name="teams_title">Equipos</string>
+    <string name="refresh_text">Actualizar</string>
+
+    <string-array name="groups">
+        <item>Grupo A</item>
+        <item>Grupo B</item>
+        <item>Grupo C</item>
+        <item>Grupo D</item>
+    </string-array>
+
+    <string-array name="knockout">
+        <item>Cuartos de final</item>
+        <item>Semi final</item>
+        <item>FINAL</item>
+    </string-array>
+
+    <string-array name="venues">
+        <item>National Stadium Warsaw, Polonia</item>
+        <item>Municipal Stadium Wroclaw, Polonia</item>
+        <item>Metalist Stadium Kharkiv, Ucrania</item>
+        <item>Arena Lviv, Ucrania</item>
+        <item>PGE Arena Gdansk, Polonia</item>
+        <item>Municipal Stadium Poznan, Polonia</item>
+        <item>Donbass Arena Donetsk, Ucrania</item>
+        <item>Olympic Stadium Kiev, Ucrania</item>
+    </string-array>
+
+    <!--
+         Venues_Short, do not translate! 
+         should obviously match venues array
+    -->
+    <string-array name="venues_short">
+        <item>warsaw</item>
+        <item>wroclaw</item>
+        <item>kharkiv</item>
+        <item>lviv</item>
+        <item>gdansk</item>
+        <item>poznan</item>
+        <item>donetsk</item>
+        <item>kiev</item>
+    </string-array>
+
+    <string-array name="venue_capacities">
+        <item>Capacidad 50.000</item>
+        <item>Capacidad 40.000</item>
+        <item>Capacidad 35.000</item>
+        <item>Capacidad 30.000</item>
+        <item>Capacidad 40.000</item>
+        <item>Capacidad 40.000</item>
+        <item>Capacidad 50.000</item>
+        <item>Capacidad 60.000</item>
+    </string-array>
+
+    <string-array name="team_names">
+        <item>Polonia</item>
+        <item>Grecia</item>
+        <item>Rusia</item>
+        <item>Rep. Checa</item>
+        <item>Holanda</item>
+        <item>Dinamarca</item>
+        <item>Alemania</item>
+        <item>Portugal</item>
+        <item>España</item>
+        <item>Italia</item>
+        <item>Irlanda</item>
+        <item>Croacia</item>
+        <item>Ucrania</item>
+        <item>Suecia</item>
+        <item>Francia</item>
+        <item>Inglaterra</item>
+    </string-array>
+
+    <!--
+         Team drawables, do not translate! 
+         should obviously match team array
+    -->
+    <string-array name="team_icon_resource_names">
+        <item>poland</item>
+        <item>greece</item>
+        <item>russia</item>
+        <item>czechrep</item>
+        <item>netherlands</item>
+        <item>denmark</item>
+        <item>germany</item>
+        <item>portugal</item>
+        <item>spain</item>
+        <item>italy</item>
+        <item>ireland</item>
+        <item>croatia</item>
+        <item>ukraine</item>
+        <item>sweden</item>
+        <item>france</item>
+        <item>england</item>
+    </string-array>
+
+    <string-array name="qf_placeholder_names">
+        <item>1er Grupo A</item>
+        <item>2o Grupo B</item>
+        <item>1er Grupo B</item>
+        <item>2o Grupo A</item>
+        <item>1er Grupo C</item>
+        <item>2o Grupo D</item>
+        <item>1er Grupo D</item>
+        <item>2o Grupo C</item>
+    </string-array>
+
+    <string-array name="sf_placeholder_names">
+        <item>Ganador CF 1</item>
+        <item>Ganador CF 2</item>
+        <item>Ganador CF 3</item>
+        <item>Ganador CF 4</item>
+    </string-array>
+
+    <string-array name="f_placeholder_names">
+        <item>Ganador SF 1</item>
+        <item>Ganador SF 2</item>
+    </string-array>
+
+    <string-array name="qf_game_titles">
+        <item>CF1</item>
+        <item>CF2</item>
+        <item>CF3</item>
+        <item>CF4</item>
+    </string-array>
+
+    <string-array name="sf_game_titles">
+        <item>SF1</item>
+        <item>SF2</item>
+    </string-array>
+
+    <string-array name="f_game_titles">
+        <item>F</item>
+    </string-array>
+
+    <string name="menuGames">Partidos</string>
+    <string name="menuVenues">Estadios</string>
+    <string name="menuTeams">Equipos</string>
+    <string name="menuNews">Noticias</string>
+    <string name="loadingNews">Descargando Noticias&#8230;</string>
+    <string name="homeButton">Menú principal</string>
+    
+    <string name="cdVenueDesc">Estadios</string>
+
+    <string name="played_hdr">PJ</string>
+    <string name="goals_for_hdr">GF</string>
+    <string name="goals_against_hdr">GC</string>
+    <string name="points_hdr">P</string>
+
+    <string name="jersey_hdr">#</string>
+    <string name="player_hdr">Jugador</string>
+    <string name="age_hdr">Edad</string>
+    <string name="server_error_body">Error de información en la actualización de los equipos. Por favor intentelo de nuevo más tarde.</string>
+
+    <string name="cdIcon">Icono</string>
+    
+    <string name="fixtureIconHomeCD">Icono Equipo Local</string>
+    <string name="fixtureIconAwayCD">Icono Equipo Visitante</string>
+
+    <string name="scoreSeperator"> - </string>
+    <string name="scoreSeperatorUnplayed"> v </string>
+
+    <string name="daysToGo">%d days to go!</string>
+    <string name="oneDayToGo">One day to go!</string>
+    
+    <string name="aboutMenu">Información</string>
+
+    <string name="teamsIconCD">Icono de Equipo</string>
+    <string name="feedLoadingError">No es posible cargar las noticias. Por favor revise su conexión a internet.</string>
+
+    <!-- Do not translate -->
+    <string name="adsId">4028cba631d63df10131e1d3818b00cc</string>
+    
+    <string name="aboutHeader">Información</string>
+    <string name="aboutText">Euro 2012 Planner ha estado desarollada por John O\'Halloran y Stephen Roberts, y la traducción al español por Christina Llopis &#169; 2012.\n\n 
+        Créditos para las imagenes de los estadios:\n\n
+        http://www.euro2012.uke.gov.pl/public/Page/Stadiums/Poznan/Rys0.jpg\n\n
+        http://pics.livejournal.com/tov_tob/pic/005xw8b3\n\n
+        http://en.wikipedia.org/wiki/File:Stadion_Narodowy_w_Warszawie_20120422.jpg\n\n
+        http://en.wikipedia.org/wiki/File:PGE_Arena.jpeg\n\n
+        http://en.wikipedia.org/wiki/File:Stadion_Wroclaw_z_lotu_ptaka.jpg\n\n
+        http://en.wikipedia.org/wiki/File:Donezk_Donbass_Arena_01.JPG\n\n
+        http://www.soccerfansnetwork.com/\n\n
+        http://www.lenam-travel.co.uk/\n\n
+        http://en.wikipedia.org/wiki/File:Tango_12_match_ball_of_UEFA_EURO_2012.png\n\n
+       Vamos la roja!!\n\n
+    </string>
+
+    <string name="errorHeader">Error</string>
+    <string name="loadingTournError">No es posible cargar los datos de los partidos. Puede que los datos hayan expirado.</string>
+    <string name="loadingSquadError">No es posible cargar los datos de los equipos. Puede que los datos hayan expirado.</string>
+    <string name="loadingResults">Descargando los últimos horarios y resultados&#8230;</string>
+</resources>

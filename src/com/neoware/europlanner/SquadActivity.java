@@ -153,7 +153,7 @@ public class SquadActivity extends SherlockFragmentActivity {
 
     private void HandleException(PlayerPositionException ex) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle(R.string.server_error_title);
+        alertDialogBuilder.setTitle(R.string.errorHeader);
         alertDialogBuilder
             .setMessage(R.string.server_error_body)
             .setCancelable(true)

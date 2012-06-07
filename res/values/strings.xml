@@ -156,8 +156,7 @@
     <string name="jersey_hdr">#</string>
     <string name="player_hdr">Player</string>
     <string name="age_hdr">Age</string>
-    <string name="server_error_title">Server Error</string>
-    <string name="server_error_body">Error Updating Squad Info. Please Try Again in 1 Minute.</string>
+    <string name="server_error_body">Error in handling squad data. Please try again later.</string>
 
     <string name="cdIcon">Icon</string>
     
