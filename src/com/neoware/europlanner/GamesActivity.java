@@ -58,7 +58,6 @@ public class GamesActivity extends E12ServiceActivity {
         mPager = (ViewPager)findViewById(R.id.groupPager);
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-
         mTabAdapter = new TabsAdapter(this, mPager);
         mPager.setAdapter(mTabAdapter);
 
@@ -186,7 +185,7 @@ public class GamesActivity extends E12ServiceActivity {
             return true;
         }
         else if(item == mRefreshItem) {
-            readGamesFromServer();
+            readGamesFromServer(true);
         }
 
         return super.onMenuItemSelected(featureId, item);
@@ -215,13 +214,13 @@ public class GamesActivity extends E12ServiceActivity {
 
     @Override
     protected void onServiceConnected() {
-        readGamesFromServer();
+        readGamesFromServer(false);
     }
 
     @Override
     protected void onServiceDisconnected() { }
 
-    private void readGamesFromServer() {
+    private void readGamesFromServer(boolean forceLoad) {
 
         String loading = getResources().getString(R.string.loadingResults);
         mProgressDialog = ProgressDialog.show(this, "", loading, true);
@@ -255,6 +254,6 @@ public class GamesActivity extends E12ServiceActivity {
                 mProgressDialog.dismiss();
                 mTabAdapter.notifyDataSetChanged();
             }
-        });
+        } , forceLoad);
     }
 }

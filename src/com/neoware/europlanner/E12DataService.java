@@ -7,7 +7,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Scanner;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -20,11 +19,12 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
 import android.app.Service;
-import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Binder;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.neoware.europlanner.ReadDataAsyncTask.OnDataLoadedCallback;
@@ -33,6 +33,11 @@ public class E12DataService extends Service {
 
     private static final String SQUAD_DATA = "squaddefn.xml";
     private static final String TOURN_DATA = "tournamentdefn.xml";
+
+    private static final long MS_IN_HOUR = 1000 * 60 * 60;
+    private static final long REFRESH_INTERVAL_MS = MS_IN_HOUR * 1;
+    private static final String TIMESTAMP_KEY_TOURN = "TIMESTAMP_TOURN";
+    private static final String TIMESTAMP_KEY_SQUAD = "TIMESTAMP_SQUAD";
 
     public interface DataLoadedCallback {
         public void dataReady();
@@ -46,50 +51,8 @@ public class E12DataService extends Service {
             loadSquadData(callback);
         }
 
-        public void loadTournamentDefnFromServer(DataLoadedCallback callback) {
-            loadTournamentDefn(callback);
-        }
-
-        public String getSquadData(Context context) {
-
-            ContextWrapper wrapper = new ContextWrapper(context);
-            File homeDir = wrapper.getFilesDir();
-            File squadFile = new File(homeDir, SQUAD_DATA);
-            return readFile(squadFile);
-        }
-
-        public String getTournamentData(Context context) {
-
-            ContextWrapper wrapper = new ContextWrapper(context);
-            File homeDir = wrapper.getFilesDir();
-            File tournamentFile = new File(homeDir, TOURN_DATA);
-            return readFile(tournamentFile);
-        }
-
-        private String readFile(File file) {
-
-            String result = null;
-            Scanner scanner = null;
-
-            try {
-
-                StringBuilder fileContents = new StringBuilder((int)file.length());
-                scanner = new Scanner(file);
-                String lineSeparator = System.getProperty("line.separator");
-
-                while(scanner.hasNextLine()) {
-                    fileContents.append(scanner.nextLine() + lineSeparator);
-                }
-                result = fileContents.toString();
-            }
-            catch(IOException ex) {
-                Log.w(getClass().getSimpleName(), "Unable to read file: " + ex.getMessage());
-            }
-            finally {
-                scanner.close();
-            }
-
-            return result;
+        public void loadTournamentDefnFromServer(DataLoadedCallback callback, boolean forceLoad) {
+            loadTournamentDefn(callback, forceLoad);
         }
     }
 
@@ -124,7 +87,27 @@ public class E12DataService extends Service {
         }).execute(ReadDataAsyncTask.SQUAD_DEFN_DATA_URL);
     }
 
-    private void loadTournamentDefn(final DataLoadedCallback callback) {
+    private boolean serverReadRequiredForTournament() {
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplication());
+
+        long now = System.currentTimeMillis();
+        long lastRefresh = prefs.getLong(TIMESTAMP_KEY_TOURN, 0);
+
+        return ( (now - lastRefresh) > REFRESH_INTERVAL_MS);
+    }
+
+    private void loadTournamentDefn(final DataLoadedCallback callback, boolean forceLoad) {
+
+        if(!forceLoad && !serverReadRequiredForTournament()) {
+            callback.dataReady();
+            return;
+        }
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplication());
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putLong(TIMESTAMP_KEY_TOURN, System.currentTimeMillis());
+        editor.commit();
 
         new ReadDataAsyncTask(new OnDataLoadedCallback() {
 
