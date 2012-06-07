@@ -45,6 +45,10 @@ public class SquadsDefinition {
         return DEFN_SINGLETON;
     }
 
+    public static void refreshSquadsDefnInstance(Context context) {
+        DEFN_SINGLETON = new SquadsDefinition(context);
+    }
+
     private SquadsDefinition(Context context) {
         mContext = context;
         initialise();

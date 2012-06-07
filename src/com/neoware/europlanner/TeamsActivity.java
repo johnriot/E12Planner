@@ -1,5 +1,8 @@
 package com.neoware.europlanner;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
@@ -18,10 +21,13 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.MenuItem;
 import com.inmobi.androidsdk.IMAdRequest;
 import com.inmobi.androidsdk.IMAdView;
+import com.neoware.europlanner.E12DataService.DataLoadedCallback;
 
 public class TeamsActivity extends E12ServiceActivity {
 
     private static final int TEAMS_PER_GROUP = 4;
+
+    private ProgressDialog mProgressDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -193,8 +199,39 @@ public class TeamsActivity extends E12ServiceActivity {
 
     @Override
     protected void onServiceConnected() {
-        // TODO Auto-generated method stub
 
+        String loading = getResources().getString(R.string.loadingSquads);
+        mProgressDialog = ProgressDialog.show(this, "", loading, true);
+
+        mBinder.loadSquadsDefnFromServer(new DataLoadedCallback() {
+
+            @Override
+            public void errorLoadingData(String error) {
+
+                mProgressDialog.dismiss();
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(TeamsActivity.this);
+                alertDialogBuilder.setTitle(R.string.errorHeader);
+                alertDialogBuilder
+                    .setMessage(error)
+                    .setCancelable(true)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog,int id) {
+                            dialog.cancel();
+                        }
+                      });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
+            }
+
+            @Override
+            public void dataReady() {
+                mProgressDialog.dismiss();
+            }
+        } , false);
     }
 
     @Override

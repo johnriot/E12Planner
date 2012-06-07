@@ -195,4 +195,5 @@
     <string name="loadingTournError">Unable to load latest tournament data. Data may be out of date.</string>
     <string name="loadingSquadError">Unable to load latest squad data. Sqauds may be out of date.</string>
     <string name="loadingResults">Loading latest fixtures and results&#8230;</string>
+    <string name="loadingSquads">Loading latest squad data&#8230;</string>
 </resources>
