@@ -17,6 +17,10 @@ public class StageFragment extends SherlockFragment {
 
     private final int mStageId;
 
+    public StageFragment() {
+        mStageId = 0;
+    }
+
     public StageFragment(int stageId) {
         mStageId = stageId;
     }
