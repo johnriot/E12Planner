@@ -23,7 +23,7 @@ import com.neoware.europlanner.Player.PlayerPositionException;
 public class SquadActivity extends SherlockFragmentActivity {
 
     public static final String TEAM_INDEX = "team_indx";
-    SquadDefinition mSquadDefn;
+    SquadsDefinition mSquadDefn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class SquadActivity extends SherlockFragmentActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        mSquadDefn = new SquadDefinition(this, teamIndx);
+        mSquadDefn = SquadsDefinition.getSquadsDefnInstance(this);
 
         Resources res = this.getResources();
         String packageName = getClass().getPackage().getName();
@@ -57,14 +57,15 @@ public class SquadActivity extends SherlockFragmentActivity {
         TableLayout squadTable = (TableLayout)findViewById(R.id.squadTableLayout);
 
         // for every player in the squad
-        for(int i = 0; i < mSquadDefn.getSquad().getSize(); ++i) {
+        Squad squad = mSquadDefn.getSquad(teamIndx);
+        for(int i = 0; i < squad.getSize(); ++i) {
 
             TableRow playerRow = (TableRow)inflater.inflate(
                     R.layout.sqaud_table_row, null);
 
             try {
 
-                Player player = mSquadDefn.getSquad().getPlayer(i);
+                Player player = squad.getPlayer(i);
 
                 ImageView iconViewV = (ImageView)playerRow.findViewById(R.id.playerIcon);
                 String playerIcon = player.getPositionFilename();
