@@ -6,5 +6,6 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="/ActionBarSherlock/libs/android-support-v4.jar"/>
 	<classpathentry kind="src" path="/ActionBarSherlock"/>
+	<classpathentry kind="lib" path="libs/GoogleAdMobAdsSdk-4.3.1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

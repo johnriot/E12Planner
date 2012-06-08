@@ -9,13 +9,8 @@ import com.actionbarsherlock.app.SherlockFragment;
 
 public class StageFragment extends SherlockFragment {
 
-    @Override
-    public View getView() {
-
-        return super.getView();
-    }
-
-    private final int mStageId;
+    private static final String STAGE_ID = "stageid";
+    private int mStageId;
 
     public StageFragment() {
         mStageId = 0;
@@ -29,10 +24,19 @@ public class StageFragment extends SherlockFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        if(savedInstanceState != null) {
+            mStageId = savedInstanceState.getInt(STAGE_ID);
+        }
+
         TournamentStage stage = TournamentDefinition.getTournamentDefnInstance(
                 getActivity()).getStage(mStageId);
 
         return stage.drawView(inflater, container, savedInstanceState, this.getResources(), getActivity());
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedState) {
+        super.onSaveInstanceState(savedState);
+        savedState.putInt(STAGE_ID, mStageId);
+    }
 }
