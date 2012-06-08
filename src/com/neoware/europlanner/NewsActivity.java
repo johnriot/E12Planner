@@ -1,7 +1,11 @@
 package com.neoware.europlanner;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
+import junit.framework.Assert;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
@@ -17,8 +21,8 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.inmobi.androidsdk.IMAdRequest;
-import com.inmobi.androidsdk.IMAdView;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 import com.neoware.europlanner.FeedsAdapter.FeedDefn;
 import com.neoware.rss.RSSFault;
 import com.neoware.rss.RSSItem;
@@ -87,11 +91,18 @@ public class NewsActivity extends SherlockActivity {
 
         super.onResume();
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewNews);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(Settings.USE_TEST_ADS);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
+        if(Settings.USE_LIVE_ADS) {
+            AdView adview = (AdView)findViewById(R.id.adViewNews);
+            Assert.assertNotNull(adview);
+
+            AdRequest req = new AdRequest();
+
+            String [] keywords = getResources().getStringArray(R.array.adKeywords);
+            Set<String> keywordsSet = new HashSet<String>(Arrays.asList(keywords));
+            req.setKeywords(keywordsSet);
+
+            adview.loadAd(req);
+        }
     }
 
     private static class AsyncReader extends AsyncTask<String, Void, FeedDefn> {

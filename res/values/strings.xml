@@ -196,4 +196,16 @@
     <string name="loadingSquadError">Unable to load latest squad data. Sqauds may be out of date.</string>
     <string name="loadingResults">Loading latest fixtures and results&#8230;</string>
     <string name="loadingSquads">Loading latest squad data&#8230;</string>
+
+    <array name="adKeywords">
+        <item>Euro 2012</item>
+        <item>Football</item>
+        <item>Sport</item>
+        <item>Soccer</item>
+        <item>Poland</item>
+        <item>Ukraine</item>
+        <item>Travel</item>
+        <item>futbol</item>
+        <item>eurocopa</item>
+    </array>
 </resources>

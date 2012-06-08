@@ -1,5 +1,9 @@
 package com.neoware.europlanner;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,8 +20,8 @@ import android.widget.TextView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
-import com.inmobi.androidsdk.IMAdRequest;
-import com.inmobi.androidsdk.IMAdView;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 import com.neoware.europlanner.Player.PlayerPositionException;
 
 public class SquadActivity extends SherlockFragmentActivity {
@@ -130,11 +134,17 @@ public class SquadActivity extends SherlockFragmentActivity {
 
         super.onResume();
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewSquad);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(Settings.USE_TEST_ADS);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
+        if(Settings.USE_LIVE_ADS) {
+            AdView adview = (AdView)findViewById(R.id.adViewSquad);
+
+            AdRequest req = new AdRequest();
+
+            String [] keywords = getResources().getStringArray(R.array.adKeywords);
+            Set<String> keywordsSet = new HashSet<String>(Arrays.asList(keywords));
+            req.setKeywords(keywordsSet);
+
+            adview.loadAd(req);
+        }
     }
 
     @Override

@@ -1,8 +1,12 @@
 package com.neoware.europlanner;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Set;
 
+import junit.framework.Assert;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -20,8 +24,8 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.inmobi.androidsdk.IMAdRequest;
-import com.inmobi.androidsdk.IMAdView;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 import com.neoware.europlanner.E12DataService.DataLoadedCallback;
 
 public class GamesActivity extends E12ServiceActivity {
@@ -74,14 +78,20 @@ public class GamesActivity extends E12ServiceActivity {
 
     @Override
     public void onResume() {
-
         super.onResume();
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewGames);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(Settings.USE_TEST_ADS);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
+        if(Settings.USE_LIVE_ADS) {
+            AdView adview = (AdView)findViewById(R.id.adViewGames);
+            Assert.assertNotNull(adview);
+
+            AdRequest req = new AdRequest();
+
+            String [] keywords = getResources().getStringArray(R.array.adKeywords);
+            Set<String> keywordsSet = new HashSet<String>(Arrays.asList(keywords));
+            req.setKeywords(keywordsSet);
+
+            adview.loadAd(req);
+        }
     }
 
     public void addGroupsAndKnockout() {

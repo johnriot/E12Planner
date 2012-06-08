@@ -2,5 +2,5 @@ package com.neoware.europlanner;
 
 public class Settings {
 
-    public static boolean USE_TEST_ADS = true;
+    public static boolean USE_LIVE_ADS = false;
 }
