@@ -209,4 +209,10 @@
         <item>futbol</item>
         <item>eurocopa</item>
     </array>
+
+    <!--  Required abs translations -->
+   <string name="abs__action_bar_up_description">Up</string>
+   <string name="abs__action_bar_home_description">Home</string>
+   <string name="abs__action_menu_overflow_description">Overflow</string>
+   <string name="abs__action_mode_done">Done</string>
 </resources>
