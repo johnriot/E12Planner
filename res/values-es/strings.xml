@@ -196,4 +196,5 @@
     <string name="loadingTournError">No es posible cargar los datos de los partidos. Puede que los datos hayan expirado.</string>
     <string name="loadingSquadError">No es posible cargar los datos de los equipos. Puede que los datos hayan expirado.</string>
     <string name="loadingResults">Descargando los últimos horarios y resultados&#8230;</string>
+    <string name="loadingSquads">Descargando los últimos datos de los equipos&#8230;</string>
 </resources>
