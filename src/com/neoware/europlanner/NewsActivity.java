@@ -60,7 +60,7 @@ public class NewsActivity extends SherlockActivity {
         final ExpandableListView listView = (ExpandableListView)
                 findViewById(R.id.newsList);
 
-        String loadingNews = getResources().getString(R.string.loadingNews);
+        //String loadingNews = getResources().getString(R.string.loadingNews);
         //mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
 
         mAdapter = new FeedsAdapter(this);
@@ -219,7 +219,7 @@ public class NewsActivity extends SherlockActivity {
         }
         else if(item == mRefreshItem) {
 
-            String loadingNews = getResources().getString(R.string.loadingNews);
+            //String loadingNews = getResources().getString(R.string.loadingNews);
             //mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
             mAdapter.clearFeeds();
 
