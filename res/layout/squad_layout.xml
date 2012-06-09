@@ -18,39 +18,11 @@
             ads:adSize="BANNER"
             ads:loadAdOnCreate="false"/>
 
-    <ScrollView
-        android:layout_above="@id/adViewSquad" 
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:id="@+id/scrollView1" 
-        android:layout_width="fill_parent">
-    
-        <TableLayout
-            android:id="@+id/squadTableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shrinkColumns="*"
-            android:stretchColumns="*">
-            <TableRow
-                android:id="@+id/tableHeader"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                >
-                <TextView android:text=""/>
-                <TextView
-                    android:text="@string/jersey_hdr"
-                    android:gravity="center_horizontal"
-                    android:textColor="#FF000000"/>
-                <TextView
-                    android:text="@string/player_hdr"
-                    android:gravity="center_horizontal"
-                    android:textColor="#FF000000"/>
-                <TextView
-                    android:text="@string/age_hdr"
-                    android:gravity="center_horizontal"
-                    android:textColor="#FF000000"/>
-            </TableRow>
-        </TableLayout>
-    </ScrollView>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/squadPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/adViewSquad"/>
 
 </RelativeLayout>

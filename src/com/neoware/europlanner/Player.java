@@ -71,7 +71,7 @@ public class Player {
         return years;
     }
 
-    class PlayerPositionException extends Exception {
+    public class PlayerPositionException extends Exception {
         private static final long serialVersionUID = -7748157905927939921L;
     }
 }

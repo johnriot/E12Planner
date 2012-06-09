@@ -1,37 +1,44 @@
 package com.neoware.europlanner;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.widget.ImageView;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 
 import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.ActionBar.Tab;
+import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.Window;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
-import com.neoware.europlanner.Player.PlayerPositionException;
+import com.neoware.europlanner.fragments.SquadFragment;
+import com.neoware.europlanner.fragments.SquadWriteupFragment;
+import com.neoware.europlanner.fragments.StarPlayerFragment;
 
 public class SquadActivity extends SherlockFragmentActivity {
+
+    private SquadsTabAdapter mTabAdapter;
+    private ViewPager mPager;
 
     public static final String TEAM_INDEX = "team_indx";
     SquadsDefinition mSquadDefn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         super.onCreate(savedInstanceState);
+
+        setSupportProgressBarIndeterminateVisibility(false);
 
         setContentView(R.layout.squad_layout);
 
@@ -54,79 +61,26 @@ public class SquadActivity extends SherlockFragmentActivity {
 
         mSquadDefn = SquadsDefinition.getSquadsDefnInstance(this);
 
-        Resources res = this.getResources();
-        String packageName = getClass().getPackage().getName();
+        mPager = (ViewPager)findViewById(R.id.squadPager);
+        getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        LayoutInflater inflater = LayoutInflater.from(this);
-        TableLayout squadTable = (TableLayout)findViewById(R.id.squadTableLayout);
+        mTabAdapter = new SquadsTabAdapter(this, mPager);
+        mPager.setAdapter(mTabAdapter);
 
-        // for every player in the squad
-        Squad squad = mSquadDefn.getSquad(teamIndx);
-        for(int i = 0; i < squad.getSize(); ++i) {
+        mTabAdapter.addTab(getSupportActionBar()
+                .newTab()
+                .setText(R.string.squadHeader),
+                new SquadFragment(teamIndx));
 
-            TableRow playerRow = (TableRow)inflater.inflate(
-                    R.layout.sqaud_table_row, null);
+        mTabAdapter.addTab(getSupportActionBar()
+                .newTab()
+                .setText(R.string.squadProspects),
+                new SquadWriteupFragment(teamIndx));
 
-            try {
-
-                Player player = squad.getPlayer(i);
-
-                ImageView iconViewV = (ImageView)playerRow.findViewById(R.id.playerIcon);
-                String playerIcon = player.getPositionFilename();
-                iconViewV.setImageResource((res.getIdentifier(playerIcon,
-                        "drawable", packageName)));
-
-                TextView playerNumberV = (TextView)playerRow.findViewById(R.id.playerNumber);
-                playerNumberV.setText(player.getNumber());
-
-                TextView playerNameV = (TextView)playerRow.findViewById(R.id.playerName);
-                playerNameV.setText(player.getName());
-
-                TextView playerAgeV = (TextView)playerRow.findViewById(R.id.playerAge);
-                playerAgeV.setText(player.getAge().toString());
-
-                squadTable.addView(playerRow);
-
-            } catch (PlayerPositionException ex) {
-                HandleException(ex);
-            }
-
-            /*
-            String iconViewIdStr = "player" + i + "Icon";
-            int iconViewId = res.getIdentifier(iconViewIdStr, "id", packageName);
-            ImageView playerIconView = (ImageView)findViewById(iconViewId);
-
-            try {
-                Player player = mSquadDefn.getSquad().getPlayer(i);
-                String playerIcon = player.getPositionFilename();
-                playerIconView.setImageResource((res.getIdentifier(playerIcon,
-                        "drawable", packageName)));
-
-                String playerNameViewIdStr = "player" + i + "Name";
-                int playerNameViewId = res.getIdentifier(playerNameViewIdStr, "id", packageName);
-                TextView playerNameView = (TextView)findViewById(playerNameViewId);
-
-                playerNameView.setText(player.getName());
-
-                String playerNumberViewIdStr = "player" + i + "Number";
-                int playerNumberViewId = res.getIdentifier(playerNumberViewIdStr, "id", packageName);
-                TextView playerNumberView = (TextView)findViewById(playerNumberViewId);
-
-                playerNumberView.setText(player.getNumber());
-
-                String playerAgeViewIdStr = "player" + i + "Age";
-                int playerAgeViewId = res.getIdentifier(playerAgeViewIdStr, "id", packageName);
-                TextView playerAgeView = (TextView)findViewById(playerAgeViewId);
-
-                Integer playerAge = player.getAge();
-                playerAgeView.setText(playerAge.toString());
-
-            } catch (PlayerPositionException ex) {
-                HandleException(ex);
-            }
-
-                */
-        }
+        mTabAdapter.addTab(getSupportActionBar()
+                .newTab()
+                .setText(R.string.squadStarPlayer),
+                new StarPlayerFragment(teamIndx));
     }
 
     @Override
@@ -162,20 +116,66 @@ public class SquadActivity extends SherlockFragmentActivity {
         return super.onMenuItemSelected(featureId, item);
     }
 
-    private void HandleException(PlayerPositionException ex) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle(R.string.errorHeader);
-        alertDialogBuilder
-            .setMessage(R.string.server_error_body)
-            .setCancelable(true)
-            .setPositiveButton("OK",new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog,int id) {
-                    dialog.cancel();
-                }
-              });
+    //TODO: This is exactly the same as the games one - unify
+    private static class SquadsTabAdapter extends FragmentPagerAdapter
+        implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+        private final ActionBar mActionBar;
+        private final ViewPager mViewPager;
+        private final ArrayList<SherlockFragment> mFragments = new ArrayList<SherlockFragment>();
+
+        public SquadsTabAdapter(SherlockFragmentActivity activity, ViewPager pager) {
+            super(activity.getSupportFragmentManager());
+
+            mActionBar = activity.getSupportActionBar();
+            mViewPager = pager;
+            mViewPager.setAdapter(this);
+            mViewPager.setOnPageChangeListener(this);
+        }
+
+        public void addTab(ActionBar.Tab tab, SherlockFragment fragment) {
+
+            mFragments.add(fragment);
+            tab.setTabListener(this);
+            mActionBar.addTab(tab);
+            notifyDataSetChanged();
+        }
+
+        @Override
+        public int getCount() {
+            return mFragments.size();
+        }
+
+        @Override
+        public SherlockFragment getItem(int position) {
+            return mFragments.get(position);
+        }
+
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            mActionBar.setSelectedNavigationItem(position);
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+        }
+
+        @Override
+        public void onTabSelected(Tab tab, FragmentTransaction ft) {
+            mViewPager.setCurrentItem(tab.getPosition());
+        }
+
+        //Without this, notifyDataSetChanged does FUCK ALL
+        @Override
+        public int getItemPosition(Object object) {
+            return POSITION_NONE;
+        }
+
+        @Override public void onTabUnselected(Tab tab, FragmentTransaction ft) {}
+        @Override public void onTabReselected(Tab tab, FragmentTransaction ft) {}
     }
 }

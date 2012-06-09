@@ -1,4 +1,4 @@
-package com.neoware.europlanner;
+package com.neoware.europlanner.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.neoware.europlanner.TournamentDefinition;
+import com.neoware.europlanner.TournamentStage;
 
 public class StageFragment extends SherlockFragment {
 

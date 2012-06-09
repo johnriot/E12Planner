@@ -33,7 +33,7 @@
     </string-array>
 
     <!--
-         Venues_Short, do not translate! 
+         Venues_Short, do not translate!
          should obviously match venues array
     -->
     <string-array name="venues_short">
@@ -78,7 +78,7 @@
     </string-array>
 
     <!--
-         Team drawables, do not translate! 
+         Team drawables, do not translate!
          should obviously match team array
     -->
     <string-array name="team_icon_resource_names">
@@ -145,7 +145,7 @@
     <string name="menuNews">News</string>
     <string name="loadingNews">Loading News&#8230;</string>
     <string name="homeButton">Home Button</string>
-    
+
     <string name="cdVenueDesc">Venues</string>
 
     <string name="played_hdr">P</string>
@@ -159,7 +159,7 @@
     <string name="server_error_body">Error in handling squad data. Please try again later.</string>
 
     <string name="cdIcon">Icon</string>
-    
+
     <string name="fixtureIconHomeCD">Home Team Icon</string>
     <string name="fixtureIconAwayCD">Away Team Icon</string>
 
@@ -168,16 +168,18 @@
 
     <string name="daysToGo">%d days to go!</string>
     <string name="oneDayToGo">One day to go!</string>
-    
+
     <string name="aboutMenu">About</string>
 
     <string name="teamsIconCD">Team Icon</string>
     <string name="feedLoadingError">Unable to load news. Please check your internet connection.</string>
     <!-- Do not translate -->
     <string name="adsId">4028cba631d63df10131e1d3818b00cc</string>
-    
+
     <string name="aboutHeader">About</string>
-    <string name="aboutText">Euro 2012 Planner Application developed by John O\'Halloran and Stephen Roberts &#169; 2012.\n\n 
+    <string name="aboutText">Euro 2012 Planner Application developed by John
+        O\'Halloran and Stephen Roberts &#169; 2012. Team write ups by Mark O\'Reilly.
+        \n\n
         Credits for stadium images:\n\n
         http://www.euro2012.uke.gov.pl/public/Page/Stadiums/Poznan/Rys0.jpg\n\n
         http://pics.livejournal.com/tov_tob/pic/005xw8b3\n\n
@@ -208,4 +210,124 @@
         <item>futbol</item>
         <item>eurocopa</item>
     </array>
+
+    <!--  Below here not in Spanish -->
+
+    <!-- Strings for squad tabs -->
+    <string name="squadHeader">Squad</string>
+    <string name="squadProspects">Prediction</string>
+    <string name="squadStarPlayer">Star Player</string>
+
+    <string name="prediction">Prediction:</string>
+
+    <!--  Write Ups -->
+    <string name="writeupNotFound">Write up not available</string>
+    <string name="starPlayerWriteupNotFound">Star Player Write up not available</string>
+    <string name="predictionNotFound">Not available</string>
+
+    <string name="writeup0">
+        Co-Hosts of the tournament Poland never had to qualify for the tournament
+        and have spent the past two years developing their side in anticipation
+        of the Euros in their home country. Unfortunately for Poland it has meant
+        they haven’t played a competitive international in 3 years. With a trio
+        of league winners hailing from the Borussia Dortmund team and an excellent
+        goalkeeper in Szcesny Poland have some experience in their ranks,
+        however qualification through to the quarters looks unlikely.
+        Home support and the wonderful striker Robert Lewandowski will have to
+        play their part if this minor miracle is to happen. Although he should
+        be the star man in this Polish team I have a feeling they will be more
+        on the back foot than the front.
+    </string>
+    <string name="prediction0">
+        Group exit
+    </string>
+    <string name="starman0">
+        Szcesny. The young Arsenal goalkeeper will have to be at his best if
+        Poland are to have any chance of qualifying from the group. A strong
+        goalkeeper with excellent reflexes, he has been outstanding for Arsenal.
+        His impact has been such that the often questioned Arsenal goalkeeping
+        position hasn’t been discussed in well over 18 months.
+    </string>
+
+    <string name="writeup1">
+        Having changed managers from the last campaign Greece have taken off the
+        shackles and adopted a more attacking 433 formation. It has proved very
+        effective and led to a run of 17 games unbeaten. Greece qualified top and
+        unbeaten in a group which contained a very good Croatian side as well as
+        Israel, Latvia and Georgia. This speaks for the defensive solidity they
+        have continued under Fernando Santos. Upfront Greece aren’t the strongest
+        and rely heavily on Gekas an excellent goalscorer but temperamental
+        character. The poor, sometimes awful Samaras will provide competition.
+        The star player for me though has to be Ninis in midfield. He was their
+        talisman during qualification and is their attacking playmaker.
+    </string>
+    <string name="prediction1">
+        Narrowly miss out on qualification
+    </string>
+    <string name="starman1">
+        Ninis. Another prodigious young talent who has recently signed for Parma.
+        He carries a huge responsibility to create for Greece but unfortunately
+        for him he has been injured for most of the season. If he can sparkle
+        Greece have a chance at qualifying.
+    </string>
+
+    <string name="writeup2">
+A tight qualifying campaign saw Russia as one of the last automatic qualifiers for the Euro’s.The Republic of Ireland finished 2nd in their group but were easily defeated at home by an impressive firt half Russian performance. Currently managed by the experienced ex Zenit St Petersburg manager Dick Advocaat, Russia have become less about the flair and more about the results. Four years ago saw a fluid, scintillating performance led by an explosive Andrey Arshavin. Time has taken its toll however and Arshavin no longer possesses the blistering pace and or match sharpness to make him the piercing wide threat he once was. Russia will instead look to their playmaker Shirokov to dictate the middle of the park and provide the ammunition for the young Dzagoev to hurt the opposition. Russia also possess an excellent goalkeeper in Akinfeev.
+    </string>
+    <string name="prediction2">
+        Group A winners
+    </string>
+    <string name="starman2">
+Dzagoev, a young wide man from CSKA Moscow. Has good Champions league experience and scored against Manchester United at Old Trafford. Expect good invention, quick feet and goalscoring opportunities.
+    </string>
+
+    <string name="writeup3">
+        Defeating Montenegro in the playoffs having finished behind Spain in the qualifying group, the Czech Rep maintained their fantastic record of having qualified for every Euro’s since the breakup of Czechoslovakia. The Czech side is solid and technically very adept.  Jiracek is a worker in the middle of the park and will be supported from either side by quick wing backs. However the main fulcrum of the team is Tomas Rosicky, the Arsenal midfielder. The Czech coach Bilek will be glad to have seen the renaissance of Rosicky in the latter half of the season after two horrendous years of injuries. A lot will depend on his guile and the finishing of Milan Baros if the Czech Rep are to qualify. A lack of a decent striker is a real problem as Baros has lost his yard of pace.
+    </string>
+    <string name="prediction3">
+        Qualify in 2nd, just
+    </string>
+    <string name="starman3">
+        Rosicky. A class player when he is fit and mobile. His form at the end of the season with Arsenal suggests he might be ready for the responsibility of leading his country into these Euros.
+    </string>
+
+    <string name="writeup4">
+        Everyone’s favourite second team Holland continues the legacy of Renes Michels, Cruyff, Gullit, Van Basten and Rikjaard with a commitment to attacking football. Holland finished top of their qualifying group scoring the more goals than any other team in qualification (37.) A wonderful team to watch they have come so close in recent years to winning a major championship’s but never quite made it over the line. With Robin Van Persie up top Holland have the most in form striker in Europe at present. RVP has devastated defences all year with his supreme technical ability and deadly accuracy.  He will be supported by the speed merchants Afellay and the wonderous Arjen Robben. These two wingers possess great ability to beat opposing full backs but it is their ability to get the ball into RVP and avoiding the temptation to be selfish which may define the Dutch teams campaign. Behind the front three will sit Wesley Sneijder an excellent no.10 who has lost his form since the world cup. Expect a big performance from him as he is said to be looking for a move this summer so this is his opportunity to put himself in the shop window. Looking further back in the team Jonny Heitnga is a solid performer, if not a bit rash and Gregory Van der Wiel provides great attacking support for the wingers. With De Jong and Van Bommel enforcing in the centre of the park Holland have a secure platform from which to spring forward. Discipline, as we seen in the World Cup could play an important part of their campaign.
+    </string>
+    <string name="prediction4">
+        Semi Final
+    </string>
+    <string name="starman4">
+Arjen Robben. A top class player who lit up this year Champions League I expect Robben to once again terrorise defences with his menace. Has a wonderful ability to change direction while moving a high speeds and a thunderous left foot. If Robben can make the right decisions in the final third i.e. when to give it to RVP and when to go alone he could be up there for player for the tournament.
+    </string>
+
+    <string name="writeup5">
+The most unfancied of the Group B teams, but Denmark will be no slouches. They had an impressive qualifying campaign as Portugal will be aware. They topped the group losing only once, away to Portugal. Denmark have a strong central defence in Agger and Kjaer with what looks now like Lindegaard in goal. The squad have the luck of having played under Martin Olsen for a long, long time which has bred continuity in tactics and squad harmony. They will be aware of all the teams in their group with the Dutch and Germans being their geographical neigbours and Portugal having been in their group. Upfront they possess the enigma that is Niklas Bendtner, normally a lot better for his country than at club level, but more importantly the highly sought after Christian Eriksen. The young playmaker has grown up at Ajax and exhibits all the technique and skills one would expect from an Ajax academy graduate. He will be instrumental if Denmark are to progress in the tournament.
+    </string>
+    <string name="prediction5">
+        Unlucky for Denmark that they ended up in such a difficult group. Elimination at the group stage is inevitable
+    </string>
+    <string name="starman5">
+         Cristian Eriksen. He might not get his chance to shine given the difficult opponents but in parts where Denmark plays well, he will be instrumental.
+    </string>
+
+    <string name="writeup6">
+German efficiency prevailed in the qualifying round easing through to the Euro’s with 10 wins from 10. An excellent record carrying on the legacy of teams from the 2006 World Cup. Many people’s bet to lift the title in Poland the German’s are hard to argue against. Their strength is in the middle of the park where they can boast the sublime (and in my opinion) finest centre midfielder in the world, Bastian Schweinsteiger. A machine of a man he is aligns technical brilliance with a phenomenal engine. He is the heartbeat of the team and the class of Mesut Ozil just in front provides a perfect compliment to his industry. Ozil is a tremendously talented individual capable of splitting defence’s apart with his wonderful vision and skill of pass. Wide of Ozil Germany can call on the young but brilliant Tomas Muller and Podolski. Up top Germany have one of the most prolific international strikers around in Miroslav Klose, who along with Podolksi will effectively be playing on home soil given they are half Polish. When examining the back line there is also talents in abundance. Phillip Lahm, capable of playing on either full back position and the Bayern keeper Neuer provide true world class cover. However, the one soft area of the German team is the centre of defence. Badstuber and Hummels aren’t the greatest but the quality and ability of the rest of the team will see the Germans are OK. From the bench Germany have two of the most exciting prospects in Europe in Reus and the majestic Mario Gotze. Gotze campaign was blighted by injury this year but this may leave him feeling fresher for the tournament. If he gets time on the pitch I would expect him to make a telling impact.
+    </string>
+    <string name="prediction6">
+        Final
+    </string>
+    <string name="starman6">
+Schweinsteiger. Although Germany have some phenomenal attacking talent ‘’Schweiny’’ is quite simply the complete footballer. He will dictate their tempo and always be available for teammates. His experience is also vital for the younger players and I expect him to be one of the players of the tournament. Injured for most of the season, Schweinsteiger came back toward the end of the season and absolutely dominated the midfield in the CL final. Unfortunately for him he was to miss the significant penalty in the shootout but I expect his German mentality to allow him to forget the tragedy in Munich and set his sights firmly on winning in Poland.
+    </string>
+
+    <string name="writeup7">
+Cometh the hour….Cometh the man….Thats what he’ll be thinking anyway. After another virtuoso year Cristiano Ronaldo steps into this tournament with the opportunity to make history for both Portugal and himself. With no Leo Messi to compete with, CR7 can be the first Portuguese captain to lift an international trophy. It’s just a pity for him they got drawn in the group of death. A very talented squad marshaled by Paulo Bento, Portugal struggled through the qualifying group stages finishing second in their group to Denmark. Fortunately they came through the second leg with an emphatic 6-2 win over Bosnia and cemented their place in the finals. Although the talisman is Ronaldo, Portugal have a wealth of attacking talent. Traditionally their problem area has been their goalkeeper and their no9. The no9 problem still exists with Postiga and Almeida fighting it out for a starting berth but in Rui Patricio Portugal can boast one of the most consistent performers in Europe this past two seasons. Nani and Ronaldo will terrorise defences with their speed and trickery but the player who will dictate everything will be the excellent Joao Moutinho. Small in stature but with fantastic ability the Porto midfielder is a superb creator of chances. Expect fast, possession football from Portugal with a strong emphasis on quick counter attacks utilizing the speed of Ronaldo and Nani. Personally however, I just don’t see any way past the two big hitters in this group and with a poor defence and teams focusing on Ronaldo I don’t see Portugal having enough to get out of the group.
+    </string>
+    <string name="prediction7">
+        Group stage exit
+    </string>
+    <string name="starman7">
+Fabio Coentrao. A shocking first season at Madrid after signing for 20+million, he had the fans heavily criticisizing him, but Coentrao got through it and won La Liga. He is an excellent attacking full back and I expect to see him perform back to his best with his national team. He is the first choice left back and the confidence the manager as in him should help him perform to the level he is capable of. In a group full of attacking talent he will no doubt be worked hard so it will be important for him to play well.
+    </string>
 </resources>

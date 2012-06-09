@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <array name="starPlayersUrls">
+        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/108501.jpg</item>
+        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/1900714.jpg</item>
+        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/108426.jpg</item>
+        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/33466.jpg</item>
+        
+        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/57134.jpg</item>
+        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/1905884.jpg</item>
+        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/67496.jpg</item>
+        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/107951.jpg</item>
+    </array>
+</resources>

@@ -27,14 +27,15 @@ import com.actionbarsherlock.view.MenuItem;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.neoware.europlanner.E12DataService.DataLoadedCallback;
+import com.neoware.europlanner.fragments.StageFragment;
 
 public class GamesActivity extends E12ServiceActivity {
 
-    TabsAdapter mTabAdapter;
+    private TabsAdapter mTabAdapter;
 
     //TODO: Check out this indicator: http://www.zylinc.com/blog-reader/items/viewpaager-page-indicator.html
-    ViewPager mPager;
-    TournamentDefinition mTournamentDefn;
+    private ViewPager mPager;
+    private TournamentDefinition mTournamentDefn;
 
     public static final String GROUP_KNOCKOUT = "groupKnockout";
 
@@ -121,7 +122,7 @@ public class GamesActivity extends E12ServiceActivity {
         }
     }
 
-    public static class TabsAdapter extends FragmentPagerAdapter
+    private static class TabsAdapter extends FragmentPagerAdapter
         implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
         private final ActionBar mActionBar;
