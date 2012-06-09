@@ -6,7 +6,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import junit.framework.Assert;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
@@ -33,7 +32,11 @@ public class NewsActivity extends SherlockActivity {
 
     private MenuItem mRefreshItem;
     private FeedsAdapter mAdapter;
-    private ProgressDialog mProgressDialog;
+
+    //TODO: Removing progress dialog for now. People can then read the loaded news
+    //       while other news loads. Going to leave it just commented for now in case
+    //       we need it again
+    //private ProgressDialog mProgressDialog;
     private TournamentDefinition mDefn;
 
     @Override
@@ -58,7 +61,7 @@ public class NewsActivity extends SherlockActivity {
                 findViewById(R.id.newsList);
 
         String loadingNews = getResources().getString(R.string.loadingNews);
-        mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
+        //mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
 
         mAdapter = new FeedsAdapter(this);
         listView.setAdapter(mAdapter);
@@ -163,7 +166,7 @@ public class NewsActivity extends SherlockActivity {
             public void onReaderComplete(FeedDefn feed, String errorMessage) {
 
                 if(allFeedsLoaded()) {
-                    mProgressDialog.dismiss();
+                    //mProgressDialog.dismiss();
                 }
 
                 if(feed == null) {
@@ -190,7 +193,7 @@ public class NewsActivity extends SherlockActivity {
             }
         }
 
-        if(allFeedsLoaded()) mProgressDialog.dismiss();
+        //if(allFeedsLoaded()) mProgressDialog.dismiss();
     }
 
     @Override
@@ -217,7 +220,7 @@ public class NewsActivity extends SherlockActivity {
         else if(item == mRefreshItem) {
 
             String loadingNews = getResources().getString(R.string.loadingNews);
-            mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
+            //mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
             mAdapter.clearFeeds();
 
             for(FeedDefn feed : mDefn.getFeeds()) feed.loaded = false;
