@@ -218,7 +218,7 @@
     <string name="squadProspects">Prediction</string>
     <string name="squadStarPlayer">Star Player</string>
 
-    <string name="prediction">Prediction:</string>
+    <string name="prediction">Pre Tournament Prediction:</string>
 
     <!--  Write Ups -->
     <string name="writeupNotFound">Write up not available</string>
