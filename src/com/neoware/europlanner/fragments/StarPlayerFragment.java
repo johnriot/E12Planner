@@ -47,6 +47,9 @@ public class StarPlayerFragment extends SherlockFragment {
         TextView starPlayerTv = (TextView)layout.findViewById(R.id.startPlayerTv);
         starPlayerTv.setText(squad.getStarPlayerWriteUp(getSherlockActivity()));
 
+        TextView starPlayerNameTv = (TextView)layout.findViewById(R.id.starPlayerName);
+        starPlayerNameTv.setText(squad.getStarPlayerName(getSherlockActivity()));
+
         String url = squad.getStarPlayerUrl(getSherlockActivity());
         if(url != null) {
 

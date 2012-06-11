@@ -179,7 +179,7 @@
     
     <string name="aboutHeader">Información</string>
     <string name="aboutText">Euro 2012 Planner ha estado desarollada por John O\'Halloran y Stephen Roberts, y la traducción al español por Christina Llopis &#169; 2012.\n\n 
-        Créditos para las imagenes de los estadios:\n\n
+        Prediccíones por Mark O´Reilly. Vienen en Español pronto! Créditos para las imagenes de los estadios:\n\n
         http://www.euro2012.uke.gov.pl/public/Page/Stadiums/Poznan/Rys0.jpg\n\n
         http://pics.livejournal.com/tov_tob/pic/005xw8b3\n\n
         http://en.wikipedia.org/wiki/File:Stadion_Narodowy_w_Warszawie_20120422.jpg\n\n
@@ -215,4 +215,16 @@
    <string name="abs__action_bar_home_description">Home</string>
    <string name="abs__action_menu_overflow_description">Overflow</string>
    <string name="abs__action_mode_done">Done</string>
+
+    <!-- Strings for squad tabs -->
+    <string name="squadHeader">Equipo</string>
+    <string name="squadProspects">Prediccíon</string>
+    <string name="squadStarPlayer">Jugador Estrella</string>
+
+    <string name="prediction">Pre Tournament Prediction:</string>
+
+    <!--  Write Ups -->
+    <string name="writeupNotFound">No disponible</string>
+    <string name="starPlayerWriteupNotFound">No disponible</string>
+    <string name="predictionNotFound">No disponible</string>
 </resources>

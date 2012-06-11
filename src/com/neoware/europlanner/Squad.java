@@ -10,6 +10,7 @@ public class Squad {
     private static final String WRITE_UP_RES_PREFIX = "writeup";
     private static final String STAR_PLAYER_RES_PREFIX = "starman";
     private static final String PREDICTION_RES_PREFIX = "prediction";
+    private static final String STAR_PLAYER_NAME_RES_PREFIX = "starmanname";
 
     private final int mId;
     private final ArrayList<Player> mPlayers = new ArrayList<Player>();
@@ -87,6 +88,21 @@ public class Squad {
         }
         catch(Resources.NotFoundException ex) {
             return context.getResources().getString(R.string.predictionNotFound);
+        }
+    }
+
+    public String getStarPlayerName(Context context) {
+
+        String predictionStrId = STAR_PLAYER_NAME_RES_PREFIX + mId;
+
+        int id = context.getResources().getIdentifier(predictionStrId ,
+                "string", context.getPackageName());
+
+        try {
+            return context.getResources().getString(id);
+        }
+        catch(Resources.NotFoundException ex) {
+            return context.getResources().getString(R.string.nameNotFound);
         }
     }
 
