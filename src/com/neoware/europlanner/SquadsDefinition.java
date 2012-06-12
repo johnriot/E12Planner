@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -24,19 +25,31 @@ import org.xml.sax.XMLReader;
 import android.content.Context;
 import android.content.ContextWrapper;
 
-public class SquadDefinition {
+public class SquadsDefinition {
 
     private static final String mDefinitionFileName = "squaddefn.xml";
 
     private File mDefnFile;
 
     private final Context mContext;
-    private Squad mSquad;
-    private static int mTargetSquadId;
-    private static int mCurrentSquadId;
+    private final ArrayList<Squad> mSquads = new ArrayList<Squad>();
 
-    public SquadDefinition(Context context, int teamIndx) {
-        mTargetSquadId = teamIndx;
+    private static SquadsDefinition DEFN_SINGLETON = null;
+
+    public static SquadsDefinition getSquadsDefnInstance(Context context) {
+
+        if(DEFN_SINGLETON == null) {
+            DEFN_SINGLETON = new SquadsDefinition(context);
+        }
+
+        return DEFN_SINGLETON;
+    }
+
+    public static void refreshSquadsDefnInstance(Context context) {
+        DEFN_SINGLETON = new SquadsDefinition(context);
+    }
+
+    private SquadsDefinition(Context context) {
         mContext = context;
         initialise();
         refreshDataStructre();
@@ -88,30 +101,23 @@ public class SquadDefinition {
                 private static final String NAME = "name";
                 private static final String DOB = "dob";
 
+                private Squad mCurrentSquad;
+
                 @Override
                 public void startElement(String uri, String localName,
                         String qName, Attributes atts) throws SAXException {
 
                     if(localName.equals(SQUAD)) {
 
-                        mCurrentSquadId = Integer.parseInt(atts.getValue(SQUAD_ID));
-                        // Only parse the squad we want, skip otherwise
-                        if(mCurrentSquadId != mTargetSquadId) {
-                            return;
-                        }
-                        else {
-                            mSquad = new Squad(
-                                    Integer.parseInt(atts.getValue(SQUAD_ID)));
-                        }
+                        if(mCurrentSquad != null) mSquads.add(mCurrentSquad);
+
+                        mCurrentSquad = new Squad(
+                                Integer.parseInt(atts.getValue(SQUAD_ID)));
                     }
 
                     else if(localName.equals(PLAYER)) {
-                        // Only parse the squad we want, skip otherwise
-                        if(mCurrentSquadId != mTargetSquadId) {
-                            return;
-                        }
 
-                        mSquad.addPlayer(new Player(
+                        mCurrentSquad.addPlayer(new Player(
                                 atts.getValue(POSITION),
                                 atts.getValue(NUMBER),
                                 atts.getValue(NAME),
@@ -121,7 +127,10 @@ public class SquadDefinition {
                 }
 
                 @Override
-                public void endDocument() throws SAXException { // TODO: Remove
+                public void endDocument() throws SAXException {
+                    if(mCurrentSquad != null) {
+                        mSquads.add(mCurrentSquad);
+                    }
                 }
 
                 @Override public void startPrefixMapping(String prefix, String uri) throws SAXException {}
@@ -148,7 +157,13 @@ public class SquadDefinition {
         }
     }
 
-    public Squad getSquad() {
-        return mSquad;
+    public Squad getSquad(int squadId) {
+        for(Squad squad : mSquads) {
+            if(squad.getId() == squadId) {
+                return squad;
+            }
+        }
+
+        return null;
     }
 }

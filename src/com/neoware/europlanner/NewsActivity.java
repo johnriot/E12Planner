@@ -1,8 +1,11 @@
 package com.neoware.europlanner;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
-import android.app.ProgressDialog;
+import junit.framework.Assert;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
@@ -17,8 +20,8 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.inmobi.androidsdk.IMAdRequest;
-import com.inmobi.androidsdk.IMAdView;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 import com.neoware.europlanner.FeedsAdapter.FeedDefn;
 import com.neoware.rss.RSSFault;
 import com.neoware.rss.RSSItem;
@@ -29,7 +32,11 @@ public class NewsActivity extends SherlockActivity {
 
     private MenuItem mRefreshItem;
     private FeedsAdapter mAdapter;
-    private ProgressDialog mProgressDialog;
+
+    //TODO: Removing progress dialog for now. People can then read the loaded news
+    //       while other news loads. Going to leave it just commented for now in case
+    //       we need it again
+    //private ProgressDialog mProgressDialog;
     private TournamentDefinition mDefn;
 
     @Override
@@ -50,17 +57,11 @@ public class NewsActivity extends SherlockActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewNews);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         final ExpandableListView listView = (ExpandableListView)
                 findViewById(R.id.newsList);
 
-        String loadingNews = getResources().getString(R.string.loadingNews);
-        mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
+        //String loadingNews = getResources().getString(R.string.loadingNews);
+        //mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
 
         mAdapter = new FeedsAdapter(this);
         listView.setAdapter(mAdapter);
@@ -86,6 +87,25 @@ public class NewsActivity extends SherlockActivity {
         });
 
         loadFeeds();
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        if(Settings.USE_LIVE_ADS) {
+            AdView adview = (AdView)findViewById(R.id.adViewNews);
+            Assert.assertNotNull(adview);
+
+            AdRequest req = new AdRequest();
+
+            String [] keywords = getResources().getStringArray(R.array.adKeywords);
+            Set<String> keywordsSet = new HashSet<String>(Arrays.asList(keywords));
+            req.setKeywords(keywordsSet);
+
+            adview.loadAd(req);
+        }
     }
 
     private static class AsyncReader extends AsyncTask<String, Void, FeedDefn> {
@@ -146,7 +166,7 @@ public class NewsActivity extends SherlockActivity {
             public void onReaderComplete(FeedDefn feed, String errorMessage) {
 
                 if(allFeedsLoaded()) {
-                    mProgressDialog.dismiss();
+                    //mProgressDialog.dismiss();
                 }
 
                 if(feed == null) {
@@ -173,7 +193,7 @@ public class NewsActivity extends SherlockActivity {
             }
         }
 
-        if(allFeedsLoaded()) mProgressDialog.dismiss();
+        //if(allFeedsLoaded()) mProgressDialog.dismiss();
     }
 
     @Override
@@ -199,8 +219,8 @@ public class NewsActivity extends SherlockActivity {
         }
         else if(item == mRefreshItem) {
 
-            String loadingNews = getResources().getString(R.string.loadingNews);
-            mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
+            //String loadingNews = getResources().getString(R.string.loadingNews);
+            //mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
             mAdapter.clearFeeds();
 
             for(FeedDefn feed : mDefn.getFeeds()) feed.loaded = false;

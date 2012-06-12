@@ -1,4 +1,4 @@
-package com.neoware.europlanner;
+package com.neoware.europlanner.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,16 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.neoware.europlanner.TournamentDefinition;
+import com.neoware.europlanner.TournamentStage;
 
 public class StageFragment extends SherlockFragment {
 
-    @Override
-    public View getView() {
+    private static final String STAGE_ID = "stageid";
+    private int mStageId;
 
-        return super.getView();
+    public StageFragment() {
+        mStageId = 0;
     }
-
-    private final int mStageId;
 
     public StageFragment(int stageId) {
         mStageId = stageId;
@@ -25,10 +26,19 @@ public class StageFragment extends SherlockFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        if(savedInstanceState != null) {
+            mStageId = savedInstanceState.getInt(STAGE_ID);
+        }
+
         TournamentStage stage = TournamentDefinition.getTournamentDefnInstance(
                 getActivity()).getStage(mStageId);
 
         return stage.drawView(inflater, container, savedInstanceState, this.getResources(), getActivity());
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedState) {
+        super.onSaveInstanceState(savedState);
+        savedState.putInt(STAGE_ID, mStageId);
+    }
 }

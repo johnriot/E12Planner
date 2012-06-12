@@ -11,7 +11,7 @@
 
         <ImageView 
             android:contentDescription="@string/app_name"
-            android:layout_above="@+id/adView"
+            android:layout_above="@+id/adViewPlannerActivityHome"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/euro2012ball"/>
@@ -41,11 +41,12 @@
             </TableRow>
         </TableLayout>
 
-        <com.inmobi.androidsdk.IMAdView
+        <com.google.ads.AdView
             android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
+            android:id="@+id/adViewPlannerActivityHome"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:id="@+id/adView"
-            appId="@string/adsId"
-            adSlot="15" />
+            ads:adUnitId="a14f59150c4f295"
+            ads:adSize="BANNER"
+            ads:loadAdOnCreate="false"/>
     </RelativeLayout>

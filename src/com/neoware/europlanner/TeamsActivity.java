@@ -1,5 +1,13 @@
 package com.neoware.europlanner;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import junit.framework.Assert;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.BitmapDrawable;
@@ -16,12 +24,15 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.MenuItem;
-import com.inmobi.androidsdk.IMAdRequest;
-import com.inmobi.androidsdk.IMAdView;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+import com.neoware.europlanner.E12DataService.DataLoadedCallback;
 
 public class TeamsActivity extends E12ServiceActivity {
 
     private static final int TEAMS_PER_GROUP = 4;
+
+    private ProgressDialog mProgressDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,12 +49,6 @@ public class TeamsActivity extends E12ServiceActivity {
         bar.setHomeButtonEnabled(true);
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
-
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewTeams);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
 
         final String teams[] = getResources().getStringArray(R.array.team_names);
         final String groups[] = getResources().getStringArray(R.array.groups);
@@ -70,6 +75,25 @@ public class TeamsActivity extends E12ServiceActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        if(Settings.USE_LIVE_ADS) {
+            AdView adview = (AdView)findViewById(R.id.adViewTeams);
+            Assert.assertNotNull(adview);
+
+            AdRequest req = new AdRequest();
+
+            String [] keywords = getResources().getStringArray(R.array.adKeywords);
+            Set<String> keywordsSet = new HashSet<String>(Arrays.asList(keywords));
+            req.setKeywords(keywordsSet);
+
+            adview.loadAd(req);
+        }
     }
 
     @Override
@@ -187,8 +211,39 @@ public class TeamsActivity extends E12ServiceActivity {
 
     @Override
     protected void onServiceConnected() {
-        // TODO Auto-generated method stub
 
+        String loading = getResources().getString(R.string.loadingSquads);
+        mProgressDialog = ProgressDialog.show(this, "", loading, true);
+
+        mBinder.loadSquadsDefnFromServer(new DataLoadedCallback() {
+
+            @Override
+            public void errorLoadingData(String error) {
+
+                mProgressDialog.dismiss();
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(TeamsActivity.this);
+                alertDialogBuilder.setTitle(R.string.errorHeader);
+                alertDialogBuilder
+                    .setMessage(error)
+                    .setCancelable(true)
+                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog,int id) {
+                            dialog.cancel();
+                        }
+                      });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+
+            }
+
+            @Override
+            public void dataReady() {
+                mProgressDialog.dismiss();
+            }
+        } , false);
     }
 
     @Override

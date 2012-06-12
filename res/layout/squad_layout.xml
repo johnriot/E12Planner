@@ -9,47 +9,20 @@
         android:background="@color/white"
         android:id="@+id/squadLayout">
 
-     <com.inmobi.androidsdk.IMAdView
+        <com.google.ads.AdView
             android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
+            android:id="@+id/adViewSquad"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:id="@+id/adViewTeams"
-            appId="@string/adsId"
-            adSlot="15"
-            testMode="true" />
+            ads:adUnitId="a14f59150c4f295"
+            ads:adSize="BANNER"
+            ads:loadAdOnCreate="false"/>
 
-    <ScrollView 
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:id="@+id/scrollView1" 
-        android:layout_width="fill_parent">
-    
-        <TableLayout
-            android:id="@+id/squadTableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shrinkColumns="*"
-            android:stretchColumns="*">
-            <TableRow
-                android:id="@+id/tableHeader"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                >
-                <TextView android:text=""/>
-                <TextView
-                    android:text="@string/jersey_hdr"
-                    android:gravity="center_horizontal"
-                    android:textColor="#FF000000"/>
-                <TextView
-                    android:text="@string/player_hdr"
-                    android:gravity="center_horizontal"
-                    android:textColor="#FF000000"/>
-                <TextView
-                    android:text="@string/age_hdr"
-                    android:gravity="center_horizontal"
-                    android:textColor="#FF000000"/>
-            </TableRow>
-        </TableLayout>
-    </ScrollView>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/squadPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/adViewSquad"/>
 
 </RelativeLayout>

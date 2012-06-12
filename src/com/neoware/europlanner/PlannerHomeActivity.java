@@ -1,5 +1,10 @@
 package com.neoware.europlanner;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+import junit.framework.Assert;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,8 +22,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.inmobi.androidsdk.IMAdRequest;
-import com.inmobi.androidsdk.IMAdView;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 
 public class PlannerHomeActivity extends Activity implements OnClickListener {
 
@@ -32,12 +37,6 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.main);
-
-        IMAdView adView = (IMAdView) findViewById(R.id.adView);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
 
         LinearLayout newsLayout =
                 (LinearLayout)findViewById(R.id.news_button);
@@ -68,6 +67,25 @@ public class PlannerHomeActivity extends Activity implements OnClickListener {
 
         TextView teamsTv = (TextView)findViewById(R.id.teamsMenuTv);
         teamsTv.setTypeface(font);
+    }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+
+        if(Settings.USE_LIVE_ADS) {
+            AdView adview = (AdView)findViewById(R.id.adViewPlannerActivityHome);
+            Assert.assertNotNull(adview);
+
+            AdRequest req = new AdRequest();
+
+            String [] keywords = getResources().getStringArray(R.array.adKeywords);
+            Set<String> keywordsSet = new HashSet<String>(Arrays.asList(keywords));
+            req.setKeywords(keywordsSet);
+
+            adview.loadAd(req);
+        }
     }
 
     @Override

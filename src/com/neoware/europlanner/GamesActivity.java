@@ -1,8 +1,12 @@
 package com.neoware.europlanner;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.HashSet;
+import java.util.Set;
 
+import junit.framework.Assert;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -20,17 +24,18 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.inmobi.androidsdk.IMAdRequest;
-import com.inmobi.androidsdk.IMAdView;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 import com.neoware.europlanner.E12DataService.DataLoadedCallback;
+import com.neoware.europlanner.fragments.StageFragment;
 
 public class GamesActivity extends E12ServiceActivity {
 
-    TabsAdapter mTabAdapter;
+    private TabsAdapter mTabAdapter;
 
     //TODO: Check out this indicator: http://www.zylinc.com/blog-reader/items/viewpaager-page-indicator.html
-    ViewPager mPager;
-    TournamentDefinition mTournamentDefn;
+    private ViewPager mPager;
+    private TournamentDefinition mTournamentDefn;
 
     public static final String GROUP_KNOCKOUT = "groupKnockout";
 
@@ -53,17 +58,10 @@ public class GamesActivity extends E12ServiceActivity {
         bar.setDisplayHomeAsUpEnabled(true);
         bar.setDisplayUseLogoEnabled(true);
 
-        IMAdView adView = (IMAdView) findViewById(R.id.adViewGames);
-        IMAdRequest adRequest = new IMAdRequest();
-        adRequest.setTestMode(true);
-        adView.setIMAdRequest(adRequest);
-        adView.loadNewAd();
-
         mTournamentDefn = TournamentDefinition.getTournamentDefnInstance(this);
 
         mPager = (ViewPager)findViewById(R.id.groupPager);
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
 
         mTabAdapter = new TabsAdapter(this, mPager);
         mPager.setAdapter(mTabAdapter);
@@ -77,6 +75,24 @@ public class GamesActivity extends E12ServiceActivity {
         }
 
         mPager.setCurrentItem(groupIndx);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if(Settings.USE_LIVE_ADS) {
+            AdView adview = (AdView)findViewById(R.id.adViewGames);
+            Assert.assertNotNull(adview);
+
+            AdRequest req = new AdRequest();
+
+            String [] keywords = getResources().getStringArray(R.array.adKeywords);
+            Set<String> keywordsSet = new HashSet<String>(Arrays.asList(keywords));
+            req.setKeywords(keywordsSet);
+
+            adview.loadAd(req);
+        }
     }
 
     public void addGroupsAndKnockout() {
@@ -106,7 +122,7 @@ public class GamesActivity extends E12ServiceActivity {
         }
     }
 
-    public static class TabsAdapter extends FragmentPagerAdapter
+    private static class TabsAdapter extends FragmentPagerAdapter
         implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
         private final ActionBar mActionBar;
@@ -180,7 +196,7 @@ public class GamesActivity extends E12ServiceActivity {
             return true;
         }
         else if(item == mRefreshItem) {
-            readGamesFromServer();
+            readGamesFromServer(true);
         }
 
         return super.onMenuItemSelected(featureId, item);
@@ -209,13 +225,13 @@ public class GamesActivity extends E12ServiceActivity {
 
     @Override
     protected void onServiceConnected() {
-        readGamesFromServer();
+        readGamesFromServer(false);
     }
 
     @Override
     protected void onServiceDisconnected() { }
 
-    private void readGamesFromServer() {
+    private void readGamesFromServer(boolean forceLoad) {
 
         String loading = getResources().getString(R.string.loadingResults);
         mProgressDialog = ProgressDialog.show(this, "", loading, true);
@@ -225,7 +241,7 @@ public class GamesActivity extends E12ServiceActivity {
             @Override
             public void errorLoadingData(String error) {
 
-                mProgressDialog.hide();
+                mProgressDialog.dismiss();
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(GamesActivity.this);
                 alertDialogBuilder.setTitle(R.string.errorHeader);
@@ -246,9 +262,9 @@ public class GamesActivity extends E12ServiceActivity {
 
             @Override
             public void dataReady() {
-                mProgressDialog.hide();
+                mProgressDialog.dismiss();
                 mTabAdapter.notifyDataSetChanged();
             }
-        });
+        } , forceLoad);
     }
 }

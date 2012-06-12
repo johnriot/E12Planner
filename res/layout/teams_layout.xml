@@ -9,14 +9,14 @@
         android:background="@color/white"
         android:id="@+id/teamsLayout">
 
-        <com.inmobi.androidsdk.IMAdView
+        <com.google.ads.AdView
             android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
             android:id="@+id/adViewTeams"
-            appId="@string/adsId"
-            adSlot="15"
-            testMode="true" />
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            ads:adUnitId="a14f59150c4f295"
+            ads:adSize="BANNER"
+            ads:loadAdOnCreate="false"/>
 
         <ListView 
             android:layout_height="wrap_content"
