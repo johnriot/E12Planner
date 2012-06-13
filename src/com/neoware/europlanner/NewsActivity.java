@@ -142,7 +142,9 @@ public class NewsActivity extends SherlockActivity {
         @Override
         protected void onPostExecute(FeedDefn result) {
             super.onPostExecute(result);
-            mFeedDefn.loaded = true;
+            if(result != null) {
+                mFeedDefn.loaded = true;
+            }
             mReaderComplete.onReaderComplete(result, mErrorMessage);
         }
     }

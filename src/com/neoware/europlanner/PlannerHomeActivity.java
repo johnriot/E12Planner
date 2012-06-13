@@ -165,7 +165,7 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
      */
     private void getAndDisplayFeed() {
 
-        if(TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(UEFA_FEED) == true) {
+        if(TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(UEFA_FEED)) {
             String newsTicker = makeTickerText();
             displayTickerText(newsTicker);
         }
