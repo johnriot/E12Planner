@@ -22,10 +22,10 @@ public class ReadDataAsyncTask extends AsyncTask<String, Integer, Boolean> {
     };
 
     public static final String SQUAD_DEFN_DATA_URL = "http://dl.dropbox.com/u/82143078/squaddefn.xml";
-    public static final String TOURN_DEFN_DATA_URL = "http://dl.dropbox.com/u/82143078/tournamentdefn.xml";
+    //public static final String TOURN_DEFN_DATA_URL = "http://dl.dropbox.com/u/82143078/tournamentdefn.xml";
 
     //USE FOR TESTING
-    //public static final String TOURN_DEFN_DATA_URL = "http://dl.dropbox.com/u/82143078/test_defn.xml";
+    public static final String TOURN_DEFN_DATA_URL = "http://dl.dropbox.com/u/82143078/test_defn.xml";
 
     private final OnDataLoadedCallback mCallback;
     private String mErrorMessage;

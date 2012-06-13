@@ -17,55 +17,75 @@ public class GroupOrdering {
     }
 
     public static void order(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+
+        // Order the group based on points only
         setTeamsUnsorted(teams);
         orderByPoints(teams, fixtures);
-        mTieBreaker = TieBreakers.POINTS_DECIDE.ordinal();
-
-        while(!areAllTeamsSorted(teams)) {
-            try {
-                orderTies(teams, fixtures);
-                Collections.sort(teams, new TeamsComparator());
-                setTeamsSorted(teams);
-            }
-            catch(CantOrderTeamsException e) {
-                // TODO: Should take some action here if teams cannot be sorted on info
-                // available - either sort group based on XML input or prompt user
-                return;
-            }
+        Collections.sort(teams, new TeamsComparator());
+        setTeamsSorted(teams);
+        if(areAllTeamsSorted(teams)) {
+            return;
         }
+
+        // Split any ties
+        mTieBreaker = TieBreakers.POINTS_DECIDE.ordinal();
+        try {
+            orderTies(teams, fixtures);
+        }
+        catch(CantOrderTeamsException e) {
+            // TODO: Should take some action here if teams cannot be sorted on info
+            // available - either sort group based on XML input or prompt user
+            return;
+        }
+
     }
 
     private static void orderTies(ArrayList<Team> teams, ArrayList<Fixture> fixtures)
                                         throws CantOrderTeamsException {
+
         ArrayList<Team> ties = new ArrayList<Team>(teams.size());
-        for(int t = 0; t < teams.size(); ++t) {
+        for(int t = 0; t < teams.size() - 1; ) {
             ties = findTiesFromSubset(t, teams);
             if(ties == null)
                 continue;
 
-            clearComparisonValues(ties);
-            switch (TieBreakers.values()[mTieBreaker++]) {
-            case POINTS_DECIDE:
-                orderTiesByPoints(ties, fixtures);
-                break;
-            case GOAL_DIFF_DECIDES:
-                orderTiesByGoalDifference(ties, fixtures);
-                break;
-            case GOALS_SCORED_DECIDES:
-                orderTiesByGoalsScored(ties, fixtures);
-                break;
-            case GOAL_DIFF_ALL_DECIDES:
-                orderTiesByGoalDifferenceAll(ties, fixtures);
-                break;
-            case GOALS_SCORED_ALL_DECIDES:
-                orderTiesByGoalsScoredAll(ties, fixtures);
-                break;
-            case NO_MORE_TIEBREAKERS:
-                throw new CantOrderTeamsException();
-            }
+            do {
+                clearComparisonValues(ties);
+                switch (TieBreakers.values()[mTieBreaker++]) {
+                case POINTS_DECIDE:
+                    orderTiesByPoints(ties, fixtures);
+                    break;
+                case GOAL_DIFF_DECIDES:
+                    orderTiesByGoalDifference(ties, fixtures);
+                    break;
+                case GOALS_SCORED_DECIDES:
+                    orderTiesByGoalsScored(ties, fixtures);
+                    break;
+                case GOAL_DIFF_ALL_DECIDES:
+                    orderTiesByGoalDifferenceAll(ties, fixtures);
+                    break;
+                case GOALS_SCORED_ALL_DECIDES:
+                    orderTiesByGoalsScoredAll(ties, fixtures);
+                    break;
+                case NO_MORE_TIEBREAKERS:
+                    break;
+                }
 
-            // Replace tied teams with (possibly) sorted teams
-            t = replaceTiedWithSortedTeams(t, teams, ties);
+                Collections.sort(ties, new TeamsComparator());
+                setTeamsSorted(ties);
+                // Replace tied teams with (possibly) sorted teams
+                replaceTiedWithSortedTeams(t, teams, ties);
+
+            } while(!areAllTeamsSorted(ties) &&
+                    mTieBreaker <= TieBreakers.NO_MORE_TIEBREAKERS.ordinal());
+
+            // Set next loop for next bunch of tying teams
+            t += ties.size();
+        }
+
+        // Throw exception if we've failed to sort by now
+        if(!areAllTeamsSorted(teams)) {
+            throw new CantOrderTeamsException();
         }
     }
 
@@ -218,8 +238,12 @@ public class GroupOrdering {
         ArrayList<Team> tiedTeams = new ArrayList<Team>();
         tiedTeams.add(teams.get(startIndx));
         for(int ii = startIndx + 1; ii < teams.size(); ++ii) {
-            if(!teams.get(ii).isSorted()) {
+            Team thisTeam = teams.get(ii);
+            if(!thisTeam.isSorted()) {
                 tiedTeams.add(teams.get(ii));
+            }
+            else {
+                break;
             }
         }
         if(tiedTeams.size() == 1) {
