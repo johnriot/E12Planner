@@ -165,8 +165,8 @@ public class E12DataService extends Service {
         }).execute(ReadDataAsyncTask.TOURN_DEFN_DATA_URL);
     }
 
-    private void loadFeeds(final DataLoadedCallback callback)
-    {
+    private void loadFeeds(final DataLoadedCallback callback) {
+
         final FeedsReader reader = new FeedsReader(this);
 
         reader.loadFeeds(new AsyncFeedsReader.ReaderCompleteCallback() {

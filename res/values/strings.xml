@@ -179,8 +179,8 @@
     <!-- News Ticker -->
     <string name="ticker_text">UEFA News Loading.... Touch for Full Index!</string>
     <string name="loadingFeedError">News Channel Temporarily Unavailable.</string>
-    <string name="uefa_feed_lead">UEFA NEWS FEED....</string>
-    <string name="uefa_feed_tail">*END OF FEED*....</string>
+    <string name="uefa_feed_lead">UEFA NEWS FEED &#8230;</string>
+    <string name="uefa_feed_tail">*END OF FEED* &#8230;</string>
 
     <string name="aboutHeader">About</string>
     <string name="aboutText">Euro 2012 Planner Application developed by John

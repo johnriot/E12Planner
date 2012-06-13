@@ -76,17 +76,6 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
     public void onResume() {
 
         super.onResume();
-        if(mBinder != null) {
-            if(TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(UEFA_FEED) == false) {
-
-                displayTickerText(getResources().getString(R.string.ticker_text));
-                getAndDisplayFeed();
-            }
-            else {
-                String tickerText = makeTickerText();
-                displayTickerText(tickerText);
-            }
-        }
 
         if(Settings.USE_LIVE_ADS) {
             AdView adview = (AdView)findViewById(R.id.adViewPlannerActivityHome);
@@ -238,7 +227,15 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
 
     @Override
     protected void onServiceConnected() {
-        getAndDisplayFeed();
+
+            if(!TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(UEFA_FEED)) {
+                displayTickerText(getResources().getString(R.string.ticker_text));
+                getAndDisplayFeed();
+            }
+            else {
+                String tickerText = makeTickerText();
+                displayTickerText(tickerText);
+            }
     }
 
     @Override

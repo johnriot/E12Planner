@@ -27,8 +27,6 @@ public class GroupOrdering {
             return;
         }
 
-        // Split any ties
-        mTieBreaker = TieBreakers.POINTS_DECIDE.ordinal();
         try {
             orderTies(teams, fixtures);
         }
@@ -46,8 +44,13 @@ public class GroupOrdering {
         ArrayList<Team> ties = new ArrayList<Team>(teams.size());
         for(int t = 0; t < teams.size() - 1; ) {
             ties = findTiesFromSubset(t, teams);
-            if(ties == null)
+            if(ties == null) {
+                t++;
                 continue;
+            }
+
+            // Start at the first tie-breaker
+            mTieBreaker = TieBreakers.POINTS_DECIDE.ordinal();
 
             do {
                 clearComparisonValues(ties);
