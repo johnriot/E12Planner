@@ -13,6 +13,7 @@ public class GroupOrdering {
         GOALS_SCORED_DECIDES,
         GOAL_DIFF_ALL_DECIDES,
         GOALS_SCORED_ALL_DECIDES,
+        GOAL_DIFF_H2H_DECIDES,
         NO_MORE_TIEBREAKERS
     }
 
@@ -69,6 +70,9 @@ public class GroupOrdering {
                     break;
                 case GOALS_SCORED_ALL_DECIDES:
                     orderTiesByGoalsScoredAll(ties, fixtures);
+                    break;
+                case GOAL_DIFF_H2H_DECIDES:
+                    orderTiesByGoalDifferenceHeadToHead(ties, fixtures);
                     break;
                 case NO_MORE_TIEBREAKERS:
                     break;
@@ -160,12 +164,26 @@ public class GroupOrdering {
 
     /**
      * Separate tying teams by goals scored in fixtures among those teams
-     * c) higher number of goals scored in the matches among the teams in
-     * question (if more than two teams finish equal on points);
+     * e) higher number of goals scored in all matches
      */
     private static void orderTiesByGoalsScoredAll(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
         for(Fixture fixture: fixtures) {
             updateGoalsFor(fixture);
+        }
+    }
+
+    /**
+     * Extra - head-to-head ordering if nothing else works
+     */
+    private static void orderTiesByGoalDifferenceHeadToHead(ArrayList<Team> teams, ArrayList<Fixture> fixtures) {
+        int minTeams = 2; // Only order when two or more teams tied
+        if(teams.size() >= minTeams) {
+            for(Fixture fixture: fixtures) {
+                // Only consider games where the tying teams are present
+                if(fixture.involvesTeams(teams)) {
+                    updateGoalDifference(fixture);
+                }
+            }
         }
     }
 
