@@ -48,32 +48,13 @@ public class E12DataService extends Service {
     //Same process so don't worry about IPC
     public class E12DataServiceBinder extends Binder {
 
-//<<<<<<< HEAD
         public void loadSquadsDefnFromServer(DataLoadedCallback callback, boolean forceLoad) {
             loadSquadsDefn(callback, forceLoad);
         }
-/*=======
-        public void loadSquadDataFromServer(DataLoadedCallback callback) {
-            loadSquadData(callback);
-        }
 
-        public void loadTournamentDefnFromServer(DataLoadedCallback callback) {
-            loadTournamentDefn(callback);
-        }
-*/
         public void loadNewsFeeds(DataLoadedCallback callback) {
             loadFeeds(callback);
         }
-
-/*        public String getSquadData(Context context) {
-
-            ContextWrapper wrapper = new ContextWrapper(context);
-            File homeDir = wrapper.getFilesDir();
-            File squadFile = new File(homeDir, SQUAD_DATA);
-            return readFile(squadFile);
->>>>>>> 809ea7d... Finished News Ticker implementation using service
-
-        }*/
 
         public void loadTournamentDefnFromServer(DataLoadedCallback callback, boolean forceLoad) {
             loadTournamentDefn(callback, forceLoad);
