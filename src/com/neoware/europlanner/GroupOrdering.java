@@ -260,7 +260,7 @@ public class GroupOrdering {
         tiedTeams.add(teams.get(startIndx));
         for(int ii = startIndx + 1; ii < teams.size(); ++ii) {
             Team thisTeam = teams.get(ii);
-            if(!thisTeam.isSorted()) {
+            if(!thisTeam.isSorted() && thisTeam.getComparisonValue() == teams.get(startIndx).getComparisonValue()) {
                 tiedTeams.add(teams.get(ii));
             }
             else {
