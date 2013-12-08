@@ -13,23 +13,32 @@
         <item>Group B</item>
         <item>Group C</item>
         <item>Group D</item>
+        <item>Group E</item>
+        <item>Group F</item>
+        <item>Group G</item>
+        <item>Group H</item>
     </string-array>
 
     <string-array name="knockout">
+        <item>Second Round</item>
         <item>Quarter-Final</item>
         <item>Semi-Final</item>
         <item>FINAL</item>
     </string-array>
 
     <string-array name="venues">
-        <item>National Stadium Warsaw, Poland</item>
-        <item>Municipal Stadium Wroclaw, Poland</item>
-        <item>Metalist Stadium Kharkiv, Ukraine</item>
-        <item>Arena Lviv, Ukraine</item>
-        <item>PGE Arena Gdansk, Poland</item>
-        <item>Municipal Stadium Poznan, Poland</item>
-        <item>Donbass Arena Donetsk, Ukraine</item>
-        <item>Olympic Stadium Kiev, Ukraine</item>
+        <item>Estádio do Maracanã, Rio de Janeiro</item>
+        <item>Estádio Nacional Mané Garrincha, Brasília</item>
+        <item>Arena Corinthians, São Paulo</item>
+        <item>Estádio Castelão, Fortaleza</item>
+        <item>Estádio Mineirão, Belo Horizonte</item>
+        <item>Estádio Beira-Rio, Porto Alegre</item>
+        <item>Arena Fonte Nova, Salvador</item>
+        <item>Arena Pernambuco, Recife</item>
+        <item>Arena Pantanal, Cuiabá</item>
+        <item>Arena Amazônia, Manaus</item>
+        <item>Arena das Dunas, Natal</item>
+        <item>Arena da Baixada, Curitiba</item>
     </string-array>
 
     <!--
@@ -45,6 +54,25 @@
         <item>poznan</item>
         <item>donetsk</item>
         <item>kiev</item>
+        <item>warsaw</item>
+        <item>wroclaw</item>
+        <item>kharkiv</item>
+        <item>lviv</item>
+        
+        <!-- Use below
+        <item>rio</item>
+        <item>brasília</item>
+        <item>s paulo</item>
+        <item>fortaleza</item>
+        <item>b horiz</item>
+        <item>p alegre</item>
+        <item>salvador</item>
+        <item>recife</item>
+        <item>cuiabá</item>
+        <item>manaus</item>
+        <item>natal</item>
+        <item>curitiba</item>
+        -->
     </string-array>
 
     <string-array name="venue_capacities">
@@ -56,25 +84,45 @@
         <item>40,000 Capacity</item>
         <item>50,000 Capacity</item>
         <item>60,000 Capacity</item>
+        <item>40,000 Capacity</item>
+        <item>40,000 Capacity</item>
+        <item>50,000 Capacity</item>
+        <item>60,000 Capacity</item>
     </string-array>
 
     <string-array name="team_names">
-        <item>Poland</item>
-        <item>Greece</item>
-        <item>Russia</item>
-        <item>Czech Rep.</item>
+        <item>Brazil</item>
+        <item>Croatia</item>
+        <item>Mexico</item>
+        <item>Cameroon</item>
+        <item>Spain</item>
         <item>Netherlands</item>
-        <item>Denmark</item>
+        <item>Chile</item>
+        <item>Australia</item>
+        <item>Colombia</item>
+        <item>Greece</item>
+        <item>Ivory Coast</item>
+        <item>Japan</item>
+        <item>Uruguay</item>
+        <item>Costa Rica</item>
+        <item>England</item>
+        <item>Italy</item>
+        <item>Switzerland</item>
+        <item>Ecuador</item>
+        <item>France</item>
+        <item>Honduras</item>
+        <item>Argentina</item>
+        <item>Bos Herz</item>
+        <item>Iran</item>
+        <item>Nigeria</item>
         <item>Germany</item>
         <item>Portugal</item>
-        <item>Spain</item>
-        <item>Italy</item>
-        <item>Ireland</item>
-        <item>Croatia</item>
-        <item>Ukraine</item>
-        <item>Sweden</item>
-        <item>France</item>
-        <item>England</item>
+        <item>Ghana</item>
+        <item>USA</item>
+        <item>Belgium</item>
+        <item>Algeria</item>
+        <item>Russia</item>
+        <item>S Korea</item>
     </string-array>
 
     <!--
@@ -98,8 +146,24 @@
         <item>sweden</item>
         <item>france</item>
         <item>england</item>
+        <item>poland</item>
+        <item>greece</item>
+        <item>russia</item>
+        <item>czechrep</item>
+        <item>netherlands</item>
+        <item>denmark</item>
+        <item>germany</item>
+        <item>portugal</item>
+        <item>spain</item>
+        <item>italy</item>
+        <item>ireland</item>
+        <item>croatia</item>
+        <item>ukraine</item>
+        <item>sweden</item>
+        <item>france</item>
+        <item>england</item>
     </string-array>
-
+    
     <string-array name="qf_placeholder_names">
         <item>1st Group A</item>
         <item>2nd Group B</item>

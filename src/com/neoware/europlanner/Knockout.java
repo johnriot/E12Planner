@@ -39,11 +39,15 @@ public class Knockout extends TournamentStage {
 
         String teamPlaceholders[] = null;
         String gameTitles[] = null;
-        if(mId == 4) { // Quarter-Final
+        if(mId == 8) { // Second-Round
+            gameTitles = res.getStringArray(R.array.qf_game_titles); // TODO - Update to sr_game_titles
+            teamPlaceholders = res.getStringArray(R.array.qf_placeholder_names); // TODO - Update to sr_placeholder_names
+        }
+        else if(mId == 9) { // Quarter-Final
             gameTitles = res.getStringArray(R.array.qf_game_titles);
             teamPlaceholders = res.getStringArray(R.array.qf_placeholder_names);
         }
-        else if(mId == 5) { // Semi-Final
+        else if (mId == 10){ // Semi-Final
             gameTitles = res.getStringArray(R.array.sf_game_titles);
             teamPlaceholders = res.getStringArray(R.array.sf_placeholder_names);
         }

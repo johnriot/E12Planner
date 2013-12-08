@@ -67,8 +67,8 @@ public class TournamentDefinition {
         File homeDir = wrapper.getFilesDir();
         mDefnFile = new File(homeDir, mDefinitionFileName);
 
-        //For dev always copy - DONT SHIP WITH THIS!!!!!
-        if(!mDefnFile.exists() /* true */) {
+        //For dev always copy - DONT SHIP WITH if(true) !!!!!
+        if(/*!mDefnFile.exists()*/ true) {
 
             InputStream defnInputStream = context.getResources().openRawResource(
                     R.raw.tournamentdefn);
@@ -256,7 +256,7 @@ public class TournamentDefinition {
 
     private void createVenues() {
         // Hardcoded 8 venues
-        for(int ii = 0; ii < 8; ++ii) {
+        for(int ii = 0; ii < 12; ++ii) {
             mVenues.add(new Venue(ii));
         }
 

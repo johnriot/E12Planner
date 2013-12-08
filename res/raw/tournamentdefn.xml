@@ -59,8 +59,65 @@
         <fixture hometeam="13" awayteam="14" venue="7" date="June 19, 2012, 18:45, GMT" score="x:x" />
         <fixture hometeam="15" awayteam="12" venue="6" date="June 19, 2012, 18:45, GMT" score="x:x" />
     </group>
+    
+    <group id="4">
+        <team id="16" />
+        <team id="17" />
+        <team id="18" />
+        <team id="19" />
 
-    <knockout id="4"> <!-- Knockout Id for quarter final is the next number after the highest group id -->
+        <fixture hometeam="16" awayteam="17" venue="8" date="June 11, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="18" awayteam="19" venue="9" date="June 11, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="16" awayteam="18" venue="8" date="June 15, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="19" awayteam="17" venue="9" date="June 15, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="19" awayteam="16" venue="9" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="17" awayteam="18" venue="8" date="June 19, 2012, 18:45, GMT" score="x:x" />
+    </group>
+    
+    <group id="5">
+        <team id="20" />
+        <team id="21" />
+        <team id="22" />
+        <team id="23" />
+
+        <fixture hometeam="20" awayteam="21" venue="10" date="June 11, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="22" awayteam="23" venue="11" date="June 11, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="20" awayteam="23" venue="10" date="June 15, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="22" awayteam="21" venue="11" date="June 15, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="23" awayteam="20" venue="10" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="21" awayteam="22" venue="11" date="June 19, 2012, 18:45, GMT" score="x:x" />
+    </group>
+    
+    <group id="6">
+        <team id="24" />
+        <team id="25" />
+        <team id="26" />
+        <team id="27" />
+
+        <fixture hometeam="24" awayteam="25" venue="6" date="June 11, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="26" awayteam="27" venue="7" date="June 11, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="24" awayteam="26" venue="6" date="June 15, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="27" awayteam="25" venue="7" date="June 15, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="27" awayteam="24" venue="7" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="25" awayteam="26" venue="6" date="June 19, 2012, 18:45, GMT" score="x:x" />
+    </group>
+    
+    <group id="7">
+        <team id="28" />
+        <team id="29" />
+        <team id="30" />
+        <team id="31" />
+
+        <fixture hometeam="28" awayteam="29" venue="6" date="June 11, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="30" awayteam="31" venue="7" date="June 11, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="28" awayteam="30" venue="6" date="June 15, 2012, 16:00, GMT" score="x:x" />
+        <fixture hometeam="31" awayteam="29" venue="7" date="June 15, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="31" awayteam="28" venue="7" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="29" awayteam="30" venue="6" date="June 19, 2012, 18:45, GMT" score="x:x" />
+    </group>
+    
+
+    <knockout id="8"> <!-- Knockout Id for quarter final is the next number after the highest group id -->
         <!--  
         Once Knockout teams are decided, this file should be updated in the format:
         <knockout_team id="10" /> // Ireland
@@ -93,7 +150,7 @@
         <knockout_fixture hometeam="106" awayteam="107" venue="7" date="June 24, 2012, 18:45, GMT" score="x:x" />
     </knockout>
 
-    <knockout id="5"> <!-- Semi-Final -->
+    <knockout id="9"> <!-- Quarter-Final -->
         <team_placeholder id="100" /> <!-- Winner Quarter-Final 1 -->
         <team_placeholder id="101" /> <!-- Winner Quarter-Final 2 -->
         <team_placeholder id="102" /> <!-- Winner Quarter-Final 3 -->
@@ -103,7 +160,14 @@
         <knockout_fixture hometeam="101" awayteam="103" venue="0" date="June 28, 2012, 18:45, GMT" score="x:x" />
     </knockout>
 
-    <knockout id="6"> <!-- FINAL -->
+    <knockout id="10"> <!-- Semi-Final -->
+        <team_placeholder id="100" /> <!-- Winner Semi-Final 1 -->
+        <team_placeholder id="101" /> <!-- Winner Semi-Final 2 -->
+
+        <knockout_fixture hometeam="100" awayteam="101" venue="7" date="July 1, 2012, 18:45, GMT" score="x:x" />
+    </knockout>
+    
+    <knockout id="11"> <!-- FINAL -->
         <team_placeholder id="100" /> <!-- Winner Semi-Final 1 -->
         <team_placeholder id="101" /> <!-- Winner Semi-Final 2 -->
 
