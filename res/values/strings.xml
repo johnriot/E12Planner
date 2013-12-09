@@ -27,18 +27,18 @@
     </string-array>
 
     <string-array name="venues">
-        <item>Estádio do Maracanã, Rio de Janeiro</item>
-        <item>Estádio Nacional Mané Garrincha, Brasília</item>
-        <item>Arena Corinthians, São Paulo</item>
-        <item>Estádio Castelão, Fortaleza</item>
-        <item>Estádio Mineirão, Belo Horizonte</item>
-        <item>Estádio Beira-Rio, Porto Alegre</item>
-        <item>Arena Fonte Nova, Salvador</item>
-        <item>Arena Pernambuco, Recife</item>
-        <item>Arena Pantanal, Cuiabá</item>
-        <item>Arena Amazônia, Manaus</item>
-        <item>Arena das Dunas, Natal</item>
-        <item>Arena da Baixada, Curitiba</item>
+        <item>Arena Corinthians, São Paulo</item> 		<!-- 0 -->
+        <item>Arena das Dunas, Natal</item> 			<!-- 1 -->
+        <item>Estádio Castelão, Fortaleza</item>		<!-- 2 -->
+        <item>Arena Amazônia, Manaus</item>				<!-- 3 -->
+        <item>E. N. Mané Garrincha, Brasília</item>		<!-- 4 -->
+        <item>Arena Pernambuco, Recife</item>			<!-- 5 -->
+        <item>Arena Fonte Nova, Salvador</item>			<!-- 6 -->
+        <item>Arena Pantanal, Cuiabá</item>				<!-- 7 -->
+        <item>E. Beira-Rio, Porto Alegre</item>			<!-- 8 -->
+        <item>E. do Maracanã, Rio de Janeiro</item>		<!-- 9 -->        
+        <item>E. Mineirão, Belo Horizonte</item>		<!-- 10 -->
+        <item>Arena da Baixada, Curitiba</item>   		<!-- 11 -->     
     </string-array>
 
     <!--
@@ -164,7 +164,7 @@
         <item>england</item>
     </string-array>
     
-    <string-array name="qf_placeholder_names">
+    <string-array name="sr_placeholder_names">
         <item>1st Group A</item>
         <item>2nd Group B</item>
         <item>1st Group B</item>
@@ -173,6 +173,25 @@
         <item>2nd Group D</item>
         <item>1st Group D</item>
         <item>2nd Group C</item>
+        <item>1st Group E</item>
+        <item>2nd Group F</item>
+        <item>1st Group F</item>
+        <item>2nd Group E</item>
+        <item>1st Group G</item>
+        <item>2nd Group H</item>
+        <item>1st Group H</item>
+        <item>2nd Group G</item>
+    </string-array>
+    
+    <string-array name="qf_placeholder_names">
+        <item>Winner SR 1</item>
+        <item>Winner SR 2</item>
+        <item>Winner SR 3</item>
+        <item>Winner SR 4</item>
+        <item>Winner SR 5</item>
+        <item>Winner SR 6</item>
+        <item>Winner SR 7</item>
+        <item>Winner SR 8</item>
     </string-array>
 
     <string-array name="sf_placeholder_names">
@@ -187,6 +206,17 @@
         <item>Winner SF 2</item>
     </string-array>
 
+    <string-array name="sr_game_titles">
+        <item>SR1</item>
+        <item>SR2</item>
+        <item>SR3</item>
+        <item>SR4</item>
+        <item>SR5</item>
+        <item>SR6</item>
+        <item>SR7</item>
+        <item>SR8</item>
+    </string-array>
+    
     <string-array name="qf_game_titles">
         <item>QF1</item>
         <item>QF2</item>

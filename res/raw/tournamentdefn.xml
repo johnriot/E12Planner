@@ -5,131 +5,133 @@
     <feed description="BBC Feed" url="http://feeds.bbci.co.uk/sport/0/football/rss.xml" iconid="1" />
 
     <group id="0">
-        <team id="0" />
-        <team id="1" />
-        <team id="2" />
-        <team id="3" />
+        <team id="0" /> <!-- Brazil -->
+        <team id="1" /> <!-- Croatia -->
+        <team id="2" /> <!-- Mexico -->
+        <team id="3" /> <!-- Cameroon -->
 
-        <fixture hometeam="0" awayteam="1" venue="0" date="June 8, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="2" awayteam="3" venue="1" date="June 8, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="1" awayteam="3" venue="1" date="June 12, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="0" awayteam="2" venue="0" date="June 12, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="3" awayteam="0" venue="1" date="June 16, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="1" awayteam="2" venue="0" date="June 16, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="0" awayteam="1" venue="0" date="June 12, 2014, 20:00, UTC-3" score="x:x" />
+        <fixture hometeam="2" awayteam="3" venue="1" date="June 13, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="0" awayteam="2" venue="2" date="June 17, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="3" awayteam="1" venue="3" date="June 18, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="3" awayteam="0" venue="4" date="June 23, 2014, 17:00, UTC-3" score="x:x" />
+        <fixture hometeam="1" awayteam="2" venue="5" date="June 23, 2014, 17:00, UTC-3" score="x:x" />
     </group>
 
     <group id="1">
-        <team id="4" />
-        <team id="5" />
-        <team id="6" />
-        <team id="7" />
+        <team id="4" /> <!-- Spain -->
+        <team id="5" /> <!-- Netherlands -->
+        <team id="6" /> <!-- Chile -->
+        <team id="7" /> <!-- Australia -->
 
-        <fixture hometeam="4" awayteam="5" venue="2" date="June 9, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="6" awayteam="7" venue="3" date="June 9, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="5" awayteam="7" venue="3" date="June 13, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="4" awayteam="6" venue="2" date="June 13, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="7" awayteam="4" venue="2" date="June 17, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="5" awayteam="6" venue="3" date="June 17, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="4" awayteam="5" venue="6" date="June 13, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="6" awayteam="7" venue="7" date="June 13, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="7" awayteam="5" venue="8" date="June 18, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="4" awayteam="6" venue="9" date="June 18, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="7" awayteam="4" venue="10" date="June 23, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="5" awayteam="6" venue="11" date="June 23, 2014, 13:00, UTC-3" score="x:x" />
     </group>
 
     <group id="2">
-        <team id="8" />
-        <team id="9" />
-        <team id="10" />
-        <team id="11" />
+        <team id="8" />  <!-- Colombia -->
+        <team id="9" />  <!-- Greece -->
+        <team id="10" /> <!-- Ivory Coast -->
+        <team id="11" /> <!-- Japan -->
 
-        <fixture hometeam="8" awayteam="9" venue="4" date="June 10, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="10" awayteam="11" venue="5" date="June 10, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="9" awayteam="11" venue="5" date="June 14, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="8" awayteam="10" venue="4" date="June 14, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="11" awayteam="8" venue="4" date="June 18, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="9" awayteam="10" venue="5" date="June 18, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="8" awayteam="9" venue="10" date="June 14, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="10" awayteam="11" venue="5" date="June 14, 2014, 22:00, UTC-3" score="x:x" />
+        <fixture hometeam="8" awayteam="10" venue="4" date="June 19, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="11" awayteam="9" venue="1" date="June 19, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="11" awayteam="8" venue="7" date="June 24, 2014, 17:00, UTC-3" score="x:x" />
+        <fixture hometeam="9" awayteam="10" venue="2" date="June 24, 2014, 17:00, UTC-3" score="x:x" />
     </group>
 
     <group id="3">
-        <team id="12" />
-        <team id="13" />
-        <team id="14" />
-        <team id="15" />
+        <team id="12" /> <!-- Uruguay -->
+        <team id="13" /> <!-- Costa Rica -->
+        <team id="14" /> <!-- England -->
+        <team id="15" /> <!-- Italy -->
 
-        <fixture hometeam="14" awayteam="15" venue="6" date="June 11, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="12" awayteam="13" venue="7" date="June 11, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="12" awayteam="14" venue="6" date="June 15, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="13" awayteam="15" venue="7" date="June 15, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="13" awayteam="14" venue="7" date="June 19, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="15" awayteam="12" venue="6" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="12" awayteam="13" venue="2" date="June 14, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="14" awayteam="15" venue="3" date="June 14, 2014, 18:45, UTC-3" score="x:x" />
+        <fixture hometeam="12" awayteam="14" venue="0" date="June 19, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="15" awayteam="13" venue="5" date="June 20, 2014, 18:45, UTC-3" score="x:x" />
+        <fixture hometeam="15" awayteam="12" venue="1" date="June 24, 2014, 18:45, UTC-3" score="x:x" />
+        <fixture hometeam="13" awayteam="14" venue="10" date="June 24, 2014, 18:45, UTC-3" score="x:x" />
     </group>
     
     <group id="4">
-        <team id="16" />
-        <team id="17" />
-        <team id="18" />
-        <team id="19" />
+        <team id="16" /> <!-- Switzerland -->
+        <team id="17" /> <!-- Ecuador -->
+        <team id="18" /> <!-- France -->
+        <team id="19" /> <!-- Honduras -->
 
-        <fixture hometeam="16" awayteam="17" venue="8" date="June 11, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="18" awayteam="19" venue="9" date="June 11, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="16" awayteam="18" venue="8" date="June 15, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="19" awayteam="17" venue="9" date="June 15, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="19" awayteam="16" venue="9" date="June 19, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="17" awayteam="18" venue="8" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="16" awayteam="17" venue="4" date="June 15, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="18" awayteam="19" venue="8" date="June 15, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="16" awayteam="18" venue="6" date="June 20, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="19" awayteam="17" venue="11" date="June 20, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="19" awayteam="16" venue="3" date="June 25, 2014, 17:00, UTC-3" score="x:x" />
+        <fixture hometeam="17" awayteam="18" venue="9" date="June 25, 2014, 17:00, UTC-3" score="x:x" />
     </group>
     
     <group id="5">
-        <team id="20" />
-        <team id="21" />
-        <team id="22" />
-        <team id="23" />
+        <team id="20" /> <!-- Argentina -->
+        <team id="21" /> <!-- Bosnia and Herzegovina -->
+        <team id="22" /> <!-- Iran -->
+        <team id="23" /> <!-- Nigeria -->
 
-        <fixture hometeam="20" awayteam="21" venue="10" date="June 11, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="22" awayteam="23" venue="11" date="June 11, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="20" awayteam="23" venue="10" date="June 15, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="22" awayteam="21" venue="11" date="June 15, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="23" awayteam="20" venue="10" date="June 19, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="21" awayteam="22" venue="11" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="20" awayteam="21" venue="9" date="June 15, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="22" awayteam="23" venue="11" date="June 16, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="20" awayteam="22" venue="10" date="June 21, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="23" awayteam="21" venue="7" date="June 21, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="23" awayteam="20" venue="8" date="June 25, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="21" awayteam="22" venue="6" date="June 25, 2014, 13:00, UTC-3" score="x:x" />
     </group>
     
     <group id="6">
-        <team id="24" />
-        <team id="25" />
-        <team id="26" />
-        <team id="27" />
+        <team id="24" /> <!-- Germany -->
+        <team id="25" /> <!-- Portugal -->
+        <team id="26" /> <!-- Ghana -->
+        <team id="27" /> <!-- United States -->
 
-        <fixture hometeam="24" awayteam="25" venue="6" date="June 11, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="26" awayteam="27" venue="7" date="June 11, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="24" awayteam="26" venue="6" date="June 15, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="27" awayteam="25" venue="7" date="June 15, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="27" awayteam="24" venue="7" date="June 19, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="25" awayteam="26" venue="6" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="24" awayteam="25" venue="6" date="June 16, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="26" awayteam="27" venue="1" date="June 16, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="24" awayteam="26" venue="2" date="June 21, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="27" awayteam="25" venue="3" date="June 22, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="27" awayteam="24" venue="5" date="June 26, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="25" awayteam="26" venue="4" date="June 26, 2014, 13:00, UTC-3" score="x:x" />
     </group>
     
     <group id="7">
-        <team id="28" />
-        <team id="29" />
-        <team id="30" />
-        <team id="31" />
+        <team id="28" /> <!-- Belgium -->
+        <team id="29" /> <!-- Algeria -->
+        <team id="30" /> <!-- Russia -->
+        <team id="31" /> <!-- South Korea -->
 
-        <fixture hometeam="28" awayteam="29" venue="6" date="June 11, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="30" awayteam="31" venue="7" date="June 11, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="28" awayteam="30" venue="6" date="June 15, 2012, 16:00, GMT" score="x:x" />
-        <fixture hometeam="31" awayteam="29" venue="7" date="June 15, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="31" awayteam="28" venue="7" date="June 19, 2012, 18:45, GMT" score="x:x" />
-        <fixture hometeam="29" awayteam="30" venue="6" date="June 19, 2012, 18:45, GMT" score="x:x" />
+        <fixture hometeam="28" awayteam="29" venue="10" date="June 17, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="30" awayteam="31" venue="7" date="June 17, 2014, 19:00, UTC-3" score="x:x" />
+        <fixture hometeam="28" awayteam="30" venue="9" date="June 22, 2014, 13:00, UTC-3" score="x:x" />
+        <fixture hometeam="31" awayteam="29" venue="8" date="June 22, 2014, 16:00, UTC-3" score="x:x" />
+        <fixture hometeam="31" awayteam="28" venue="0" date="June 26, 2014, 17:00, UTC-3" score="x:x" />
+        <fixture hometeam="29" awayteam="30" venue="11" date="June 26, 2014, 17:00, UTC-3" score="x:x" />
     </group>
     
 
-    <knockout id="8"> <!-- Knockout Id for quarter final is the next number after the highest group id -->
+    <knockout id="8"> <!-- Second Round -->
+        
+        <!-- Knockout Id for quarter final is the next number after the highest group id -->
         <!--  
         Once Knockout teams are decided, this file should be updated in the format:
         <knockout_team id="10" /> // Ireland
         <knockout_team id="14" /> // England
         ...
-        <knockout_fixture hometeam="10" awayteam="14" venue="0" date="June 21, 2012, 18:45, GMT" score="x:x" /> // Ireland vs England
+        <knockout_fixture hometeam="10" awayteam="14" venue="0" date="June 21, 2014, 18:45, UTC-3" score="x:x" /> // Ireland vs England
         
         It is valid to have a team_placeholder vs a knockout_team in either order:
         <knockout_team id="1" /> // Greece
         <team_placeholder id="101" /> // Second Group B (Placeholders start at 100)
         ...
-        <knockout_fixture hometeam="1" awayteam="101" venue="0" date="June 21, 2012, 18:45, GMT" score="x:x" />
+        <knockout_fixture hometeam="1" awayteam="101" venue="0" date="June 21, 2014, 18:45, UTC-3" score="x:x" />
         
         When editing, check that only the team_placeholder / knockout_team numbers are used
         for homeTeam and awayTeam in the knockout_fixture (and only use each once).
@@ -143,35 +145,56 @@
         <team_placeholder id="105" /> <!-- Second Group D -->
         <team_placeholder id="106" /> <!-- Winner Group D -->
         <team_placeholder id="107" /> <!-- Second Group C -->
+        <team_placeholder id="108" /> <!-- Winner Group E --> 
+        <team_placeholder id="109" /> <!-- Second Group F -->
+        <team_placeholder id="110" /> <!-- Winner Group F -->
+        <team_placeholder id="111" /> <!-- Second Group E -->
+        <team_placeholder id="112" /> <!-- Winner Group G -->
+        <team_placeholder id="113" /> <!-- Second Group H -->
+        <team_placeholder id="114" /> <!-- Winner Group H -->
+        <team_placeholder id="115" /> <!-- Second Group G -->
 
-        <knockout_fixture hometeam="100" awayteam="101" venue="0" date="June 21, 2012, 18:45, GMT" score="x:x" />
-        <knockout_fixture hometeam="102" awayteam="103" venue="4" date="June 22, 2012, 18:45, GMT" score="x:x" />
-        <knockout_fixture hometeam="104" awayteam="105" venue="6" date="June 23, 2012, 18:45, GMT" score="x:x" />
-        <knockout_fixture hometeam="106" awayteam="107" venue="7" date="June 24, 2012, 18:45, GMT" score="x:x" />
+        <knockout_fixture hometeam="100" awayteam="101" venue="10" date="June 28, 2014, 13:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="102" awayteam="103" venue="9" date="June 28, 2014, 17:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="104" awayteam="105" venue="2" date="June 29, 2014, 13:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="106" awayteam="107" venue="5" date="June 29, 2014, 17:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="108" awayteam="109" venue="4" date="June 30, 2014, 13:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="110" awayteam="111" venue="8" date="June 30, 2014, 17:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="112" awayteam="113" venue="0" date="July 1, 2014, 13:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="114" awayteam="115" venue="6" date="July 1, 2014, 17:00, UTC-3" score="x:x" />
     </knockout>
 
     <knockout id="9"> <!-- Quarter-Final -->
-        <team_placeholder id="100" /> <!-- Winner Quarter-Final 1 -->
-        <team_placeholder id="101" /> <!-- Winner Quarter-Final 2 -->
-        <team_placeholder id="102" /> <!-- Winner Quarter-Final 3 -->
-        <team_placeholder id="103" /> <!-- Winner Quarter-Final 4 -->
+        <team_placeholder id="100" /> <!-- Winner Second Round 1 -->
+        <team_placeholder id="101" /> <!-- Winner Second Round 2 -->
+        <team_placeholder id="102" /> <!-- Winner Second Round 3 -->
+        <team_placeholder id="103" /> <!-- Winner Second Round 4 -->
+        <team_placeholder id="104" /> <!-- Winner Second Round 5 -->
+        <team_placeholder id="105" /> <!-- Winner Second Round 6 -->
+        <team_placeholder id="106" /> <!-- Winner Second Round 7 -->
+        <team_placeholder id="107" /> <!-- Winner Second Round 8 -->
 
-        <knockout_fixture hometeam="100" awayteam="102" venue="6" date="June 27, 2012, 18:45, GMT" score="x:x" />
-        <knockout_fixture hometeam="101" awayteam="103" venue="0" date="June 28, 2012, 18:45, GMT" score="x:x" />
+        <knockout_fixture hometeam="104" awayteam="105" venue="9" date="July 4, 2014, 13:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="100" awayteam="101" venue="2" date="July 4, 2014, 17:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="106" awayteam="107" venue="4" date="July 5, 2014, 13:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="102" awayteam="103" venue="6" date="July 5, 2014, 17:00, UTC-3" score="x:x" />
     </knockout>
 
     <knockout id="10"> <!-- Semi-Final -->
         <team_placeholder id="100" /> <!-- Winner Semi-Final 1 -->
         <team_placeholder id="101" /> <!-- Winner Semi-Final 2 -->
+        <team_placeholder id="102" /> <!-- Winner Semi-Final 3 -->
+        <team_placeholder id="103" /> <!-- Winner Semi-Final 4 -->
 
-        <knockout_fixture hometeam="100" awayteam="101" venue="7" date="July 1, 2012, 18:45, GMT" score="x:x" />
+        <knockout_fixture hometeam="101" awayteam="100" venue="10" date="July 8, 2014, 17:00, UTC-3" score="x:x" />
+        <knockout_fixture hometeam="103" awayteam="102" venue="0" date="July 9, 2014, 17:00, UTC-3" score="x:x" />
     </knockout>
     
     <knockout id="11"> <!-- FINAL -->
         <team_placeholder id="100" /> <!-- Winner Semi-Final 1 -->
         <team_placeholder id="101" /> <!-- Winner Semi-Final 2 -->
 
-        <knockout_fixture hometeam="100" awayteam="101" venue="7" date="July 1, 2012, 18:45, GMT" score="x:x" />
+        <knockout_fixture hometeam="100" awayteam="101" venue="9" date="July 13, 2014, 16:00, UTC-3" score="x:x" />
     </knockout>
 
 </tournamen_defn>
