@@ -46,48 +46,33 @@
          should obviously match venues array
     -->
     <string-array name="venues_short">
-        <item>warsaw</item>
-        <item>wroclaw</item>
-        <item>kharkiv</item>
-        <item>lviv</item>
-        <item>gdansk</item>
-        <item>poznan</item>
-        <item>donetsk</item>
-        <item>kiev</item>
-        <item>warsaw</item>
-        <item>wroclaw</item>
-        <item>kharkiv</item>
-        <item>lviv</item>
-        
-        <!-- Use below
-        <item>rio</item>
-        <item>brasília</item>
-        <item>s paulo</item>
-        <item>fortaleza</item>
-        <item>b horiz</item>
-        <item>p alegre</item>
-        <item>salvador</item>
-        <item>recife</item>
-        <item>cuiabá</item>
-        <item>manaus</item>
+        <item>spaulo</item>
         <item>natal</item>
+        <item>fortaleza</item>
+        <item>manaus</item>
+        <item>brasilia</item>
+        <item>recife</item>
+        <item>salvador</item>
+        <item>cuiaba</item>
+        <item>palegre</item>
+        <item>rio</item>
+        <item>belohoriz</item>
         <item>curitiba</item>
-        -->
     </string-array>
 
     <string-array name="venue_capacities">
-        <item>50,000 Capacity</item>
-        <item>40,000 Capacity</item>
-        <item>35,000 Capacity</item>
-        <item>30,000 Capacity</item>
-        <item>40,000 Capacity</item>
-        <item>40,000 Capacity</item>
-        <item>50,000 Capacity</item>
-        <item>60,000 Capacity</item>
-        <item>40,000 Capacity</item>
-        <item>40,000 Capacity</item>
-        <item>50,000 Capacity</item>
-        <item>60,000 Capacity</item>
+        <item>68,000 Capacity</item>
+        <item>42,086 Capacity</item>
+        <item>64,846 Capacity</item>
+        <item>42,374 Capacity</item>
+        <item>70,042 Capacity</item>
+        <item>46,154 Capacity</item>
+        <item>56,000 Capacity</item>
+        <item>42,968 Capacity</item>
+        <item>51,300 Capacity</item>
+        <item>76,935 Capacity</item>
+        <item>62,547 Capacity</item>
+        <item>43,981 Capacity</item>
     </string-array>
 
     <string-array name="team_names">
