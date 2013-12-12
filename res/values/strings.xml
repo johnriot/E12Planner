@@ -114,39 +114,40 @@
          Team drawables, do not translate!
          should obviously match team array
     -->
+    
     <string-array name="team_icon_resource_names">
-        <item>poland</item>
-        <item>greece</item>
-        <item>russia</item>
-        <item>czechrep</item>
+        <item>brazil</item>
+        <item>croatia</item>
+        <item>mexico</item>
+        <item>cameroon</item>
+        <item>spain</item>
         <item>netherlands</item>
-        <item>denmark</item>
+        <item>chile</item>
+        <item>australia</item>
+        <item>colombia</item>
+        <item>greece</item>
+        <item>ivorycoast</item>
+        <item>japan</item>
+        <item>uruguay</item>
+        <item>costarica</item>
+        <item>england</item>
+        <item>italy</item>
+        <item>switzerland</item>
+        <item>ecuador</item>
+        <item>france</item>
+        <item>honduras</item>
+        <item>argentina</item>
+        <item>bosniaherz</item>
+        <item>iran</item>
+        <item>nigeria</item>
         <item>germany</item>
         <item>portugal</item>
-        <item>spain</item>
-        <item>italy</item>
-        <item>ireland</item>
-        <item>croatia</item>
-        <item>ukraine</item>
-        <item>sweden</item>
-        <item>france</item>
-        <item>england</item>
-        <item>poland</item>
-        <item>greece</item>
+        <item>ghana</item>
+        <item>unitedstates</item>
+        <item>belgium</item>
+        <item>algeria</item>
         <item>russia</item>
-        <item>czechrep</item>
-        <item>netherlands</item>
-        <item>denmark</item>
-        <item>germany</item>
-        <item>portugal</item>
-        <item>spain</item>
-        <item>italy</item>
-        <item>ireland</item>
-        <item>croatia</item>
-        <item>ukraine</item>
-        <item>sweden</item>
-        <item>france</item>
-        <item>england</item>
+        <item>southkorea</item>
     </string-array>
     
     <string-array name="sr_placeholder_names">
