@@ -59,6 +59,11 @@ public class VenueFragment extends SherlockFragment {
         System.arraycopy(groupString, 0, groupKnockoutString, 0, groupString.length);
         System.arraycopy(knockoutString, 0, groupKnockoutString, groupString.length, knockoutString.length);
 
+        /*
+         * REMOVING FOR NOW AS NOT DISPLAYING NICELY
+         * MAY REINSTATE LATER WHEN WE HAVE MORE TIME
+         * TO WORK ON IT
+
         Set<Integer> venueGroupKnockoutId = mVenue.getGroupKnockoutIds();
         Iterator<Integer> it = venueGroupKnockoutId.iterator();
         int ii = 0;
@@ -84,6 +89,7 @@ public class VenueFragment extends SherlockFragment {
                 }
             });
         }
+        */
 
         return fragView;
     }

@@ -138,7 +138,7 @@ public class TournamentDefinition {
                         int iconid = R.drawable.rss_icon;
                         switch(icon) {
                         case 0:
-                            iconid = R.drawable.uefa;
+                            iconid = R.drawable.fifa;
                             break;
                         case 1:
                             iconid = R.drawable.bbcicon;

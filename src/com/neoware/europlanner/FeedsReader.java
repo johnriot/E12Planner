@@ -23,8 +23,8 @@ public class FeedsReader {
     public static ArrayList<String> getAllTitles(int groupPosition, Context context) {
 
         ArrayList<String> titles = new ArrayList<String>();
-        FeedsAdapter.FeedDefn uefaFeed = TournamentDefinition.getTournamentDefnInstance(context).getFeeds().get(groupPosition);
-        List<RSSItem> feedList = uefaFeed.rssFeed.getItems();
+        FeedsAdapter.FeedDefn fifaFeed = TournamentDefinition.getTournamentDefnInstance(context).getFeeds().get(groupPosition);
+        List<RSSItem> feedList = fifaFeed.rssFeed.getItems();
         for(RSSItem rssItem : feedList) {
             titles.add(rssItem.getTitle());
         }

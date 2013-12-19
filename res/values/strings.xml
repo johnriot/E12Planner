@@ -257,10 +257,10 @@
     <string name="adsId">4028cba631d63df10131e1d3818b00cc</string>
     
     <!-- News Ticker -->
-    <string name="ticker_text">UEFA News Loading.... Touch for Full Index!</string>
+    <string name="ticker_text">FIFA News Loading.... Touch for Full Index!</string>
     <string name="loadingFeedError">News Channel Temporarily Unavailable.</string>
-    <string name="uefa_feed_lead">UEFA NEWS FEED &#8230;</string>
-    <string name="uefa_feed_tail">*END OF FEED* &#8230;</string>
+    <string name="fifa_feed_lead">FIFA.com News &#8230;</string>
+    <string name="fifa_feed_tail">*END OF FEED* &#8230;</string>
 
     <string name="aboutHeader">About</string>
     <string name="aboutText">Euro 2012 Planner Application developed by John
@@ -286,12 +286,12 @@
     <string name="loadingSquads">Loading latest squad data&#8230;</string>
 
     <array name="adKeywords">
-        <item>Euro 2012</item>
+        <item>World Cup 2014</item>
         <item>Football</item>
         <item>Sport</item>
         <item>Soccer</item>
-        <item>Poland</item>
-        <item>Ukraine</item>
+        <item>Brazil</item>
+        <item>South America</item>
         <item>Travel</item>
         <item>futbol</item>
         <item>eurocopa</item>

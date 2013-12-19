@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tournamen_defn>
 
-    <feed description="UEFA Official Feed" url="http://www.uefa.com/rssfeed/uefaeuro2012/rss.xml" iconid="0" />
+	<feed description="FIFA.com News" url="http://www.fifa.com/worldcup/news/rss.xml" iconid="0" />
     <feed description="BBC Feed" url="http://feeds.bbci.co.uk/sport/0/football/rss.xml" iconid="1" />
 
     <group id="0">

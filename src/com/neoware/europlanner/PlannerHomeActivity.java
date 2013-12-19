@@ -31,7 +31,7 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
 
     //private static final String fontName = "fonts/GoodDog.otf";
     private static final String fontName = "fonts/RockSalt.ttf";
-    private static final int UEFA_FEED = 0;
+    private static final int FIFA_FEED = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -165,7 +165,7 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
      */
     private void getAndDisplayFeed() {
 
-        if(TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(UEFA_FEED)) {
+        if(TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(FIFA_FEED)) {
             String newsTicker = makeTickerText();
             displayTickerText(newsTicker);
         }
@@ -183,7 +183,7 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
                 @Override
                 public void dataReady() {
 
-                    if(TournamentDefinition.getTournamentDefnInstance(PlannerHomeActivity.this).areFeedRssItemsSaved(UEFA_FEED)) {
+                    if(TournamentDefinition.getTournamentDefnInstance(PlannerHomeActivity.this).areFeedRssItemsSaved(FIFA_FEED)) {
                         String newsTicker = makeTickerText();
                         displayTickerText(newsTicker);
                     }
@@ -194,10 +194,10 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
 
     private String makeTickerText() {
 
-        ArrayList<String> titles = FeedsReader.getAllTitles(UEFA_FEED, this);
+        ArrayList<String> titles = FeedsReader.getAllTitles(FIFA_FEED, this);
         int titlesSize = titles.size();
         int randomPosition = (int) Math.floor((Math.random()*titles.size()));
-        String newsTicker = getResources().getString(R.string.uefa_feed_lead) + "    ";
+        String newsTicker = getResources().getString(R.string.fifa_feed_lead) + "    ";
 
         // Write the string from a random point so that users will see a different
         // headline first each time.
@@ -208,7 +208,7 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
             newsTicker += titles.get(i) + "    ";
         }
 
-        newsTicker += getResources().getString(R.string.uefa_feed_tail);
+        newsTicker += getResources().getString(R.string.fifa_feed_tail);
         return newsTicker;
     }
 
@@ -228,7 +228,7 @@ public class PlannerHomeActivity extends E12ServiceActivity implements OnClickLi
     @Override
     protected void onServiceConnected() {
 
-            if(!TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(UEFA_FEED)) {
+            if(!TournamentDefinition.getTournamentDefnInstance(this).areFeedRssItemsSaved(FIFA_FEED)) {
                 displayTickerText(getResources().getString(R.string.ticker_text));
                 getAndDisplayFeed();
             }
