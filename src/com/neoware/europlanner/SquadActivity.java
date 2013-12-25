@@ -69,11 +69,6 @@ public class SquadActivity extends SherlockFragmentActivity {
 
         mTabAdapter.addTab(getSupportActionBar()
                 .newTab()
-                .setText(R.string.squadHeader),
-                new SquadFragment(teamIndx));
-
-        mTabAdapter.addTab(getSupportActionBar()
-                .newTab()
                 .setText(R.string.squadProspects),
                 new SquadWriteupFragment(teamIndx));
 
@@ -81,6 +76,13 @@ public class SquadActivity extends SherlockFragmentActivity {
                 .newTab()
                 .setText(R.string.squadStarPlayer),
                 new StarPlayerFragment(teamIndx));
+        
+        /* TODO: PERHAPS REINSTATE LATER
+        mTabAdapter.addTab(getSupportActionBar()
+                .newTab()
+                .setText(R.string.squadHeader),
+                new SquadFragment(teamIndx));
+                */
     }
 
     @Override

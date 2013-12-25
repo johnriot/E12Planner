@@ -62,8 +62,8 @@ public class SquadsDefinition {
         File homeDir = wrapper.getFilesDir();
         mDefnFile = new File(homeDir, mDefinitionFileName);
 
-        //For dev always copy - DONT SHIP WITH THIS!!!!!
-        if(!mDefnFile.exists() /* true*/) {
+        // TODO: DONT SHIP WITH if(true)
+        if(/*!mDefnFile.exists()*/ true) {
 
             InputStream defnInputStream = mContext.getResources().openRawResource(
                     R.raw.squaddefn);
