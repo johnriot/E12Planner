@@ -2,44 +2,44 @@
 <resources>
     
     <array name="starPlayersUrls">
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/108501.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/1900714.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/108426.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/33466.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Neymargoldenball.jpg/382px-Neymargoldenball.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/4/4c/Luka_Modri\%%C4\%%87_against_Sevilla.jpg </item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Javier_\%%22Chicharito\%%22_Hernandez_vs_MLS_All_Stars.jpg/385px-Javier_\%%22Chicharito\%%22_Hernandez_vs_MLS_All_Stars.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Samuel_2011.jpg/465px-Samuel_2011.jpg</item>
         
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/57134.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/1905884.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/67496.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/107951.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andr\%%C3\%%A9s_Iniesta_Euro_2012_vs_France_02.jpg/398px-Andr\%%C3\%%A9s_Iniesta_Euro_2012_vs_France_02.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/8/8d/Arjen_Robben.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/5/58/Arturo_Vidal_\%%28Juventus\%%29.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Mile_Jedinak_Antalyaspor.JPG/398px-Mile_Jedinak_Antalyaspor.JPG</item>
         
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/58686.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/58656.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/17865.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/74875.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/en/9/9c/Falcao.JPG</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/1/14/20130814_AT-GR_Kostas_Mitroglou_2795.jpg/399px-20130814_AT-GR_Kostas_Mitroglou_2795.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/e/ee/Yaya_Tour\%%C3\%%A9.JPG</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Kagawa_Shinji\%%2C_Japanese_footballer_3.jpg/429px-Kagawa_Shinji\%%2C_Japanese_footballer_3.jpg</item>
         
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/24271.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/96881.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/93321.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/250021048.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/1/10/Luis_Su\%%C3\%%A1rez_vs._Netherlands_\%%28cropped\%%29.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bryan_Ruiz_Fulham.jpg/355px-Bryan_Ruiz_Fulham.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Andros_Townsend.jpg/496px-Andros_Townsend.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Andrea_Pirlo_Juventus.jpg/458px-Andrea_Pirlo_Juventus.jpg</item>
         
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/108501.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/1900714.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/108426.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/33466.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/ShaqiriBay.jpg/308px-ShaqiriBay.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/5/51/Antonio_Valencia_cropped.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/a/a3/Franck_Rib\%%C3\%%A9ry_20120611.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Izaguirre_Nov2010.jpg/421px-Izaguirre_Nov2010.jpg</item>
         
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/57134.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/1905884.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/67496.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/107951.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Lionel_Messi_Player_of_the_Year_2011.jpg/388px-Lionel_Messi_Player_of_the_Year_2011.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/0/0c/Dzeko_city.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/8/84/Javad_neko.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/3/32/John_Obi_Mikel_02_Chelsea_vs_AS-Roma_10AUG2013.jpg/302px-John_Obi_Mikel_02_Chelsea_vs_AS-Roma_10AUG2013.jpg</item>
         
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/58686.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/58656.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/17865.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/74875.jpg</item>
+        <item>http://en.wikipedia.org/wiki/File:Mesut_\%%C3\%%96zil_(9881761465)_Cropped.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cristiano_Ronaldo_-_Croatia_vs._Portugal\%%2C_10th_June_2013.jpg/337px-Cristiano_Ronaldo_-_Croatia_vs._Portugal\%%2C_10th_June_2013.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Essien_Real_Madrid.JPG/371px-Essien_Real_Madrid.JPG</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/7/79/Michael_Bradley_at_media_roundtable_during_World_Cup_2010-06-17.JPG</item>
         
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/24271.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/96881.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/93321.jpg</item>
-        <item>http://img.uefa.com/imgml/TP/players/3/2012/324x324/250021048.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Vincent_Kompany_vs_USA_2013.jpg/640px-Vincent_Kompany_vs_USA_2013.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/1/13/Sofiane_Feghouli-cropped-VCF_vs_ESP.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Alan_Dzagoev_2011_\%%282\%%29.jpg/420px-Alan_Dzagoev_2011_\%%282\%%29.jpg</item>
+        <item>http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Son_Heung-Min_in_Bayer_Leverkusen.jpg/540px-Son_Heung-Min_in_Bayer_Leverkusen.jpg</item>
     </array>
 </resources>

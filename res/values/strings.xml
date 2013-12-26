@@ -320,12 +320,12 @@
     <string name="writeup1">With some excellent players and a strategic manager, Croatia should be going into this tournament full of confidence. However, their qualifying campaign was lackluster and had they not been fortuitous enough to draw Iceland in the qualifiers they may well have been watching this tournament from a distance. With the players art their disposal, especially in midfield, they may cause problems even to the bigger teams. But they will need things to really click into place for them to progress beyond the second round.</string>
     <string name="prediction1">Second round exit</string>
     <string name="starman1">The Real Madrid player is one of the best passers in world football and is the centre of all things that are good for Croatia. If he gets time and space he can cause real damage.</string>
-    <string name="starmanname1">Luka Modric</string>
+    <string name="starmanname1">Luka Modrić</string>
     
     <string name="writeup2">With recent managerial and playing-system changes, Mexico aren\'t arriving to the tournament in the settled state that would be preferred. They have at their disposal a number of talented players with plenty of pace and trickery. But given their tough group they will have to find something extra to progress very far.</string>
     <string name="prediction2">Going home early</string>
     <string name="starman2">Although struggling to stake out a first team place at club Manchester United, Hernandez has skill and pace to burnf. He will need to be at his lethal best for Mexico to make any headlines.</string>
-    <string name="starmanname2">Javier Hernandez</string>
+    <string name="starmanname2">Javier Hernández</string>
 
     <string name="writeup3">One of the current forces of African football, Cameroon will be tricky opponents and will be unfazed by the high Brazilian temperatures. They have a wealth of pace, power and fitness but will need calm heads and strong leadership to make any waves.</string>
     <string name="prediction3">Group exit</string>
@@ -335,7 +335,7 @@
     <string name="writeup4">The World Cup and Europen Cup holders go in to the tournament as one of favourites. The team largely remains the same, which is good from the point of view of stability, but perhaps a little bit worrying in terms of the ageing profile. Bayern Munich handed a blueprint to combat their short-passing style in their Champions League victory over Barcelona. Adding Brazil\'s comfotable federation cup final victory over the national team has lead some to conclude that the golden era for Spain is drawing to a close. This seems somewhat premature and Spain will be there right to the end.</string>
     <string name="prediction4">Semi finalists</string>
     <string name="starman4">Delivers on the biggest occasions and will have to do so again if Spain are the conquer the other giants and lift the cup.</string>
-    <string name="starmanname4">Andres Iniesta</string>
+    <string name="starmanname4">Andrés Iniesta</string>
     
     <string name="writeup5">With a mouth-watering clash with Spain the pick of the early fixtures, this Dutch side has an interesting mix of youth and experience that will be very interesting to watch. Unfortunately, there is always the cloud of egos and infighting that often disrupts the Dutch in the big events. If they can avoid that, they can go far.</string>
     <string name="prediction5">Quarter finals</string>
@@ -355,7 +355,7 @@
     <string name="writeup8">Colombia looked like an assured team in qualifying and haven been given a group of which most other teams are jealous this could be the year for Colombia to finally fulfil their much touted ambitions. It will be interesting to see how their team fares against highly drilled European outfits (assuming they get that far) but they will definitley be a team to watch in Brazil.</string>
     <string name="prediction8">Quarter finals with a chance to go further.</string>
     <string name="starman8">A sublime attacking talent, he could be one of the heroes of the cup.</string>
-    <string name="starmanname8">Falcao</string>
+    <string name="starmanname8">Radamel Falcao</string>
     
     <string name="writeup9">The Greeks boast a very mean defence and rigit organisation that makes them difficult for any team to beat. On the other side, they are lacking the flair of the serious contenders in this tournament.</string>
     <string name="prediction9">Group stage exit</string>
@@ -405,7 +405,7 @@
     <string name="writeup18">Having fought back from the brink of elimination in their qualfier against the Ukraine, France then landed the group that all the bottom seeds were dreaming of. Their team is full of star names and in coach Deschamps they have a man with a chance of keeping balance among the many egos in the squad.</string>
     <string name="prediction18">A lot depends on the desire and harmony in the group, with anything from first round elimination to World Cup winners a possibility. Predicting quarter finals.</string>
     <string name="starman18">Already one of the world\'s best players, Ribery has taken his game to another level over the past couple of years and has become the complete player.</string>
-    <string name="starmanname18">Franck Ribery</string>
+    <string name="starmanname18">Franck Ribéry</string>
     
     <string name="writeup19">Honduras would be happy to come home from this tournament with a win under their belts and would be ecstatic with anything more. The group is kind and they might not get a better opportunity for three World Cup points for some time to come.</string>
     <string name="prediction19">May get that first win but still unlikely to qualify from the group. </string>
@@ -420,7 +420,7 @@
     <string name="writeup21">A solid team with some world-class players, Bosnia- Hertzegovina could make a name for themselves at their first World Cup. Capable of getting a result against any other team they will be one to watch.</string>
     <string name="prediction21">Provided the occasion doesn\'t get to them, Bosnia-Herzegovina will get out of the group but the dream will end there.</string>
     <string name="starman21">Man City\'s Edin Dzeko scored 10 goals in the qualifying campaign and it will be no surprise if he knocks in a few more in Brazil.</string>
-    <string name="starmanname21">Edin Dzeko</string>
+    <string name="starmanname21">Edin Džeko</string>
     
     <string name="writeup22">Iran\'s form-guide won\'t frighten anyone in this tournament, including a 1-0 defeat at the hands of lowly Lebanon. They will be hoping to return from the tournament with their pride intact, which may even be a little to optimistic.</string>
     <string name="prediction22">Second round seems possible but getting much further would require some excellent performances and a slice of luck.</string>
@@ -435,7 +435,7 @@
     <string name="writeup24">With a starting eleven as good as any in the tournament and a bench that is the envy of most of the world, Germany are incredibly strong contenders at this World Cup. Combining teachnical excellence with elite athleticism, it is going to take a team with doses of talent and organisation to stop the rampaging Germans from going all the way.</string>
     <string name="prediction24">Beaten finalists.</string>
     <string name="starman24">His departure from Real Madrid over the summer was greeted by shock all around the footballing world, having been one of Madrid\'s star performers the previous season.</string>
-    <string name="starmanname24">Mesut Ozil</string>
+    <string name="starmanname24">Mesut Özil</string>
     
     <string name="writeup25">A team with many talented individuals that just seem to be lacking a bit of team-spirit. In Ronaldo they have probably the world\'s second-best player and he is capable of glossing over their dificiencies and dragging them to big results (as he notably did in the qualfier play-offs against Sweden).</string>
     <string name="prediction25">Should cruise through the group but may struggle against more complete teams. Quarter finals.</string>
