@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Euro2012Planner</string>
+    <string name="app_name">Brazil2014Plan</string>
     <string name="news_title">News Channel</string>
     <string name="games_title">Fixtures</string>
     <string name="venues_title">Venues</string>
