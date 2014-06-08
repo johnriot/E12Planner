@@ -14,7 +14,7 @@
             android:id="@+id/adViewNews"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            ads:adUnitId="ca-app-pub-7019242850144339/1393914802"
+            ads:adUnitId="ca-app-pub-7019242850144339/7954931606"
             ads:adSize="BANNER"
             ads:loadAdOnCreate="false"/>
 
