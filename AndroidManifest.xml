@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.neoware.europlanner"
+    package="com.neoware.brazilplanner"
     android:versionCode="7"
     android:versionName="1.7" >
 
@@ -13,7 +13,7 @@
         android:label="@string/app_name">
         <activity
             android:label="@string/app_name"
-            android:name=".PlannerHomeActivity"
+            android:name="com.neoware.brazilplanner.PlannerHomeActivity"
             android:theme="@style/Theme.Styled"
             android:screenOrientation="portrait" >
 
@@ -25,43 +25,43 @@
 
         <activity
             android:label="@string/app_name"
-            android:name=".GamesActivity"
+            android:name="com.neoware.brazilplanner.GamesActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Styled" />
         
         <activity
             android:label="@string/app_name"
-            android:name=".VenuesActivity"
+            android:name="com.neoware.brazilplanner.VenuesActivity"
             android:theme="@style/Theme.Styled"
             android:screenOrientation="portrait" />
 
         <activity
             android:label="@string/app_name"
-            android:name=".TeamsActivity"
+            android:name="com.neoware.brazilplanner.TeamsActivity"
             android:theme="@style/Theme.Styled"
             android:screenOrientation="portrait" />
 
         <activity
             android:label="@string/app_name"
-            android:name=".SquadActivity"
+            android:name="com.neoware.brazilplanner.SquadActivity"
             android:theme="@style/Theme.Styled"
             android:screenOrientation="portrait" />
 
         <activity
             android:label="@string/app_name"
-            android:name=".NewsActivity"
+            android:name="com.neoware.brazilplanner.NewsActivity"
             android:theme="@style/Theme.Styled"
             android:screenOrientation="portrait" />
 
         <activity
             android:label="@string/app_name"
-            android:name=".WebViewActivity"
+            android:name="com.neoware.brazilplanner.WebViewActivity"
             android:theme="@style/Theme.Styled"
             android:screenOrientation="portrait" /> 
 
         <service
             android:enabled="true"
-            android:name=".E12DataService"
+            android:name="com.neoware.brazilplanner.E12DataService"
             android:exported="false" />
 
         <activity
