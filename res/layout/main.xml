@@ -14,7 +14,7 @@
             android:layout_above="@+id/news_ticker"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/euro2012ball"/>
+            android:src="@drawable/brazil2014"/>
         
         <TextView
             android:layout_width="fill_parent"
@@ -63,7 +63,7 @@
             android:id="@+id/adViewPlannerActivityHome"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            ads:adUnitId="a14f59150c4f295"
+            ads:adUnitId="ca-app-pub-7019242850144339/1393914802"
             ads:adSize="BANNER"
             ads:loadAdOnCreate="false"/>
     </RelativeLayout>

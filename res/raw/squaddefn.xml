@@ -417,5 +417,23 @@
         <player position ="F" number ="22" name ="Danny Welbeck" dob ="November 26, 1990" />
         <player position ="G" number ="23" name ="Jack Butland" dob ="March 10, 1993" />
     </squad>
+    
+    <!--  TODO: Fill out Squad details -->
+    <squad id="16"/>
+    <squad id="17"/>
+    <squad id="18"/>
+    <squad id="19"/>
+    <squad id="20"/>
+    <squad id="21"/>
+    <squad id="22"/>
+    <squad id="23"/>
+    <squad id="24"/>
+    <squad id="25"/>
+    <squad id="26"/>
+    <squad id="27"/>
+    <squad id="28"/>
+    <squad id="29"/>
+    <squad id="30"/>
+    <squad id="31"/>
 
 </squad_defn>

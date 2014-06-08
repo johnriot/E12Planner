@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Euro2012Planner</string>
+    <string name="app_name">Brazil2014Plan</string>
     <string name="news_title">News Channel</string>
     <string name="games_title">Fixtures</string>
     <string name="venues_title">Venues</string>
@@ -13,23 +13,32 @@
         <item>Group B</item>
         <item>Group C</item>
         <item>Group D</item>
+        <item>Group E</item>
+        <item>Group F</item>
+        <item>Group G</item>
+        <item>Group H</item>
     </string-array>
 
     <string-array name="knockout">
+        <item>Second Round</item>
         <item>Quarter-Final</item>
         <item>Semi-Final</item>
         <item>FINAL</item>
     </string-array>
 
     <string-array name="venues">
-        <item>National Stadium Warsaw, Poland</item>
-        <item>Municipal Stadium Wroclaw, Poland</item>
-        <item>Metalist Stadium Kharkiv, Ukraine</item>
-        <item>Arena Lviv, Ukraine</item>
-        <item>PGE Arena Gdansk, Poland</item>
-        <item>Municipal Stadium Poznan, Poland</item>
-        <item>Donbass Arena Donetsk, Ukraine</item>
-        <item>Olympic Stadium Kiev, Ukraine</item>
+        <item>Arena Corinthians, São Paulo</item> 		<!-- 0 -->
+        <item>Arena das Dunas, Natal</item> 			<!-- 1 -->
+        <item>Estádio Castelão, Fortaleza</item>		<!-- 2 -->
+        <item>Arena Amazônia, Manaus</item>				<!-- 3 -->
+        <item>E. N. Mané Garrincha, Brasília</item>		<!-- 4 -->
+        <item>Arena Pernambuco, Recife</item>			<!-- 5 -->
+        <item>Arena Fonte Nova, Salvador</item>			<!-- 6 -->
+        <item>Arena Pantanal, Cuiabá</item>				<!-- 7 -->
+        <item>E. Beira-Rio, Porto Alegre</item>			<!-- 8 -->
+        <item>E. do Maracanã, Rio de Janeiro</item>		<!-- 9 -->        
+        <item>E. Mineirão, Belo Horizonte</item>		<!-- 10 -->
+        <item>Arena da Baixada, Curitiba</item>   		<!-- 11 -->     
     </string-array>
 
     <!--
@@ -37,70 +46,111 @@
          should obviously match venues array
     -->
     <string-array name="venues_short">
-        <item>warsaw</item>
-        <item>wroclaw</item>
-        <item>kharkiv</item>
-        <item>lviv</item>
-        <item>gdansk</item>
-        <item>poznan</item>
-        <item>donetsk</item>
-        <item>kiev</item>
+        <item>spaulo</item>
+        <item>natal</item>
+        <item>fortaleza</item>
+        <item>manaus</item>
+        <item>brasilia</item>
+        <item>recife</item>
+        <item>salvador</item>
+        <item>cuiaba</item>
+        <item>palegre</item>
+        <item>rio</item>
+        <item>belohoriz</item>
+        <item>curitiba</item>
     </string-array>
 
     <string-array name="venue_capacities">
-        <item>50,000 Capacity</item>
-        <item>40,000 Capacity</item>
-        <item>35,000 Capacity</item>
-        <item>30,000 Capacity</item>
-        <item>40,000 Capacity</item>
-        <item>40,000 Capacity</item>
-        <item>50,000 Capacity</item>
-        <item>60,000 Capacity</item>
+        <item>68,000 Capacity</item>
+        <item>42,086 Capacity</item>
+        <item>64,846 Capacity</item>
+        <item>42,374 Capacity</item>
+        <item>70,042 Capacity</item>
+        <item>46,154 Capacity</item>
+        <item>56,000 Capacity</item>
+        <item>42,968 Capacity</item>
+        <item>51,300 Capacity</item>
+        <item>76,935 Capacity</item>
+        <item>62,547 Capacity</item>
+        <item>43,981 Capacity</item>
     </string-array>
 
     <string-array name="team_names">
-        <item>Poland</item>
-        <item>Greece</item>
-        <item>Russia</item>
-        <item>Czech Rep.</item>
+        <item>Brazil</item>
+        <item>Croatia</item>
+        <item>Mexico</item>
+        <item>Cameroon</item>
+        <item>Spain</item>
         <item>Netherlands</item>
-        <item>Denmark</item>
+        <item>Chile</item>
+        <item>Australia</item>
+        <item>Colombia</item>
+        <item>Greece</item>
+        <item>Ivory Coast</item>
+        <item>Japan</item>
+        <item>Uruguay</item>
+        <item>Costa Rica</item>
+        <item>England</item>
+        <item>Italy</item>
+        <item>Switzerland</item>
+        <item>Ecuador</item>
+        <item>France</item>
+        <item>Honduras</item>
+        <item>Argentina</item>
+        <item>Bos Herz</item>
+        <item>Iran</item>
+        <item>Nigeria</item>
         <item>Germany</item>
         <item>Portugal</item>
-        <item>Spain</item>
-        <item>Italy</item>
-        <item>Ireland</item>
-        <item>Croatia</item>
-        <item>Ukraine</item>
-        <item>Sweden</item>
-        <item>France</item>
-        <item>England</item>
+        <item>Ghana</item>
+        <item>USA</item>
+        <item>Belgium</item>
+        <item>Algeria</item>
+        <item>Russia</item>
+        <item>S Korea</item>
     </string-array>
 
     <!--
          Team drawables, do not translate!
          should obviously match team array
     -->
+    
     <string-array name="team_icon_resource_names">
-        <item>poland</item>
-        <item>greece</item>
-        <item>russia</item>
-        <item>czechrep</item>
+        <item>brazil</item>
+        <item>croatia</item>
+        <item>mexico</item>
+        <item>cameroon</item>
+        <item>spain</item>
         <item>netherlands</item>
-        <item>denmark</item>
+        <item>chile</item>
+        <item>australia</item>
+        <item>colombia</item>
+        <item>greece</item>
+        <item>ivorycoast</item>
+        <item>japan</item>
+        <item>uruguay</item>
+        <item>costarica</item>
+        <item>england</item>
+        <item>italy</item>
+        <item>switzerland</item>
+        <item>ecuador</item>
+        <item>france</item>
+        <item>honduras</item>
+        <item>argentina</item>
+        <item>bosniaherz</item>
+        <item>iran</item>
+        <item>nigeria</item>
         <item>germany</item>
         <item>portugal</item>
-        <item>spain</item>
-        <item>italy</item>
-        <item>ireland</item>
-        <item>croatia</item>
-        <item>ukraine</item>
-        <item>sweden</item>
-        <item>france</item>
-        <item>england</item>
+        <item>ghana</item>
+        <item>unitedstates</item>
+        <item>belgium</item>
+        <item>algeria</item>
+        <item>russia</item>
+        <item>southkorea</item>
     </string-array>
-
-    <string-array name="qf_placeholder_names">
+    
+    <string-array name="sr_placeholder_names">
         <item>1st Group A</item>
         <item>2nd Group B</item>
         <item>1st Group B</item>
@@ -109,6 +159,25 @@
         <item>2nd Group D</item>
         <item>1st Group D</item>
         <item>2nd Group C</item>
+        <item>1st Group E</item>
+        <item>2nd Group F</item>
+        <item>1st Group F</item>
+        <item>2nd Group E</item>
+        <item>1st Group G</item>
+        <item>2nd Group H</item>
+        <item>1st Group H</item>
+        <item>2nd Group G</item>
+    </string-array>
+    
+    <string-array name="qf_placeholder_names">
+        <item>Winner SR 1</item>
+        <item>Winner SR 2</item>
+        <item>Winner SR 3</item>
+        <item>Winner SR 4</item>
+        <item>Winner SR 5</item>
+        <item>Winner SR 6</item>
+        <item>Winner SR 7</item>
+        <item>Winner SR 8</item>
     </string-array>
 
     <string-array name="sf_placeholder_names">
@@ -123,6 +192,17 @@
         <item>Winner SF 2</item>
     </string-array>
 
+    <string-array name="sr_game_titles">
+        <item>SR1</item>
+        <item>SR2</item>
+        <item>SR3</item>
+        <item>SR4</item>
+        <item>SR5</item>
+        <item>SR6</item>
+        <item>SR7</item>
+        <item>SR8</item>
+    </string-array>
+    
     <string-array name="qf_game_titles">
         <item>QF1</item>
         <item>QF2</item>
@@ -177,10 +257,10 @@
     <string name="adsId">4028cba631d63df10131e1d3818b00cc</string>
     
     <!-- News Ticker -->
-    <string name="ticker_text">UEFA News Loading.... Touch for Full Index!</string>
+    <string name="ticker_text">FIFA News Loading.... Touch for Full Index!</string>
     <string name="loadingFeedError">News Channel Temporarily Unavailable.</string>
-    <string name="uefa_feed_lead">UEFA NEWS FEED &#8230;</string>
-    <string name="uefa_feed_tail">*END OF FEED* &#8230;</string>
+    <string name="fifa_feed_lead">FIFA.com News &#8230;</string>
+    <string name="fifa_feed_tail">*END OF FEED* &#8230;</string>
 
     <string name="aboutHeader">About</string>
     <string name="aboutText">Euro 2012 Planner Application developed by John
@@ -206,12 +286,12 @@
     <string name="loadingSquads">Loading latest squad data&#8230;</string>
 
     <array name="adKeywords">
-        <item>Euro 2012</item>
+        <item>World Cup 2014</item>
         <item>Football</item>
         <item>Sport</item>
         <item>Soccer</item>
-        <item>Poland</item>
-        <item>Ukraine</item>
+        <item>Brazil</item>
+        <item>South America</item>
         <item>Travel</item>
         <item>futbol</item>
         <item>eurocopa</item>
@@ -222,7 +302,7 @@
     <string name="squadProspects">Prediction</string>
     <string name="squadStarPlayer">Star Player</string>
 
-    <string name="prediction">Pre Tournament Prediction:</string>
+    <string name="prediction">Prediction:</string>
 
     <!--  Write Ups -->
     <string name="writeupNotFound">Write up not available</string>
@@ -232,84 +312,164 @@
 
     <!--  Below here not in Spanish -->
 
-    <string name="writeup0">Co-Hosts of the tournament Poland never had to qualify for the tournament and have spent the past two years developing their side in anticipation of the Euros in their home country. Unfortunately for Poland it has meant they haven’t played a competitive international in 3 years. With a trio of league winners hailing from the Borussia Dortmund team and an excellent goalkeeper in Szcesny Poland have some experience in their ranks, however qualification through to the quarters looks unlikely. Home support and the wonderful striker Robert Lewandowski will have to play their part if this minor miracle is to happen. Although he should be the star man in this Polish team I have a feeling they will be more on the back foot than the front.</string>
-    <string name="prediction0">Group exit</string>
-    <string name="starman0">The young Arsenal goalkeeper will have to be at his best if Poland are to have any chance of qualifying from the group. A strong goalkeeper with excellent reflexes, he has been outstanding for Arsenal. His impact has been such that the often questioned Arsenal goalkeeping position hasn’t been discussed in well over 18 months.</string>
-    <string name="starmanname0">Wojciech Szczęsny</string>
+    <string name="writeup0">Hosts and five-time winners Brazil rightly go into the tournament as one of the favourites. With outstanding talents throughout the team and with an efficiency drilled by caoch Scolari, Brazil are capable of beating the best. The only worry may be that automatic qualification may mean the team will lack that competitive edge. However, it would be brave to bet against them especially with home advantage.</string>
+    <string name="prediction0">The twelfth man will be just enough to see Brazil edge past the others to win the World Cup on home soil.</string>
+    <string name="starman0">So good they only named him once! Barcelona\'s Neymar is coming-of-age at the perfect time for this tournament. The hopes and prayers of his nation will be on his shoulders and he could achieve God-like status if he influences the team to a successful home World Cup.</string>
+    <string name="starmanname0">Neymar</string>
 
-    <string name="writeup1">Having changed managers from the last campaign Greece have taken off the shackles and adopted a more attacking 433 formation. It has proved very effective and led to a run of 17 games unbeaten. Greece qualified top and unbeaten in a group which contained a very good Croatian side as well as Israel, Latvia and Georgia. This speaks for the defensive solidity they have continued under Fernando Santos. Upfront Greece aren’t the strongest and rely heavily on Gekas an excellent goalscorer but temperamental character. The poor, sometimes awful Samaras will provide competition.  The star player for me though has to be Ninis in midfield. He was their talisman during qualification and is their attacking playmaker.</string>
-    <string name="prediction1">Narrowly miss out on qualification</string>
-    <string name="starman1">Another prodigious young talent who has recently signed for Parma. He carries a huge responsibility to create for Greece but unfortunately for him he has been injured for most of the season. If he can sparkle Greece have a chance at qualifying.</string>
-    <string name="starmanname1">Sotiris Ninis</string>
+    <string name="writeup1">With some excellent players and a strategic manager, Croatia should be going into this tournament full of confidence. However, their qualifying campaign was lackluster and had they not been fortuitous enough to draw Iceland in the qualifiers they may well have been watching this tournament from a distance. With the players art their disposal, especially in midfield, they may cause problems even to the bigger teams. But they will need things to really click into place for them to progress beyond the second round.</string>
+    <string name="prediction1">Second round exit</string>
+    <string name="starman1">The Real Madrid player is one of the best passers in world football and is the centre of all things that are good for Croatia. If he gets time and space he can cause real damage.</string>
+    <string name="starmanname1">Luka Modrić</string>
     
-    <string name="writeup2">A tight qualifying campaign saw Russia as one of the last automatic qualifiers for the Euro’s.The Republic of Ireland finished 2nd in their group but were easily defeated at home by an impressive firt half Russian performance. Currently managed by the experienced ex Zenit St Petersburg manager Dick Advocaat, Russia have become less about the flair and more about the results. Four years ago saw a fluid, scintillating performance led by an explosive Andrey Arshavin. Time has taken its toll however and Arshavin no longer possesses the blistering pace and or match sharpness to make him the piercing wide threat he once was. Russia will instead look to their playmaker Shirokov to dictate the middle of the park and provide the ammunition for the young Dzagoev to hurt the opposition. Russia also possess an excellent goalkeeper in Akinfeev.</string>
-    <string name="prediction2">Group A winners</string>
-    <string name="starman2">The young wide man from CSKA Moscow. Has good Champions league experience and scored against Manchester United at Old Trafford. Expect good invention, quick feet and goalscoring opportunities.</string>
-    <string name="starmanname2">Alan Dzagoev</string>
+    <string name="writeup2">With recent managerial and playing-system changes, Mexico aren\'t arriving to the tournament in the settled state that would be preferred. They have at their disposal a number of talented players with plenty of pace and trickery. But given their tough group they will have to find something extra to progress very far.</string>
+    <string name="prediction2">Going home early</string>
+    <string name="starman2">Although struggling to stake out a first team place at club Manchester United, Hernandez has skill and pace to burnf. He will need to be at his lethal best for Mexico to make any headlines.</string>
+    <string name="starmanname2">Javier Hernández</string>
 
-    <string name="writeup3">Defeating Montenegro in the playoffs having finished behind Spain in the qualifying group, the Czech Rep maintained their fantastic record of having qualified for every Euro’s since the breakup of Czechoslovakia. The Czech side is solid and technically very adept.  Jiracek is a worker in the middle of the park and will be supported from either side by quick wing backs. However the main fulcrum of the team is Tomas Rosicky, the Arsenal midfielder. The Czech coach Bilek will be glad to have seen the renaissance of Rosicky in the latter half of the season after two horrendous years of injuries. A lot will depend on his guile and the finishing of Milan Baros if the Czech Rep are to qualify. A lack of a decent striker is a real problem as Baros has lost his yard of pace.</string>
-    <string name="prediction3">Qualify in 2nd, just</string>
-    <string name="starman3">A class player when he is fit and mobile. His form at the end of the season with Arsenal suggests he might be ready for the responsibility of leading his country into these Euros.</string>
-    <string name="starmanname3">Tomáš Rosický</string>
+    <string name="writeup3">One of the current forces of African football, Cameroon will be tricky opponents and will be unfazed by the high Brazilian temperatures. They have a wealth of pace, power and fitness but will need calm heads and strong leadership to make any waves.</string>
+    <string name="prediction3">Group exit</string>
+    <string name="starman3">Samuel Eto\'o, the captain and leader, will need to inspire those around him to perform with the perfect balance of controlled agression to navigate a difficult group.</string>
+    <string name="starmanname3">Samuel Eto\'o</string>
     
-    <string name="writeup4">Everyone’s favourite second team Holland continues the legacy of Renes Michels, Cruyff, Gullit, Van Basten and Rikjaard with a commitment to attacking football. Holland finished top of their qualifying group scoring the more goals than any other team in qualification (37.) A wonderful team to watch they have come so close in recent years to winning a major championship’s but never quite made it over the line. With Robin Van Persie up top Holland have the most in form striker in Europe at present. RVP has devastated defences all year with his supreme technical ability and deadly accuracy.  He will be supported by the speed merchants Afellay and the wonderous Arjen Robben. These two wingers possess great ability to beat opposing full backs but it is their ability to get the ball into RVP and avoiding the temptation to be selfish which may define the Dutch teams campaign. Behind the front three will sit Wesley Sneijder an excellent no.10 who has lost his form since the world cup. Expect a big performance from him as he is said to be looking for a move this summer so this is his opportunity to put himself in the shop window. Looking further back in the team Jonny Heitnga is a solid performer, if not a bit rash and Gregory Van der Wiel provides great attacking support for the wingers. With De Jong and Van Bommel enforcing in the centre of the park Holland have a secure platform from which to spring forward. Discipline, as we seen in the World Cup could play an important part of their campaign.</string>
-    <string name="prediction4">Semi Final</string>
-    <string name="starman4">A top class player who lit up this year Champions League I expect Robben to once again terrorise defences with his menace. Has a wonderful ability to change direction while moving a high speeds and a thunderous left foot. If Robben can make the right decisions in the final third i.e. when to give it to RVP and when to go alone he could be up there for player for the tournament.</string>
-    <string name="starmanname4">Arjen Robben</string>
+    <string name="writeup4">The World Cup and Europen Cup holders go in to the tournament as one of favourites. The team largely remains the same, which is good from the point of view of stability, but perhaps a little bit worrying in terms of the ageing profile. Bayern Munich handed a blueprint to combat their short-passing style in their Champions League victory over Barcelona. Adding Brazil\'s comfotable federation cup final victory over the national team has lead some to conclude that the golden era for Spain is drawing to a close. This seems somewhat premature and Spain will be there right to the end.</string>
+    <string name="prediction4">Semi finalists</string>
+    <string name="starman4">Delivers on the biggest occasions and will have to do so again if Spain are the conquer the other giants and lift the cup.</string>
+    <string name="starmanname4">Andrés Iniesta</string>
     
-    <string name="writeup5">The most unfancied of the Group B teams, but Denmark will be no slouches. They had an impressive qualifying campaign as Portugal will be aware. They topped the group losing only once, away to Portugal. Denmark have a strong central defence in Agger and Kjaer with what looks now like Lindegaard in goal. The squad have the luck of having played under Martin Olsen for a long, long time which has bred continuity in tactics and squad harmony. They will be aware of all the teams in their group with the Dutch and Germans being their geographical neigbours and Portugal having been in their group. Upfront they possess the enigma that is Niklas Bendtner, normally a lot better for his country than at club level, but more importantly the highly sought after Christian Eriksen. The young playmaker has grown up at Ajax and exhibits all the technique and skills one would expect from an Ajax academy graduate. He will be instrumental if Denmark are to progress in the tournament.</string>
-    <string name="prediction5">Unlucky for Denmark that they ended up in such a difficult group. Elimination at the group stage is inevitable</string>
-    <string name="starman5">He might not get his chance to shine given the difficult opponents but in parts where Denmark plays well, he will be instrumental.</string>
-    <string name="starmanname5">Cristian Eriksen</string>
+    <string name="writeup5">With a mouth-watering clash with Spain the pick of the early fixtures, this Dutch side has an interesting mix of youth and experience that will be very interesting to watch. Unfortunately, there is always the cloud of egos and infighting that often disrupts the Dutch in the big events. If they can avoid that, they can go far.</string>
+    <string name="prediction5">Quarter finals</string>
+    <string name="starman5">It\'s hard to believe that Arjen Robben will only be 30 years old at this tournament. It seems like he has been playing forever. He contributes massively to Bayern winning the Champions League and will be massive for the Netherlands in Brazil.</string>
+    <string name="starmanname5">Arjen Robben</string>
     
-    <string name="writeup6">German efficiency prevailed in the qualifying round easing through to the Euro’s with 10 wins from 10. An excellent record carrying on the legacy of teams from the 2006 World Cup. Many people’s bet to lift the title in Poland the German’s are hard to argue against. Their strength is in the middle of the park where they can boast the sublime (and in my opinion) finest centre midfielder in the world, Bastian Schweinsteiger. A machine of a man he is aligns technical brilliance with a phenomenal engine. He is the heartbeat of the team and the class of Mesut Ozil just in front provides a perfect compliment to his industry. Ozil is a tremendously talented individual capable of splitting defence’s apart with his wonderful vision and skill of pass. Wide of Ozil Germany can call on the young but brilliant Tomas Muller and Podolski. Up top Germany have one of the most prolific international strikers around in Miroslav Klose, who along with Podolksi will effectively be playing on home soil given they are half Polish. When examining the back line there is also talents in abundance. Phillip Lahm, capable of playing on either full back position and the Bayern keeper Neuer provide true world class cover. However, the one soft area of the German team is the centre of defence. Badstuber and Hummels aren’t the greatest but the quality and ability of the rest of the team will see the Germans are OK. From the bench Germany have two of the most exciting prospects in Europe in Reus and the majestic Mario Gotze. Gotze campaign was blighted by injury this year but this may leave him feeling fresher for the tournament. If he gets time on the pitch I would expect him to make a telling impact.</string>
-    <string name="prediction6">Final</string>
-    <string name="starman6">Although Germany have some phenomenal attacking talent ‘’Schweiny’’ is quite simply the complete footballer. He will dictate their tempo and always be available for teammates. His experience is also vital for the younger players and I expect him to be one of the players of the tournament. Injured for most of the season, Schweinsteiger came back toward the end of the season and absolutely dominated the midfield in the CL final. Unfortunately for him he was to miss the significant penalty in the shootout but I expect his German mentality to allow him to forget the tragedy in Munich and set his sights firmly on winning in Poland.</string>
-    <string name="starmanname6">Bastian Schweinsteiger</string>
+    <string name="writeup6">Chile will feal resonably at home in Brazil and will play without any fear as expectation is not very high on them in a group with two of the giants of European football. Neither Spain nor The Netherlands will look forward to playing Chile and I can forsee them getting a result from one of those games.</string>
+    <string name="prediction6">Brave performances but ultimately a group stage exit.</string>
+    <string name="starman6">The Juventus star is one of the most exciting talents in world football with lively link up play and good finishing on his resume.</string>
+    <string name="starmanname6">Arturo Vidal</string>
     
-    <string name="writeup7">Cometh the hour….Cometh the man….Thats what he’ll be thinking anyway. After another virtuoso year Cristiano Ronaldo steps into this tournament with the opportunity to make history for both Portugal and himself. With no Leo Messi to compete with, CR7 can be the first Portuguese captain to lift an international trophy. It’s just a pity for him they got drawn in the group of death. A very talented squad marshaled by Paulo Bento, Portugal struggled through the qualifying group stages finishing second in their group to Denmark. Fortunately they came through the second leg with an emphatic 6&#8211;2 win over Bosnia and cemented their place in the finals. Although the talisman is Ronaldo, Portugal have a wealth of attacking talent. Traditionally their problem area has been their goalkeeper and their no9. The no9 problem still exists with Postiga and Almeida fighting it out for a starting berth but in Rui Patricio Portugal can boast one of the most consistent performers in Europe this past two seasons. Nani and Ronaldo will terrorise defences with their speed and trickery but the player who will dictate everything will be the excellent Joao Moutinho. Small in stature but with fantastic ability the Porto midfielder is a superb creator of chances. Expect fast, possession football from Portugal with a strong emphasis on quick counter attacks utilizing the speed of Ronaldo and Nani. Personally however, I just don’t see any way past the two big hitters in this group and with a poor defence and teams focusing on Ronaldo I don’t see Portugal having enough to get out of the group.</string>
-    <string name="prediction7">Group stage exit</string>
-    <string name="starman7">A shocking first season at Madrid after signing for 20+million, he had the fans heavily criticisizing him, but Coentrao got through it and won La Liga. He is an excellent attacking full back and I expect to see him perform back to his best with his national team. He is the first choice left back and the confidence the manager as in him should help him perform to the level he is capable of. In a group full of attacking talent he will no doubt be worked hard so it will be important for him to play well.</string>
-    <string name="starmanname7">Fabio Coentrao</string>
+    <string name="writeup7">From Australia\'s point of view, this is a group of death. Their stars are passed their prime and their young talent is good but not superb. They will do well if they avoid embarrassment in one of the toughest groups of the tournament.</string>
+    <string name="prediction7">First flight home</string>
+    <string name="starman7">The Crystal Palace captain is a gritty performer and will have to inspire this throughout the team for Australia not to go home blushing.</string>
+    <string name="starmanname7">Mile Jedinak</string>
     
-    <string name="writeup8">Everyone’s pre tournament favourite, its very hard to criticize this Spanish team. Without doubt the most talented and complete squad they breezed through their qualifying campaign with 8 wins out of 8 and scoring 26 goals in the process. However, the reigning world and European champions have begun to gather some problems recently with the withdrawal of Puyol and the lethal David Villa. Most other teams would feel the pinch losing two inspirational characters but the Spanish can replace them. Spurred on by his Champions League success Fernando Torres now has the chance to step up to the mark and be Spain’s leading number 9 at a tournament and plan B will be made available through the excellent Fernando Llorente. Strong, mobile and aerially superb Llorente will offer the Spanish a different choice upfront if needed. After 4 years of Spanish dominance and the success of Barcelona, teams understand how to tactically adjust to defeat the tiki taka style of the Spanish. Jordi Alba is the most notable change in the lineup from the previous world cup winning side; expect plenty of forward runs showing support to Mata / Silva / Iniesta / Pedro / Cesc. Sergio Ramos will form the centre partnership with the eloquent Pique and as per usual Xavi will pull the strings in front. The midfield should be completed by Alonso and Busquets who will continue the carousel ride for the opponent’s midfield. The main advantage the Spanish have however is their bench with players of the calibre of Javi Martinez, Jesus Navas and Santi Carzola to take the places of any injured or suspended players. In saying all of this, I still fancy the Spanish to come up short. The pressure of being the first international team to win three successive championships is huge but coupled with the tiredness of the Barcelona contingent of 4 years of non-stop football I believe it might just be a bridge to far.</string>
-    <string name="prediction8">Group winners but defeated at the semi’s</string>
-    <string name="starman8">This tournament offers Torres the chance to shine again. After a poor season with Chelsea and a champions league final where he was benched I expect Torres to feel at home with his compatriots. They trust him implicitly and I expect them to create plenty of chances which a confident Torres will gladly oblige.</string>
-    <string name="starmanname8">Fernando Torres</string>
+    <string name="writeup8">Colombia looked like an assured team in qualifying and haven been given a group of which most other teams are jealous this could be the year for Colombia to finally fulfil their much touted ambitions. It will be interesting to see how their team fares against highly drilled European outfits (assuming they get that far) but they will definitley be a team to watch in Brazil.</string>
+    <string name="prediction8">Quarter finals with a chance to go further.</string>
+    <string name="starman8">A sublime attacking talent, he could be one of the heroes of the cup.</string>
+    <string name="starmanname8">Radamel Falcao</string>
     
-    <string name="writeup9">Once again going into a major tournament the Italians have been stung by a domestic corruption scandal. Unlike the last time however I don’t see this Italian team being victorious. Their squad is very uninspiring for an Italian team and with Mario Balotelli included who knows what will happen? Juventus excellent Marchisio will operate in the centre of the park alongside De Rossi and the ageing but magnificent Pirlo. The problems however for Italy have been upfront with the significant loss of Guiseppe Rossi to a 2nd knee injury and although Cassano is back he is recovering from heart surgery only 6 months ago. Cassano and Balotelli represent the two enigmas of the tournament, brilliant on their day but hugely temperamental. Giovinco will provide backup from the bench, also another very talented no 10 produced by the Italians. The loss of the left back Criscito due to the match fixing scandal and centre back Barzagli for the group games may prove significant but one point the Italians will be worried about is facing a must win game versus Trapattoni’s Ireland in the last game.</string>
+    <string name="writeup9">The Greeks boast a very mean defence and rigit organisation that makes them difficult for any team to beat. On the other side, they are lacking the flair of the serious contenders in this tournament.</string>
     <string name="prediction9">Group stage exit</string>
-    <string name="starman9">An all round superb player and will need to be in top form if Italy are to overcome Spain and Croatia.</string>
-    <string name="starmanname9">Danielle De Rossi</string>
+    <string name="starman9">A top-class centre forward but will require his teammates to provide the service and this may be the problem.</string>
+    <string name="starmanname9">Konstantinos Mitroglou</string>
     
-    <string name="writeup10">After 24 years Ireland have finally returned to the Euros and the tournament will definitely know it. Expected to have the largest following of all travelling teams Ireland will no doubt carry a twelfth man into every game. Trappatoni has built an efficient side, which remains unbeaten in 13. Ireland concedes very few goals due to their solid defensive back 6. They play with Whelan and Andrews normally as the two deep lying CM’s and have the ability to counter attack effectively with their front four. With O’Shea, Given, Duff and R.Keane Ireland have plenty of experience and winners in the group to expect to make a challenge in the group. Ireland also have some good young talented highlighted by the inclusion of James McLean. Ireland will face the Croatians in the first game where, if they can get some type of a result qualification will become a real possibility. In order for them to qualify defensive solidity is important but at the other end clinical finishing. Shane Long had a decent season at West Brom and whenever used could be the difference. Jon Walters also provides a good alternative for Trap as he can fit in as a 5th midfielder, linking with the front man. My fear for Ireland however is their acceptance of defensive work and the ease at which they offer the ball to their opponents. In a group with Croatia and Spain, two passing sides, Ireland will work very hard and exhaustion may play a part. However, with any positive result Ireland will grow in confidence and believe they can achieve qualification.</string>
-    <string name="prediction10">Unfortunately, my head tells me this could be a difficult campaign for the Irish team and expect them to exit at the group stage.</string>
-    <string name="starman10">In Shay Given Ireland have one of the finest keepers in Europe over the past 10 years. If they are to do well, Shay needs to be at his best.</string>
-    <string name="starmanname10">Shay Given</string>
+    <string name="writeup10">The highest ranked African team and definietely a team to watch in this tournament. They will fancy their chances of progression from this group and few teams will fancy meeting them beyond that stage. With an extremely fit and strong team, the grueling schedule of games will suit them better than most. Likely to cause an upset along the way and make a few headlines.</string>
+    <string name="prediction10">Quarter Finals</string>
+    <string name="starman10">Man City\'s midfield engine is one of the finest players gracing the tournament and will help his team to some memorable results.</string>
+    <string name="starmanname10">Yaya Toure</string>
     
-    <string name="writeup11">Croatia would be my “dark horse” tip for the tournament. An clever passing side with a unpredictable and passionate coach, Croatia have performed consistently well in recent years. They missed out in South Africa but in Slaven Bilic they have a manager who believes and trusts the players. He inspires confidence in them and as he leaves his post after the euro’s to go to Lokomotiv Moscow this could be one final farewell. Croatia can call on the sublime Luka Modric who will run their passing game. They qualified second to Greece but hammered the Turks in the playoffs. Unpredictable but capable is how I would describe Croatia. With Krancjar and Dario Srna they have good wide men and up top they have the assassin like striker in Jelavic. His record since signing for Everton is phenomenal and his ability to hit the target in the box is reminiscent of Ole Gunnar Solskjaer. Croatia may be weak at the back and have a small squad especially since the loss of Olic but on their day they could surprise anyone.</string>
-    <string name="prediction11">2nd in the group, expect quarters but they would be my outside bet for semi finalists. Most likely have to beat France in quarters, but if England qualify top, Croatia will be there.</string>
-    <string name="starman11">A quality centre forward, David Moyes has found a bargain. He works defenders all over the box and has excellent finishing ability. At 40/1 he is a good outside bet for top goalscorer.</string>
-    <string name="starmanname11">Nikica Jelavic</string>
+    <string name="writeup11">Japan have undoubted (if underrated) talent up front but lack the resiliance in defence that is needed to pose a serious threat of qualifying from this group. They are lightly to cause their opponents problems and show some flashed of brilliance but ultimately this is unlikely to be a trip for the Blue Samurai to remember for too long.</string>
+    <string name="prediction11">Moments of beautiful football but ultimately an early flight home.</string>
+    <string name="starman11">Formerly one fo the finest players in the Budesliga, Kagawa gets very limited game time at Manchester United. Will feel he has a point to prove in Brazil.</string>
+    <string name="starmanname11">Shinji Kagawa</string>
     
-    <string name="writeup12">The team who seem to be struggling the most with injuries it has not been a good lead up to the Euro’s for Ukraine. They have lost their keeper of near 20years and their main central defender Chygrynsky, formerly of Barcelona. They are however the home side and the country will be firmly behind them. Coupled with the fact that this is Shevchenko’s swansong then there is something to cheer about for the Ukranians. They have Bayern’s Antoliy Tymoschuk in the middle of the park who will lend experience and calmness to the younger heads around him. However I fear for the Ukranians. Group D has some tricky customers and in my opinion will be a short campaign for the hosts.   </string>
-    <string name="prediction12">Failure</string>
-    <string name="starman12">In his final hurrah I think it will be impossible for anyone to overshadow the great striker.</string>
-    <string name="starmanname12">Andriy Shevchenko</string>
+    <string name="writeup12">With a fearsome attacking line, defenders will be having nightmares about going toe-to-toe with Uruguay. Luis Suarez is fast becoming one of the best strikers in the world and if his current form continues he looks capable of beating a team on his own. Uruguay will be looking to top the group and could definitely upset some big names in this tournament.</string>
+    <string name="prediction12">Quarter finals would seem very possible and I wouldn\'t bet against seeing them in the semis either.</string>
+    <string name="starman12">He has everything to be one of the greats of this era. If he can keep his discipline in check he could be making a lot of headlines this summer.</string>
+    <string name="starmanname12">Luis Suarez</string>
     
-    <string name="writeup13">The Swedes, England’s nemesis. In a three way battle for two places the English would not have liked to have drawn the Swedes given their atrocious record against them. Sweden will be very happy with their group and with Rasmus Elm and often disappointing Ibrahimovic in their attack Sweden will cause problems as they showed the Dutch team last year winning 3&#8211;2. Sweden are organized and have taken to the new coach’s expansive football well. They play with two up top with Ibra now dropping into the playmaker no10 role. Martin Olsson of Blackburn is a particularly good attacking threat and will get forward whenever possible. Sweden have a steady midfield including Seb Larsson of Sunderland who is an excellent set piece specialist (if he can get the ball from Ibra,) and Kim Kallstrom. At the back Olof Mellberg will marshal the defence though he will have to use all his experience to make up for his lack of pace. Unfortunately, I can’t see enough in the Swedish team to suggest they will clear the group stage. As an outside bet however, at 400/1 Johan Elmander is a decent shout for top goalscorer!! He’ll play up top as no.9 with Ibra behind.</string>
+    <string name="writeup13">Costa Rica boast a mean defence and their qualifying record is impressive. However, this is all against teams that could hardly claim to be in football\'s top tier. It will be interesting to see how Costa Rica will cope against stronger footballing nations and whether they can find a few goals to help them challenge for qualification from the group.</string>
     <string name="prediction13">Group stage exit</string>
-    <string name="starman13">A quality player who has been looked at by many top clubs. Expect a move sooner rather than later.</string>
-    <string name="starmanname13">Rasmus Elm</string>
+    <string name="starman13">A quality player who has all the talent but sometimes lacks consistency. Will need a huge tournament to avoid sitting at the bottom of the group after the first three games.</string>
+    <string name="starmanname13">Bryan Ruiz</string>
     
-    <string name="writeup14">After their dismal display in South Africa French football has recovered well under the guise of their world cup winning captain Laurent Blanc. Blanc has rekindled the French public’s love for the Les Bleus and even managed to integrate the highly criticized Patrice Evra back into the fold. The French qualifying campaign went very well losing only once in a shock defeat to Belarus. Since then the French have went 18 games undefeated and their side seem more settled into the team mentality than anytime under the ‘’crazy’’ Domenech. With Hugo Lloris in goal France have arguably their best goalkeeper in recent memory and a right full back in Debuchy who has had an excellent season with Lille. The rest of the defence inspires little confidence, especially with Evra at left back who since the world cup 2010 has failed to live up to his usual high standards. Further up field France can boast the talents of M’Villa a warrior in the midfield and the class of Yohann Cabaye. Although not first choice Cabaye has the potential to add that little “je ne sais quoi” to the French midfield. An excellent passer of the ball he reminds this writer of a French Cesc Fabregas. Out wide France have some potent attack with Nasri, Ben Arfa, Menez, Valbuena and whom I feel personally is one of the most overhyped players in Europe, Ribery. However the real crème de la crème lies up top where France can boast two of the most prolific marksmen in Europe this season, Olivier Giroud and Karim Benzema….Goals, Goals, Goals.</string>
-    <string name="prediction14">Group D winners</string>
-    <string name="starman14">Benzema has taken his time to settle in Madrid but under Mourinho has shone and this seasons scored 30+ goals in the white of Madrid. His strength, pace and lethal finishing make him a contender for the golden boot at the tournament. I expect France to make the semi finals at a minimum.</string>
-    <string name="starmanname14">Karim Benzema</string>
+    <string name="writeup14">National expectation is low in England for this tournament which is possibly the first time ever in the modern era. A lot of the stars from their golden era are coming into their autumn years and under Roy Hodgson their qualification campaign was quite a conservative affair for the most part. Some recent performances have hinted towards a more expansive style of play but when the tournament pressure arrives it will be surprising if England don\'t focus more of their efforts on not conceding than on anything else.</string>
+    <string name="prediction14">Second round seems possible but getting much further would require some excellent performances and a slice of luck.</string>
+    <string name="starman14">Having recently exploded onto the national team, this exciting player is capable of being the spark that England require.</string>
+    <string name="starmanname14">Andros Townsend</string>
     
-    <string name="writeup15">A strange build up to the tournament for England has seen them qualify with ease from their group only to ask their manager to leave 4 months before the tournament. In typical English style there has been plenty of controversy in the build up to the tournament with the “racism” case featuring their former captain John Terry and the omission of Rio Ferdinand. England also chose to appoint the underdog in Roy Hodgson over the press favourite Harry Redknapp. Added to that the huge injury list and it’s just another big tournament passing England by….Or is it??? Roy Hodgson is an intelligent coach who has been around Europe for a long time. International football is an area he is familiar with to having successfully taken Switzerland to 94 world cup. Tactically astute Hodsgon will drill organization into the England team and make them difficult to defeat. He has already achieved two wins in his first two games and playing France in their opening game might work to their advantage. A positive result here and anything is possible. Rooney is suspended for the first two games however, which could cause a serious problem. Personally, I see no glory again for England this year. It is the poorest midfield I can remember and the injuries have been very unkind to the team. The inclusion of two average performers in Downing and Henderson is baffling and I feel will cost England as ball retention is such a vital part of the modern game and technically these two players won’t cut it against Europe’s elite. England’s hope lies in Gerrard stepping up as leader, the excellent Joe Hart, Ashley Cole continuing his Champions League final form, Rooney returning and raring to go and the Ox making his breakthrough. With expectations lowered for the first time ever I expect England to exit at the quarters.</string>
-    <string name="prediction15">2nd in group, quarter final exit</string>
-    <string name="starman15">Given his chance this kid could provide England with the spark they need. He will be largely unknown to most teams having only broken through this year but he has searing pace and is an intelligent player. Well built with an eye for goal, I expect Hodgson to use Ox as his game changer.</string>
-    <string name="starmanname15">Alex Oxlade-Chamberlain</string>
+    <string name="writeup15">Perennial overachievers in tournament football, you write Italy off at your peril. With an ability to get results that scarcely seem possible and often don\'t seem deserved, Italy could be there right to the end. However, on paper this side just doesn\'t look strong enough to compete. Pirlo is an undoubtedly fine player, but for your playmaker to be 35 years old in such hot conditions, it seems like Italy will struggle against top teams.</string>
+    <string name="prediction15">May scrape through the group but going home before the quarter final stage.</string>
+    <string name="starman15">Pirlo can single-handedly dismantle teams, as he showed against England in their last tournament meeting. But has he the legs to play this packed schedule in such heat? </string>
+    <string name="starmanname15">Andrea Pirlo</string>
+     
+    <string name="writeup16">Impressive in qualifying and one of the top seeds of the tournament, the credentials of this Swiss team look good on paper. However, it remains to be seen how well they will cope when they are pitted against some of the bigger teams. Expect to see performances full of energy and organisation but their lack of creative flair may prevent them from making a huge impact at the cup.</string>
+    <string name="prediction16">Second round but no further.</string>
+    <string name="starman16">The Bayern Muncih player combines a low centre of gravity with two-footed trickery that can be a handful for defenders.</string>
+    <string name="starmanname16">Xerdan Shaqiri</string>
+    
+    <string name="writeup17">Not hugely impressive in qualifying, particularly when away from home, there is little to suggest that Ecuador will be doing much more than making up the numbers at World Cup 2014. They have wingers with talent but there are many frailties throughout the team that are likely to get exposed on the biggest stage.</string>
+    <string name="prediction17">Early elimination</string>
+    <string name="starman17">Undboutedly has the talent to shine at this tournament but could just as easily do nothing to be noticed.</string>
+    <string name="starmanname17">Antonio Valencia</string>
+    
+    <string name="writeup18">Having fought back from the brink of elimination in their qualfier against the Ukraine, France then landed the group that all the bottom seeds were dreaming of. Their team is full of star names and in coach Deschamps they have a man with a chance of keeping balance among the many egos in the squad.</string>
+    <string name="prediction18">A lot depends on the desire and harmony in the group, with anything from first round elimination to World Cup winners a possibility. Predicting quarter finals.</string>
+    <string name="starman18">Already one of the world\'s best players, Ribery has taken his game to another level over the past couple of years and has become the complete player.</string>
+    <string name="starmanname18">Franck Ribéry</string>
+    
+    <string name="writeup19">Honduras would be happy to come home from this tournament with a win under their belts and would be ecstatic with anything more. The group is kind and they might not get a better opportunity for three World Cup points for some time to come.</string>
+    <string name="prediction19">May get that first win but still unlikely to qualify from the group. </string>
+    <string name="starman19">Pacy left-back Emilio Izaguirre is a real attacking threat and will need to perform well for Honduras to get the goals and win their nation is dreaming of.</string>
+    <string name="starmanname19">Emilio Izaguirre</string>
+    
+    <string name="writeup20">The era of Maradonna\'s management of the Argentinian side was somewhat of a waste of the talents available but this time out Argentina have a better shot at making a real impact in the tournament. With a wealth of attacking talent and probably the world\'s best player, Argentina are real contenders to win the tournament in the home of their neighbours. The Brazilian public would rather see any other team win so Argentina can expect a hostile reception for the locals - will this distract or galvanise them?</string>
+    <string name="prediction20">Anything less than semi-finals would be a shock, but will need nerves of steel to win the tournament. Beaten semi-finalists.</string>
+    <string name="starman20">Nominated the World\'s best player for the last four years and boasting a goal scoring record that is bordering on the obscene, it\'s going to take a lot for Messi not to have a huge influence in this tournament.</string>
+    <string name="starmanname20">Lionel Messi</string>
+    
+    <string name="writeup21">A solid team with some world-class players, Bosnia- Hertzegovina could make a name for themselves at their first World Cup. Capable of getting a result against any other team they will be one to watch.</string>
+    <string name="prediction21">Provided the occasion doesn\'t get to them, Bosnia-Herzegovina will get out of the group but the dream will end there.</string>
+    <string name="starman21">Man City\'s Edin Dzeko scored 10 goals in the qualifying campaign and it will be no surprise if he knocks in a few more in Brazil.</string>
+    <string name="starmanname21">Edin Džeko</string>
+    
+    <string name="writeup22">Iran\'s form-guide won\'t frighten anyone in this tournament, including a 1-0 defeat at the hands of lowly Lebanon. They will be hoping to return from the tournament with their pride intact, which may even be a little to optimistic.</string>
+    <string name="prediction22">Second round seems possible but getting much further would require some excellent performances and a slice of luck.</string>
+    <string name="starman22">The captain has been a mainstay of the team for a long time and will be hoping to bow out of international football with his head held high.</string>
+    <string name="starmanname22">Javan Nekounam</string>
+    
+    <string name="writeup23">There is no doubting that Nigeria have the pace and athleticism to cause their group opponents problems. Unfortunately they also have a note of turmoil in their organisation and performances can be inconsistent. Could cause an upset if everything lines up properly for them.</string>
+    <string name="prediction23">Their game with Boznia- Hertzegovena will be a fascinating one to watch and will likely decide which team progresses. I predict Nigeria to narrowly lose that game and bow out at the group stage.</string>
+    <string name="starman23">Blossoming at Chelsea of late, Mickel possesses the ability to control a game and make it look easy.</string>
+    <string name="starmanname23">John Obi Mikel</string>
+    
+    <string name="writeup24">With a starting eleven as good as any in the tournament and a bench that is the envy of most of the world, Germany are incredibly strong contenders at this World Cup. Combining teachnical excellence with elite athleticism, it is going to take a team with doses of talent and organisation to stop the rampaging Germans from going all the way.</string>
+    <string name="prediction24">Beaten finalists.</string>
+    <string name="starman24">His departure from Real Madrid over the summer was greeted by shock all around the footballing world, having been one of Madrid\'s star performers the previous season.</string>
+    <string name="starmanname24">Mesut Özil</string>
+    
+    <string name="writeup25">A team with many talented individuals that just seem to be lacking a bit of team-spirit. In Ronaldo they have probably the world\'s second-best player and he is capable of glossing over their dificiencies and dragging them to big results (as he notably did in the qualfier play-offs against Sweden).</string>
+    <string name="prediction25">Should cruise through the group but may struggle against more complete teams. Quarter finals.</string>
+    <string name="starman25">Ronaldo will be keen to establish a case that he is a better player than certain other South American attackers.</string>
+    <string name="starmanname25">Christiano Ronaldo</string>
+    
+    <string name="writeup26">A strong midfield contrasts sharply with Ghana\'s options in defence and attack. They will play some nice football and may nick a goal or two but are unlikely to trouble the European big-boys in their group.</string>
+    <string name="prediction26">Group stage exit</string>
+    <string name="starman26">Though a fading power at club level, Essien is still a huge player for the national team.</string>
+    <string name="starmanname26">Michael Essien</string>
+    
+    <string name="writeup27">For all the stubbornness and strong organisation in this US team, there is a conspicuous lack of world class players on the team sheet that will leave them fighting an uphill battle all the way. Expect guts and determination but ultimately little in the way of goals or success.</string>
+    <string name="prediction27">The Ghana game will be fun, the games against Germany and Portugal will be painful. Group exit.</string>
+    <string name="starman27">Making a name for himself at Roma, this industious midfielder is the team\'s stand-out performer.</string>
+    <string name="starmanname27">Michael Bradley</string>
+    
+    <string name="writeup28">With a team-list that belies the diminutive size of their country, Belgium are a team that have a chance to go far in this tournament. Their lack of World Cup experience may play against them but few of the contenders for the title will relish a clash with this capable team.</string>
+    <string name="prediction28">Very capable of causing an upset or two. Quarter-finals.</string>
+    <string name="starman28">Marshalls the back four and lends composure to all around him, an absolute class act.</string>
+    <string name="starmanname28">Vincent Kompany</string>
+    
+    <string name="writeup29">Having just scraped into the World Cup on away goals, Algeria are the rank outsiders of the tournament. However, with a young team and a strong work ethic, they will be difficult to beat.</string>
+    <string name="prediction29">Likely to earn plenty of pride but unlikely to progress from their group.</string>
+    <string name="starman29">The Valencia player is the shining performer and Algeria will need him to be at his sparkling best to have a chance of progressing.</string>
+    <string name="starmanname29">Sofiane Feghouli</string>
+    
+    <string name="writeup30">The Russian team is a solid group with a few huge talents, most notably the dangerous Dzagoev. They find themselves in a group they should qualify from and the confidence they gain from that may be a springboard to something greater.</string>
+    <string name="prediction30">Second round seems likely, but with likely opponents of Germany or Portugal waiting, that will probably be as far as this team goes.</string>
+    <string name="starman30">A lethal finisher, this is a really good chance for the CSKA man to shine under the biggest spotlight.</string>
+    <string name="starmanname30">Alan Dzagoev</string>
+    
+    <string name="writeup31">While they will rarely be outworked, this Korean team looks likely to be outplayed by their more talented group opponents. They won\'t make it easy but I don\'t think they\'ll cause any scares either.</string>
+    <string name="prediction31">Won\'t trouble Belgium or Russia. Group exit.</string>
+    <string name="starman31">The Leverkusen attacker is the side\'s creative force and their leading light.</string>
+    <string name="starmanname31">Son Heung Min</string>
 
 </resources>

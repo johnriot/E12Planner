@@ -14,63 +14,65 @@ import android.os.AsyncTask;
 
 public class ReadDataAsyncTask extends AsyncTask<String, Integer, Boolean> {
 
-    public enum DataType {
-        ETramData,
-        EBusData,
-        EMetroData,
-        EFgcData
-    };
+	public enum DataType {
+		ETramData, EBusData, EMetroData, EFgcData
+	};
 
-    public static final String SQUAD_DEFN_DATA_URL = "http://dl.dropbox.com/u/82143078/squaddefn.xml";
-    public static final String TOURN_DEFN_DATA_URL = "http://dl.dropbox.com/u/82143078/tournamentdefn.xml";
+	// public static final String SQUAD_DEFN_DATA_URL =
+	// "http://dl.dropbox.com/u/82143078/squaddefn.xml";
+	public static final String SQUAD_DEFN_DATA_URL = "https://dl.dropboxusercontent.com/u/82143078/Brazil/squaddefn.xml";
+	// public static final String TOURN_DEFN_DATA_URL =
+	// "http://dl.dropbox.com/u/82143078/tournamentdefn.xml";
+	public static final String TOURN_DEFN_DATA_URL = "https://dl.dropboxusercontent.com/u/82143078/Brazil/tournamentdefn.xml";
 
-    //USE FOR TESTING
-    //public static final String TOURN_DEFN_DATA_URL = "http://dl.dropbox.com/u/82143078/test_defn.xml";
+	// USE FOR TESTING
+	// public static final String TOURN_DEFN_DATA_URL =
+	// "http://dl.dropbox.com/u/82143078/test_defn.xml";
 
-    private final OnDataLoadedCallback mCallback;
-    private String mErrorMessage;
-    private String mData;
+	private final OnDataLoadedCallback mCallback;
+	private String mErrorMessage;
+	private String mData;
 
-    public ReadDataAsyncTask(OnDataLoadedCallback callback) {
-        mCallback = callback;
-    }
+	public ReadDataAsyncTask(OnDataLoadedCallback callback) {
+		mCallback = callback;
+	}
 
-    @Override
-    protected Boolean doInBackground(String... params) {
+	@Override
+	protected Boolean doInBackground(String... params) {
 
-        try {
-            HttpClient httpClient = new DefaultHttpClient();
-            HttpParams httpParams = httpClient.getParams();
-            HttpConnectionParams.setConnectionTimeout(httpParams, 30000);
-            HttpConnectionParams.setSoTimeout(httpParams, 30000);
+		try {
+			HttpClient httpClient = new DefaultHttpClient();
+			HttpParams httpParams = httpClient.getParams();
+			HttpConnectionParams.setConnectionTimeout(httpParams, 30000);
+			HttpConnectionParams.setSoTimeout(httpParams, 30000);
 
-            HttpGet get = new HttpGet(params[0]);
-            mData = httpClient.execute(get, new BasicResponseHandler());
+			HttpGet get = new HttpGet(params[0]);
+			mData = httpClient.execute(get, new BasicResponseHandler());
 
-            return true;
+			return true;
 
-        } catch (ClientProtocolException ex) {
-            mErrorMessage = ex.getMessage();
-        } catch (IOException ex) {
-            mErrorMessage = ex.getMessage();
-        }
+		} catch (ClientProtocolException ex) {
+			mErrorMessage = ex.getMessage();
+		} catch (IOException ex) {
+			mErrorMessage = ex.getMessage();
+		}
 
-        return false;
-    }
+		return false;
+	}
 
-    @Override
-    protected void onPostExecute(Boolean result) {
+	@Override
+	protected void onPostExecute(Boolean result) {
 
-        if(result) {
-            mCallback.onDataLoaded(mData);
-        }
-        else {
-            mCallback.onDataLoadingFailed(mErrorMessage);
-        }
-    }
+		if (result) {
+			mCallback.onDataLoaded(mData);
+		} else {
+			mCallback.onDataLoadingFailed(mErrorMessage);
+		}
+	}
 
-    public interface OnDataLoadedCallback {
-        public void onDataLoaded(String data);
-        public void onDataLoadingFailed(String errorMessage);
-    }
+	public interface OnDataLoadedCallback {
+		public void onDataLoaded(String data);
+
+		public void onDataLoadingFailed(String errorMessage);
+	}
 }

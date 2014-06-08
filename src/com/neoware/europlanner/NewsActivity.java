@@ -30,205 +30,211 @@ import com.neoware.rss.RSSReaderException;
 
 public class NewsActivity extends SherlockActivity {
 
-    private MenuItem mRefreshItem;
-    private FeedsAdapter mAdapter;
+	private MenuItem mRefreshItem;
+	private FeedsAdapter mAdapter;
 
-    //TODO: Removing progress dialog for now. People can then read the loaded news
-    //       while other news loads. Going to leave it just commented for now in case
-    //       we need it again
-    //private ProgressDialog mProgressDialog;
-    private TournamentDefinition mDefn;
+	// TODO: Removing progress dialog for now. People can then read the loaded
+	// news
+	// while other news loads. Going to leave it just commented for now in case
+	// we need it again
+	// private ProgressDialog mProgressDialog;
+	private TournamentDefinition mDefn;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 
-        mDefn = TournamentDefinition.getTournamentDefnInstance(this);
+		mDefn = TournamentDefinition.getTournamentDefnInstance(this);
 
-        setContentView(R.layout.news_layout);
+		setContentView(R.layout.news_layout);
 
-        BitmapDrawable bg = (BitmapDrawable)getResources().getDrawable(R.drawable.toolbar_bg);
-        bg.setTileModeXY(TileMode.REPEAT, TileMode.REPEAT);
+		BitmapDrawable bg = (BitmapDrawable) getResources().getDrawable(
+				R.drawable.toolbar_bg);
+		bg.setTileModeXY(TileMode.REPEAT, TileMode.REPEAT);
 
-        ActionBar bar = getSupportActionBar();
-        bar.setBackgroundDrawable(bg);
-        bar.setTitle(R.string.news_title);
-        bar.setHomeButtonEnabled(true);
-        bar.setDisplayHomeAsUpEnabled(true);
-        bar.setDisplayUseLogoEnabled(true);
+		ActionBar bar = getSupportActionBar();
+		bar.setBackgroundDrawable(bg);
+		bar.setTitle(R.string.news_title);
+		bar.setHomeButtonEnabled(true);
+		bar.setDisplayHomeAsUpEnabled(true);
+		bar.setDisplayUseLogoEnabled(true);
 
-        final ExpandableListView listView = (ExpandableListView)
-                findViewById(R.id.newsList);
+		final ExpandableListView listView = (ExpandableListView) findViewById(R.id.newsList);
 
-        //String loadingNews = getResources().getString(R.string.loadingNews);
-        //mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
+		// String loadingNews = getResources().getString(R.string.loadingNews);
+		// mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
 
-        mAdapter = new FeedsAdapter(this);
-        listView.setAdapter(mAdapter);
+		mAdapter = new FeedsAdapter(this);
+		listView.setAdapter(mAdapter);
 
-        listView.setOnChildClickListener(new OnChildClickListener() {
+		listView.setOnChildClickListener(new OnChildClickListener() {
 
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                    int groupPosition, int childPosition, long id) {
+			@Override
+			public boolean onChildClick(ExpandableListView parent, View v,
+					int groupPosition, int childPosition, long id) {
 
-                ArrayList<FeedDefn> feeds = mAdapter.getFeeds();
-                Intent webviewIntent = new Intent(NewsActivity.this,
-                        WebViewActivity.class);
-                RSSItem item = feeds.get(groupPosition).rssFeed.getItems().
-                        get(childPosition);
+				ArrayList<FeedDefn> feeds = mAdapter.getFeeds();
+				Intent webviewIntent = new Intent(NewsActivity.this,
+						WebViewActivity.class);
+				RSSItem item = feeds.get(groupPosition).rssFeed.getItems().get(
+						childPosition);
 
-                webviewIntent.putExtra(WebViewActivity.URL_EXTRA,
-                        item.getLink().toString());
+				webviewIntent.putExtra(WebViewActivity.URL_EXTRA, item
+						.getLink().toString());
 
-                startActivity(webviewIntent);
-                return true;
-            }
-        });
+				startActivity(webviewIntent);
+				return true;
+			}
+		});
 
-        loadFeeds();
-    }
+		loadFeeds();
+	}
 
-    @Override
-    public void onResume() {
+	@Override
+	public void onResume() {
 
-        super.onResume();
+		super.onResume();
 
-        if(Settings.USE_LIVE_ADS) {
-            AdView adview = (AdView)findViewById(R.id.adViewNews);
-            Assert.assertNotNull(adview);
+		if (Settings.USE_LIVE_ADS) {
+			AdView adview = (AdView) findViewById(R.id.adViewNews);
+			Assert.assertNotNull(adview);
 
-            AdRequest req = new AdRequest();
+			AdRequest req = new AdRequest();
 
-            String [] keywords = getResources().getStringArray(R.array.adKeywords);
-            Set<String> keywordsSet = new HashSet<String>(Arrays.asList(keywords));
-            req.setKeywords(keywordsSet);
+			String[] keywords = getResources().getStringArray(
+					R.array.adKeywords);
+			Set<String> keywordsSet = new HashSet<String>(
+					Arrays.asList(keywords));
+			req.setKeywords(keywordsSet);
 
-            adview.loadAd(req);
-        }
-    }
+			adview.loadAd(req);
+		}
+	}
 
-    private static class AsyncReader extends AsyncTask<String, Void, FeedDefn> {
+	private static class AsyncReader extends AsyncTask<String, Void, FeedDefn> {
 
-        public interface ReaderCompleteCallback {
-            public void onReaderComplete(FeedDefn feed, String errorMessage);
-        }
+		public interface ReaderCompleteCallback {
+			public void onReaderComplete(FeedDefn feed, String errorMessage);
+		}
 
-        private final ReaderCompleteCallback mReaderComplete;
+		private final ReaderCompleteCallback mReaderComplete;
 
-        private String mErrorMessage;
-        private final FeedDefn mFeedDefn;
+		private String mErrorMessage;
+		private final FeedDefn mFeedDefn;
 
-        public AsyncReader(ReaderCompleteCallback callback, FeedDefn defn) {
-            mReaderComplete = callback;
-            mFeedDefn = defn;
-        }
+		public AsyncReader(ReaderCompleteCallback callback, FeedDefn defn) {
+			mReaderComplete = callback;
+			mFeedDefn = defn;
+		}
 
-        @Override
-        protected FeedDefn doInBackground(String... params) {
-            RSSReader reader = new RSSReader();
-            try {
-                mFeedDefn.rssFeed = reader.load(mFeedDefn.url);
-                return mFeedDefn;
-            } catch (RSSReaderException ex) {
-                mErrorMessage = ex.getMessage();
-                return null;
-            } catch (RSSFault ex) {
-                mErrorMessage = ex.getMessage();
-                return null;
-            }
-        }
+		@Override
+		protected FeedDefn doInBackground(String... params) {
+			RSSReader reader = new RSSReader();
+			try {
+				mFeedDefn.rssFeed = reader.load(mFeedDefn.url);
+				return mFeedDefn;
+			} catch (RSSReaderException ex) {
+				mErrorMessage = ex.getMessage();
+				return null;
+			} catch (RSSFault ex) {
+				mErrorMessage = ex.getMessage();
+				return null;
+			}
+		}
 
-        @Override
-        protected void onPostExecute(FeedDefn result) {
-            super.onPostExecute(result);
-            if(result != null) {
-                mFeedDefn.loaded = true;
-            }
-            mReaderComplete.onReaderComplete(result, mErrorMessage);
-        }
-    }
+		@Override
+		protected void onPostExecute(FeedDefn result) {
+			super.onPostExecute(result);
+			if (result != null) {
+				mFeedDefn.loaded = true;
+			}
+			mReaderComplete.onReaderComplete(result, mErrorMessage);
+		}
+	}
 
-    private boolean allFeedsLoaded() {
-        for(FeedDefn feed : mDefn.getFeeds()) {
-            if(!feed.loaded) return false;
-        }
+	private boolean allFeedsLoaded() {
+		for (FeedDefn feed : mDefn.getFeeds()) {
+			if (!feed.loaded)
+				return false;
+		}
 
-        return true;
-    }
+		return true;
+	}
 
-    private void loadFeeds() {
+	private void loadFeeds() {
 
-        AsyncReader.ReaderCompleteCallback readerCallback =
-                new AsyncReader.ReaderCompleteCallback() {
+		AsyncReader.ReaderCompleteCallback readerCallback = new AsyncReader.ReaderCompleteCallback() {
 
-            private boolean mErrorShown = false;
+			private boolean mErrorShown = false;
 
-            @Override
-            public void onReaderComplete(FeedDefn feed, String errorMessage) {
+			@Override
+			public void onReaderComplete(FeedDefn feed, String errorMessage) {
 
-                if(allFeedsLoaded()) {
-                    //mProgressDialog.dismiss();
-                }
+				if (allFeedsLoaded()) {
+					// mProgressDialog.dismiss();
+				}
 
-                if(feed == null) {
+				if (feed == null) {
 
-                    if(!mErrorShown) {
-                        Toast.makeText(NewsActivity.this, R.string.feedLoadingError, Toast.LENGTH_SHORT).show();
-                        mErrorShown = true;
-                    }
+					if (!mErrorShown) {
+						Toast.makeText(NewsActivity.this,
+								R.string.feedLoadingError, Toast.LENGTH_SHORT)
+								.show();
+						mErrorShown = true;
+					}
 
-                    return;
-                }
+					return;
+				}
 
-                mAdapter.addFeed(feed);
-            }
-        };
+				mAdapter.addFeed(feed);
+			}
+		};
 
-        for(FeedDefn feed : mDefn.getFeeds()) {
-            if(!feed.loaded) {
-                AsyncReader reader = new AsyncReader(readerCallback, feed);
-                reader.execute();
-            }
-            else {
-                mAdapter.addFeed(feed);
-            }
-        }
+		for (FeedDefn feed : mDefn.getFeeds()) {
+			if (!feed.loaded) {
+				AsyncReader reader = new AsyncReader(readerCallback, feed);
+				reader.execute();
+			} else {
+				mAdapter.addFeed(feed);
+			}
+		}
 
-        //if(allFeedsLoaded()) mProgressDialog.dismiss();
-    }
+		// if(allFeedsLoaded()) mProgressDialog.dismiss();
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
 
-        mRefreshItem = menu.add(R.string.refresh_text)
-            .setIcon(R.drawable.ic_refresh_dark);
-        mRefreshItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+		mRefreshItem = menu.add(R.string.refresh_text).setIcon(
+				R.drawable.ic_refresh_dark);
+		mRefreshItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 
-        return true;
-    }
+		return true;
+	}
 
-    @Override
-    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 
-        if(item.getItemId() == android.R.id.home) {
+		if (item.getItemId() == android.R.id.home) {
 
-            Intent homeIntent = new Intent(this, PlannerHomeActivity.class);
-            homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(homeIntent);
+			Intent homeIntent = new Intent(this, PlannerHomeActivity.class);
+			homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(homeIntent);
 
-            return true;
-        }
-        else if(item == mRefreshItem) {
+			return true;
+		} else if (item == mRefreshItem) {
 
-            //String loadingNews = getResources().getString(R.string.loadingNews);
-            //mProgressDialog = ProgressDialog.show(this, "", loadingNews, true);
-            mAdapter.clearFeeds();
+			// String loadingNews =
+			// getResources().getString(R.string.loadingNews);
+			// mProgressDialog = ProgressDialog.show(this, "", loadingNews,
+			// true);
+			mAdapter.clearFeeds();
 
-            for(FeedDefn feed : mDefn.getFeeds()) feed.loaded = false;
-            loadFeeds();
-        }
+			for (FeedDefn feed : mDefn.getFeeds())
+				feed.loaded = false;
+			loadFeeds();
+		}
 
-        return super.onMenuItemSelected(featureId, item);
-    }
+		return super.onMenuItemSelected(featureId, item);
+	}
 }

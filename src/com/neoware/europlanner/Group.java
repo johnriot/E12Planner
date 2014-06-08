@@ -20,7 +20,7 @@ import android.widget.TextView;
 public class Group extends TournamentStage {
 
     private static final int GROUP_FRAGMENT_RESOURCE = R.layout.group_fragment;
-    public final int NUMBER_GROUPS = 4;
+    public final int NUMBER_GROUPS = 8;
     public final int NUMBER_TEAMS_PER_GROUP = 4;
 
     public Group(int groupId) {

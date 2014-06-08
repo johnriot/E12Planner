@@ -90,6 +90,66 @@
             android:clickable="true"
 			android:background="@android:drawable/list_selector_background"
             android:id="@+id/venueGamesDescription2"/>
+        
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+			android:clickable="true"
+			android:background="@android:drawable/list_selector_background"            
+            android:id="@+id/venueGamesDescription3"/>
+        
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+            android:clickable="true"
+			android:background="@android:drawable/list_selector_background"
+            android:id="@+id/venueGamesDescription4"/>
+        
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+            android:clickable="true"
+			android:background="@android:drawable/list_selector_background"
+            android:id="@+id/venueGamesDescription5"/>
+        
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+			android:clickable="true"
+			android:background="@android:drawable/list_selector_background"            
+            android:id="@+id/venueGamesDescription6"/>
+        
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+            android:clickable="true"
+			android:background="@android:drawable/list_selector_background"
+            android:id="@+id/venueGamesDescription7"/>
+        
+        <TextView
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="#FF000000"
+            android:clickable="true"
+			android:background="@android:drawable/list_selector_background"
+            android:id="@+id/venueGamesDescription8"/>
 
     </LinearLayout>
 
